@@ -1,0 +1,81 @@
+Higher Dimensions for High Level Reasoning
+From Homotopy Type Theory to Homotopy Programming Languages
+Programming and Reasoning in 3d and higher dimensions
+Programming and Reasoning in Homotopy Type Theory
+
+- Advance of formal reasoning exploiting Type Theory, tools like Coq, Agda, etc
+- Applications in Mathematics and Computer Science:
+  - certified Maths
+  - certified sw development
+- Problem: High level structures as first class citizens, coherence issues
+   Reusability
+   In informal reasoning : issues are ignored
+   E.g. consider groups up to group isomorphism
+   However equivalences are not equalities in the conventional sense
+- Proposed solution: Homotopy Type Theory
+  - Voevodsky & Awodey
+  - new foundations of mathematics
+  - Model of Type Theory using Homotopy Theory
+  - Sets are modelled as spaces, allows us to view equivalences as equality
+  - corresponds to higher dimensions
+- Theoretical aspects
+  - Type theoretic foundations
+  - using OTT to give a computational interpretation of univalence
+  - relation to higher dimensional category theory (simplicial sets etc)
+  - directed higher dimensional reasoning
+- Exciting new connection between logic and geometry
+- Relation To IR project, formalizing w-Groupoids
+- Development:
+  case studies:
+       use HTT for structuring mathematical theories
+       implement quotient containers using higher dimensional quotients
+       use HTT to structure certified libraries for datatypes
+       formally develop Ondrej's distributive laws
+   language development:       
+       develop a homotopy agda (agda in 3d)
+       collaborate with the development at IAS (math verification -> certified progrm development)
+       epigram (2d OTT), 
+       Homotopic levitation ???
+- Rypacek found exciting applications of higher dimensional in programming language theory
+   (distributive laws).
+
+
+Collaborators
+	Peter Lumsdaine
+	Benno van den Berg
+	Nicola Gambino
+	Andy Pitts 
+
+WPs (collaborate with "international leaders").
+
+Higher dimensional Category Theory (Hyland, Awodey)
+       Simplicial Sets <-> Opetopes
+       concepts in higher dimensions
+Theory of HTT,  (Vladimir, Harper)
+       canonicity problem
+       Higher dimensional quotients
+Agda/Epigram in 3D (Thierry, Curien)
+     extension of OTT
+Case studies
+     Quotient containers
+     Distributive laws
+     Datatypes upto Iso 
+     Structured Math library ? maybe not
+
+Deliverables
+    theoretical results (papers)
+    3d agda
+    case studies
+    workshop ?
+
+Beneficiaries 
+    language designers
+    people working in Type Theory, formal proof development
+    Mathematicians working in HDCT
+
+Impact
+
+
+				   
+
+Testing Testing

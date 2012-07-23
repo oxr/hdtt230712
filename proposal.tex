@@ -1,0 +1,337 @@
+\documentclass[a4paper]{article}
+
+\usepackage{pstcol}
+\usepackage{pst-text}
+\usepackage{color}
+
+% \usepackage{multibib}
+% \newcites{track}{Publications}
+% \newcites{main}{References}
+
+\newcommand{\citetrack}[1]{\cite{#1}}
+\newcommand{\citemain}[1]{\cite{#1}}
+
+%\input{prelude.tex}
+
+
+\title{Programming and Reasoning in Higher Dimensional Type Theory \\
+\LARGE (Case for Support)}
+
+\author{Thorsten Altenkirch, Eugenia Chang, Neil Ghani and Ondrej Rypacek}
+\date{}
+
+\begin{document}
+
+%\twocolumn[
+\maketitle
+\section*{Summary}
+
+Recently, the Field medallist Vladimir Voevodsky of the Institute of
+Advanced Study in Princeton became one of the latest converts to
+formally developed, computer checked Mathematics. Voevodsky is now
+using the interactive proof system Coq to support his work and
+encourages his colleagues to follow suit. However, while impressed
+with the potential of systems like Coq based on Type Theory Voevodsky
+also proposed an important extension of the type theoretic approach
+based on his background in Homotopy theory: Univalent Type Theory.
+\cite{voevodsky,awodey}. 
+Univalent Type Theory enables us to view mathematical structures as
+first class citizens and identify equivalent structures as if they
+were equal. While this is clearly important for the development of
+Mathematics it also is essential for the development of a large corpus
+of reusable and certified software allowing us to replace one abstract
+module by another equivalent one without having to repeat the effort
+of certification. While this is a long standing issue in the use of
+abstract datatypes the novelty of Univalent Type Theory lies in the
+possibility to view equivalent structures as equal which is not
+supported by any existing approach.
+
+In the research proposed here we are going to explore Univalent Type
+Theory and in particular investigate its potential impact on Computer
+Science in particular the efficent development of certified
+software. Identifying equivalence of structures with equality raises
+well known coherence issues which have been investigated in the
+context of higher dimensional category theory \cite{eugenia} which
+forms one of the foundations of our research (WP1). We conjecture that
+this background is useful when developing Univalent Type Theory
+addressing thorny issues such as the canonicity problem
+\cite{harper,voevodsky,coquand} and the formulation of higher
+dimensional quotients (WP2). The Agda system \cite{agda} which is at
+the same time a programming language and a interactive proof system is
+ideally suited to make these concepts available to interested
+researchers. We will use the Agda system both as a tool to develop the
+theory (WP3) but also as a target to turn theory into practice by developing
+software tools based on Agda to support the use of Univalent Type
+Theory for certification (WP4). Finally we plan to conduct a number of
+case studies evaluating the potential impact of Univalent Type Theory
+in Computer Science (WP5) and Computer Aided Mathematics (WP6).
+
+\section*{Part 1: Track Record}
+
+\subsection*{Thorsten Altenkirch}
+Thorsten Altenkirch received his PhD from the University of
+Edinburgh in 1993. He has been a research assistant at the University of
+Edinburgh and at Chalmers University in Gothenburg, Sweden and has
+held lecturing positions at the University of Munich, Germany, and the
+University of Nottingham. Since October 2006 he has been a Reader in
+Computer Science at the University of Nottingham and in October
+2008 he founded the Functional Programming Laboratory together with
+Graham Hutton. Altenkirch and Hutton are now jointly leading the
+laboratory.
+
+Altenkirch's research interests are in Type Theory, Category Theory, Functional
+Programming and Quantum Programming. 
+Among his main achievements is
+the first formalised normalisation proof for System F
+\citetrack{alti:tlca93}
+, his work on normalisation by evaluation 
+\citetrack{alti:lics01}%,txa:jtait}
+, extensional equality within intensional Type Theory \citetrack{alti:lics99}
+, the development of container theory \citetrack{alti:cont-tcs}%,alti:jpartial}
+, on
+monads \citetrack{alti:fossacs10} 
+and on generic programming 
+\citetrack{alti:wcgp02}
+.
+He has been on the program committee of a number of conferences and
+workshops, recently CiE 2008, TPHOLs 2009 and ITP 2010. He has
+organised TYPES meetings in 1998 and 2006 and has coedited the
+proceedings; and he has also been the program co-chair of PLPV 2009.  He
+organised a Dagstuhl seminar on dependently typed programming in 2004
+and has since organised two further workshops on this topic (DTP 2008
+and DTP 2010). He gave an invited lecture series on Type Theory at the
+University of Tallinn in 2003 and he was a visiting Professor at the
+Universit\`{e} Denis Diderot, Paris in  July 2007. He gave invited talks
+at the first workshop on quantum programming languages (QPL 2003), the
+workshop on normalisation by evaluation (NBE 2009) and at the special
+session on proof theory of CiE 2010.
+
+%\twocolumn[
+
+He has been the Principal Investigator on two successfully completed
+EPSRC grants : \emph{Modelling Irreversible Quantum Computation}
+(GR/S30818/01), \emph{Observational Equality For Dependently Typed
+  Programming} (EP/C512022/1); and has been co-investigator on
+\emph{Theory and Applications Of Containers} (EP/C511964/1). 
+He is currently the principal investigator of two ESPRC
+projects: \emph{Reusability and Dependent Types} (EP/G034109/1), 
+networked with
+Oxford and Strathclyde, Nottingham is the lead site and 
+\emph{Theory And Applications of Induction
+  Recursion} (EP/G03298X/1), networked with Strathclyde and Swansea. 
+On the European level he has been active in the the
+TYPES and APPSEM coordination actions and has been involved in the
+QICS STREP. He also hosted a Marie-Curie fellowship (2006 - 2008). He
+is regularly teaching courses at the Midland Graduate School and has
+been the co-investigator of the associated EPSRC grant: \emph{Midlands
+  Graduate School in the Foundations of Computer Science}
+(GR/T06087/01). He has supervised 5 successfully completed PhD
+projects at Nottingham, two of them in the area of quantum
+programming \citetrack{jjgthesis,asg:thesis}. He has also lectured 
+on the subject of quantum computing at third year
+undergraduate level, masters level, and to research students 
+(at the Midlands Graduate School).
+
+\subsection*{Eugenia Chang}
+
+\subsection*{Neil Ghani}
+
+\subsection*{Ondrej Rypacek}
+
+% in the School of Computer Science, at The University of
+% Nottingham.% \citetrack{g53nsc:g54nsc}.
+
+\subsection*{Nottingham - host organisation}
+
+The School of Computer Science at the University of Nottingham
+is a research-led School in one of the leading Universities in
+the UK.	 The School was ranked 8th in the last Research Assessment
+Exercise, and the Functional Programming Lab within the School is
+one of four major research groups, with an international reputation
+for its work on formally-based approaches to software construction
+and verification.  The FP lab currently comprises 4 academic staff
+(Thorsten Altenkirch, Venanzio Capretta, Graham Hutton, and Henrik
+Nilsson), 2 postdoctoral fellows, and 9 PhD students.  To date the
+group has received \pounds 1.5M of EPSRC funding over 14 projects,
+and has 12 completed PhD students.
+
+The Functional Programming Lab provides a highly stimulating
+research environment for researchers and PhD students with weekly
+research meetings and frequent seminars. 
+
+%]
+% {\small 
+% \bibliographystyletrack{abbrv}
+% \bibliographytrack{proposal} 
+% }
+
+%\newpage
+
+\newpage
+
+\section*{Part 2: Proposed Research}
+
+\section{Background}
+
+Type Theory ala Martin L\"of is at the same time a programming
+language and a logical systems based on the propositions as as types
+principle. The basic notions are $\Pi$-types generalizing the notion
+of a function type from functional programming to a situation where
+the domain type can \emph{depend} on the actual input and on the
+logical side covering the intuitionistic  explanation of the notions of 
+implication and universal quantification. On the other hand
+$\Sigma$-types generalize the notion of a product type (or record) in
+functional programming and on the logical side allow us to model
+conjunction and existential quantification. A 3rd central component are
+equality types which assign to any two values the type of proofs that 
+these values are equal. Unlike in conventional logic, Type Theory
+allows us to talk about properties of proofs, e.g. we can ask the
+question whether two propositions (i.e. types) aren't only logically
+equivalent but whether they are actually isomorphic
+(i.e. computationally equivalent). Other components of Type Theory are
+inductive and coinductive types which allow us to construct us trees
+with finite or potentially infinite depth and notion of a universe,
+such as the universe of small sets corresponding to inaccessible
+cardinals in set theory.
+
+Many interesting questions in relation to Type Theory center around
+the notion of equality. E.g. can we prove the principle of functional
+extensionality, i.e. that two functions are equal if they are
+pointwise equal? Maybe surprisingly, this principle is not provable in
+Intensional Type Theory which is the basis of most implementations of
+Type Theory (e.g. Agda, Coq). However, this shortcoming can be
+addressed using Observational Type Theory which is one of the main
+outcomes of EPSRC project XXX based on earlier work by Altenkirch
+\cite{alti:lics99} . Another question related to equality is the
+question whether any two proofs of equality are themselves equal
+(uniqueness of equality proofs). It was shown by Hofmann and Streicher
+that this is not provable in standard Type Theory using a groupoid
+interpretation of Type Theory \cite{groupoid-model}.
+
+
+
+% - Type Theory
+% - Equality in Type Theory, UIP, Groupoid model
+% - Models of Type Theory (CWFs, LCCCs)
+% - Higher categories & groupoids
+% - Problem of extensionality in Type Theory
+% - Notion of univalence...
+% - Implementations of Type Theory (Agda, Coq)
+% - the problem of canonicity 
+
+
+\subsection{Higher dimensional category theory}
+\label{sec:high-dimens-categ}
+
+\subsection{Homotopy Type Theory}
+\label{sec:homotopy-type-theory}
+
+
+\section{Programme and Methodology}
+
+
+
+
+Based on the summary above, we arrive at the following work packages:
+
+\subsection*{WP1 : Higher dimensional category theory}
+\label{sec:wp:qio}
+
+\subsubsection*{Research challenges}
+\label{sec:rsearch-challenges}
+\begin{itemize}
+\item Identify a workable, constructive definition of a weak
+$\omega$-groupoid
+
+\item Investigate models of Type Theory (CWFs, locally cartesian
+  closed categories) in a higher dimensional setting,
+\item Relate this to existing approaches to $\omega$-categories and
+  groupoids based on contractible operads
+\item Relate the notion the simplicial approach to $\omega$-groupoid.
+\end{itemize}
+
+
+\subsection*{WP2 : Foundations of Higher Dimensional Type Theory}
+
+\subsubsection*{Research challenges}
+\label{sec:rsearch-challenges}
+
+\begin{itemize}
+\item Develop a feasible judgemental presentation of higher order,
+  higher dimensional Type Theory
+
+\item Identify a notion of higher dimensional model and show that
+  standard constructions give rise or are closed under this notion,
+
+\item Investigate the problem of weak and strong canonicity
+  in the presence of extensionality and univalence.
+\end{itemize}
+
+
+\subsection*{WP3 : Formalizing higher dimensional structures} 
+\label{sec:wp:qio}
+
+\subsubsection*{Research challenges}
+\label{sec:rsearch-challenges}
+
+\begin{itemize}
+\item Make the notions of WP1 and WP2 sufficiently precise so that they
+  can be formalized and mechanically checked in Agda.
+
+\item Formalize core aspects of higher dimensional category theory in
+  Agda.
+
+\item Formalize core aspects of higher dimensional type theory in Agda.
+
+\item Identify the requirements on the Metatheory we need to represent
+  our notion (e.g. induction-recursion or induction-induction related
+  to project XXX).
+
+\end{itemize}
+
+\subsection*{WP4 : Implement higher dimensional type theory} 
+\label{sec:wp:qio}
+
+\subsubsection*{Research challenges}
+\label{sec:rsearch-challenges}
+
+\begin{itemize}
+\item Develop the implementation of a higher dimensional core language
+  in a functional language (e.g. Haskell).
+
+\item Study the potential of modifying the Agda system to support
+  higher dimensional concepts.
+  
+\end{itemize}
+
+
+\subsection*{WP5 : Applications in Computer Science} 
+\label{sec:wp:qio}
+
+\subsubsection*{Research challenges}
+\label{sec:rsearch-challenges}
+
+\subsection*{WP6 : Applications in Formal Mathematics} 
+\label{sec:wp:qio}
+
+\subsubsection*{Research challenges}
+\label{sec:rsearch-challenges}
+
+\section{Relevance to Beneficiaries}
+
+
+
+\section{Dissemination and Exploitation}
+
+
+
+{% \small 
+% \bibliographystylemain{abbrv}
+% \bibliographymain{proposal} 
+% }
+
+{\small
+\bibliographystyle{abbrv}
+\bibliography{proposal} 
+}
+\end{document}
