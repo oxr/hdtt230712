@@ -48,7 +48,7 @@ supported by any existing approach.
 
 In the research proposed here we are going to explore Univalent Type
 Theory and in particular investigate its potential impact on Computer
-Science in particular the efficent development of certified
+Science in particular the efficient development of certified
 software. Identifying equivalence of structures with equality raises
 well known coherence issues which have been investigated in the
 context of higher dimensional category theory \cite{eugenia} which
@@ -189,7 +189,7 @@ allows us to talk about properties of proofs, e.g. we can ask the
 question whether two propositions (i.e. types) aren't only logically
 equivalent but whether they are actually isomorphic
 (i.e. computationally equivalent). Other components of Type Theory are
-inductive and coinductive types which allow us to construct us trees
+inductive and coinductive types which allow us to construct trees
 with finite or potentially infinite depth and notion of a universe,
 such as the universe of small sets corresponding to inaccessible
 cardinals in set theory.
@@ -204,9 +204,46 @@ addressed using Observational Type Theory which is one of the main
 outcomes of EPSRC project XXX based on earlier work by Altenkirch
 \cite{alti:lics99} . Another question related to equality is the
 question whether any two proofs of equality are themselves equal
-(uniqueness of equality proofs). It was shown by Hofmann and Streicher
+(uniqueness of equality proofs)? It was shown by Hofmann and Streicher
 that this is not provable in standard Type Theory using a groupoid
-interpretation of Type Theory \cite{groupoid-model}.
+interpretation of Type Theory \cite{groupoid-model}. Later Lumsdaine
+and independently Garner and de Berg \cite{lumsdaine,garner-deberg}
+showed that equality in Type Theory give rise to a weak
+$\omega$-groupoid, a structure well known in higher-dimensional
+category.
+
+Voevodsky and Awodey developed an interpretation of Type Theory using
+homotopy theory \cite{voevodsky,awodey}. In this interpretation types
+are viewed as (special) topological spaces, elements as points and
+equality proofs as paths or homotopies between elements. The homotopy
+interpretation gives a very intuitive geometric explanation for the
+unprovability of uniqueness of equality proofs. It also lead Voevodsky
+to postulate the univalence axiom, which states that weakly equivalent
+types should be equal. In particular isomorphic sets such as natural
+numbers and lists of natural numbers are equated as a consequence of
+the univalence axiom. Clearly, the univalence axiom is incompatible
+with uniqueness of equality proofs since in general there is more than
+one way to show that two isomorphic sets are equal. The univalence
+axiom implies the principle of extensionality --- indeed it can be viewed
+as a strong extensionality principle which identifies
+indistinguishable types.  
+
+Type Theory has an increasing influence on the development of
+certified software and mathematical theories in particular through the
+Coq system. While Coq in practice maintains a separation of logic and
+proof, newer developments like the Agda system introduce Type Theory
+as a total functional programming language with a particular
+expressive type system and thus makes Type Theory accessible to
+interested programmers. The availability of extensionality principles
+(such as functional extensionality and univalence)
+is here of practical importance because it is essential for an
+structured development of a complex deliverables allowing us to 
+replace one module by another, behaviourially equivalent one.
+Unlike in conventional logic where it is enough just to postulate an
+axiom this is not sufficient in Type Theory because this may stop
+computation. Hence extensionality principles come with a canonicity
+problem which need to be addressed before these principles can be used
+in practice. 
 
 
 
