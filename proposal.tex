@@ -33,7 +33,7 @@ proof assistant Coq \cite{coq} and the dependently typed functional
 programming language Agda \cite{Agda}. In the research proposed here
 we are going to investigate and develop further a novel extension of
 the type-theoretic approach based on a new connection between geometry
-(Homotopy theory) and reasoning proposed by the Field medallist Vladimir
+(Homotopy theory) and reasoning proposed by Field medallist Vladimir
 Voevodsky. In a nutshell this \emph{higher dimensional type theory}
 allows us to treat structures as first class citizens by viewing
 equivalence of structures as equality. We anticipate that this
@@ -174,10 +174,10 @@ supported by any existing approach.
 \section{Background}
 
 Type Theory ala Martin L\"of is at the same time a programming
-language and a logical systems based on the propositions as as types
+language and a logical system based on the propositions as types
 principle. The basic notions are $\Pi$-types generalizing the notion
 of a function type from functional programming to a situation where
-the domain type can \emph{depend} on the actual input and on the
+the codomain type can \emph{depend} on the actual input and on the
 logical side covering the intuitionistic  explanation of the notions of 
 implication and universal quantification. On the other hand
 $\Sigma$-types generalize the notion of a product type (or record) in
@@ -185,9 +185,9 @@ functional programming and on the logical side allow us to model
 conjunction and existential quantification. A 3rd central component are
 equality types which assign to any two values the type of proofs that 
 these values are equal. Unlike in conventional logic, Type Theory
-allows us to talk about properties of proofs, e.g. we can ask the
-question whether two propositions (i.e. types) aren't only logically
-equivalent but whether they are actually isomorphic
+allows us to talk about properties of proofs, e.g. we can not only ask 
+the question whether two propositions (i.e. types) are logically
+equivalent but also whether they are actually isomorphic
 (i.e. computationally equivalent). Other components of Type Theory are
 inductive and coinductive types which allow us to construct trees
 with finite or potentially infinite depth and notion of a universe,
