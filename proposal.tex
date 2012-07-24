@@ -8,6 +8,9 @@
 % \newcites{track}{Publications}
 % \newcites{main}{References}
 
+\usepackage{color}
+\newcommand{\txa}[1]{\textcolor{red}{\textbf{Thorsten:~}#1}}
+
 \renewcommand{\cite}[1]{{\tt[#1]}}
 
 \newcommand{\citetrack}[1]{\cite{#1}}
@@ -58,7 +61,11 @@ University of Nottingham. Since October 2006 he has been a Reader in
 Computer Science at the University of Nottingham and in October
 2008 he founded the Functional Programming Laboratory together with
 Graham Hutton. Altenkirch and Hutton are now jointly leading the
-laboratory.
+laboratory. Altenkirch is well known for his work on Type Theory and
+applications of category theory, in particular his work on
+normalisation by evaluation, formal development of Type Theory, the
+development of container theory and its applications to generic
+programming. 
 
 
 \subsection*{Eugenia Chang}
@@ -107,24 +114,20 @@ using the interactive proof system Coq to support his work and
 encourages his colleagues to follow suit. However, while impressed
 with the potential of systems like Coq based on Type Theory Voevodsky
 also proposed an important extension of the type theoretic approach
-based on his background in Homotopy theory: Univalent Type Theory.
-\cite{voevodsky,awodey}. 
-\begin{quote}{\footnotesize
-Should we say something like: We will build on Univalent Type Theory and take it
-further to a .... theory, which we call Higher-dimensional Type
-Theory.}
-\end{quote}
-Univalent Type Theory enables us to view mathematical structures as
-first class citizens and identify equivalent structures as if they
-were equal. While this is clearly important for the development of
-Mathematics it also is essential for the development of a large corpus
-of reusable and certified software allowing us to replace one abstract
-module by another equivalent one without having to repeat the effort
-of certification. While this is a long standing issue in the use of
-abstract datatypes the novelty of Univalent Type Theory lies in the
-possibility to view equivalent structures as equal which is not
-supported by any existing approach.
+based on his background in Homotopy theory: Univalent Type Theory ---
+an instance of a higher dimensional theory where the structure of
+equality proofs in non-trivial.
 
+Higher dimensional Type Theory with univalence enables us to view
+mathematical structures as first class citizens and identify
+equivalent structures as if they were equal. While this is clearly
+important for the development of Mathematics it also is essential for
+the development of a large corpus of reusable and certified software
+allowing us to replace one abstract module by another equivalent one
+without having to repeat the effort of certification. While this is a
+long standing issue in the use of abstract datatypes the novelty of
+Higher dimensional Type Theory lies in the possibility to view equivalent
+structures as equal which is not supported by any existing approach.
 
 \section{Background}
 
@@ -203,6 +206,7 @@ computation. Hence extensionality principles come with a canonicity
 problem which needs to be addressed before these principles can be used
 in practice. 
 
+\txa{Some more background on higher dimensional cats?}
 
 
 % - Type Theory
@@ -231,19 +235,19 @@ certified software. Identifying equivalence of structures with
 equality raises well known coherence issues which have been
 investigated in the context of higher dimensional category theory
 \cite{eugenia} which forms one of the foundations of our research
-(WP1). We conjecture that this background is useful when developing
-Higher-dimensional Type Theory addressing thorny issues such as the canonicity
-problem \cite{harper,voevodsky,coquand} and the formulation of higher
-dimensional quotients (WP2). The Agda system \cite{agda} which is at
-the same time a programming language and a interactive proof system is
-ideally suited to make these concepts available to interested
-researchers. We will use the Agda system both as a tool to develop the
-theory (WP3) but also as a target to turn theory into practice by
-developing software tools based on Agda to support the use of
-Higher-dimensional Type Theory for certification (WP4). Finally we plan to
-conduct a number of case studies evaluating the potential impact of
-Higher-dimensional Type Theory in Computer Science (WP5) and Computer Aided
-Mathematics (WP6).
+(WP1). This background is essential when we study the syntax and
+semantics of higher dimensional type theory (WP2) --- hoping to
+address thorny issues such as the canonicity problem in presence of
+the univalence principle. The Agda system \cite{agda}
+which is at the same time a programming language and a interactive
+proof system is ideally suited to make these concepts available to
+interested researchers. We will use the Agda system both as a tool to
+develop the theory (WP3) but also as a target to turn theory into
+practice by developing software tools based on Agda to support the use
+of Higher-dimensional Type Theory for certification (WP4). Finally we
+plan to conduct a number of case studies evaluating the potential
+impact of Higher-dimensional Type Theory in Computer Science (WP5) and
+Computer Aided Mathematics (WP6).
 
 \subsection*{WP1 : Higher dimensional category theory}
 \label{sec:wp:qio}
@@ -260,7 +264,9 @@ disadvantages. While our main emphasis is on groupoids we also need to
 relate them to the more general case of higher dimensional categories
 and in particular investigate $(n,\infty)$ categories.
 
-Opetopes?
+\txa{Say something about Opetopes?}
+
+\txa{Need lots of input on this WP. Eugenia? Neil?}
 
 \subsubsection*{Research challenges}
 \label{sec:rsearch-challenges}
@@ -277,7 +283,7 @@ $\omega$-groupoid.
 
 Building on the work in WP1 we are going to investigate higher
 dimensional type theory from a semantic perspective. A starting point
-are 2-dimensional locally cartesian closed categories (2LCCCs) and
+are 2-dimensional locally cartesian closed categories and
 higher dimensional generalisations of categories with families. We
 need to address the issue that weak 2-groupoids do not form a model of
 first order type theory. 
@@ -318,34 +324,7 @@ that this will lay the foundation for the higher-dimensional case.
   in the presence of extensionality and univalence.
 \end{itemize}
 
-\subsection*{WP3 : HIgher dimensional datastructures}
-
-Recently higher dimensional inductive types have been proposed
-\cite{shulman} which provide a type-theoretic account of the notion of
-the fundamental groupoid of a space. This notion has also interesting
-applications in computer science for datastructures whose equality can
-be inductively defined. Going beyond this we consider the notion of a
-higher dimensional quotients which arise as the left adjoint of the
-embedding of types into the category of $n$-groupoids (or more general
-$\omega$-groupoids). Even 2-dimensional quotients provide interesting
-applications to the theory of quotient containers \cite{qcont}
-developed in EPSRC project XXX which has recently aquired new
-attention \cite{gylterud,kock}: we can reduce quotient containers to
-ordinary containers in a higher dimensional setting. 
-
-\subsubsection*{Research challenges}
-
-\begin{itemize}
-\item Give a precise syntactic and semantic description of higher
-  dimensional inductive (and coinductive) types.
-\item Develop the notion of higher dimensional quotient types and
-  investigate their relation to higher dimensional datatypes.
-\item Investigate the application of higher dimensional quotient to
-  the theory of quotient containers.
-\end{itemize}
-
-
-\subsection*{WP4 : Formalizing higher dimensional structures} 
+\subsection*{WP3 : Formalisation} 
 \label{sec:wp:qio}
 
 Since we are working in the context of formally verified, machine
@@ -378,9 +357,15 @@ induction-recursion.
 
 \end{itemize}
 
-\subsection*{WP5 : Implementation of higher-dimensional calculi} 
+\subsection*{WP4 : Implementation} 
 
-
+To make higher dimensional Type Theory usable we need an
+implementation. Realistically we cannot expect a full scale
+implementation or modification of an existing system. Moreover,
+Voevodsky has already proposed to start such a development at
+Princeton but focusing on application in Mathematics. Within the
+present project we are focusing on the implementation of a higher
+dimensional type theory as a proof of concept. 
 
 \subsubsection*{Research challenges}
 
@@ -394,17 +379,47 @@ induction-recursion.
 \end{itemize}
 
 
-\subsection*{WP6 : Applications in Computer Science} 
-\label{sec:wp:qio}
+\subsection*{WP5 : Applications in Computer Science} 
+Recently higher dimensional inductive types have been proposed
+\cite{shulman} which provide a type-theoretic account of the notion of
+the fundamental groupoid of a space. This notion has also interesting
+applications in computer science for datastructures whose equality can
+be inductively defined. Going beyond this we consider the notion of a
+higher dimensional quotients which arise as the left adjoint of the
+embedding of types into the category of $n$-groupoids (or more general
+$\omega$-groupoids). Even 2-dimensional quotients provide interesting
+applications to the theory of quotient containers \cite{qcont}
+developed in EPSRC project XXX which has recently aquired new
+attention \cite{gylterud,kock}: we can reduce quotient containers to
+ordinary containers in a higher dimensional setting. 
+
+Rypacek \cite{ondrej:phd} found exciting applications of higher
+dimensional reasoning in programming language theory (distributive
+laws) in particular he was able to analyze the relation between
+functional and object oriented programming. This approach is ideally
+suited to be developed formally within a higher dimensional type theory
+
 
 \subsubsection*{Research challenges}
-\label{sec:rsearch-challenges}
+
+\begin{itemize}
+\item Give a precise syntactic and semantic description of higher
+  dimensional inductive (and coinductive) types.
+\item Develop the notion of higher dimensional quotient types and
+  investigate their relation to higher dimensional datatypes.
+\item Investigate the application of higher dimensional quotient to
+  the theory of quotient containers.
+\item Develop Rypacek's distributive laws in the setting of higher
+  dimensional type theory.
+\end{itemize}
 
 \subsection*{WP7 : Applications in Formal Mathematics} 
-\label{sec:wp:qio}
+
+\txa{Need help with this. Clearly we are looking for an area where
+  reasoning upto equivalence is important without being too reflective
+  (i.e. higher dimensional cats or semantics of type theory)}
 
 \subsubsection*{Research challenges}
-\label{sec:rsearch-challenges}
 
 \section{Relevance to Beneficiaries}
 
