@@ -1,0 +1,282 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.7.13)  24 JUL 2012 09:31
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\input proposal.tex
+(./proposal.tex (/usr/local/texlive/2010/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pstricks/pstcol.sty
+Package: pstcol 2007/04/11 v1.3 LaTeX wrapper for `PSTricks' (RN,HV)
+
+
+Package pstcol Warning: ************************************ 
+(pstcol)                The package `pstcol' is obsolet! 
+(pstcol)                You should use `pstricks' directly: 
+(pstcol)                    \usepackage{pstricks}
+(pstcol)                ************************************.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2010/06/17 v0.45 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pstricks/pstricks.tex
+(/usr/local/texlive/2010/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks14
+\XKV@tempa@toks=\toks15
+\XKV@depth=\count87
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pstricks/pst-fp.tex
+`pst-fp' v0.06, 2010/05/14 (hv)
+\pstFP@xs=\count88
+\pstFP@xia=\count89
+\pstFP@xib=\count90
+\pstFP@xfa=\count91
+\pstFP@xfb=\count92
+\pstFP@rega=\count93
+\pstFP@regb=\count94
+\pstFP@regs=\count95
+\pstFP@times=\count96
+)
+\psLoopIndex=\count97
+
+`PSTricks' v2.08  <2010/06/06> (tvz)
+\pst@dima=\dimen103
+\pst@dimb=\dimen104
+\pst@dimc=\dimen105
+\pst@dimd=\dimen106
+\pst@dimg=\dimen107
+\pst@dimh=\dimen108
+\pst@dimm=\dimen109
+\pst@dimn=\dimen110
+\pst@dimo=\dimen111
+\pst@dimp=\dimen112
+\pst@hbox=\box26
+\pst@boxg=\box27
+\pst@cnta=\count98
+\pst@cntb=\count99
+\pst@cntc=\count100
+\pst@cntd=\count101
+\pst@cntg=\count102
+\pst@cnth=\count103
+\pst@cntm=\count104
+\pst@cntn=\count105
+\pst@cnto=\count106
+\pst@cntp=\count107
+\@zero=\count108
+\pst@toks=\toks16
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen113
+\psxunit=\dimen114
+\psyunit=\dimen115
+\pslinewidth=\dimen116
+\pst@customdefs=\toks17
+\pslinearc=\dimen117
+\pst@symbolStep=\dimen118
+\pst@symbolWidth=\dimen119
+\everypsbox=\toks18
+\psframesep=\dimen120
+\pslabelsep=\dimen121
+\pst@shift=\dimen122
+\theoverlaybox=\box28
+)
+File: pstricks.tex 2010/06/06 v2.08 `PSTricks' (tvz,hv)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pstricks/pst-fp.tex)
+File: pst-fp.tex 2010/06/06 v2.08 `PST-fp' (hv)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
+\Gread@gobject=\count109
+)
+Package color Info: Redefining color black on input line 164.
+Package color Info: Redefining color white on input line 165.
+Package color Info: Redefining color red on input line 168.
+Package color Info: Redefining color green on input line 169.
+Package color Info: Redefining color blue on input line 170.
+Package color Info: Redefining color cyan on input line 173.
+Package color Info: Redefining color magenta on input line 174.
+Package color Info: Redefining color yellow on input line 175.
+)
+Package color Info: Redefining color darkgray on input line 181.
+Package color Info: Redefining color gray on input line 181.
+Package color Info: Redefining color lightgray on input line 181.
+Package color Info: Redefining color black on input line 214.
+Package color Info: Redefining color darkgray on input line 215.
+Package color Info: Redefining color gray on input line 216.
+Package color Info: Redefining color lightgray on input line 217.
+Package color Info: Redefining color white on input line 218.
+Package color Info: Redefining color red on input line 219.
+Package color Info: Redefining color green on input line 220.
+Package color Info: Redefining color blue on input line 221.
+Package color Info: Redefining color yellow on input line 225.
+Package color Info: Redefining color cyan on input line 226.
+Package color Info: Redefining color magenta on input line 227.
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pst-text/pst-text.sty
+Package: pst-text 2006/01/01 package wrapper for pst-text.tex (hv)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pst-text/pst-text.tex
+ v1.00, 2006/11/05(tvz,hv))
+File: pst-text.tex 2006/11/05 1.00 `pst-text' (tvz)
+) (./proposal.aux
+
+LaTeX Warning: Label `sec:rsearch-challenges' multiply defined.
+
+
+LaTeX Warning: Label `sec:wp:qio' multiply defined.
+
+
+LaTeX Warning: Label `sec:rsearch-challenges' multiply defined.
+
+
+LaTeX Warning: Label `sec:wp:qio' multiply defined.
+
+
+LaTeX Warning: Label `sec:rsearch-challenges' multiply defined.
+
+
+LaTeX Warning: Label `sec:wp:qio' multiply defined.
+
+
+LaTeX Warning: Label `sec:rsearch-challenges' multiply defined.
+
+
+LaTeX Warning: Label `sec:wp:qio' multiply defined.
+
+
+LaTeX Warning: Label `sec:rsearch-challenges' multiply defined.
+
+)
+\openout1 = `proposal.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+ (/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count110
+\scratchdimen=\dimen123
+\scratchbox=\box29
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen124
+\MPnumerator=\count114
+\everyMPtoPDFconversion=\toks20
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 28.
+
+Overfull \hbox (30.07404pt too wide) in paragraph at lines 28--28
+ [][] 
+ []
+
+[1
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!{/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map}]
+Overfull \hbox (21.29234pt too wide) in paragraph at lines 90--113
+\OT1/cmr/m/n/10 has been co-investigator on \OT1/cmr/m/it/10 The-ory and Ap-pli
+-ca-tions Of Con-tain-ers \OT1/cmr/m/n/10 (EP/C511964/1).
+ []
+
+[2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 178.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 178.
+ [3] [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 295.
+
+ (/usr/local/texlive/2010/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 295.
+
+(./proposal.bbl [5]) [6] (./proposal.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 380 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 2322 strings out of 493747
+ 31651 string characters out of 3143546
+ 102872 words of memory out of 3000000
+ 5620 multiletter control sequences out of 15000+200000
+ 9348 words of font info for 33 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 39i,6n,40p,245b,262s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+17.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.
+pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
+b></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
+/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmu10.pfb>
+Output written on proposal.pdf (6 pages, 167629 bytes).
+PDF statistics:
+ 71 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

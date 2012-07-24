@@ -8,13 +8,15 @@
 % \newcites{track}{Publications}
 % \newcites{main}{References}
 
+\renewcommand{\cite}[1]{{\tt #1}}
+
 \newcommand{\citetrack}[1]{\cite{#1}}
 \newcommand{\citemain}[1]{\cite{#1}}
 
 %\input{prelude.tex}
 
 
-\title{Programming and Reasoning in Higher Dimensional Type Theory \\
+\title{Programming and Reasoning\\ in Higher Dimensional Type Theory \\
 \LARGE (Case for Support)}
 
 \author{Thorsten Altenkirch, Eugenia Chang, Neil Ghani and Ondrej Rypacek}
@@ -25,46 +27,23 @@
 %\twocolumn[
 \maketitle
 \section*{Summary}
+Type Theory is the one of the most promising approaches to formally
+certified software and mathematics, being the base of tools like the
+proof assistant Coq \cite{coq} and the dependently typed functional
+programming language Agda \cite{Agda}. In the research proposed here
+we are going to investigate and develop further a novel extension of
+the type-theoretic approach based on a new connection between geometry
+(Homotopy theory) and reasoning proposed by the Field medallist Vladimir
+Voevodsky. In a nutshell this \emph{higher dimensional type theory}
+allows us to treat structures as first class citizens by viewing
+equivalence of structures as equality. We anticipate that this
+innovation will have substantial impact on the feasibility of large scale
+formal development by supporting the replacability of components
+without affecting the rest of the development. Our work will draw on
+and create new connections between fundamental mathematical theories
+like Homotopy theory and higher dimensional category theory on the one
+side and formally supported software engineering on the other.
 
-Recently, the Field medallist Vladimir Voevodsky of the Institute of
-Advanced Study in Princeton became one of the latest converts to
-formally developed, computer checked Mathematics. Voevodsky is now
-using the interactive proof system Coq to support his work and
-encourages his colleagues to follow suit. However, while impressed
-with the potential of systems like Coq based on Type Theory Voevodsky
-also proposed an important extension of the type theoretic approach
-based on his background in Homotopy theory: Univalent Type Theory.
-\cite{voevodsky,awodey}. 
-Univalent Type Theory enables us to view mathematical structures as
-first class citizens and identify equivalent structures as if they
-were equal. While this is clearly important for the development of
-Mathematics it also is essential for the development of a large corpus
-of reusable and certified software allowing us to replace one abstract
-module by another equivalent one without having to repeat the effort
-of certification. While this is a long standing issue in the use of
-abstract datatypes the novelty of Univalent Type Theory lies in the
-possibility to view equivalent structures as equal which is not
-supported by any existing approach.
-
-In the research proposed here we are going to explore Univalent Type
-Theory and in particular investigate its potential impact on Computer
-Science in particular the efficient development of certified
-software. Identifying equivalence of structures with equality raises
-well known coherence issues which have been investigated in the
-context of higher dimensional category theory \cite{eugenia} which
-forms one of the foundations of our research (WP1). We conjecture that
-this background is useful when developing Univalent Type Theory
-addressing thorny issues such as the canonicity problem
-\cite{harper,voevodsky,coquand} and the formulation of higher
-dimensional quotients (WP2). The Agda system \cite{agda} which is at
-the same time a programming language and a interactive proof system is
-ideally suited to make these concepts available to interested
-researchers. We will use the Agda system both as a tool to develop the
-theory (WP3) but also as a target to turn theory into practice by developing
-software tools based on Agda to support the use of Univalent Type
-Theory for certification (WP4). Finally we plan to conduct a number of
-case studies evaluating the potential impact of Univalent Type Theory
-in Computer Science (WP5) and Computer Aided Mathematics (WP6).
 
 \section*{Part 1: Track Record}
 
@@ -171,6 +150,27 @@ research meetings and frequent seminars.
 
 \section*{Part 2: Proposed Research}
 
+Recently, the Field medallist Vladimir Voevodsky of the Institute of
+Advanced Study in Princeton became one of the latest proponents of
+formally developed, computer checked Mathematics. Voevodsky is now
+using the interactive proof system Coq to support his work and
+encourages his colleagues to follow suit. However, while impressed
+with the potential of systems like Coq based on Type Theory Voevodsky
+also proposed an important extension of the type theoretic approach
+based on his background in Homotopy theory: Univalent Type Theory.
+\cite{voevodsky,awodey}. 
+Univalent Type Theory enables us to view mathematical structures as
+first class citizens and identify equivalent structures as if they
+were equal. While this is clearly important for the development of
+Mathematics it also is essential for the development of a large corpus
+of reusable and certified software allowing us to replace one abstract
+module by another equivalent one without having to repeat the effort
+of certification. While this is a long standing issue in the use of
+abstract datatypes the novelty of Univalent Type Theory lies in the
+possibility to view equivalent structures as equal which is not
+supported by any existing approach.
+
+
 \section{Background}
 
 Type Theory ala Martin L\"of is at the same time a programming
@@ -266,10 +266,25 @@ in practice.
 
 \section{Programme and Methodology}
 
-
-
-
-Based on the summary above, we arrive at the following work packages:
+In the research proposed here we are going to explore Univalent Type
+Theory and in particular investigate its potential impact on Computer
+Science in particular the efficient development of certified
+software. Identifying equivalence of structures with equality raises
+well known coherence issues which have been investigated in the
+context of higher dimensional category theory \cite{eugenia} which
+forms one of the foundations of our research (WP1). We conjecture that
+this background is useful when developing Univalent Type Theory
+addressing thorny issues such as the canonicity problem
+\cite{harper,voevodsky,coquand} and the formulation of higher
+dimensional quotients (WP2). The Agda system \cite{agda} which is at
+the same time a programming language and a interactive proof system is
+ideally suited to make these concepts available to interested
+researchers. We will use the Agda system both as a tool to develop the
+theory (WP3) but also as a target to turn theory into practice by developing
+software tools based on Agda to support the use of Univalent Type
+Theory for certification (WP4). Finally we plan to conduct a number of
+case studies evaluating the potential impact of Univalent Type Theory
+in Computer Science (WP5) and Computer Aided Mathematics (WP6).
 
 \subsection*{WP1 : Higher dimensional category theory}
 \label{sec:wp:qio}
