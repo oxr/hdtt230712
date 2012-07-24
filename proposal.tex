@@ -33,12 +33,12 @@ proof assistant Coq \cite{coq} and the dependently typed functional
 programming language Agda \cite{Agda}. In the research proposed here
 we are going to investigate and develop further a novel extension of
 the type-theoretic approach based on a new connection between geometry
-(Homotopy theory) and reasoning proposed by Field medallist Vladimir
+(Homotopy theory) and reasoning proposed by the Field medallist Vladimir
 Voevodsky. In a nutshell this \emph{higher dimensional type theory}
 allows us to treat structures as first class citizens by viewing
 equivalence of structures as equality. We anticipate that this
 innovation will have substantial impact on the feasibility of large scale
-formal development by supporting the replacability of components
+formal development by supporting the replaceability of components
 without affecting the rest of the development. Our work will draw on
 and create new connections between fundamental mathematical theories
 like Homotopy theory and higher dimensional category theory on the one
@@ -173,11 +173,11 @@ supported by any existing approach.
 
 \section{Background}
 
-Type Theory ala Martin L\"of is at the same time a programming
-language and a logical system based on the propositions as types
+Type Theory ala Martin-L\"of is at the same time a programming
+language and a logical systems based on the propositions as as types
 principle. The basic notions are $\Pi$-types generalizing the notion
 of a function type from functional programming to a situation where
-the codomain type can \emph{depend} on the actual input and on the
+the domain type can \emph{depend} on the actual input and on the
 logical side covering the intuitionistic  explanation of the notions of 
 implication and universal quantification. On the other hand
 $\Sigma$-types generalize the notion of a product type (or record) in
@@ -185,9 +185,9 @@ functional programming and on the logical side allow us to model
 conjunction and existential quantification. A 3rd central component are
 equality types which assign to any two values the type of proofs that 
 these values are equal. Unlike in conventional logic, Type Theory
-allows us to talk about properties of proofs, e.g. we can not only ask 
-the question whether two propositions (i.e. types) are logically
-equivalent but also whether they are actually isomorphic
+allows us to talk about properties of proofs, e.g. we can ask the
+question whether two propositions (i.e. types) aren't only logically
+equivalent but whether they are actually isomorphic
 (i.e. computationally equivalent). Other components of Type Theory are
 inductive and coinductive types which allow us to construct trees
 with finite or potentially infinite depth and notion of a universe,
@@ -257,11 +257,11 @@ in practice.
 % - the problem of canonicity 
 
 
-\subsection{Higher dimensional category theory}
-\label{sec:high-dimens-categ}
+% \subsection{Higher dimensional category theory}
+% \label{sec:high-dimens-categ}
 
-\subsection{Homotopy Type Theory}
-\label{sec:homotopy-type-theory}
+% \subsection{Homotopy Type Theory}
+% \label{sec:homotopy-type-theory}
 
 
 \section{Programme and Methodology}
@@ -289,26 +289,66 @@ in Computer Science (WP5) and Computer Aided Mathematics (WP6).
 \subsection*{WP1 : Higher dimensional category theory}
 \label{sec:wp:qio}
 
+In this work package we aim at laying the mathematical foundations for
+the rest of the project. A central component is a better understanding
+of $\omega$ groupoids which can be viewed as the higher dimensional
+generalisation of equivalence relations. There are a number of
+different approaches \cite{operads, etc} including own own
+\cite{csl12} and Coquand's recent work on a constructive reformulation
+of simplicial sets. We need to understand better how these approaches
+are related and what are their respective advantages and
+disadvantages. While our main emphasis is on groupoids we also need to
+relate them to the more general case of higher dimensional categories
+and in particular investigate $(n,\infinity)$ categories.
+
+Opetopes?
+
 \subsubsection*{Research challenges}
 \label{sec:rsearch-challenges}
 \begin{itemize}
 \item Identify a workable, constructive definition of a weak
-$\omega$-groupoid
-
-\item Investigate models of Type Theory (CWFs, locally cartesian
-  closed categories) in a higher dimensional setting,
+$\omega$-groupoid.
 \item Relate this to existing approaches to $\omega$-categories and
-  groupoids based on contractible operads
+  groupoids based on contractible operads.
 \item Relate the notion the simplicial approach to $\omega$-groupoid.
 \end{itemize}
 
 
 \subsection*{WP2 : Foundations of Higher Dimensional Type Theory}
 
+Building on the work in WP1 we are going to investigate higher
+dimensional type theory from a semantic perspective. A starting point
+are 2-dimensional locally cartesian closed categories (2LCCCs) and
+higher dimensional generalisations of categories with families. We
+need to address the issue that weak 2-groupoids do not form a model of
+first order type theory. 
+
+On the other hand we need a syntactic representation of higher
+dimensional type theory, i.e. a collection of
+judgements. \cite{harper:popl} present such a system but assume that
+the lower level is extensional and ignore the role of explicit
+weakenings. Inspired by our semantical analysis we plan to develop
+alternatives based on the groupoid interpretation of type theory.
+Having done this for lower dimensions will inspire the design of
+the $\omega$-dimensional case.
+
+A central question is wether the extension of type theory by
+univalence preserves canonicity, i.e. wether any closed term of a
+first-order datatype is reducible (or at least provably equal) to a
+term in constructor form. Harper \cite{harper:popl} have a first
+result for the 2-dimensional case but we believe we can improve on
+this based on our previous work on the elimination of extensionality
+\cite{alti99,plpv08} by presenting a more general and simpler
+construction based on the groupoid interpretation. We also envisage
+that this will lay the foundation for the higher-dimensional case.
+
 \subsubsection*{Research challenges}
 \label{sec:rsearch-challenges}
 
 \begin{itemize}
+\item Investigate models of Type Theory (CWFs, locally cartesian
+  closed categories) in a higher dimensional setting,
+
 \item Develop a feasible judgemental presentation of higher order,
   higher dimensional Type Theory
 
@@ -319,12 +359,50 @@ $\omega$-groupoid
   in the presence of extensionality and univalence.
 \end{itemize}
 
+\subsection*{WP3 : HIgher dimensional datastructures}
 
-\subsection*{WP3 : Formalizing higher dimensional structures} 
-\label{sec:wp:qio}
+Recently higher dimensional inductive types have been proposed
+\cite{shulman} which provide a type-theoretic account of the notion of
+the fundamental groupoid of a space. This notion has also interesting
+applications in computer science for datastructures whose equality can
+be inductively defined. Going beyond this we consider the notion of a
+higher dimensional quotients which arise as the left adjoint of the
+embedding of types into the category of $n$-groupoids (or more general
+$\omega$-groupoids). Even 2-dimensional quotients provide interesting
+applications to the theory of quotient containers \cite{qcont}
+developed in EPSRC project XXX which has recently aquired new
+attention \cite{gylterud,kock}: we can reduce quotient containers to
+ordinary containers in a higher dimensional setting. 
 
 \subsubsection*{Research challenges}
-\label{sec:rsearch-challenges}
+
+\begin{itemize}
+\item Give a precise syntactic and semantic description of higher
+  dimensional inductive (and coinductive) types.
+\item Develop the notion of higher dimensional quotient types and
+  investigate their relation to higher dimensional datatypes.
+\item Investigate the application of higher dimensional quotient to
+  the theory of quotient containers.
+\end{itemize}
+
+
+\subsection*{WP4 : Formalizing higher dimensional structures} 
+\label{sec:wp:qio}
+
+Since we are working in the context of formally verified, machine
+checked Mathematics in is clear that we are going to apply these ideas
+to our own development. This is also essential due to the complexity
+and dependency on rather subtle details which makes a purely paper
+based development doubtful. Our goal is to formalize aspects of higher
+dimensional category theory and type theory in Agda. One major
+limitation of this may be the computational feasibility of this
+endeavour putting new demands on the implementation. We would also
+like to understand the metatheoretical requirements for the
+formalisation of higher dimensional structures - here we hope to be
+able to build on results from out recent EPSRC project XXX in
+induction-recursion. 
+
+\subsubsection*{Research challenges}
 
 \begin{itemize}
 \item Make the notions of WP1 and WP2 sufficiently precise so that they
@@ -341,11 +419,11 @@ $\omega$-groupoid
 
 \end{itemize}
 
-\subsection*{WP4 : Implement higher dimensional type theory} 
-\label{sec:wp:qio}
+\subsection*{WP5 : Implementation of higher-dimensional calculi} 
+
+
 
 \subsubsection*{Research challenges}
-\label{sec:rsearch-challenges}
 
 \begin{itemize}
 \item Develop the implementation of a higher dimensional core language
@@ -357,13 +435,13 @@ $\omega$-groupoid
 \end{itemize}
 
 
-\subsection*{WP5 : Applications in Computer Science} 
+\subsection*{WP6 : Applications in Computer Science} 
 \label{sec:wp:qio}
 
 \subsubsection*{Research challenges}
 \label{sec:rsearch-challenges}
 
-\subsection*{WP6 : Applications in Formal Mathematics} 
+\subsection*{WP7 : Applications in Formal Mathematics} 
 \label{sec:wp:qio}
 
 \subsubsection*{Research challenges}
