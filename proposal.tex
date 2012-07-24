@@ -187,24 +187,27 @@ cardinals in set theory.
 The notion of equality in Type Theory raises some fundamental questions. 
 % Many interesting questions in relation to Type Theory center around
 % the notion of equality. 
-Can we prove the principle of functional extensionality,
-i.e. that two functions are equal if they are pointwise equal? Maybe
-surprisingly, this principle is not provable in Intensional Type
-Theory which is the basis of most implementations of Type Theory
-(e.g. Agda, Coq). However, this shortcoming can be partly addressed
-using Observational Type Theory under the assumption of uniqueness of
+Can we prove the principle of functional extensionality, i.e. that two
+functions are equal if they are pointwise equal? Maybe surprisingly,
+this principle is not provable in Intensional Type Theory which is the
+basis of most implementations of Type Theory (e.g. Agda,
+Coq). However, this shortcoming can be partly addressed using
+Observational Type Theory under the assumption of uniqueness of
 identity proofs, which is one of the main outcomes of EPSRC project
-XXX based on earlier work by Altenkirch \cite{alti:lics99}.
-The question whether two proofs of
-equality are themselves equal (uniqueness of equality proofs) 
-was open until it was shown by Hofmann and Streicher that this is not
-provable in standard Type Theory using a groupoid interpretation of
-Type Theory \cite{groupoid-model}. Later Lumsdaine and independently
-Garner and van den Berg \cite{lumsdaine,garner-deberg} showed that
-equality in Type Theory gives rise to a weak $\omega$-groupoid, a
-structure well known in higher-dimensional category theory. These results
-suggest a novel interpretation of Type Theory. 
+XXX based on earlier work by Altenkirch \cite{alti:lics99}.  The
+question whether two proofs of equality are themselves equal
+(uniqueness of equality proofs) was open until it was shown by Hofmann
+and Streicher that this is not provable in standard Type Theory using
+a groupoid interpretation of Type Theory \cite{groupoid-model}. Later
+Lumsdaine and independently Garner and van den Berg
+\cite{lumsdaine,garner-deberg} showed that equality in Type Theory
+gives rise to a weak $\omega$-groupoid, a higher-categorical structure
+well known in homotopy theory. These results suggest a novel
+interpretation of Type Theory based on the interplay of Type Theory on
+the logical side, homotopy theory on the geometrical side and
+higher-dimensional category theory on the algebraic side.
 
+% on homotopy theory
 Voevodsky and Awodey developed an interpretation of Type Theory using
 homotopy theory \cite{voevodsky,awodey}. In this interpretation types
 are viewed as (special) topological spaces, elements as points and
@@ -220,6 +223,29 @@ one way to show that two isomorphic sets are equal. The univalence
 axiom implies the principle of extensionality --- indeed it can be viewed
 as a strong extensionality principle which identifies
 indistinguishable types.  
+
+% higher category theory
+The development of algebraic topology and homotopy theory in
+particular has driven the development of higher-dimensional category
+theory as its algebraic counterpart. A higher(-dimensional) category
+is a category where the arrows between two objects form not just a set
+but again a higher category. One can assign a higher category to every
+space by considering the points in the space as objects (0-cells), the
+paths between points as arrows (1-cells), the deformations of paths as
+arrows between arrows (2-cells), etc. This is analogous to the
+formation of higher identity types in Type Theory. It is a property
+not only of higher categories arising in this way that the axioms of a
+category don't hold on the nose but only up higher cells. This
+weakening of equality to cells gives rise exponential blowup in the
+complexity of naive formulations of higher-dimensional categories
+\cite{tricategories,tetracategories} which has ultimately led to the
+development of more elaborate approaches to higher-dimensional categories,
+most notably based on higher operads
+\cite{batanin,leinster}, simplicial and opetopic sets \cite{joyal,baez}.  These
+various formulations need yet to be refined, compared and further
+developed in order to arrive at a tractable and workable theory of
+higher categories, in particular when the goal is a formally verified
+and computable formulation.
 
 Type Theory has an increasing influence on the development of
 certified software and mathematical theories in particular through the
