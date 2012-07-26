@@ -35,7 +35,7 @@
 \usepackage{color}
 \newcommand{\txa}[1]{\textcolor{red}{\textbf{Thorsten:~}#1}}
 
-\renewcommand{\cite}[1]{{\tt[#1]}}
+%\renewcommand{\cite}[1]{{\tt[#1]}}
 
 \newcommand{\citetrack}[1]{\cite{#1}}
 \newcommand{\citemain}[1]{\cite{#1}}
@@ -58,7 +58,7 @@
 \section*{Summary}
 Type Theory is the one of the most promising approaches to formally
 certified software and mathematics, being the base of tools like the
-proof assistant Coq \cite{coq} and the dependently typed functional
+proof assistant Coq \cite{CoqArt} and the dependently typed functional
 programming language Agda \cite{Agda}. In the research proposed here
 we are going to investigate and develop further a novel extension of
 the type-theoretic approach based on a new connection between geometry
@@ -218,35 +218,38 @@ basis of most implementations of Type Theory (e.g. Agda,
 Coq). However, this shortcoming can be partly addressed using
 Observational Type Theory under the assumption of uniqueness of
 identity proofs, which is one of the main outcomes of EPSRC project
-XXX based on earlier work by Altenkirch \cite{alti:lics99}.  The
-question whether two proofs of equality are themselves equal
+XXX based on earlier work by Altenkirch \cite{altenkirch:extSetoids}.
+The question whether two proofs of equality are themselves equal
 (uniqueness of equality proofs) was open until it was shown by Hofmann
 and Streicher that this is not provable in standard Type Theory using
-a groupoid interpretation of Type Theory \cite{groupoid-model}. Later
-Lumsdaine and independently Garner and van den Berg
-\cite{lumsdaine,garner-deberg} showed that equality in Type Theory
-gives rise to a weak $\omega$-groupoid, a higher-categorical structure
-well known in homotopy theory. These results suggest a novel
-interpretation of Type Theory based on the interplay of Type Theory on
-the logical side, homotopy theory on the geometrical side and
-higher-dimensional category theory on the algebraic side.
+a groupoid interpretation of Type Theory
+\cite{hofmannStreicher:groupoids}. Later Lumsdaine and independently
+Garner and van den Berg
+\cite{lumsdaine:omegaCatsFromTT,bergGarner:typesAreWeakOG} showed that
+equality in Type Theory gives rise to a weak $\omega$-groupoid, a
+higher-categorical structure well known in homotopy theory. These
+results suggest a novel interpretation of Type Theory based on the
+interplay of Type Theory on the logical side, homotopy theory on the
+geometrical side and higher-dimensional category theory on the
+algebraic side.
 
 % on homotopy theory
 Voevodsky and Awodey developed an interpretation of Type Theory using
-homotopy theory \cite{voevodsky,awodey}. In this interpretation types
-are viewed as (special) topological spaces, elements as points and
-equality proofs as paths or homotopies between elements. The homotopy
-interpretation gives a very intuitive geometric explanation for the
-unprovability of uniqueness of equality proofs. It also lead Voevodsky
-to postulate the univalence axiom, which states that weakly equivalent
-types should be equal. In particular isomorphic sets such as natural
-numbers and lists of natural numbers are equated as a consequence of
-the univalence axiom. Clearly, the univalence axiom is incompatible
-with uniqueness of equality proofs since in general there is more than
-one way to show that two isomorphic sets are equal. The univalence
-axiom implies the principle of extensionality --- indeed it can be viewed
-as a strong extensionality principle which identifies
-indistinguishable types.  
+homotopy theory
+\cite{voevodsky:equivalenceAndUnivalence,awodey:tth}. In this
+interpretation types are viewed as (special) topological spaces,
+elements as points and equality proofs as paths or homotopies between
+elements. The homotopy interpretation gives a very intuitive geometric
+explanation for the unprovability of uniqueness of equality proofs. It
+also lead Voevodsky to postulate the univalence axiom, which states
+that weakly equivalent types should be equal. In particular isomorphic
+sets such as natural numbers and lists of natural numbers are equated
+as a consequence of the univalence axiom. Clearly, the univalence
+axiom is incompatible with uniqueness of equality proofs since in
+general there is more than one way to show that two isomorphic sets
+are equal. The univalence axiom implies the principle of
+extensionality --- indeed it can be viewed as a strong extensionality
+principle which identifies indistinguishable types.
 
 % higher category theory
 The development of algebraic topology and homotopy theory in
@@ -260,16 +263,18 @@ arrows between arrows (2-cells), etc. This is analogous to the
 formation of higher identity types in Type Theory. It is a property
 not only of higher categories arising in this way that the axioms of a
 category don't hold on the nose but only up to higher cells. This
-weakening of equality to cells gives rise to an exponential blowup in the
-complexity of naive formulations of higher-dimensional categories
-\cite{tricategories,tetracategories} which has ultimately led to the
-development of more elaborate approaches to higher-dimensional categories,
-most notably based on higher operads
-\cite{batanin,leinster}, simplicial and opetopic sets \cite{joyal,baez}.  These
-various formulations need yet to be refined, compared and further
-developed in order to arrive at a tractable and workable theory of
-higher categories, in particular when the goal is a formally verified
-and computable formulation.
+weakening of equality to cells gives rise to an exponential blowup in
+the complexity of naive formulations of higher-dimensional categories
+\cite{gordonPowerStreet:tricategories,trimble:tetracategories} which
+has ultimately led to the development of more elaborate approaches to
+higher-dimensional categories, most notably based on higher operads
+\cite{batanin:monoidal,cheng:comparingOperadicTheories}, weak
+enrichment \cite{leinster:survey}, simplicial and opetopic sets
+\cite{joyal02:quasicategories,baezDolan:opetopes,cheng:opetopicAndMultitopicFoundations}
+among many others \cite{leinster:HOHC,leinster:survey,chengLauda:guidebook}.  These various formulations need yet to be
+refined, compared and further developed in order to arrive at a
+tractable and workable theory of higher categories, in particular when
+the goal is a formally verified and computable formulation.
 
 Type Theory has an increasing influence on the development of
 certified software and mathematical theories in particular through the
@@ -287,8 +292,6 @@ axiom this is not sufficient in Type Theory because this may stop
 computation. Hence extensionality principles come with a canonicity
 problem which needs to be addressed before these principles can be used
 in practice. 
-
-\txa{Some more background on higher dimensional cats?}
 
 
 % - Type Theory
@@ -320,7 +323,7 @@ investigated in the context of higher dimensional category theory
 (WP1). This background is essential when we study the syntax and
 semantics of higher dimensional type theory (WP2) --- hoping to
 address thorny issues such as the canonicity problem in presence of
-the univalence principle. The Agda system \cite{agda}
+the univalence principle. The Agda system \cite{Agda}
 which is at the same time a programming language and a interactive
 proof system is ideally suited to make these concepts available to
 interested researchers. We will use the Agda system both as a tool to
@@ -338,9 +341,9 @@ In this work package we aim at laying the mathematical foundations for
 the rest of the project. A central component is a better understanding
 of $\omega$ groupoids which can be viewed as the higher dimensional
 generalisation of equivalence relations. There are a number of
-different approaches \cite{operads, etc} including own own
-\cite{csl12} and Coquand's recent work on a constructive reformulation
-of simplicial sets. We need to understand better how these approaches
+different approaches \cite{leinster:survey,batanin:monoidal,joyal02:quasicategories,baezDolan:opetopes} including our own
+\cite{altenRypacek:weakOmegaGrp} and Coquand's recent work on a constructive reformulation
+of simplicial sets\cite{??}. We need to understand better how these approaches
 are related and what are their respective advantages and
 disadvantages. While our main emphasis is on groupoids we also need to
 relate them to the more general case of higher dimensional categories
@@ -372,7 +375,7 @@ first order type theory.
 
 On the other hand we need a syntactic representation of higher
 dimensional type theory, i.e. a collection of
-judgements. \cite{harper:popl} present such a system but assume that
+judgements. \cite{licataHarper:canonicity2d} present such a system but assume that
 the lower level is extensional and ignore the role of explicit
 weakenings. Inspired by our semantical analysis we plan to develop
 alternatives based on the groupoid interpretation of type theory.
@@ -382,12 +385,13 @@ the $\omega$-dimensional case.
 A central question is wether the extension of type theory by
 univalence preserves canonicity, i.e. wether any closed term of a
 first-order datatype is reducible (or at least provably equal) to a
-term in constructor form. Harper \cite{harper:popl} have a first
-result for the 2-dimensional case but we believe we can improve on
-this based on our previous work on the elimination of extensionality
-\cite{alti99,plpv08} by presenting a more general and simpler
-construction based on the groupoid interpretation. We also envisage
-that this will lay the foundation for the higher-dimensional case.
+term in constructor form. Harper \cite{licataHarper:canonicity2d} have
+a first result for the 2-dimensional case but we believe we can
+improve on this based on our previous work on the elimination of
+extensionality \cite{altenkirch:extSetoids,altenMcBSwier07:beast} by
+presenting a more general and simpler construction based on the
+groupoid interpretation. We also envisage that this will lay the
+foundation for the higher-dimensional case.
 
 \subsubsection*{Research challenges}
 \label{sec:rsearch-challenges}
@@ -463,19 +467,20 @@ dimensional type theory as a proof of concept.
 
 \subsection*{WP5 : Applications in Computer Science} 
 Recently higher dimensional inductive types have been proposed
-\cite{shulman} which provide a type-theoretic account of the notion of
-the fundamental groupoid of a space. This notion has also interesting
-applications in computer science for datastructures whose equality can
-be inductively defined. Going beyond this we consider the notion of a
-higher dimensional quotients which arise as the left adjoint of the
-embedding of types into the category of $n$-groupoids (or more general
-$\omega$-groupoids). Even 2-dimensional quotients provide interesting
-applications to the theory of quotient containers \cite{qcont}
-developed in EPSRC project XXX which has recently aquired new
-attention \cite{gylterud,kock}: we can reduce quotient containers to
-ordinary containers in a higher dimensional setting. 
+\cite{shulman:blog} which provide a type-theoretic account of the
+notion of the fundamental groupoid of a space. This notion has also
+interesting applications in computer science for datastructures whose
+equality can be inductively defined. Going beyond this we consider the
+notion of a higher dimensional quotients which arise as the left
+adjoint of the embedding of types into the category of $n$-groupoids
+(or more general $\omega$-groupoids). Even 2-dimensional quotients
+provide interesting applications to the theory of quotient containers
+\cite{abottAltenGhaniMcB:quotientContainers} developed in EPSRC
+project XXX which has recently aquired new attention
+\cite{gylterud:thesis,kock:groupoids}: we can reduce quotient containers to ordinary
+containers in a higher dimensional setting.
 
-Rypacek \cite{ondrej:phd} found exciting applications of higher
+Rypacek \cite{rypacek:thesis} found exciting applications of higher
 dimensional reasoning in programming language theory (distributive
 laws) in particular he was able to analyze the relation between
 functional and object oriented programming. This approach is ideally
@@ -532,13 +537,14 @@ Theory community.
 
 \txa{Say more ?}
 
-{% \small 
+%{ \small 
 % \bibliographystylemain{abbrv}
 % \bibliographymain{proposal} 
 % }
 
 {\small
-\bibliographystyle{abbrv}
+\bibliographystyle{plain}
 \bibliography{proposal} 
 }
+
 \end{document}

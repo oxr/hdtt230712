@@ -6,3 +6,11 @@ proposal.log
 proposal.pdf
 
 proposal.synctex.gz
+
+*.bbl
+
+*.bbl
+
+proposal.bbl
+
+proposal.blg
