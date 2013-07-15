@@ -334,30 +334,35 @@ plan to conduct a number of case studies evaluating the potential
 impact of Higher-dimensional Type Theory in Computer Science (WP5) and
 Computer Aided Mathematics (WP6).
 
-\subsection*{WP1 : Higher dimensional category theory}
+\subsection*{WP1 : Constructive models of Homotopy Type Theory}
 \label{sec:wp:qio}
 
-In this work package we aim at laying the mathematical foundations for
-the rest of the project. A central component is a better understanding
-of $\omega$ groupoids which can be viewed as the higher dimensional
-generalisation of equivalence relations. There are a number of
-different approaches \cite{leinster:survey,batanin:monoidal,joyal02:quasicategories,baezDolan:opetopes} including our own
-\cite{altenRypacek:weakOmegaGrp} and Coquand's recent work on a constructive reformulation
-of simplicial sets\cite{??}. We need to understand better how these approaches
-are related and what are their respective advantages and
-disadvantages. While our main emphasis is on groupoids we also need to
-relate them to the more general case of higher dimensional categories
-and in particular investigate $(n,\infty)$ categories.
+What is a model of Homotopy Type Theory? Much of the theory is
+justified by its interpretation in the category of simplical sets. To
+be more precise dependent types are interpreted as Kan fibrations. 
+However, this intepretation is non-constructive which makes it
+unsuitable for our purpose since this doesn't tell us how to evaluate
+programs in HoTT. Coquand \cite{coquand:semi} proposes to use
+semi-simplicial sets to overcome this issue, but he is only able to
+interpret weak Type Theory (i.e. no convesion under the $\lambda$). 
 
-\txa{Say something about Opetopes?}
-
-\txa{Need lots of input on this WP. Eugenia? Neil?}
+Intuitively, types in HoTT should be interpreted as weak
+$\omega$-groupoids. Indeed, we have studied weak $\omega$-groupoids 
+in a type theoretic setting \cite{altiRypacek:weakOmegaGrp} and
+recently Brunerie has greatly simplified our approach
+\cite{brunery:wgpds}. However, it is not obvious how this can be used
+how to model type theory since there is a combinatoric explosion of
+coherence problems. On the other hand strict $\omega$ groupoids are a model of Type
+Theory \cite{Warren:PhD} but they do not validate univalence. A
+possibility we are going to consider is to study a 
+compromise, i.e. strict $\omega$-categories with a weak symmetry.
+This may avoid the combinatoric problems connected with a completely
+weak approach but still allows us to model univalence.
 
 \subsubsection*{Research challenges}
 \label{sec:rsearch-challenges}
 \begin{itemize}
-\item Identify a workable, constructive definition of a weak
-$\omega$-groupoid.
+\item Invesitigate Brunderie's notion of weak $\omega$-groupoids and alternatives.
 \item Relate this to existing approaches to $\omega$-categories and
   groupoids based on contractible operads.
 \item Relate the notion the simplicial approach to $\omega$-groupoid.
