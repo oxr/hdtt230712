@@ -43,7 +43,7 @@
 %\input{prelude.tex}
 
 
-\title{Programming and Reasoning\\ in Higher Dimensional Type Theory \\
+\title{Reusability and Abstraction in Formal Verification from Homotopy Type Theory
 \LARGE (Case for Support)}
 
 \author{Thorsten Altenkirch, Eugenia Chang, Neil Ghani and Ondrej Rypacek}
@@ -63,7 +63,7 @@ programming language Agda \cite{Agda}. In the research proposed here
 we are going to investigate and develop further a novel extension of
 the type-theoretic approach based on a new connection between geometry
 (Homotopy theory) and reasoning proposed by Field medallist Vladimir
-Voevodsky. In a nutshell this \emph{higher dimensional type theory}
+Voevodsky. In a nutshell this \emph{Homotopy type Theory
 allows us to treat structures as first class citizens by viewing
 equivalence of structures as equality. We anticipate that this
 innovation will have substantial impact on the feasibility of large scale
@@ -163,27 +163,79 @@ research meetings and frequent seminars.
 
 \section*{Part 2: Proposed Research}
 
-Recently, Field medallist Vladimir Voevodsky of the Institute of
-Advanced Study in Princeton became one of the latest proponents of
-formally developed, computer checked Mathematics. Voevodsky is now
-using the interactive proof system Coq to support his work and
-encourages his colleagues to follow suit. However, while impressed
-with the potential of systems like Coq based on Type Theory Voevodsky
-also proposed an important extension of the type theoretic approach
-based on his background in Homotopy theory: Univalent Type Theory ---
-an instance of a higher dimensional theory where the structure of
-equality proofs in non-trivial.
+With the advent of interactive proof assistants like Coq or Isabelle,
+formal verification of software systems is becoming more and more of a
+reality. E.g. within the CompCert project a relaistic C-compiler has
+been verified, at the same time Georges Gonthier and his team are
+formally verifying the theory of finite groups, Tom Hales is
+working on a formal verification of the Kepler conjecture, and indeed
+many academic papers in theoretical computer science are accompanied
+by a formal proof development. This success also creates a new
+challenge, we have to do software engineering for formal developments,
+we need to reuse and share concepts between different developments to
+be able to tackle realistic applications. Here it appears that the
+tools we are using are insuffcient because they do not sufficently
+support abstraction. 
 
-Higher dimensional Type Theory with univalence enables us to view
-mathematical structures as first class citizens and identify
-equivalent structures as if they were equal. While this is clearly
-important for the development of Mathematics it also is essential for
-the development of a large corpus of reusable and certified software
-allowing us to replace one abstract module by another equivalent one
-without having to repeat the effort of certification. While this is a
-long standing issue in the use of abstract datatypes the novelty of
-Higher dimensional Type Theory lies in the possibility to view equivalent
-structures as equal which is not supported by any existing approach.
+This may come as a surprise since the idea of
+\emph{abstract data types} is the bread and butter of computer
+science. But are our data types really abstract? Imagine you have
+just formally verified a development of basic arithmetical theorems
+based on unary Peano-style natural numbers. Nice, says your colleague
+but this is a really inefficient representation of numbers, why don't
+you use binary numbers instead? No problem, you think, after all
+binary numbers are \emph{isomorphic} to unary natural numbers
+so hence everything should carry over. Indeed in the language you are
+using there is no way you could distinguish unary and binary natural
+numbers. However, replacing one by the other requires bascially a
+reeingineering of all the definitions and theorems you have
+proven. Shouldn't this be just automatic? Shouldn't isomorphic
+structures be considered equal?
+
+The answer lies in a novel combination of two concepts: one from
+Computer Science, Type Theory (indeed the aforementioned Coq system is
+based on Type Theory) and from Mathematics Homotopy Theory as an
+abstract way to look at geometric objects. This at the first glance
+unilkely combination has been proposed by Vladimir Voevodsky, Field
+Medallist, working at the Institute for Advanced Study. His ideas have
+been explored during a special year at the IAS attended by some of the
+leading researchers in theoretical computer science, logic and
+homotopy theory. As a result of this a new foundation of Mathematics,
+Homotopy Type Theory has been proposed, which may be an alternative to
+Set Theory and which has an important impact on how to do mathematics
+and the same time abstractly and precisely enough to be amenable to
+formal verfication.  
+
+Within this project we propose to take advantage of these new
+foundations for computer science and using Homotopy Type Theory as an
+integrated langauge for programming and reasoning which does support
+abstraction properly. Indeed isomorphic structures in HoTT are
+\textbf{equal} and no reengineering is necessary. This is a
+revolutionary step making structures first class citizens in a way
+similar to functions becomnig first class citizens in functional
+programming.  
+
+% Recently, Field medallist Vladimir Voevodsky of the Institute of
+% Advanced Study in Princeton became one of the latest proponents of
+% formally developed, computer checked Mathematics. Voevodsky is now
+% using the interactive proof system Coq to support his work and
+% encourages his colleagues to follow suit. However, while impressed
+% with the potential of systems like Coq based on Type Theory Voevodsky
+% also proposed an important extension of the type theoretic approach
+% based on his background in Homotopy theory: Univalent Type Theory ---
+% an instance of a higher dimensional theory where the structure of
+% equality proofs in non-trivial.
+
+% Higher dimensional Type Theory with univalence enables us to view
+% mathematical structures as first class citizens and identify
+% equivalent structures as if they were equal. While this is clearly
+% important for the development of Mathematics it also is essential for
+% the development of a large corpus of reusable and certified software
+% allowing us to replace one abstract module by another equivalent one
+% without having to repeat the effort of certification. While this is a
+% long standing issue in the use of abstract datatypes the novelty of
+% Higher dimensional Type Theory lies in the possibility to view equivalent
+% structures as equal which is not supported by any existing approach.
 
 \section{Background}
 
@@ -346,10 +398,6 @@ disadvantages. While our main emphasis is on groupoids we also need to
 relate them to the more general case of higher dimensional categories
 and in particular investigate $(n,\infty)$ categories.
 
-\txa{Say something about Opetopes?}
-
-\txa{Need lots of input on this WP. Eugenia? Neil?}
-
 \subsubsection*{Research challenges}
 \label{sec:rsearch-challenges}
 \begin{itemize}
@@ -361,7 +409,7 @@ $\omega$-groupoid.
 \end{itemize}
 
 
-\subsection*{WP2 : Foundations of Higher Dimensional Type Theory}
+\subsection*{WP2 : Foundations of Homotopy Type Theory}
 
 Building on the work in WP1 we are going to investigate higher
 dimensional type theory from a semantic perspective. A starting point
