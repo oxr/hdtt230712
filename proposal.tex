@@ -411,60 +411,84 @@ compromise, i.e. strict $\omega$-categories with a weak symmetry.
 This may avoid the combinatoric problems connected with a completely
 weak approach but still allows us to model univalence.
 
-\subsubsection*{Research challenges}
-\label{sec:rsearch-challenges}
-\begin{itemize}
-\item Invesitigate Brunderie's notion of weak $\omega$-groupoids and alternatives.
-\item Relate this to existing approaches to $\omega$-categories and
-  groupoids based on contractible operads.
-\item Relate the notion the simplicial approach to $\omega$-groupoid.
-\end{itemize}
+% \subsubsection*{Research challenges}
+% \label{sec:rsearch-challenges}
+% \begin{itemize}
+% \item Invesitigate Brunderie's notion of weak $\omega$-groupoids and alternatives.
+% \item Relate this to existing approaches to $\omega$-categories and
+%   groupoids based on contractible operads.
+% \item Relate the notion the simplicial approach to $\omega$-groupoid.
+% \end{itemize}
 
 
-\subsection*{WP2 : Foundations of Homotopy Type Theory}
+\subsection*{WP2 : Homotopy Type Theory, constructively}
 
-Building on the work in WP1 we are going to investigate higher
-dimensional type theory from a semantic perspective. A starting point
-are 2-dimensional locally cartesian closed categories and
-higher dimensional generalisations of categories with families. We
-need to address the issue that weak 2-groupoids do not form a model of
-first order type theory. 
+In the book on Homotopy Type Theory the canicity problem is identified
+as one of the central open problems for HoTT. Basically in the current
+formulation of HoTT it is not clear how a closed expression of type
+Nat can be evaluated to a numeral. Voevodsky has conjectured that this
+should always be possible but so far no solution to the problem is
+known. Basically, HoTT is a programming langauge but we don't know how
+to run its programs!
 
-On the other hand we need a syntactic representation of higher
-dimensional type theory, i.e. a collection of
-judgements. \cite{licataHarper:canonicity2d} present such a system but assume that
-the lower level is extensional and ignore the role of explicit
-weakenings. Inspired by our semantical analysis we plan to develop
-alternatives based on the groupoid interpretation of type theory.
-Having done this for lower dimensions will inspire the design of
-the $\omega$-dimensional case.
+Our approach is to use the results from WP1 to develop a definitional
+equality for HoTT which avoids the canonicity problem. We need to show
+that such an equality is decidable, here we hope to be able to draw
+from recent results by the group in Strathclyde \cite{ConorPierre},
+which shows how to extend type theory with equations on neutral terms.
 
-A central question is wether the extension of type theory by
-univalence preserves canonicity, i.e. wether any closed term of a
-first-order datatype is reducible (or at least provably equal) to a
-term in constructor form. Harper \cite{licataHarper:canonicity2d} have
-a first result for the 2-dimensional case but we believe we can
-improve on this based on our previous work on the elimination of
-extensionality \cite{altenkirch:extSetoids,altenMcBSwier07:beast} by
-presenting a more general and simpler construction based on the
-groupoid interpretation. We also envisage that this will lay the
-foundation for the higher-dimensional case.
+Even if we should be unable to solve the problem in general we should
+be able to solve it at least for some low dimension, let's say 2 or 3
+or even any finite level
+which would be sufficent for most practical applications but
+interlectually less satisfying. 
 
-\subsubsection*{Research challenges}
-\label{sec:rsearch-challenges}
+% Using the ideas presented in WP1 we think we should be able to
+% solve this problem and develop a decidable
 
-\begin{itemize}
-\item Investigate models of Type Theory (CWFs, locally cartesian
-  closed categories) in a higher dimensional setting,
+% Building on the work in WP1 we are going to investigate higher
+% dimensional type theory from a semantic perspective. A starting point
+% are 2-dimensional locally cartesian closed categories and
+% higher dimensional generalisations of categories with families. We
+% need to address the issue that weak 2-groupoids do not form a model of
+% first order type theory. 
 
-\item Develop a feasible judgemental presentation of higher order,
-  higher dimensional Type Theory
+% On the other hand we need a syntactic representation of higher
+% dimensional type theory, i.e. a collection of
+% judgements. \cite{licataHarper:canonicity2d} present such a system but assume that
+% the lower level is extensional and ignore the role of explicit
+% weakenings. Inspired by our semantical analysis we plan to develop
+% alternatives based on the groupoid interpretation of type theory.
+% Having done this for lower dimensions will inspire the design of
+% the $\omega$-dimensional case.
 
-\item Identify a notion of higher dimensional model and show that
-  standard constructions give rise or are closed under this notion,
+% A central question is wether the extension of type theory by
+% univalence preserves canonicity, i.e. wether any closed term of a
+% first-order datatype is reducible (or at least provably equal) to a
+% term in constructor form. Harper \cite{licataHarper:canonicity2d} have
+% a first result for the 2-dimensional case but we believe we can
+% improve on this based on our previous work on the elimination of
+% extensionality \cite{altenkirch:extSetoids,altenMcBSwier07:beast} by
+% presenting a more general and simpler construction based on the
+% groupoid interpretation. We also envisage that this will lay the
+% foundation for the higher-dimensional case.
 
-\item Investigate the problem of weak and strong canonicity
-  in the presence of extensionality and univalence.
+% \subsubsection*{Research challenges}
+% \label{sec:rsearch-challenges}
+
+% \begin{itemize}
+% \item Investigate models of Type Theory (CWFs, locally cartesian
+%   closed categories) in a higher dimensional setting,
+
+% \item Develop a feasible judgemental presentation of higher order,
+%   higher dimensional Type Theory
+
+% \item Identify a notion of higher dimensional model and show that
+%   standard constructions give rise or are closed under this notion,
+
+% \item Investigate the problem of weak and strong canonicity
+%   in the presence of extensionality and 
+%  univalence.
 \end{itemize}
 
 \subsection*{WP3 : Formalisation} 
