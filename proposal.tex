@@ -9,6 +9,7 @@
 % \newcites{main}{References}
 
 \usepackage{mathptmx}
+\usepackage{amssymb}
 %\usepackage{epsf}      
 %\usepackage{url}
 %\usepackage[dvips]{graphics}
@@ -35,7 +36,7 @@
 \usepackage{color}
 \newcommand{\txa}[1]{\textcolor{red}{\textbf{Thorsten:~}#1}}
 
-%\renewcommand{\cite}[1]{{\tt[#1]}}
+\renewcommand{\cite}[1]{{\tt[#1]}}
 
 \newcommand{\citetrack}[1]{\cite{#1}}
 \newcommand{\citemain}[1]{\cite{#1}}
@@ -63,7 +64,7 @@ programming language Agda \cite{Agda}. In the research proposed here
 we are going to investigate and develop further a novel extension of
 the type-theoretic approach based on a new connection between geometry
 (Homotopy theory) and reasoning proposed by Field medallist Vladimir
-Voevodsky. In a nutshell this \emph{Homotopy type Theory
+Voevodsky. In a nutshell this \emph{Homotopy type Theory}
 allows us to treat structures as first class citizens by viewing
 equivalence of structures as equality. We anticipate that this
 innovation will have substantial impact on the feasibility of large scale
@@ -386,62 +387,146 @@ plan to conduct a number of case studies evaluating the potential
 impact of Higher-dimensional Type Theory in Computer Science (WP5) and
 Computer Aided Mathematics (WP6).
 
-\subsection*{WP1 : Constructive models of Homotopy Type Theory}
-\label{sec:wp:qio}
+\subsection*{WP1 : Categorical Models of Homotopy Type Theory}
 
-What is a model of Homotopy Type Theory? Much of the theory is
-justified by its interpretation in the category of simplical sets. To
-be more precise dependent types are interpreted as Kan fibrations. 
-However, this intepretation is non-constructive which makes it
-unsuitable for our purpose since this doesn't tell us how to evaluate
-programs in HoTT. Coquand \cite{coquand:semi} proposes to use
-semi-simplicial sets to overcome this issue, but he is only able to
-interpret weak Type Theory (i.e. no convesion under the $\lambda$). 
+The standard model to justify HoTT is the model in the category of
+simplicial sets, modelling types as Kan Fibrations
+\cite{voevodskyEtAl}. However, a shortcoming of this model is that it
+is not constructive - this was pointed out by Coquand who proposed to
+use semisimplicial sets instead \cite{CoquandEtAl}. Even this approach
+still has some shortcomings, one of them is that it only models weak
+Type Theory (i.e. no conversion under $\lambda$).
 
-Intuitively, types in HoTT should be interpreted as weak
-$\omega$-groupoids. Indeed, we have studied weak $\omega$-groupoids 
-in a type theoretic setting \cite{altiRypacek:weakOmegaGrp} and
-recently Brunerie has greatly simplified our approach
-\cite{brunery:wgpds}. However, it is not obvious how this can be used
-how to model type theory since there is a combinatoric explosion of
-coherence problems. On the other hand strict $\omega$ groupoids are a model of Type
-Theory \cite{Warren:PhD} but they do not validate univalence. A
-possibility we are going to consider is to study a 
-compromise, i.e. strict $\omega$-categories with a weak symmetry.
-This may avoid the combinatoric problems connected with a completely
-weak approach but still allows us to model univalence.
+We are going to take a fresh look at interpretations of HoTT. Instead
+of using variations of simplicial sets we are going to base our
+approach on a direct representation of weak $\omega$-Groupoids in Type
+Theory. This has been explored in \cite{altiRypacek} and recently very
+much simplified by Brunerie \cite{guillaume:gpds}. Attempting to use
+this approach to model type theory means that we have to tackle some
+non-trivial coherence issues. There are a number of choices
+which vary what is strict and what is weak. One extreme is Warren's 
+strict $\omega$-groupoid model, which however is too strict and cannot
+model univalence. We will try to find a sweet spot in this spectrum,
+e.g. something like a strict $\omega$-category with a weak symmetry.
+
+The main open problem in the metatheory of HoTT is \emph{canonicity
+  problem}, i.e. it is not clear how to reduce a closed term of type
+$\mathbb{N}$ to a numeral, this is related to Voevodsky's conjecture.  Basically in the current
+formulation of HoTT it is not clear how a closed expression of type
+Nat can be evaluated to a numeral. Voevodsky has conjectured that this
+should always be possible but so far no solution to the problem is
+known. HoTT is a programming langauge but we don't know how
+to run its programs!
+
+Coming up with a constructive interpretation where the type $\Bbb{N}$ 
+is interpreted by the natural numbers would provide a positive answer
+to this problem.
+
+Our goal is not only to model basic type theory with univalence, but
+also higher inductive types (HITs). The existing interpretation is
+based on the non-constructive simplicial set model \cite{shulman}, we
+hope to be able to exhibit a more straightforward account where HITs
+are modelled as initial algebras of $\omega$-endofunctors.
+
+\subsubsection*{Research challenges}
+\label{sec:rsearch-challenges}
+\begin{itemize}
+\item Invesitigate Brunerie's notion of weak $\omega$-groupoids and alternatives.
+\item Study different variations of semi-strict $\omega$-groupoids as
+  potential models of HoTT.
+\item Verify that such a construction would solve the canonicity problem.
+\item Investigate wether HITs can be modelled as initial algebras of
+  $\omega$-functors. 
+\end{itemize}
+
+
+% What is a model of Homotopy Type Theory? Much of the theory is
+% justified by its interpretation in the category of simplical sets. To
+% be more precise dependent types are interpreted as Kan fibrations. 
+% However, this intepretation is non-constructive which makes it
+% unsuitable for our purpose since this doesn't tell us how to evaluate
+% programs in HoTT. Coquand \cite{coquand:semi} proposes to use
+% semi-simplicial sets to overcome this issue, but he is only able to
+% interpret weak Type Theory (i.e. no conversion under the $\lambda$). 
+
+% Intuitively, types in HoTT should be interpreted as weak
+% $\omega$-groupoids. Indeed, we have studied weak $\omega$-groupoids 
+% in a type theoretic setting \cite{altiRypacek:weakOmegaGrp} and
+% recently Brunerie has greatly simplified our approach
+% \cite{brunery:wgpds}. However, it is not obvious how this can be used
+% how to model type theory since there is a combinatoric explosion of
+% coherence problems. On the other hand strict $\omega$ groupoids are a model of Type
+% Theory \cite{Warren:PhD} but they do not validate univalence. A
+% possibility we are going to consider is to study a 
+% compromise, i.e. strict $\omega$-categories with a weak symmetry.
+% This may avoid the combinatoric problems connected with a completely
+% weak approach but still allows us to model univalence.
 
 % \subsubsection*{Research challenges}
 % \label{sec:rsearch-challenges}
 % \begin{itemize}
-% \item Invesitigate Brunderie's notion of weak $\omega$-groupoids and alternatives.
+% \item Invesitigate Brunerie's notion of weak $\omega$-groupoids and alternatives.
 % \item Relate this to existing approaches to $\omega$-categories and
 %   groupoids based on contractible operads.
 % \item Relate the notion the simplicial approach to $\omega$-groupoid.
 % \end{itemize}
 
 
-\subsection*{WP2 : Homotopy Type Theory, constructively}
+\subsection*{WP2 : A syntact presentation of HoTT}
 
-In the book on Homotopy Type Theory the canicity problem is identified
-as one of the central open problems for HoTT. Basically in the current
-formulation of HoTT it is not clear how a closed expression of type
-Nat can be evaluated to a numeral. Voevodsky has conjectured that this
-should always be possible but so far no solution to the problem is
-known. Basically, HoTT is a programming langauge but we don't know how
-to run its programs!
+While the work outlined in WP1 will provide some important general
+facts about HoTT, for a reasonable implementation it is essential to
+have a purely syntactic presentation of the theory and in particualr
+the conversion relation. Here we follow our approach for Observational
+Type Theory \cite{PLPV07}, the main difference here is that we have to
+take account of proof relevance and also that we have to be able to
+incorporate univalence and higher inductive types. 
 
-Our approach is to use the results from WP1 to develop a definitional
-equality for HoTT which avoids the canonicity problem. We need to show
-that such an equality is decidable, here we hope to be able to draw
-from recent results by the group in Strathclyde \cite{ConorPierre},
-which shows how to extend type theory with equations on neutral terms.
+In WP1 we considered versions of HoTT with various strictness
+properties, e.g. we may want the categorical laws for equality to hold
+definitionally - this is not the case in cinventional Type
+Theory. Hence a main challenge would be to establish decicdability of
+definitional equality with these additional equations. At this point
+some recent results by the MSP group at Strathclyde may be useful: \cite{ConorPierre}
+show how to decide conversion with additional equations with certain
+properties. However, this work was only carried out in a simply typed
+setting and would need to be extended to dependent types to be
+applicable to our setting.
 
-Even if we should be unable to solve the problem in general we should
-be able to solve it at least for some low dimension, let's say 2 or 3
-or even any finite level
-which would be sufficent for most practical applications but
-interlectually less satisfying. 
+In general to establish decidability for HoTT with a strong theory
+conversion will require scaling up existing technologies like
+normalisation by evaluation \cite{nbe} and big-step normalisation
+\cite{big-step}. Luckily the groups at Strathclyde and Nottingham do
+have considerable experience in those areas.
+
+We need also to address HITs in the syntactic setting. Basically the
+definitional equality for a HIT should be \emph{freely generated} from
+the stated equality proofs, the equation for the eliminator and the
+genral laws for definitional equality. Brunerie and Licata
+\cite{hott-examples} have investigated many examples when modelling
+constructions in Homotopy Theory where a strong conversion relation
+would be useful. We need to investigate wether the definitional
+equality we are proposing would address these issues.
+
+% In the book on Homotopy Type Theory the canicity problem is identified
+% as one of the central open problems for HoTT. Basically in the current
+% formulation of HoTT it is not clear how a closed expression of type
+% Nat can be evaluated to a numeral. Voevodsky has conjectured that this
+% should always be possible but so far no solution to the problem is
+% known. Basically, HoTT is a programming langauge but we don't know how
+% to run its programs!
+
+% Our approach is to use the results from WP1 to develop a definitional
+% equality for HoTT which avoids the canonicity problem. We need to show
+% that such an equality is decidable, here we hope to be able to draw
+% from recent results by the group in Strathclyde \cite{ConorPierre},
+% which shows how to extend type theory with equations on neutral terms.
+
+% Even if we should be unable to solve the problem in general we should
+% be able to solve it at least for some low dimension, let's say 2 or 3
+% or even any finite level
+% which would be sufficent for most practical applications but
+% interlectually less satisfying. 
 
 % Using the ideas presented in WP1 we think we should be able to
 % solve this problem and develop a decidable
@@ -473,39 +558,59 @@ interlectually less satisfying.
 % groupoid interpretation. We also envisage that this will lay the
 % foundation for the higher-dimensional case.
 
-% \subsubsection*{Research challenges}
-% \label{sec:rsearch-challenges}
+\subsubsection*{Research challenges}
+\label{sec:rsearch-challenges}
 
-% \begin{itemize}
-% \item Investigate models of Type Theory (CWFs, locally cartesian
-%   closed categories) in a higher dimensional setting,
+\begin{itemize}
 
-% \item Develop a feasible judgemental presentation of higher order,
-%   higher dimensional Type Theory
+\item Provide a syntactic theory for HoTT with a strong conversion
+  relation, ie.e. with additional equalities reflecting the
+  categorical properties of eqaulity proofs.
 
-% \item Identify a notion of higher dimensional model and show that
-%   standard constructions give rise or are closed under this notion,
+\item Establish decidability of this theory, extending existing
+  approaches like NBE and Big-step semantics to this case.
 
-% \item Investigate the problem of weak and strong canonicity
-%   in the presence of extensionality and 
-%  univalence.
+\item Extend the theory to HITs and investigate wether the 
+  result supports the examples from Homotopy Theory investigated by
+  Brunerie and Licata.
+
 \end{itemize}
 
 \subsection*{WP3 : Formalisation} 
-\label{sec:wp:qio}
 
 Since we are working in the context of formally verified, machine
 checked Mathematics it is clear that we are going to apply these ideas
 to our own development. This is also essential due to the complexity
 and dependency on rather subtle details which makes a purely paper
-based development doubtful. Our goal is to formalize aspects of higher
-dimensional category theory and type theory in Agda. One major
-limitation of this may be the computational feasibility of this
-endeavour putting new demands on the implementation. We would also
-like to understand the metatheoretical requirements for the
-formalisation of higher dimensional structures - here we hope to be
-able to build on results from out recent EPSRC project XXX in
-induction-recursion. 
+based development doubtful. Our goal is to formalize the theory of
+weak $\omega$-groupoids with various strictness properties in Type
+Theory using the Agda system as a vehicle. This is feasible since both
+in MSP and FPLab there are a number of Agda experts. 
+
+Clearly, this relies to a large degree on addressing the known problem
+of how to represent Type Theory in Type Theory, eg see
+\cite{Chapman:tteat}. We conjecture that HoTT itself may help here,
+i.e. the syntax of Type Theory can be conveniently represented as an
+higher inductive-inductive type where definitional equality and term
+and type constructors are defined at the same time. 
+
+This approach relies on results from our recent joint EPSRC project on 
+induction-recursion where we also investigate inductive-inductive
+definitions. Indeed, Frederik Forsberg, the specialist in this area
+will soon join the group at Strathclyde. We need to extend this
+results to the combination of inductive-inductive definitions and
+higher inductive types. Indeed, this will have other spinoffs, since
+for example the definition of the Cauchy reals in the HoTT book relies
+on this feature.
+
+Our approach may appear circular, since we are going to use HoTT to
+model HoTT. Semantically we would appeal to a naive correctness of the
+constructions while technically we should be able, initially to follow
+this approach by using the known methods to approximate HoTT in Agda
+\cite{LicatasTrick}  and hopefully use the theory we are defining
+itself at a later stage. Note that this also relies on using a
+combination of HITs and inductive inductive definitions, which in
+itself hasn't been investigated yet.
 
 \subsubsection*{Research challenges}
 
@@ -513,53 +618,128 @@ induction-recursion.
 \item Make the notions of WP1 and WP2 sufficiently precise so that they
   can be formalized and mechanically checked in Agda.
 
-\item Formalize core aspects of higher dimensional category theory in
-  Agda.
+\item Use higher inductive-inductive types to model the syntax of Type
+  Theory. 
 
-\item Formalize core aspects of higher dimensional type theory in Agda.
-
-\item Identify the requirements on the Metatheory we need to represent
-  our notion (e.g. induction-recursion or induction-induction related
-  to project XXX).
+\item Investigate the theory of higher inductive-inductive
+  definitions.
 
 \end{itemize}
 
 \subsection*{WP4 : Implementation} 
 
-To make higher dimensional Type Theory usable we need an
-implementation. Realistically we cannot expect a full scale
-implementation or modification of an existing system. Moreover,
-Voevodsky has already proposed to start such a development at
-Princeton but focusing on application in Mathematics. Within the
-present project we are focusing on the implementation of a higher
-dimensional type theory as a proof of concept. 
+At the moment users of HoTT have to use various hacks and workarounds
+to use HoTT within Agda or Coq. Even though these hacks are
+unsatisfactory because they do not address the cnanocity problem,
+i.e. there are programs that do not evaluate and frequently the
+built-in conversion is too weak for practical purpose - especially
+when using HITs. We anticipate that the type theory we are defining in
+WP2 addresses these issues and our goal is to make this technology
+available to users.
+
+As a first step we plan to develop a prototypical implementation in
+tandem with the work in WP2. We are planning to use Haskell as an
+implementation language because there is considerable expertise both
+at Nottingham and Strathclyde in using Haskell to implement type
+checkers for dependent type theories \cite{epigram,easy,pisigma}.
+Indeed the ongoing work on Epigram 2 is based on our work on OTT which
+can be viewed as a precursor of HoTT.
+This will be a bare bones implementation of the theory, lacking
+practically important features such as implicit parameters and
+universe polymorphism.
+
+In Agda pattern matching is one of the main devices to support
+efective program construction ofr depndent types. However, unlimited
+pattern matching is incompatible with HoTT. Currently, in Akgda there
+is an adhoc implementation of a check that pattern matching is
+restricted so that UIP is not derivable. However, there is no clear
+theory or justification of the current implementation which also has
+been proven to be unsound in several instances. Our goal is to develop
+a notion of pattern matching which is consistent with HoTT and
+formally verify this fact. 
+
+In HoTT there are two orthogonal hierarchies of types indexed by size
+(i.e. universe level) and dimension (i.e. truncation level or h-level). We often
+want to quantify over types with a certain size or a certain dimension
+and we also want to be able to implement construction parametric in
+both. On the other hand we want to minimize bureaucracy and in
+particular automatically infer subtyping relations bewteen different
+levels. We will explore this new area which is essential to make HoTT
+usable in practice.
+
+Ideally, we would like to implement the new theory on back of an
+existing system, for our puposes that would most likely be Agda. 
+However, it is in the moment not clear wether this would be feasible
+since it would affect the very core of the Agda system and would
+require considerable support from the Agda community.
+
+Clearly we will also continue our collaboration with the Coq
+implementors who are also very keen on HoTT related features. It
+remains to be seen which system would be the better vehicle for a new
+language.
+
+In any case, it is clear that this workpackage will require
+considerable man power, which is the reason why we do indeed need an
+RA to support the work. 
 
 \subsubsection*{Research challenges}
 
 \begin{itemize}
-\item Develop the implementation of a higher dimensional core language
-  in a functional language (e.g. Haskell).
 
-\item Study the potential of modifying the Agda system to support
-  higher dimensional concepts.
+\item Implement a prototypical typechecker for the language defined in
+  WP2. 
+
+\item Develop and verify an approach to pattern matching that is
+  consistent with HoTT.
+
+\item Analyze the impact of having two orthogonal hierarchies of types
+  (size and dimension).
+
+\item Explore the possibility of implementing HoTT features in Agda or
+  Coq.
   
 \end{itemize}
 
+\subsection*{WP5 : HITs and their applications} 
 
-\subsection*{WP5 : Applications in Computer Science} 
-Recently higher dimensional inductive types have been proposed
-\cite{shulman:blog} which provide a type-theoretic account of the
-notion of the fundamental groupoid of a space. This notion has also
-interesting applications in computer science for datastructures whose
-equality can be inductively defined. Going beyond this we consider the
-notion of a higher dimensional quotients which arise as the left
-adjoint of the embedding of types into the category of $n$-groupoids
-(or more general $\omega$-groupoids). Even 2-dimensional quotients
-provide interesting applications to the theory of quotient containers
+Higher inductive types are a central feature of HoTT which combine 
+inductive datatypes and quotients in one concept. We envisage that
+there are many applications to reusable program construction and
+verification. 
+
+We want to fully develop HITs: we need to accomodate them in our
+semantic framework, we need to develop a good syntax including a
+notion of pattern matching which capture HITs. In the hoTT book it is
+shown that a restricted collection of HITs is sufficent to implement
+all HIts (using the hubs-and-spoke cinstruction) - we want to go
+further and find a closed representation of HITs generalizing W-types
+in ordinary Type Theory.
+
+We are going to investigate applications of HITs to verification in
+particluar to develop a richer notion of datatypes. Using HITs we can
+introduce constructors and equations in parallel - this has already
+some important applicationsin the HoTT book for the definition of the
+real numbers and the cummulative hierarchy of sets. We anticipate many
+more applications in Computer Science.
+
+HITs can be used to define datatypes with permutable positions such as
+multisets and the structure of rings (circular lists which are stable
+under rotation) which has many applications in verification. More
+generally, it seems that the notion of quotient containers
 \cite{abottAltenGhaniMcB:quotientContainers} developed in EPSRC
 project XXX which has recently aquired new attention
-\cite{gylterud:thesis,kock:groupoids}: we can reduce quotient containers to ordinary
+\cite{gylterud:thesis,kock:groupoids}: can be reduced to ordinary
 containers in a higher dimensional setting.
+
+We want to go further and investigate the interaction of HITs and
+inductive-recursive and inductive-inductive definitions which have
+been the subject of our recent EPSRC project XXXX. An exciting
+application of Higher Inductive-Inductive Types is the formalisation
+of Type Theory in itself which would contribute to the formal
+verification of the type theory we are developing. Another obviosu
+extension would be to have Higher coinductive types and more generally
+mual Higher Inductive and Coinductive types generalizing our work
+\cite{txa-nisse}. 
 
 Rypacek \cite{rypacek:thesis} found exciting applications of higher
 dimensional reasoning in programming language theory (distributive
@@ -567,42 +747,55 @@ laws) in particular he was able to analyze the relation between
 functional and object oriented programming. This approach is ideally
 suited to be developed formally within a higher dimensional type theory
 
-
 \subsubsection*{Research challenges}
 
 \begin{itemize}
-\item Give a precise syntactic and semantic description of higher
-  dimensional inductive (and coinductive) types.
-\item Develop the notion of higher dimensional quotient types and
-  investigate their relation to higher dimensional datatypes.
-\item Investigate the application of higher dimensional quotient to
-  the theory of quotient containers.
+
+\item Develop syntax and semantics of HIT in the framework of the
+  previous WPs.
+
+\item Investigate pattern matching for HITs.
+
+\item Is there a closed representation of HITs similar to using
+  W-types in ordinary Type Theory.
+
+\item Invesitigate applications of HITs exploiting the mutual
+  introduction of constructors and equations.
+
+\item Analyze quotient containers in the presence of HITs.
+
+\item Can we combine HITs and inductive-inductive, inductive-recursive 
+  and mutual inductive-coinductive definitions?
+
+\item Can we use Higher Inductive-Inductive types to formalize
+  Type Theory in itself?
+
 \item Develop Rypacek's distributive laws in the setting of higher
   dimensional type theory.
 \end{itemize}
 
-\subsection*{WP7 : Applications in Formal Mathematics} 
+% \subsection*{WP7 : Applications in Formal Mathematics} 
 
-\txa{Need help with this. Clearly we are looking for an area where
-  reasoning upto equivalence is important without being too reflective
-  (i.e. higher dimensional cats or semantics of type theory)}
+% \txa{Need help with this. Clearly we are looking for an area where
+%   reasoning upto equivalence is important without being too reflective
+%   (i.e. higher dimensional cats or semantics of type theory)}
 
-\subsubsection*{Research challenges}
+% \subsubsection*{Research challenges}
 
-\section{Relevance to Beneficiaries}
+% \section{Relevance to Beneficiaries}
 
-Our work will create new connections between pure Mathematics and
-formally justified software engineering, benefiting researchers in
-both areas: Mathematicians who are becoming aware of new applications
-of the theories which will also raise new questions and raise further
-research interest and on the other hand researchers in formal software
-engineering who are using tools like Coq and Agda. In the long run a
-development of a higher dimensional theory is essential for the
-feasibility of larger scale modular development of certified software
-and will in the long run have an important impact on the practice of
-software engineering.
+% Our work will create new connections between pure Mathematics and
+% formally justified software engineering, benefiting researchers in
+% both areas: Mathematicians who are becoming aware of new applications
+% of the theories which will also raise new questions and raise further
+% research interest and on the other hand researchers in formal software
+% engineering who are using tools like Coq and Agda. In the long run a
+% development of a higher dimensional theory is essential for the
+% feasibility of larger scale modular development of certified software
+% and will in the long run have an important impact on the practice of
+% software engineering.
 
-\txa{Say more ?}
+% \txa{Say more ?}
 
 \section{Dissemination and Exploitation}
 
