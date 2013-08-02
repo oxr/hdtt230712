@@ -36,6 +36,9 @@
 \usepackage{color}
 \newcommand{\txa}[1]{\textcolor{red}{\textbf{Thorsten:~}#1}}
 
+\newcommand{\Rypacek}{Ryp\'a\v{c}ek}
+\newcommand{\Ondrej}{Ond\v{r}ej}
+
 \renewcommand{\cite}[1]{{\tt[#1]}}
 
 \newcommand{\citetrack}[1]{\cite{#1}}
@@ -47,7 +50,7 @@
 \title{Reusability and Abstraction in Formal Verification from Homotopy Type Theory
 \LARGE (Case for Support)}
 
-\author{Thorsten Altenkirch, Eugenia Chang, Neil Ghani and Ondrej Rypacek}
+\author{Thorsten Altenkirch, Eugenia Chang, Neil Ghani and \Ondrej \Rypacek}
 \date{}
 
 \begin{document}
@@ -132,7 +135,7 @@ Voevodsky and others on topics related to this research grant.
 
 \subsection*{Neil Ghani}
 
-\subsection*{Ondrej Rypacek}
+\subsection*{\Ondrej \Rypacek}
 
 \subsection*{Nottingham - host organisation}
 
@@ -210,12 +213,13 @@ and the same time abstractly and precisely enough to be amenable to
 formal verfication.  
 
 While HoTT is a promising new foundational framework both for
-Mathematics and for formal Software Engineering, there are a number of
-open problems which need to be tackled so that HoTT can deliver on its
+Mathematics and for formal Software Engineering, a number of
+open problems need to be tackled so that HoTT can deliver on its
 promise. To cite from the HoTT book:
 \begin{quote}
-  Perhaps the most pressing of them is the “constructivity” of the
-  Univalence Axiom, posed by Voevodsky in \cite{Voe12}.
+  Perhaps the most pressing of [the open problems] is the
+  “constructivity” of the Univalence Axiom, posed by Voevodsky in
+  \cite{Voe12}.
 \end{quote}
 In this project we propose to attack this problem using a
 novel combination of tools from higher category theory and type
@@ -311,7 +315,8 @@ basic theorems of homotopy theory. Higher inductive types have clear
 applications to datatypes with non-trivial identities which hasn't yet
 been explored. 
 
-While conceptually HoTT lead to a very extensional notion of types it
+\marginpar{More work needed}
+While conceptually HoTT leads to a very extensional notion of types it
 is not obvious how to make sense of this computationally. Indeed, the
 known models based on Kan simplicial sets rely essentially on
 classical logic \cite{coquand}.In previous
@@ -438,38 +443,101 @@ simplicial sets \cite{coquand}.
 % % - Problem of extensionality in Type Theory
 % % - Notion of univalence...
 % % - Implementations of Type Theory (Agda, Coq)
-% % - the problem of canonicity 
-
-
-% % \subsection{Higher dimensional category theory}
+% % - the problem of canonicity We{Higher dimensional category theory}
 % % \label{sec:high-dimens-categ}
 
 % % \subsection{Homotopy Type Theory}
 % % \label{sec:homotopy-type-theory}
 
 
+\section{National Importance}
+\begin{quote}{\footnotesize
+Describe the extent to which, over the long term, the research
+proposed:
+\begin{itemize}
+\item contributes to, or helps maintain the health of other research disciplines, contributes to addressing key UK societal challenges, contributes to current or future UK economic success and/or enables future development of key emerging industry(s)
+\item meets national strategic needs by establishing or maintaining a unique world leading research activity (including areas of niche capability)
+\item fits with and complements other UK research already funded in
+  the area  or related areas, including the relationship to the EPSRC
+  portfolio and our stated strategy set out in “Our Portfolio.”
+\end{itemize}
+The extent to which applicants are able to address each bullet point will depend on the nature of the research proposed.  Applicants should indicate how their research relates to EPSRC’s research areas and strategies (many projects will be relevant to more than 1 EPSRC research area) and complements EPSRC's current portfolio.  Information on the portfolio is available through the EPSRC's Grants on the Web (GoW).
+
+The definition of National Importance and further details can be found at preparing new proposals to include National Importance.
+}
+\end{quote}
+\section{Academic Impact}
+\label{sec:academic-impact}
+
+\begin{quote}{\footnotesize
+Describe how the research will benefit other researchers in the field and in related disciplines, both within the UK and elsewhere. What will be done to ensure that they can benefit?
+
+\begin{itemize}
+\item Explain any collaboration with other researchers and their role
+  in the project. For each Visiting Researcher, set out why they are
+  the most appropriate person, and what they will contribute to the
+  project.
+\end{itemize}
+}
+\end{quote}
+
+\section{Research Hypothesis and Objectives}
+\label{sec:rese-hypoth-object}
+
+\begin{quote}{\footnotesize
+  \begin{itemize}
+  \item Set out the research idea or hypothesis.
+  \item Explain why the proposed project is of sufficient timeliness
+    and novelty to warrant consideration for funding.
+  \item Identify the overall aims of the project and the individual
+    measurable objectives against which you would wish the outcome of
+    the work to be assessed.
+  \end{itemize}
+}\end{quote}
+
+
 \section{Programme and Methodology}
 
-In the research proposed here we are going to explore
-Higher-dimensional Type Theory in order to investigate its potential
-impact on Computer Science in particular the efficient development of
-certified software. Identifying equivalence of structures with
-equality raises well known coherence issues which have been
-investigated in the context of higher dimensional category theory
-\cite{eugenia} which forms one of the foundations of our research
-(WP1). This background is essential when we study the syntax and
-semantics of higher dimensional type theory (WP2) --- hoping to
-address thorny issues such as the canonicity problem in presence of
-the univalence principle. The Agda system \cite{Agda}
-which is at the same time a programming language and a interactive
-proof system is ideally suited to make these concepts available to
-interested researchers. We will use the Agda system both as a tool to
-develop the theory (WP3) but also as a target to turn theory into
-practice by developing software tools based on Agda to support the use
-of Higher-dimensional Type Theory for certification (WP4). Finally we
-plan to conduct a number of case studies evaluating the potential
-impact of Higher-dimensional Type Theory in Computer Science (WP5) and
-Computer Aided Mathematics (WP6).
+In the research proposed here we want attack the central problems
+surrounding a computational presentation of HoTT where by HoTT we mean
+a type theory which is univalent, has higher inductive types and
+satisfies canonicity.  In (WP1) we start from a semantical analysis
+and look into the Categorical models of type theory from a
+computational perspective. We are going to take a fresh look at
+interpretations of HoTT starting from our previous work
+\cite{altiRypacek} and Brunerie's proposal \cite{guillaume:gpds}.  In
+(WP2) we are going to develop a syntactic presentation of HoTT based
+on the semantic concepts developed in (WP1) in particular addressing
+the decidability of definitional equality.  In order make sure the
+syntactic development is sound as its complexity is going be very
+high, in (WP3) we are going to implement the central results within
+the proposed type theory. This will also serve as the first
+substantial test case of our progress.  In (WP4) and (WP5) we turn to
+more practical aspects; in (WP4) we plan to develop a prototypical
+type checker for the proposed calculus and also explore the avenues
+for integration into existing proof assistants (CoQ, Agda). In (WP5)
+we want to fully develop the theory and applications of HITs to the
+formal development itself and in Computer Science.
+
+
+
+% Identifying equivalence of structures with
+% equality raises well known coherence issues which have been
+% investigated in the context of higher dimensional category theory
+% \cite{eugenia} which forms one of the foundations of our research
+% (WP1). This background is essential when we study the syntax and
+% semantics of higher dimensional type theory (WP2) --- hoping to
+% address thorny issues such as the canonicity problem in presence of
+% the univalence principle. The Agda system \cite{Agda}
+% which is at the same time a programming language and a interactive
+% proof system is ideally suited to make these concepts available to
+% interested researchers. We will use the Agda system both as a tool to
+% develop the theory (WP3) but also as a target to turn theory into
+% practice by developing software tools based on Agda to support the use
+% of Higher-dimensional Type Theory for certification (WP4). Finally we
+% plan to conduct a number of case studies evaluating the potential
+% impact of Higher-dimensional Type Theory in Computer Science (WP5) and
+% Computer Aided Mathematics (WP6).
 
 \subsection*{WP1 : Categorical Models of Homotopy Type Theory}
 
@@ -487,11 +555,17 @@ approach on a direct representation of weak $\omega$-Groupoids in Type
 Theory. This has been explored in \cite{altiRypacek} and recently very
 much simplified by Brunerie \cite{guillaume:gpds}. Attempting to use
 this approach to model type theory means that we have to tackle some
-non-trivial coherence issues. There are a number of choices
-which vary what is strict and what is weak. One extreme is Warren's 
-strict $\omega$-groupoid model, which however is too strict and cannot
-model univalence. We will try to find a sweet spot in this spectrum,
-e.g. something like a strict $\omega$-category with a weak symmetry.
+non-trivial coherence issues. There are a number of choices which vary
+what is strict and what is weak. One extreme is Warren's strict
+$\omega$-groupoid model, which however is too strict and cannot model
+univalence. We will try to find a sweet spot in this spectrum.  A good
+starting point is a conjecture of Simpson \cite{simpson} who is saying
+that every weak $\omega$-category is equivalent to an
+$\omega$-category in which composition and exchange laws are strict
+and only the unit laws are allowed to hold weakly. In the groupoid
+case perhaps the symmetries also have to be weakened. One can expect
+several such semistrictification statements \cite{ChengGurski}. 
+
 
 The main open problem in the metatheory of HoTT is \emph{canonicity
   problem}, i.e. it is not clear how to reduce a closed term of type
@@ -560,7 +634,7 @@ are modelled as initial algebras of $\omega$-endofunctors.
 
 While the work outlined in WP1 will provide some important general
 facts about HoTT, for a reasonable implementation it is essential to
-have a purely syntactic presentation of the theory and in particualr
+have a purely syntactic presentation of the theory and in particular
 the conversion relation. Here we follow our approach for Observational
 Type Theory \cite{PLPV07}, the main difference here is that we have to
 take account of proof relevance and also that we have to be able to
@@ -568,7 +642,7 @@ incorporate univalence and higher inductive types.
 
 In WP1 we considered versions of HoTT with various strictness
 properties, e.g. we may want the categorical laws for equality to hold
-definitionally - this is not the case in cinventional Type
+definitionally - this is not the case in conventional Type
 Theory. Hence a main challenge would be to establish decicdability of
 definitional equality with these additional equations. At this point
 some recent results by the MSP group at Strathclyde may be useful: \cite{ConorPierre}
@@ -673,28 +747,21 @@ in MSP and FPLab there are a number of Agda experts.
 
 Clearly, this relies to a large degree on addressing the known problem
 of how to represent Type Theory in Type Theory, eg see
-\cite{Chapman:tteat}. We conjecture that HoTT itself may help here,
+\cite{Chapman:tteat}.  We conjecture that HoTT itself may help here,
 i.e. the syntax of Type Theory can be conveniently represented as an
 higher inductive-inductive type where definitional equality and term
-and type constructors are defined at the same time. 
+and type constructors are defined at the same time. We will
+investigate this in detail in (WP5) and the work carried out there
+will to a large extend impact the formalisation carried out in this
+WP.
 
-This approach relies on results from our recent joint EPSRC project on 
-induction-recursion where we also investigate inductive-inductive
-definitions. Indeed, Frederik Forsberg, the specialist in this area
-will soon join the group at Strathclyde. We need to extend this
-results to the combination of inductive-inductive definitions and
-higher inductive types. Indeed, this will have other spinoffs, since
-for example the definition of the Cauchy reals in the HoTT book relies
-on this feature.
 
 Our approach may appear circular, since we are going to use HoTT to
 model HoTT. Semantically we would appeal to a naive correctness of the
 constructions while technically we should be able, initially to follow
 this approach by using the known methods to approximate HoTT in Agda
 \cite{LicatasTrick}  and hopefully use the theory we are defining
-itself at a later stage. Note that this also relies on using a
-combination of HITs and inductive inductive definitions, which in
-itself hasn't been investigated yet.
+itself at a later stage. 
 
 \subsubsection*{Research challenges}
 
@@ -786,76 +853,80 @@ RA to support the work.
 
 \subsection*{WP5 : HITs and their applications} 
 
-Higher inductive types are a central feature of HoTT which combine 
-inductive datatypes and quotients in one concept. We envisage that
-there are many applications to reusable program construction and
-verification. 
-
+Higher inductive types are a central feature of HoTT which combine
+inductive datatypes and quotients in one concept. 
+%
+% They play an
+% essential role in our formalisation of
+% HoTT. We also envisage that there are many applications to reusable
+% program construction and verification. We also anticipate many
+% more applications in Computer Science. 
+%
 We want to fully develop HITs: we need to accomodate them in our
 semantic framework, we need to develop a good syntax including a
 notion of pattern matching which capture HITs. In the hoTT book it is
 shown that a restricted collection of HITs is sufficent to implement
-all HIts (using the hubs-and-spoke cinstruction) - we want to go
+all HIts (using the hubs-and-spoke construction) - we want to go
 further and find a closed representation of HITs generalizing W-types
 in ordinary Type Theory.
 
-We are going to investigate applications of HITs to verification in
-particluar to develop a richer notion of datatypes. Using HITs we can
-introduce constructors and equations in parallel - this has already
-some important applicationsin the HoTT book for the definition of the
-real numbers and the cummulative hierarchy of sets. We anticipate many
-more applications in Computer Science.
-
-HITs can be used to define datatypes with permutable positions such as
-multisets and the structure of rings (circular lists which are stable
-under rotation) which has many applications in verification. More
-generally, it seems that the notion of quotient containers
-\cite{abottAltenGhaniMcB:quotientContainers} developed in EPSRC
-project XXX which has recently aquired new attention
-\cite{gylterud:thesis,kock:groupoids}: can be reduced to ordinary
-containers in a higher dimensional setting.
-
-We want to go further and investigate the interaction of HITs and
+We also want to investigate the interaction of HITs and
 inductive-recursive and inductive-inductive definitions which have
-been the subject of our recent EPSRC project XXXX. An exciting
+been the subject of our recent EPSRC project XXXX. Moreover, Frederik
+Forsberg, the specialist in this area will soon join the group at
+Strathclyde. Another obvious extension would be to have Higher
+coinductive types and more generally mutual Higher Inductive and
+Coinductive types generalizing our work \cite{txa-nisse}. An exciting
 application of Higher Inductive-Inductive Types is the formalisation
 of Type Theory in itself which would contribute to the formal
-verification of the type theory we are developing. Another obviosu
-extension would be to have Higher coinductive types and more generally
-mual Higher Inductive and Coinductive types generalizing our work
-\cite{txa-nisse}. 
+verification of the type theory we are developing within this project
+(WP3).
 
-Rypacek \cite{rypacek:thesis} found exciting applications of higher
-dimensional reasoning in programming language theory (distributive
-laws) in particular he was able to analyze the relation between
-functional and object oriented programming. This approach is ideally
-suited to be developed formally within a higher dimensional type theory
+We are going to investigate other applications of HITs to verification in
+particular to develop a richer notion of datatypes. Using HITs we can
+introduce constructors and equations in parallel - this has already
+some important applicationsin the HoTT book for the definition of the
+real numbers and the cummulative hierarchy of sets.
+%
+In Computer Science, HITs can be used to define datatypes with
+permutable positions such as multisets and the structure of rings
+(circular lists which are stable under rotation) which has many
+applications in verification. More generally, it seems that the notion
+of quotient containers \cite{abottAltenGhaniMcB:quotientContainers}
+developed in EPSRC project XXX which has recently acquired new
+attention \cite{gylterud:thesis,kock:groupoids}: can be reduced to
+ordinary containers in a higher dimensional setting.
+
+% \Rypacek \cite{rypacek:thesis} found exciting applications of higher
+% dimensional reasoning in programming language theory (distributive
+% laws) in particular he was able to analyze the relation between
+% functional and object oriented programming. This approach is ideally
+% suited to be developed formally within a higher dimensional type theory
 
 \subsubsection*{Research challenges}
 
 \begin{itemize}
 
 \item Develop syntax and semantics of HIT in the framework of the
-  previous WPs.
-
-\item Investigate pattern matching for HITs.
-
-\item Is there a closed representation of HITs similar to using
+  previous WPS including a closed representation of HITs similar to using
   W-types in ordinary Type Theory.
 
+% \item Investigate pattern matching for HITs.
+
+\item Develop inductive-recursive, inductive-inductive
+  and mutual inductive-coinductive definition for HITs
+
+\item Investigate the use Higher Inductive-Inductive types to formalize
+  Type Theory in itself
+
 \item Invesitigate applications of HITs exploiting the mutual
-  introduction of constructors and equations.
+  introduction of constructors and equations to verification.
 
 \item Analyze quotient containers in the presence of HITs.
 
-\item Can we combine HITs and inductive-inductive, inductive-recursive 
-  and mutual inductive-coinductive definitions?
 
-\item Can we use Higher Inductive-Inductive types to formalize
-  Type Theory in itself?
-
-\item Develop Rypacek's distributive laws in the setting of higher
-  dimensional type theory.
+% \item Develop \Rypacek's distributive laws in the setting of higher
+%   dimensional type theory.
 \end{itemize}
 
 % \subsection*{WP7 : Applications in Formal Mathematics} 
@@ -881,19 +952,19 @@ suited to be developed formally within a higher dimensional type theory
 
 % \txa{Say more ?}
 
-\section{Dissemination and Exploitation}
+% \section{Dissemination and Exploitation}
 
-Our dissemination strategy exploits both modern interactive forms of
-communication with the community eg using twitter, facebook, blogs and
-mailing lists. We will also provide a webpage making all research
-output immediately available to fellow researchers and the interested
-public. At the same time we will also publish research papers at
-conferences (such as LICS, POPL, CSL, ITP) and in journals such as JFP,
-TCS, etc. We will continue to participate in the regular Agda
-Implementers meeting and make our developments available to the Type
-Theory community.  
+% Our dissemination strategy exploits both modern interactive forms of
+% communication with the community eg using twitter, facebook, blogs and
+% mailing lists. We will also provide a webpage making all research
+% output immediately available to fellow researchers and the interested
+% public. At the same time we will also publish research papers at
+% conferences (such as LICS, POPL, CSL, ITP) and in journals such as JFP,
+% TCS, etc. We will continue to participate in the regular Agda
+% Implementers meeting and make our developments available to the Type
+% Theory community.  
 
-\txa{Say more ?}
+% \txa{Say more ?}
 
 %{ \small 
 % \bibliographystylemain{abbrv}
