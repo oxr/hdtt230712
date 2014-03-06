@@ -268,12 +268,12 @@ the content here from a particular computer science viewpoint.
 Type Theory was originally proposed by Bertrand Russell as a way to
 avoid paradoxes in naive set theory \cite{russell08}. The development
 of $\lambda$-calculus by Alonzo Church and Haskell Curry
-\cite{church33,church40,church41,Curry} as a system to formalize
+\cite{church33,church40,church41} as a system to formalize
 Mathematics was influenced by Rusell's idea. Later, in Computer Science this
 lead to the development of functional programming languages from LISP
-\cite{lisp57} to Haskell \cite{haskell}. Per Martin-L\"of further
+\cite{lisp57} to Haskell \cite{haskell98}. Per Martin-L\"of further
 developed Type Theory, adding dependent types to give a satisfactory
-explanation of predicate logic \cite{ml84} and the propositions as
+explanation of predicate logic \cite{martinLoef:tt} and the propositions as
 types principle. This is the basis of the system we are considering
 here which at the same time is a rigorous framework for the
 formalisation of constructive mathematics and a powerful programming
@@ -305,7 +305,7 @@ Since we can repeat this construction, i.e. talk about equalities of
 equality proofs etc this leads to a higher dimensional view of types
 which can be described using the language of higher category theory.
 Indeed, equality proofs form a weak $\omega$-groupoid
-\cite{lumsdaine,garner}.  
+\cite{lumsdaine:omegaCatsFromTT,bergGarner:typesAreWeakOG}.  
 
 The HoTT view also extends the type-theoretic concept of an inductive
 types in an interesting way: higher inductive types allow the
@@ -316,19 +316,19 @@ basic theorems of homotopy theory. Higher inductive types have clear
 applications to datatypes with non-trivial identities which hasn't yet
 been explored. 
 
-\marginpar{More work needed}
+\marginpar{mention \cite{coquand:cubical}}
 While conceptually HoTT leads to a very extensional notion of types it
 is not obvious how to make sense of this computationally. Indeed, the
 known models based on Kan simplicial sets rely essentially on
-classical logic \cite{coquand}.In previous
-work \cite{alti:lics01,alti:plpv07} we have shown that we can
+classical logic \cite{coqHuber:conKan}.In previous
+work \cite{alti:lics01,alti:ott-conf} we have shown that we can
 eliminate the principle of functional extensionality (which arises as
 a consequence of univalence) but only under the assumption of
 uniqueness of identity proofs which is uninteresting from the point of
 HoTT. Clearly, the notion of a setoid has to be replaced by the higher
 dimensional notion of a weak $\omega$-groupoid
-\cite{alti:csl12,brunerie13} or a constructive version of Kan
-simplicial sets \cite{coquand}.
+\cite{altenRypacek:weakOmegaGrp,brunerie13} or a constructive version of Kan
+simplicial sets \cite{coqHuber:conKan}.
 
 % Type Theory ala Martin-L\"of is at the same time a programming
 % language and a logical system based on the propositions as types
@@ -506,19 +506,20 @@ satisfies canonicity.  In (WP1) we start from a semantical analysis
 and look into the Categorical models of type theory from a
 computational perspective. We are going to take a fresh look at
 interpretations of HoTT starting from our previous work
-\cite{altiRypacek} and Brunerie's proposal \cite{guillaume:gpds}.  In
-(WP2) we are going to develop a syntactic presentation of HoTT based
-on the semantic concepts developed in (WP1) in particular addressing
-the decidability of definitional equality.  In order make sure the
-syntactic development is sound as its complexity is going be very
-high, in (WP3) we are going to implement the central results within
-the proposed type theory. This will also serve as the first
-substantial test case of our progress.  In (WP4) and (WP5) we turn to
-more practical aspects; in (WP4) we plan to develop a prototypical
-type checker for the proposed calculus and also explore the avenues
-for integration into existing proof assistants (CoQ, Agda). In (WP5)
-we want to fully develop the theory and applications of HITs to the
-formal development itself and in Computer Science.
+\cite{altenRypacek:weakOmegaGrp} and Brunerie's proposal
+\cite{brunerie13}.  In (WP2) we are going to develop a syntactic
+presentation of HoTT based on the semantic concepts developed in (WP1)
+in particular addressing the decidability of definitional equality.
+In order make sure the syntactic development is sound as its
+complexity is going be very high, in (WP3) we are going to implement
+the central results within the proposed type theory. This will also
+serve as the first substantial test case of our progress.  In (WP4)
+and (WP5) we turn to more practical aspects; in (WP4) we plan to
+develop a prototypical type checker for the proposed calculus and also
+explore the avenues for integration into existing proof assistants
+(CoQ, Agda). In (WP5) we want to fully develop the theory and
+applications of HITs to the formal development itself and in Computer
+Science.
 
 
 
