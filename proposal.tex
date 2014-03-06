@@ -11,7 +11,7 @@
 \usepackage{mathptmx}
 \usepackage{amssymb}
 %\usepackage{epsf}      
-%\usepackage{url}
+\usepackage{url}
 %\usepackage[dvips]{graphics}
 %\usepackage[dvips,all]{xy}
 %\usepackage[round,authoryear]{natbib}
@@ -39,7 +39,7 @@
 \newcommand{\Rypacek}{Ryp\'a\v{c}ek}
 \newcommand{\Ondrej}{Ond\v{r}ej}
 
-\renewcommand{\cite}[1]{{\tt[#1]}}
+%%\renewcommand{\cite}[1]{{\tt[#1]}}
 
 \newcommand{\citetrack}[1]{\cite{#1}}
 \newcommand{\citemain}[1]{\cite{#1}}
@@ -50,7 +50,7 @@
 \title{Reusability and Abstraction in Formal Verification from Homotopy Type Theory
 \LARGE (Case for Support)}
 
-\author{Thorsten Altenkirch, Eugenia Chang, Neil Ghani and \Ondrej \Rypacek}
+\author{Thorsten Altenkirch, Eugenia Chang, Neil Ghani and {\Ondrej} {\Rypacek}}
 \date{}
 
 \begin{document}
@@ -135,7 +135,7 @@ Voevodsky and others on topics related to this research grant.
 
 \subsection*{Neil Ghani}
 
-\subsection*{\Ondrej \Rypacek}
+\subsection*{{\Ondrej} {\Rypacek}}
 
 \subsection*{Nottingham - host organisation}
 
@@ -201,16 +201,17 @@ Computer Science, Type Theory (indeed the aforementioned Coq system is
 based on Type Theory) and from Mathematics Homotopy Theory as an
 abstract way to look at geometric objects. This at the first glance
 unilkely combination has been independently proposed by Voevodsky and
-Awodey / Warren \cite{voevodsky,awodey-warren} based on earlier work by Hofmann and
-Streicher \cite{groupoid-model}. These ideas have
-been explored during a special year at the IAS attended by some of the
-leading researchers in theoretical computer science, logic and
-homotopy theory. As a result of this a new foundation of Mathematics,
-Homotopy Type Theory has been proposed \cite{hott-book}, which is an
-alternative to
-Set Theory as a foundation of Mathematicsand which has an important impact on how to do mathematics
+Awodey / Warren
+\cite{voevodsky:very-short-note,awodeyWarren:HTmodelsOfIT} based on
+earlier work by Hofmann and Streicher \cite{hofmannStreicher:groupoids}. These
+ideas have been explored during a special year at the IAS attended by
+some of the leading researchers in theoretical computer science, logic
+and homotopy theory. As a result of this a new foundation of
+Mathematics, Homotopy Type Theory has been proposed \cite{hott-book},
+which is an alternative to Set Theory as a foundation of
+Mathematicsand which has an important impact on how to do mathematics
 and the same time abstractly and precisely enough to be amenable to
-formal verfication.  
+formal verfication.
 
 While HoTT is a promising new foundational framework both for
 Mathematics and for formal Software Engineering, a number of
@@ -219,7 +220,7 @@ promise. To cite from the HoTT book:
 \begin{quote}
   Perhaps the most pressing of [the open problems] is the
   “constructivity” of the Univalence Axiom, posed by Voevodsky in
-  \cite{Voe12}.
+  \cite{Voe12,trimble:tetracategories}.
 \end{quote}
 In this project we propose to attack this problem using a
 novel combination of tools from higher category theory and type
@@ -267,7 +268,7 @@ the content here from a particular computer science viewpoint.
 Type Theory was originally proposed by Bertrand Russell as a way to
 avoid paradoxes in naive set theory \cite{russell08}. The development
 of $\lambda$-calculus by Alonzo Church and Haskell Curry
-\cite{Church,Curry} as a system to formalize
+\cite{church33,church40,church41,Curry} as a system to formalize
 Mathematics was influenced by Rusell's idea. Later, in Computer Science this
 lead to the development of functional programming languages from LISP
 \cite{lisp57} to Haskell \cite{haskell}. Per Martin-L\"of further
@@ -278,7 +279,7 @@ here which at the same time is a rigorous framework for the
 formalisation of constructive mathematics and a powerful programming
 and specification language. The latter aspect has been exploited in
 the implementation of interactive proof systems such as Coq and Agda
-\cite{coq,agda}. 
+\cite{CoqArt,Agda}. 
 
 While superficially the types of type theory may look like sets in
 set theory, they have fundamental differences. In type theory you
@@ -897,7 +898,7 @@ developed in EPSRC project XXX which has recently acquired new
 attention \cite{gylterud:thesis,kock:groupoids}: can be reduced to
 ordinary containers in a higher dimensional setting.
 
-% \Rypacek \cite{rypacek:thesis} found exciting applications of higher
+% {\Rypacek} \cite{rypacek:thesis} found exciting applications of higher
 % dimensional reasoning in programming language theory (distributive
 % laws) in particular he was able to analyze the relation between
 % functional and object oriented programming. This approach is ideally
@@ -925,7 +926,7 @@ ordinary containers in a higher dimensional setting.
 \item Analyze quotient containers in the presence of HITs.
 
 
-% \item Develop \Rypacek's distributive laws in the setting of higher
+% \item Develop {\Rypacek}'s distributive laws in the setting of higher
 %   dimensional type theory.
 \end{itemize}
 
