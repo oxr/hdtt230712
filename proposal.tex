@@ -644,6 +644,101 @@ are modelled as initial algebras of $\omega$-endofunctors.
 
 \emph{Ondrej}
 
+\paragraph{Problem} \emph{Find a computational presentation of HoTT}
+In order to show that HoTT is sound, one needs to find a model. In the
+case of HoTT, which aspires to become the constructive foundation of
+all mathematics, the model must be constructive both for philosophical
+and practical reasons. Finding a computational interpretation of HoTT,
+in particular of its univalence axiom, has been identified as one of
+the most important outstanding challenges in \cite{HoTTBook}.
+
+
+\paragraph{Importance}
+Finding a computational model of HoTT is important for many reasons.
+Firstly, model theory has been an important and effective way of
+establishing meta-theoretical properties of theories. In the case of
+HoTT (its syntactical presentation we develop), one would like to
+establish strong normalisation, and decidability of definitional
+equality in order to arrive at a theory with sufficiently strong
+(nice) computational behaviour.
+
+Secondly, to testify the strength of HoTT as a foundational theory,
+one should be able to model all reasonable constructions, and in
+particular its own model.  From a computational perspective, i.e. when
+HoTT is seen as a programming language, the nonexistence of a
+computational model is particularly disturbing as without it one has
+no way of actually running the programs written in it.
+
+\paragraph{State of the art}
+All models of HoTT, barring the latest work on Cubical sets
+\cite{BezemCoquandHuber}, are classical
+\cite{VoevodskyKapulkinLumsdaine} based on the established approaches
+to modelling type theory using model categories and simplicial
+sets. Lately, Bezem, Coquand and Huber have presented a constructive
+model of Type Theory in Cubical sets
+\cite{BezemCoquandHuber}. The presentation in \cite{BezemCoquandHuber} is meta
+theoretical (on paper) and so needs to be internalised.
+
+The work on OTT \cite{AltenkirchMcBrideSwierstra} 
+defines a computational model of TT where equality is
+defined rather than postulated, but it strongly relies on UIP, which
+is incompatible with univalence.  
+
+In terms of internalisation of the theory, the work of Bernardy and
+Moulin on internal parametricity in Type Theory bears a strong
+resemblance to the cubical model.
+
+The work on internalisation of weak $\omega$-groupoids \`ala
+Grothedieck-Brunerie by two of the applicants presents another,
+globular, approach. 
+\marginpar{Belongs to WP1?}
+However, this model yet needs to be fully
+understood, in particular what makes it tick constructively, and if
+possible, the lessons learned should be applied to the simplicial
+approach. This would be
+valuable not only from the theoretical perspective but also to connect
+HoTT to the large body of mathematics that has already been developed
+for the simplicial model.
+
+
+\paragraph{Inovative Solution}
+The groups at Strathclyde and Nottingham have a considerable
+experience in dealing with similar problems (normalisation,
+decidability, parametricity (Neil), internalisation (TA\&OR, Chapman
+et. al. ?) \cite{}
+
+We would start from OTT and Altenkirch's Cubical TT (unpublished),
+bringing in the results of the work on WP1 and find (on paper) a syntactical
+presentation of HoTT (in terms of syntax and rules). 
+
+Building on our experience with parametricity \cite{} we will look at
+Bernardy et. al's computational interpretation of parametricity and
+our previous work on internal weak $\omega$-groupoids in order to
+internalise everything and arrive at a strongly normalising and fully
+formalised presentation of HoTT. As a by-product we will investigate
+parametricity of the new Theory.
+
+
+\paragraph{Deliverables}
+\begin{itemize}
+\item We will develop a computational (syntactical) formulation of
+  HoTT, give its constructive model and establish soundness of HoTT
+  and its meta-theoretical properties (low-risk item, will be done). 
+\item We will investigate the relationship of the Cubical model to the
+  simplicial model and either make the simplicial model constructive
+  or identify why it can't be done (high-risk item)(WP1?)
+\item We will define J in terms of the new theory, i.e. equality is
+  primitive defined by induction on types, and J is a derived, rather
+  than the other way round.
+\item We will establish/develop parametricity for the new
+  theory. Show \emph{refl} as an internalised Abstraction Theorem and
+  J (or similar) as a filler. (HoTT = parametricity + fillers)
+\item We think directed type theory is a by-product via alternative
+  universes (drop half of the coherence conditions on equivalence)
+  (bonus item)
+\end{itemize}
+
+
 
 \emph{Old text:}
 
