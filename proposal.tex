@@ -866,31 +866,79 @@ itself at a later stage.
 
 \end{itemize}
 
-\subsection*{WP6 : Implementation of core theory} 
+\subsection*{WP6 : Implementation of a core theory} 
 
 \emph{Thorsten}
 
-\emph{Old text:}
+The goal of this work package is to develop a prototypical
+implementation of a type checker and interpreter based on the language
+designed in WP2. This system can be viewed as a proof of concept
+implementation lacking most if not all bells and whistles present in
+modern implementations of Type Theory. The implemented language will
+only provide support for the basic combinators of HoTT but not attempt
+to implement a high-level syntax for datatypes or pattern
+matching. However, the language will include a universal HIT based on
+the work in WP3. 
 
-At the moment users of HoTT have to use various hacks and workarounds
-to use HoTT within Agda or Coq. Even though these hacks are
-unsatisfactory because they do not address the cnanocity problem,
-i.e. there are programs that do not evaluate and frequently the
-built-in conversion is too weak for practical purpose - especially
-when using HITs. We anticipate that the type theory we are defining in
-WP2 addresses these issues and our goal is to make this technology
-available to users.
+We already have considerable experience in implementing dependently
+typed languages from or work on Epigram and $\Pi\Sigma$ and our
+involvement in the development of Agda. Coquand's and Huber's
+implementation of the cubical set model shows that our approach is
+feasible in principle and we plan to collaborate with them. However,
+we should be able to address particular issues such as the fact that
+certain definitional equalities don't hold in the cubical set model
+using the technology we have developed in the context of OTT
+\cite{alti:ott-conf} which is the subject of current work at
+Strathclyde. 
 
-As a first step we plan to develop a prototypical implementation in
-tandem with the work in WP2. We are planning to use Haskell as an
-implementation language because there is considerable expertise both
-at Nottingham and Strathclyde in using Haskell to implement type
-checkers for dependent type theories \cite{epigram,easy,pisigma}.
-Indeed the ongoing work on Epigram 2 is based on our work on OTT which
-can be viewed as a precursor of HoTT.
-This will be a bare bones implementation of the theory, lacking
-practically important features such as implicit parameters and
-universe polymorphism.
+The main risk of the WP is the fact that it depends very much on the
+success of WP2. Otherwise it is relatively low risk since most of the
+issues are engineering problems. Another riskis is that the
+implementation work takes much longer than expected. Again we think the
+risk is low by keeping the scope of the languages small.
+
+% At the moment users of HoTT have to use various hacks and workarounds
+% to use HoTT within Agda or Coq. Even though these hacks are
+% unsatisfactory because they do not address the cnanocity problem,
+% i.e. there are programs that do not evaluate and frequently the
+% built-in conversion is too weak for practical purpose - especially
+% when using HITs. We anticipate that the type theory we are defining in
+% WP2 addresses these issues and our goal is to make this technology
+% available to users.
+
+% As a first step we plan to develop a prototypical implementation in
+% tandem with the work in WP2. We are planning to use Haskell as an
+% implementation language because there is considerable expertise both
+% at Nottingham and Strathclyde in using Haskell to implement type
+% checkers for dependent type theories \cite{epigram,easy,pisigma}.
+% Indeed the work on Epigram 2 was based on our work on OTT which
+% can be viewed as a precursor of HoTT.
+% This will be a bare bones implementation of the theory, lacking
+% practically important features such as implicit parameters and
+% universe polymorphism.
+
+
+% \subsubsection*{Research challenges}
+
+% \begin{itemize}
+
+% \item Implement a prototypical typechecker for the language defined in
+%   WP2. 
+
+% \item Develop and verify an approach to pattern matching that is
+%   consistent with HoTT.
+
+% \item Analyze the impact of having two orthogonal hierarchies of types
+%   (size and dimension).
+
+% \item Explore the possibility of implementing HoTT features in Agda or
+%   Coq.
+  
+% \end{itemize}
+
+\subsection*{WP7 : Development of a high level language} 
+
+\emph{Thorsten}
 
 In Agda pattern matching is one of the main devices to support
 efective program construction ofr depndent types. However, unlimited
@@ -925,28 +973,6 @@ language.
 In any case, it is clear that this workpackage will require
 considerable man power, which is the reason why we do indeed need an
 RA to support the work. 
-
-\subsubsection*{Research challenges}
-
-\begin{itemize}
-
-\item Implement a prototypical typechecker for the language defined in
-  WP2. 
-
-\item Develop and verify an approach to pattern matching that is
-  consistent with HoTT.
-
-\item Analyze the impact of having two orthogonal hierarchies of types
-  (size and dimension).
-
-\item Explore the possibility of implementing HoTT features in Agda or
-  Coq.
-  
-\end{itemize}
-
-\subsection*{WP7 : Development of a high level language} 
-
-\emph{Thorsten}
 
 \subsection*{WP8 : Case studies and applicantions} 
 
