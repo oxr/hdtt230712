@@ -749,55 +749,70 @@ equality we are proposing would address these issues.
 
 \end{itemize}
 
-\subsection*{WP3 : HITs and their applications} 
+\subsection*{WP3 : Higher Inductive Types}
 
 \emph{Thorsten}
 
-\emph{Old text:}
+Higher inductive types (HITs) are a central feature of HoTT which combine
+inductive datatypes and quotients in one concept. Our goal is to
+accomodate HITs in the semantics develped in WP1 and the syntactic
+framework of WP2. To achieve this we are aiming to develop a universal
+HIT playing the role for HITs W-types play for ordinary inductive
+types. We are well posed to achieve this exploiting our previous work on
+inductive-inductive types \cite{txa:catind2}. We will also investigate
+other variations of HITs: coinductive HITs, HITs including
+inductive-inductive and inductive-recursive
+definitions. Inductive-inductive HITs open the door towards a more
+concise representation of dependently typed syntax in type theory
+\cite{chapman2009type} by
+introducing constructors and definitional equalities at the same time
+- this will feed into WP5. As an alternative to the low-level
+combinatory presentation of HITs we will also develop a high level
+syntax for HITs (feeding into WP7) and relate the two. We will also
+investigate a pattern matching syntax for HITs this is releated again
+to WP7.
 
-Higher inductive types are a central feature of HoTT which combine
-inductive datatypes and quotients in one concept. 
-%
-% They play an
-% essential role in our formalisation of
-% HoTT. We also envisage that there are many applications to reusable
-% program construction and verification. We also anticipate many
-% more applications in Computer Science. 
-%
-We want to fully develop HITs: we need to accomodate them in our
-semantic framework, we need to develop a good syntax including a
-notion of pattern matching which capture HITs. In the hoTT book it is
-shown that a restricted collection of HITs is sufficent to implement
-all HIts (using the hubs-and-spoke construction) - we want to go
-further and find a closed representation of HITs generalizing W-types
-in ordinary Type Theory.
+The risk of this WP seems relatively low since we have already a good
+background from our previous work on induction-recursion in ESPRC
+project EP/G03298X/1. There is a risk that the semantic explanations
+don't cover all the strict equalities needed in the syntax - however
+the overal project goals are not affected because no essential further
+work depends on this.
 
-We also want to investigate the interaction of HITs and
-inductive-recursive and inductive-inductive definitions which have
-been the subject of our recent EPSRC project XXXX. Moreover, Frederik
-Forsberg, the specialist in this area will soon join the group at
-Strathclyde. Another obvious extension would be to have Higher
-coinductive types and more generally mutual Higher Inductive and
-Coinductive types generalizing our work \cite{txa-nisse}. An exciting
-application of Higher Inductive-Inductive Types is the formalisation
-of Type Theory in itself which would contribute to the formal
-verification of the type theory we are developing within this project
-(WP3).
+% We want to fully develop HITs: we need to accomodate them in our
+% semantic framework, we need to develop a good syntax including a
+% notion of pattern matching which capture HITs. In the HoTT book it is
+% shown that a restricted collection of HITs is sufficent to implement
+% all HIts (using the hubs-and-spoke construction) - we want to go
+% further and find a closed representation of HITs generalizing W-types
+% in ordinary Type Theory. 
 
-We are going to investigate other applications of HITs to verification in
-particular to develop a richer notion of datatypes. Using HITs we can
-introduce constructors and equations in parallel - this has already
-some important applicationsin the HoTT book for the definition of the
-real numbers and the cummulative hierarchy of sets.
-%
-In Computer Science, HITs can be used to define datatypes with
-permutable positions such as multisets and the structure of rings
-(circular lists which are stable under rotation) which has many
-applications in verification. More generally, it seems that the notion
-of quotient containers \cite{abottAltenGhaniMcB:quotientContainers}
-developed in EPSRC project XXX which has recently acquired new
-attention \cite{gylterud:thesis,kock:groupoids}: can be reduced to
-ordinary containers in a higher dimensional setting.
+% We also want to investigate the interaction of HITs and
+% inductive-recursive and inductive-inductive definitions which have
+% been the subject of our recent EPSRC project XXXX. Moreover, Frederik
+% Forsberg, the specialist in this area will soon join the group at
+% Strathclyde. Another obvious extension would be to have Higher
+% coinductive types and more generally mutual Higher Inductive and
+% Coinductive types generalizing our work \cite{txa-nisse}. An exciting
+% application of Higher Inductive-Inductive Types is the formalisation
+% of Type Theory in itself which would contribute to the formal
+% verification of the type theory we are developing within this project
+% (WP3).
+
+% We are going to investigate other applications of HITs to verification in
+% particular to develop a richer notion of datatypes. Using HITs we can
+% introduce constructors and equations in parallel - this has already
+% some important applicationsin the HoTT book for the definition of the
+% real numbers and the cummulative hierarchy of sets.
+% %
+% In Computer Science, HITs can be used to define datatypes with
+% permutable positions such as multisets and the structure of rings
+% (circular lists which are stable under rotation) which has many
+% applications in verification. More generally, it seems that the notion
+% of quotient containers \cite{abottAltenGhaniMcB:quotientContainers}
+% developed in EPSRC project XXX which has recently acquired new
+% attention \cite{gylterud:thesis,kock:groupoids}: can be reduced to
+% ordinary containers in a higher dimensional setting.
 
 % {\Rypacek} \cite{rypacek:thesis} found exciting applications of higher
 % dimensional reasoning in programming language theory (distributive
@@ -805,31 +820,31 @@ ordinary containers in a higher dimensional setting.
 % functional and object oriented programming. This approach is ideally
 % suited to be developed formally within a higher dimensional type theory
 
-\subsubsection*{Research challenges}
+% subsubsection*{Research challenges}
 
-\begin{itemize}
+% \begin{itemize}
 
-\item Develop syntax and semantics of HIT in the framework of the
-  previous WPS including a closed representation of HITs similar to using
-  W-types in ordinary Type Theory.
+% \item Develop syntax and semantics of HIT in the framework of the
+%   previous WPS including a closed representation of HITs similar to using
+%   W-types in ordinary Type Theory.
 
-% \item Investigate pattern matching for HITs.
+% % \item Investigate pattern matching for HITs.
 
-\item Develop inductive-recursive, inductive-inductive
-  and mutual inductive-coinductive definition for HITs
+% \item Develop inductive-recursive, inductive-inductive
+%   and mutual inductive-coinductive definition for HITs
 
-\item Investigate the use Higher Inductive-Inductive types to formalize
-  Type Theory in itself
+% \item Investigate the use Higher Inductive-Inductive types to formalize
+%   Type Theory in itself
 
-\item Invesitigate applications of HITs exploiting the mutual
-  introduction of constructors and equations to verification.
+% \item Invesitigate applications of HITs exploiting the mutual
+%   introduction of constructors and equations to verification.
 
-\item Analyze quotient containers in the presence of HITs.
+% \item Analyze quotient containers in the presence of HITs.
 
 
 % \item Develop {\Rypacek}'s distributive laws in the setting of higher
 %   dimensional type theory.
-\end{itemize}
+%\end{itemize}
 
 \subsection*{WP4 : Quotient containers} 
 
