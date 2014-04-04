@@ -38,6 +38,7 @@
 
 \newcommand{\Rypacek}{Ryp\'a\v{c}ek}
 \newcommand{\Ondrej}{Ond\v{r}ej}
+\newcommand{\iso}{\cong}
 
 %%\renewcommand{\cite}[1]{{\tt[#1]}}
 
@@ -844,87 +845,71 @@ equality we are proposing would address these issues.
 
 \end{itemize}
 
-\subsection*{WP3 : HITs and their applications} 
+\subsection*{WP3 : Higher Inductive Types}
 
 \emph{Thorsten}
 
-\emph{Old text:}
+Higher inductive types (HITs) are a central feature of HoTT which combine
+inductive datatypes and quotients in one concept. Our goal is to
+accomodate HITs in the semantics develped in WP1 and the syntactic
+framework of WP2. To achieve this we are aiming to develop a universal
+HIT playing the role for HITs W-types play for ordinary inductive
+types. We are well posed to achieve this exploiting our previous work on
+inductive-inductive types \cite{txa:catind2}. We will also investigate
+other variations of HITs: coinductive HITs, HITs including
+inductive-inductive and inductive-recursive
+definitions. Inductive-inductive HITs open the door towards a more
+concise representation of dependently typed syntax in type theory
+\cite{chapman2009type} by
+introducing constructors and definitional equalities at the same time
+- this will feed into WP5. As an alternative to the low-level
+combinatory presentation of HITs we will also develop a high level
+syntax for HITs (feeding into WP7) and relate the two. We will also
+investigate a pattern matching syntax for HITs this is releated again
+to WP7.
 
-Higher inductive types are a central feature of HoTT which combine
-inductive datatypes and quotients in one concept. 
-%
-% They play an
-% essential role in our formalisation of
-% HoTT. We also envisage that there are many applications to reusable
-% program construction and verification. We also anticipate many
-% more applications in Computer Science. 
-%
-We want to fully develop HITs: we need to accomodate them in our
-semantic framework, we need to develop a good syntax including a
-notion of pattern matching which capture HITs. In the hoTT book it is
-shown that a restricted collection of HITs is sufficent to implement
-all HIts (using the hubs-and-spoke construction) - we want to go
-further and find a closed representation of HITs generalizing W-types
-in ordinary Type Theory.
+The risk of this WP seems relatively low since we have already a good
+background from our previous work on induction-recursion in ESPRC
+project EP/G03298X/1. There is a risk that the semantic explanations
+don't cover all the strict equalities needed in the syntax - however
+the overal project goals are not affected because no essential further
+work depends on this.
 
-We also want to investigate the interaction of HITs and
-inductive-recursive and inductive-inductive definitions which have
-been the subject of our recent EPSRC project XXXX. Moreover, Fredrik
-Forsberg, the specialist in this area will soon join the group at
-Strathclyde. Another obvious extension would be to have Higher
-coinductive types and more generally mutual Higher Inductive and
-Coinductive types generalizing our work \cite{txa-nisse}. An exciting
-application of Higher Inductive-Inductive Types is the formalisation
-of Type Theory in itself which would contribute to the formal
-verification of the type theory we are developing within this project
-(WP3).
+% We want to fully develop HITs: we need to accomodate them in our
+% semantic framework, we need to develop a good syntax including a
+% notion of pattern matching which capture HITs. In the HoTT book it is
+% shown that a restricted collection of HITs is sufficent to implement
+% all HIts (using the hubs-and-spoke construction) - we want to go
+% further and find a closed representation of HITs generalizing W-types
+% in ordinary Type Theory. 
 
-We are going to investigate other applications of HITs to verification in
-particular to develop a richer notion of datatypes. Using HITs we can
-introduce constructors and equations in parallel - this has already
-some important applicationsin the HoTT book for the definition of the
-real numbers and the cummulative hierarchy of sets.
-%
-In Computer Science, HITs can be used to define datatypes with
-permutable positions such as multisets and the structure of rings
-(circular lists which are stable under rotation) which has many
-applications in verification. More generally, it seems that the notion
-of quotient containers \cite{abottAltenGhaniMcB:quotientContainers}
-developed in EPSRC project XXX which has recently acquired new
-attention \cite{gylterud:thesis,kock:groupoids}: can be reduced to
-ordinary containers in a higher dimensional setting.
+% We also want to investigate the interaction of HITs and
+% inductive-recursive and inductive-inductive definitions which have
+% been the subject of our recent EPSRC project XXXX. Moreover, Frederik
+% Forsberg, the specialist in this area will soon join the group at
+% Strathclyde. Another obvious extension would be to have Higher
+% coinductive types and more generally mutual Higher Inductive and
+% Coinductive types generalizing our work \cite{txa-nisse}. An exciting
+% application of Higher Inductive-Inductive Types is the formalisation
+% of Type Theory in itself which would contribute to the formal
+% verification of the type theory we are developing within this project
+% (WP3).
 
-% {\Rypacek} \cite{rypacek:thesis} found exciting applications of higher
-% dimensional reasoning in programming language theory (distributive
-% laws) in particular he was able to analyze the relation between
-% functional and object oriented programming. This approach is ideally
-% suited to be developed formally within a higher dimensional type theory
+% We are going to investigate other applications of HITs to verification in
+% particular to develop a richer notion of datatypes. Using HITs we can
+% introduce constructors and equations in parallel - this has already
+% some important applicationsin the HoTT book for the definition of the
+% real numbers and the cummulative hierarchy of sets.
+% %
+% In Computer Science, HITs can be used to define datatypes with
+% permutable positions such as multisets and the structure of rings
+% (circular lists which are stable under rotation) which has many
+% applications in verification. More generally, it seems that the notion
+% of quotient containers \cite{abottAltenGhaniMcB:quotientContainers}
+% developed in EPSRC project XXX which has recently acquired new
+% attention \cite{gylterud:thesis,kock:groupoids}: can be reduced to
+% ordinary containers in a higher dimensional setting.
 
-\subsubsection*{Research challenges}
-
-\begin{itemize}
-
-\item Develop syntax and semantics of HIT in the framework of the
-  previous WPS including a closed representation of HITs similar to using
-  W-types in ordinary Type Theory.
-
-% \item Investigate pattern matching for HITs.
-
-\item Develop inductive-recursive, inductive-inductive
-  and mutual inductive-coinductive definition for HITs
-
-\item Investigate the use Higher Inductive-Inductive types to formalize
-  Type Theory in itself
-
-\item Invesitigate applications of HITs exploiting the mutual
-  introduction of constructors and equations to verification.
-
-\item Analyze quotient containers in the presence of HITs.
-
-
-% \item Develop {\Rypacek}'s distributive laws in the setting of higher
-%   dimensional type theory.
-\end{itemize}
 
 \subsection*{WP4 : Quotient containers} 
 
@@ -977,89 +962,199 @@ itself at a later stage.
 
 \end{itemize}
 
-\subsection*{WP6 : Implementation of core theory} 
+\subsection*{WP6 : Implementation of a core theory} 
 
 \emph{Thorsten}
 
-\emph{Old text:}
+The goal of this work package is to develop a prototypical
+implementation of a type checker and interpreter based on the language
+designed in WP2. This system can be viewed as a proof of concept
+implementation lacking most if not all bells and whistles present in
+modern implementations of Type Theory. The implemented language will
+only provide support for the basic combinators of HoTT but not attempt
+to implement a high-level syntax for datatypes or pattern
+matching. However, the language will include a universal HIT based on
+the work in WP3. 
 
-At the moment users of HoTT have to use various hacks and workarounds
-to use HoTT within Agda or Coq. Even though these hacks are
-unsatisfactory because they do not address the cnanocity problem,
-i.e. there are programs that do not evaluate and frequently the
-built-in conversion is too weak for practical purpose - especially
-when using HITs. We anticipate that the type theory we are defining in
-WP2 addresses these issues and our goal is to make this technology
-available to users.
+We already have considerable experience in implementing dependently
+typed languages from or work on Epigram and $\Pi\Sigma$ and our
+involvement in the development of Agda. Coquand's and Huber's
+implementation of the cubical set model shows that our approach is
+feasible in principle and we plan to collaborate with them. However,
+we should be able to address particular issues such as the fact that
+certain definitional equalities don't hold in the cubical set model
+using the technology we have developed in the context of OTT
+\cite{alti:ott-conf} which is the subject of current work at
+Strathclyde. 
 
-As a first step we plan to develop a prototypical implementation in
-tandem with the work in WP2. We are planning to use Haskell as an
-implementation language because there is considerable expertise both
-at Nottingham and Strathclyde in using Haskell to implement type
-checkers for dependent type theories \cite{epigram,easy,pisigma}.
-Indeed the ongoing work on Epigram 2 is based on our work on OTT which
-can be viewed as a precursor of HoTT.
-This will be a bare bones implementation of the theory, lacking
-practically important features such as implicit parameters and
-universe polymorphism.
+The main risk of the WP is the fact that it depends very much on the
+success of WP2. Otherwise it is relatively low risk since most of the
+issues are engineering problems. Another risk is is that the
+implementation work takes much longer than expected. Again we think the
+risk is low by keeping the scope of the language small.
 
-In Agda pattern matching is one of the main devices to support
-efective program construction ofr depndent types. However, unlimited
-pattern matching is incompatible with HoTT. Currently, in Akgda there
-is an adhoc implementation of a check that pattern matching is
-restricted so that UIP is not derivable. However, there is no clear
-theory or justification of the current implementation which also has
-been proven to be unsound in several instances. Our goal is to develop
-a notion of pattern matching which is consistent with HoTT and
-formally verify this fact. 
+% At the moment users of HoTT have to use various hacks and workarounds
+% to use HoTT within Agda or Coq. Even though these hacks are
+% unsatisfactory because they do not address the cnanocity problem,
+% i.e. there are programs that do not evaluate and frequently the
+% built-in conversion is too weak for practical purpose - especially
+% when using HITs. We anticipate that the type theory we are defining in
+% WP2 addresses these issues and our goal is to make this technology
+% available to users.
 
-In HoTT there are two orthogonal hierarchies of types indexed by size
-(i.e. universe level) and dimension (i.e. truncation level or h-level). We often
-want to quantify over types with a certain size or a certain dimension
-and we also want to be able to implement construction parametric in
-both. On the other hand we want to minimize bureaucracy and in
-particular automatically infer subtyping relations bewteen different
-levels. We will explore this new area which is essential to make HoTT
-usable in practice.
+% As a first step we plan to develop a prototypical implementation in
+% tandem with the work in WP2. We are planning to use Haskell as an
+% implementation language because there is considerable expertise both
+% at Nottingham and Strathclyde in using Haskell to implement type
+% checkers for dependent type theories \cite{epigram,easy,pisigma}.
+% Indeed the work on Epigram 2 was based on our work on OTT which
+% can be viewed as a precursor of HoTT.
+% This will be a bare bones implementation of the theory, lacking
+% practically important features such as implicit parameters and
+% universe polymorphism.
 
-Ideally, we would like to implement the new theory on back of an
-existing system, for our puposes that would most likely be Agda. 
-However, it is in the moment not clear wether this would be feasible
-since it would affect the very core of the Agda system and would
-require considerable support from the Agda community.
 
-Clearly we will also continue our collaboration with the Coq
-implementors who are also very keen on HoTT related features. It
-remains to be seen which system would be the better vehicle for a new
-language.
+% \subsubsection*{Research challenges}
 
-In any case, it is clear that this workpackage will require
-considerable man power, which is the reason why we do indeed need an
-RA to support the work. 
+% \begin{itemize}
 
-\subsubsection*{Research challenges}
+% \item Implement a prototypical typechecker for the language defined in
+%   WP2. 
 
-\begin{itemize}
+% \item Develop and verify an approach to pattern matching that is
+%   consistent with HoTT.
 
-\item Implement a prototypical typechecker for the language defined in
-  WP2. 
+% \item Analyze the impact of having two orthogonal hierarchies of types
+%   (size and dimension).
 
-\item Develop and verify an approach to pattern matching that is
-  consistent with HoTT.
-
-\item Analyze the impact of having two orthogonal hierarchies of types
-  (size and dimension).
-
-\item Explore the possibility of implementing HoTT features in Agda or
-  Coq.
+% \item Explore the possibility of implementing HoTT features in Agda or
+%   Coq.
   
-\end{itemize}
+% \end{itemize}
 
 \subsection*{WP7 : Development of a high level language} 
 
 \emph{Thorsten}
 
-\subsection*{WP8 : Case studies and applicantions} 
+The aim of this WP is to make the language developed in the previous
+WPs usable in practice. This relies on a high-level syntax for
+datatypes including higher inductive types and on integrating known
+technology such as implicit arguments but also compilation and
+interfaces to other languages. A central question which needs to be
+answered is wether it is preferable to integrate our ideas with an
+existing system such as Agda, Coq or Idris or wether it is preferable
+to start from scratch. We plan to collaborate closely with the
+developers of these systems to help us to answer this question.
+
+We need to restrict pattern matching so that it is compatible with
+HoTT --- he we plan to build on recent work by Coeckx
+\cite{coeckx-without-k}. However, there are other issues related to
+the termination checker which need to be adressed
+\cite{coq-agda-issue-w-termination}. We also want to integrate
+pattern matching with HITs --- this is currently still an open problem.
+
+The main risk of this WP is that it may turn out not to be feasible to
+integrate the core language developed in the previous WP with existing
+implementations and that on the other hand that it is not feasible to
+develop a practical language within the running time of the
+project. However, we can address this by just providing a
+proof-of-concept implementation of some high level features, leaving
+the implementation of a practical language to future work. However,
+this may affect the success of WP8.
+
+% n Agda pattern matching is one of the main devices to support
+% efective program construction ofr depndent types. However, unlimited
+% pattern matching is incompatible with HoTT. Currently, in Akgda there
+% is an adhoc implementation of a check that pattern matching is
+% restricted so that UIP is not derivable. However, there is no clear
+% theory or justification of the current implementation which also has
+% been proven to be unsound in several instances. Our goal is to develop
+% a notion of pattern matching which is consistent with HoTT and
+% formally verify this fact. 
+
+% In HoTT there are two orthogonal hierarchies of types indexed by size
+% (i.e. universe level) and dimension (i.e. truncation level or h-level). We often
+% want to quantify over types with a certain size or a certain dimension
+% and we also want to be able to implement construction parametric in
+% both. On the other hand we want to minimize bureaucracy and in
+% particular automatically infer subtyping relations bewteen different
+% levels. We will explore this new area which is essential to make HoTT
+% usable in practice.
+
+% Ideally, we would like to implement the new theory on back of an
+% existing system, for our puposes that would most likely be Agda. 
+% However, it is in the moment not clear wether this would be feasible
+% since it would affect the very core of the Agda system and would
+% require considerable support from the Agda community.
+
+% Clearly we will also continue our collaboration with the Coq
+% implementors who are also very keen on HoTT related features. It
+% remains to be seen which system would be the better vehicle for a new
+% language.
+
+% In any case, it is clear that this workpackage will require
+% considerable man power, which is the reason why we do indeed need an
+% RA to support the work. 
+
+
+% \subsubsection*{Research challenges}
+
+% \begin{itemize}
+
+% \item Implement a prototypical typechecker for the language defined in
+%   WP2. 
+
+% \item Develop and verify an approach to pattern matching that is
+%   consistent with HoTT.
+
+% \item Analyze the impact of having two orthogonal hierarchies of types
+%   (size and dimension).
+
+% \item Explore the possibility of implementing HoTT features in Agda or
+%   Coq.
+  
+% \end{itemize}
+
+\subsection*{WP8 : Case studies and applications} 
+
+With new expressivity comes the need for new
+methodology: we shall find recurring effective strategies for
+exploiting HoTT in programming by putting it to work. We see two
+key opportunities.
+
+Firstly, working up to isomorphism, we can reason about a na\"ive
+reference presentation of data structures but replace them with
+efficient equivalents at runtime. E.g., we shall deliver treatments of
+\emph{numbers} (unary $\iso$ binary), \emph{sequences} (cons-lists
+$\iso$ finger-trees) and \emph{matrices} (vector-of-vectors $\iso$
+sparse encoding), where feasible computation relies on a
+sophistication best avoided for comprehension. We shall explore
+techniques for working with data structures which store redundant
+information to improve access time, e.g., databases with indices to
+cut search, and records with cached values to avoid recomputation. A
+significant risk is that efficiency savings are dominated by the cost
+of computing with isos at runtime. We shall need to ensure that we
+maximize the regions within which we use the efficient
+representations, converting data only at the boundaries.  Crucially,
+we can and will improve on \emph{data abstraction}, the
+state-of-the-art tool for managing the craft of implementation, by
+supporting the refinement of concrete computational models of data.
+
+Secondly, by enriching the notion of equality within a given type, we
+can ensure that variety in representations of a value can be exploited
+for efficiency but cannot yield inconsistency. Whilst treelike
+structures can be given a canonical form, data such as graphs, cycles
+and multisets often have multiple representatives which should be
+treated the same by operations. Today's technology presents the
+dilemma of whether to expose the representation and risk inconsistent
+treatment or to hide behind an abstraction barrier which offers a
+fixed repertoire of consistent operations but inhibits us from
+exploiting the representation to develop unforeseen operations
+efficiently. At last HoTT offers us a precise deal: we can work with
+representatives, but we must work up to equality.
+
+Semantics of effects upto theories; especially communication upto
+independent interleaving. 
 
 \emph{Conor}
 
