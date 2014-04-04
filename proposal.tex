@@ -50,7 +50,7 @@
 \title{Reusability and Abstraction in Formal Verification from Homotopy Type Theory
 \LARGE (Case for Support)}
 
-\author{Thorsten Altenkirch, Eugenia Chang, Neil Ghani and {\Ondrej} {\Rypacek}}
+\author{Thorsten Altenkirch, Nicola Gambino, Neil Ghani, Conor McBride and {\Ondrej} {\Rypacek}}
 \date{}
 
 \begin{document}
@@ -90,7 +90,7 @@ Graham Hutton.
 Altenkirch is well known for his work on Type Theory and applications
 of category theory in computer science, and has published about 50
 research papers (all available online via google scholar) which are
-frequently cited (h-index $\geq$ 23). During his work at Nottingham
+frequently cited (h-index $\geq$ 24). During his work at Nottingham
 \pounds 1M in research funding, comprising \pounds 650,903 as PI in 4
 EPSRC grants, \pounds 241,075 as CoI in 2 EPSRC grants, \pounds
 159,038 in 1 fellowship and 1 studentship. Especially relevant for the
@@ -131,11 +131,13 @@ Voevodsky and others on topics related to this research grant.
 % Voevodsky and others on topics related to this research grant.
 
 
-\subsection*{Eugenia Chang}
+\subsection*{Nicola Gambino}
 
 \subsection*{Neil Ghani}
 
 \subsection*{{\Ondrej} {\Rypacek}}
+
+\subsection*{Leeds - host organisation}
 
 \subsection*{Nottingham - host organisation}
 
@@ -154,6 +156,8 @@ and has 12 completed PhD students.
 The Functional Programming Lab provides a highly stimulating
 research environment for researchers and PhD students with weekly
 research meetings and frequent seminars. 
+
+\subsection*{Strathclyde - host organisation}
 
 %]
 % {\small 
@@ -543,6 +547,10 @@ Science.
 
 \subsection*{WP1 : Categorical Models of Homotopy Type Theory}
 
+\emph{Nicola}
+
+\emph{Old text}
+
 The standard model to justify HoTT is the model in the category of
 simplicial sets, modelling types as Kan Fibrations
 \cite{voevodskyEtAl}. However, a shortcoming of this model is that it
@@ -633,6 +641,11 @@ are modelled as initial algebras of $\omega$-endofunctors.
 
 
 \subsection*{WP2 : A syntactic presentation of HoTT}
+
+\emph{Ondrej}
+
+
+\emph{Old text:}
 
 While the work outlined in WP1 will provide some important general
 facts about HoTT, for a reasonable implementation it is essential to
@@ -736,124 +749,11 @@ equality we are proposing would address these issues.
 
 \end{itemize}
 
-\subsection*{WP3 : Formalisation} 
+\subsection*{WP3 : HITs and their applications} 
 
-Since we are working in the context of formally verified, machine
-checked Mathematics it is clear that we are going to apply these ideas
-to our own development. This is also essential due to the complexity
-and dependency on rather subtle details which makes a purely paper
-based development doubtful. Our goal is to formalize the theory of
-weak $\omega$-groupoids with various strictness properties in Type
-Theory using the Agda system as a vehicle. This is feasible since both
-in MSP and FPLab there are a number of Agda experts. 
+\emph{Thorsten}
 
-Clearly, this relies to a large degree on addressing the known problem
-of how to represent Type Theory in Type Theory, eg see
-\cite{Chapman:tteat}.  We conjecture that HoTT itself may help here,
-i.e. the syntax of Type Theory can be conveniently represented as an
-higher inductive-inductive type where definitional equality and term
-and type constructors are defined at the same time. We will
-investigate this in detail in (WP5) and the work carried out there
-will to a large extend impact the formalisation carried out in this
-WP.
-
-
-Our approach may appear circular, since we are going to use HoTT to
-model HoTT. Semantically we would appeal to a naive correctness of the
-constructions while technically we should be able, initially to follow
-this approach by using the known methods to approximate HoTT in Agda
-\cite{LicatasTrick}  and hopefully use the theory we are defining
-itself at a later stage. 
-
-\subsubsection*{Research challenges}
-
-\begin{itemize}
-\item Make the notions of WP1 and WP2 sufficiently precise so that they
-  can be formalized and mechanically checked in Agda.
-
-\item Use higher inductive-inductive types to model the syntax of Type
-  Theory. 
-
-\item Investigate the theory of higher inductive-inductive
-  definitions.
-
-\end{itemize}
-
-\subsection*{WP4 : Implementation} 
-
-At the moment users of HoTT have to use various hacks and workarounds
-to use HoTT within Agda or Coq. Even though these hacks are
-unsatisfactory because they do not address the cnanocity problem,
-i.e. there are programs that do not evaluate and frequently the
-built-in conversion is too weak for practical purpose - especially
-when using HITs. We anticipate that the type theory we are defining in
-WP2 addresses these issues and our goal is to make this technology
-available to users.
-
-As a first step we plan to develop a prototypical implementation in
-tandem with the work in WP2. We are planning to use Haskell as an
-implementation language because there is considerable expertise both
-at Nottingham and Strathclyde in using Haskell to implement type
-checkers for dependent type theories \cite{epigram,easy,pisigma}.
-Indeed the ongoing work on Epigram 2 is based on our work on OTT which
-can be viewed as a precursor of HoTT.
-This will be a bare bones implementation of the theory, lacking
-practically important features such as implicit parameters and
-universe polymorphism.
-
-In Agda pattern matching is one of the main devices to support
-efective program construction ofr depndent types. However, unlimited
-pattern matching is incompatible with HoTT. Currently, in Akgda there
-is an adhoc implementation of a check that pattern matching is
-restricted so that UIP is not derivable. However, there is no clear
-theory or justification of the current implementation which also has
-been proven to be unsound in several instances. Our goal is to develop
-a notion of pattern matching which is consistent with HoTT and
-formally verify this fact. 
-
-In HoTT there are two orthogonal hierarchies of types indexed by size
-(i.e. universe level) and dimension (i.e. truncation level or h-level). We often
-want to quantify over types with a certain size or a certain dimension
-and we also want to be able to implement construction parametric in
-both. On the other hand we want to minimize bureaucracy and in
-particular automatically infer subtyping relations bewteen different
-levels. We will explore this new area which is essential to make HoTT
-usable in practice.
-
-Ideally, we would like to implement the new theory on back of an
-existing system, for our puposes that would most likely be Agda. 
-However, it is in the moment not clear wether this would be feasible
-since it would affect the very core of the Agda system and would
-require considerable support from the Agda community.
-
-Clearly we will also continue our collaboration with the Coq
-implementors who are also very keen on HoTT related features. It
-remains to be seen which system would be the better vehicle for a new
-language.
-
-In any case, it is clear that this workpackage will require
-considerable man power, which is the reason why we do indeed need an
-RA to support the work. 
-
-\subsubsection*{Research challenges}
-
-\begin{itemize}
-
-\item Implement a prototypical typechecker for the language defined in
-  WP2. 
-
-\item Develop and verify an approach to pattern matching that is
-  consistent with HoTT.
-
-\item Analyze the impact of having two orthogonal hierarchies of types
-  (size and dimension).
-
-\item Explore the possibility of implementing HoTT features in Agda or
-  Coq.
-  
-\end{itemize}
-
-\subsection*{WP5 : HITs and their applications} 
+\emph{Old text:}
 
 Higher inductive types are a central feature of HoTT which combine
 inductive datatypes and quotients in one concept. 
@@ -930,6 +830,144 @@ ordinary containers in a higher dimensional setting.
 % \item Develop {\Rypacek}'s distributive laws in the setting of higher
 %   dimensional type theory.
 \end{itemize}
+
+\subsection*{WP4 : Quotient containers} 
+
+\emph{Frederik}
+
+\subsection*{WP5 : Formalisation} 
+
+\emph{Neil}
+
+\emph{Old text:}
+
+Since we are working in the context of formally verified, machine
+checked Mathematics it is clear that we are going to apply these ideas
+to our own development. This is also essential due to the complexity
+and dependency on rather subtle details which makes a purely paper
+based development doubtful. Our goal is to formalize the theory of
+weak $\omega$-groupoids with various strictness properties in Type
+Theory using the Agda system as a vehicle. This is feasible since both
+in MSP and FPLab there are a number of Agda experts. 
+
+Clearly, this relies to a large degree on addressing the known problem
+of how to represent Type Theory in Type Theory, eg see
+\cite{Chapman:tteat}.  We conjecture that HoTT itself may help here,
+i.e. the syntax of Type Theory can be conveniently represented as an
+higher inductive-inductive type where definitional equality and term
+and type constructors are defined at the same time. We will
+investigate this in detail in (WP5) and the work carried out there
+will to a large extend impact the formalisation carried out in this
+WP.
+
+
+Our approach may appear circular, since we are going to use HoTT to
+model HoTT. Semantically we would appeal to a naive correctness of the
+constructions while technically we should be able, initially to follow
+this approach by using the known methods to approximate HoTT in Agda
+\cite{LicatasTrick}  and hopefully use the theory we are defining
+itself at a later stage. 
+
+\subsubsection*{Research challenges}
+
+\begin{itemize}
+\item Make the notions of WP1 and WP2 sufficiently precise so that they
+  can be formalized and mechanically checked in Agda.
+
+\item Use higher inductive-inductive types to model the syntax of Type
+  Theory. 
+
+\item Investigate the theory of higher inductive-inductive
+  definitions.
+
+\end{itemize}
+
+\subsection*{WP6 : Implementation of core theory} 
+
+\emph{Thorsten}
+
+\emph{Old text:}
+
+At the moment users of HoTT have to use various hacks and workarounds
+to use HoTT within Agda or Coq. Even though these hacks are
+unsatisfactory because they do not address the cnanocity problem,
+i.e. there are programs that do not evaluate and frequently the
+built-in conversion is too weak for practical purpose - especially
+when using HITs. We anticipate that the type theory we are defining in
+WP2 addresses these issues and our goal is to make this technology
+available to users.
+
+As a first step we plan to develop a prototypical implementation in
+tandem with the work in WP2. We are planning to use Haskell as an
+implementation language because there is considerable expertise both
+at Nottingham and Strathclyde in using Haskell to implement type
+checkers for dependent type theories \cite{epigram,easy,pisigma}.
+Indeed the ongoing work on Epigram 2 is based on our work on OTT which
+can be viewed as a precursor of HoTT.
+This will be a bare bones implementation of the theory, lacking
+practically important features such as implicit parameters and
+universe polymorphism.
+
+In Agda pattern matching is one of the main devices to support
+efective program construction ofr depndent types. However, unlimited
+pattern matching is incompatible with HoTT. Currently, in Akgda there
+is an adhoc implementation of a check that pattern matching is
+restricted so that UIP is not derivable. However, there is no clear
+theory or justification of the current implementation which also has
+been proven to be unsound in several instances. Our goal is to develop
+a notion of pattern matching which is consistent with HoTT and
+formally verify this fact. 
+
+In HoTT there are two orthogonal hierarchies of types indexed by size
+(i.e. universe level) and dimension (i.e. truncation level or h-level). We often
+want to quantify over types with a certain size or a certain dimension
+and we also want to be able to implement construction parametric in
+both. On the other hand we want to minimize bureaucracy and in
+particular automatically infer subtyping relations bewteen different
+levels. We will explore this new area which is essential to make HoTT
+usable in practice.
+
+Ideally, we would like to implement the new theory on back of an
+existing system, for our puposes that would most likely be Agda. 
+However, it is in the moment not clear wether this would be feasible
+since it would affect the very core of the Agda system and would
+require considerable support from the Agda community.
+
+Clearly we will also continue our collaboration with the Coq
+implementors who are also very keen on HoTT related features. It
+remains to be seen which system would be the better vehicle for a new
+language.
+
+In any case, it is clear that this workpackage will require
+considerable man power, which is the reason why we do indeed need an
+RA to support the work. 
+
+\subsubsection*{Research challenges}
+
+\begin{itemize}
+
+\item Implement a prototypical typechecker for the language defined in
+  WP2. 
+
+\item Develop and verify an approach to pattern matching that is
+  consistent with HoTT.
+
+\item Analyze the impact of having two orthogonal hierarchies of types
+  (size and dimension).
+
+\item Explore the possibility of implementing HoTT features in Agda or
+  Coq.
+  
+\end{itemize}
+
+\subsection*{WP7 : Development of a high level language} 
+
+\emph{Thorsten}
+
+\subsection*{WP8 : Case studies and applicantions} 
+
+\emph{Conor}
+
 
 % \subsection*{WP7 : Applications in Formal Mathematics} 
 
