@@ -893,9 +893,9 @@ Strathclyde.
 
 The main risk of the WP is the fact that it depends very much on the
 success of WP2. Otherwise it is relatively low risk since most of the
-issues are engineering problems. Another riskis is that the
+issues are engineering problems. Another risk is is that the
 implementation work takes much longer than expected. Again we think the
-risk is low by keeping the scope of the languages small.
+risk is low by keeping the scope of the language small.
 
 % At the moment users of HoTT have to use various hacks and workarounds
 % to use HoTT within Agda or Coq. Even though these hacks are
@@ -940,39 +940,65 @@ risk is low by keeping the scope of the languages small.
 
 \emph{Thorsten}
 
-In Agda pattern matching is one of the main devices to support
-efective program construction ofr depndent types. However, unlimited
-pattern matching is incompatible with HoTT. Currently, in Akgda there
-is an adhoc implementation of a check that pattern matching is
-restricted so that UIP is not derivable. However, there is no clear
-theory or justification of the current implementation which also has
-been proven to be unsound in several instances. Our goal is to develop
-a notion of pattern matching which is consistent with HoTT and
-formally verify this fact. 
+The aim of this WP is to make the language developed in the previous
+WPs usable in practice. This relies on a high-level syntax for
+datatypes including higher inductive types and on integrating known
+technology such as implicit arguments but also compilation and
+interfaces to other languages. A central question which needs to be
+answered is wether it is preferable to integrate our ideas with an
+existing system such as Agda, Coq or Idris or wether it is preferable
+to start from scratch. We plan to collaborate closely with the
+developers of these systems to help us to answer this question.
 
-In HoTT there are two orthogonal hierarchies of types indexed by size
-(i.e. universe level) and dimension (i.e. truncation level or h-level). We often
-want to quantify over types with a certain size or a certain dimension
-and we also want to be able to implement construction parametric in
-both. On the other hand we want to minimize bureaucracy and in
-particular automatically infer subtyping relations bewteen different
-levels. We will explore this new area which is essential to make HoTT
-usable in practice.
+We need to restrict pattern matching so that it is compatible with
+HoTT --- he we plan to build on recent work by Coeckx
+\cite{coeckx-without-k}. However, there are other issues related to
+the termination checker which need to be adressed
+\cite{coq-agda-issue-w-termination}. We also want to integrate
+pattern matching with HITs --- this is currently still an open problem.
 
-Ideally, we would like to implement the new theory on back of an
-existing system, for our puposes that would most likely be Agda. 
-However, it is in the moment not clear wether this would be feasible
-since it would affect the very core of the Agda system and would
-require considerable support from the Agda community.
+The main risk of this WP is that it may turn out not to be feasible to
+integrate the core language developed in the previous WP with existing
+implementations and that on the other hand that it is not feasible to
+develop a practical language within the running time of the
+project. However, we can address this by just providing a
+proof-of-concept implementation of some high level features, leaving
+the implementation of a practical language to future work. However,
+this may affect the success of WP8.
 
-Clearly we will also continue our collaboration with the Coq
-implementors who are also very keen on HoTT related features. It
-remains to be seen which system would be the better vehicle for a new
-language.
+% n Agda pattern matching is one of the main devices to support
+% efective program construction ofr depndent types. However, unlimited
+% pattern matching is incompatible with HoTT. Currently, in Akgda there
+% is an adhoc implementation of a check that pattern matching is
+% restricted so that UIP is not derivable. However, there is no clear
+% theory or justification of the current implementation which also has
+% been proven to be unsound in several instances. Our goal is to develop
+% a notion of pattern matching which is consistent with HoTT and
+% formally verify this fact. 
 
-In any case, it is clear that this workpackage will require
-considerable man power, which is the reason why we do indeed need an
-RA to support the work. 
+% In HoTT there are two orthogonal hierarchies of types indexed by size
+% (i.e. universe level) and dimension (i.e. truncation level or h-level). We often
+% want to quantify over types with a certain size or a certain dimension
+% and we also want to be able to implement construction parametric in
+% both. On the other hand we want to minimize bureaucracy and in
+% particular automatically infer subtyping relations bewteen different
+% levels. We will explore this new area which is essential to make HoTT
+% usable in practice.
+
+% Ideally, we would like to implement the new theory on back of an
+% existing system, for our puposes that would most likely be Agda. 
+% However, it is in the moment not clear wether this would be feasible
+% since it would affect the very core of the Agda system and would
+% require considerable support from the Agda community.
+
+% Clearly we will also continue our collaboration with the Coq
+% implementors who are also very keen on HoTT related features. It
+% remains to be seen which system would be the better vehicle for a new
+% language.
+
+% In any case, it is clear that this workpackage will require
+% considerable man power, which is the reason why we do indeed need an
+% RA to support the work. 
 
 \subsection*{WP8 : Case studies and applicantions} 
 
