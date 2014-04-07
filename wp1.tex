@@ -1,0 +1,37 @@
+WORK PACKAGE 1: Categorical models of Homotopy Type Theory.
+
+CLEAR STATEMENT OF THE PROBLEM
+
+This workpackage concerns the problem of defining models for Homotopy Type Theory constructively, i.e. within type theories whose computational properties are well-understood. 
+
+WHY IT IS IMPORTANT
+
+The original motivation for this line of enquiry derives from a conjecture of Voevodsky, according to which the addition of the univalence axiom to a well-behaved type theory does not damage its computational properties (more precisely, it does not change in a significant way the terms of the type of natural numbers). But the study of these models is currently guiding the design of new type theories in which the univalence axiom is built-in, rather than assumed. 
+
+STATE OF THE ART
+
+The most important advance in this area is represented by so-called cubical set model of homotopy type theory, which is model of Homotopy Type Theory that is defined within a constructive type theory~\cite{BezemCoquandHuber}. Ongoing work on this model is attempting to use in in order to verify Voevodsky's conjecture and exploring the connections the theory of nominal sets~\cite{Pitts} 
+
+WHAT IS MISSING
+
+The cubical set model originated as a constructive refinement of another model, called the simplicial set model, defined by Voevodsky working in a classical metatheory. Yet, we still do not know what makes the cubical set model amenable to a constructive treatment, something that has been shown to be impossible for the existing version of the simplicial set model~\cite{Bezem-Coquand}. 
+
+OUTLINE OF PROPOSED SOLUTION AND INNOVATIVE ASPECTS:
+
+Our goal is to obtain general methods to define  constructively models of homotopy type theory. Our theory will be built and tested on the basis of known examples
+(groupoids, simplicial sets, cubical sets and related categories). The focus will be in particular on whether some of the known methods to construct Quillen model structures can be adapted to work in a constructive setting. An especially promising starting point is represented by Garner's recent refinement of Quillen's small object argument, which produces algebraic weak factorisation systems appears especially promising, since it uses a version of the free monad construction, which admits a constructive treatment (via W-types) in good circumstances.
+
+DELIVERABLES
+
+Our theory will improve our understanding of the current models, and possibly guide the definition of new ones.
+
+LESS RISKY AIMS AND MORE RISKY AIMS
+
+The idea of developing an axiomatic account of the cubical set model appears certainly possible, given its rather concrete nature. The question of whether this analysis can be generalised to account for other models (e.g. a refined version of the simplicial model) appears more challenging, since much of the theory of Quillen model categories has been developed classically. However, we do not need to reconstruct that whole theory, but only those aspects that are relevant for modelling Homotopy Type Theory.
+
+
+REFERENCES
+
+M. Bezen and T. Coquand, ???
+M. Bezem and T. Coquand and S. Huber, A cubical set model of type theory, Preprint available from Thierry Coquand's web page, March 25th 2014.
+A. Pitts, Book on nominal sets.
