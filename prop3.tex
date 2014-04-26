@@ -131,10 +131,12 @@ as ScotCats and SPLS.
 
 \vspace*{-0.1in} 
 
+%txa: added heartbleed.
 {\bf Cost of Software Failure:} The cost of software failure is truly
 staggering. Well known individual cases include the Mars Climate
 Orbiter failure (\$125 million), Ariane Rocket disaster (\$500
-million), Pentium Chip Division failure (\$475 million) and there are
+million), Pentium Chip Division failure (\$475 million), most recently
+the heartbleed bug (upto US\$400K per server) and there are
 many, many more examples. Even worse, other software failures such as
 one in the Patriot Missile System and the Therac-25 radiation system
 have costs lives. More generally, programmers make 15 to 50 errors per
@@ -155,26 +157,48 @@ increasingly critical to modern software development.
 %OpenSSL cryptographic software library.  In a nutshell, the cost of software bugs is almost
 %unbelievably staggering.
 
-{\bf Type Systems:} Traditional methods of software verification based
-upon testing only generate partial guarantees of correctness. Stronger
-guarantees of software correctness are given by mathematical proofs
-but the complexity of modern software means that hand written
-mathematical proofs are untrustworthy. As a result, the only way to
-ensure truly secure and reliable software is the gold standard of
-formally verified software which offers machine-checked mathematical
-proofs of software correctness. Several decades of pioneering work in
-the UK and elsewhere have culminated in the development of
-sophisticated and expressive type systems within which software
-construction and formal verification can take place. State of the art
-examples which are beginning to have industrial deployment are
-Haskell, OCaml, Agda and Coq, with other examples under development
-such as Idris and Trellis. One of the most pressing and fundamental
-open problems which all current systems face is which equalities
-should we compute with. If the strength of equality is too weak, then
-we cannot compute effectively while if it is too strong then type
-checking becomes undecidable.
+{\bf Type Systems:} 
+\begin{quote}
+  Static type systems are the world's most widely applied formal
+  method, in daily use by millions of programmers.\\
+  \emph{Simon Peyton Jones (Principal Researcher at
+    Microsoft)}
+\end{quote}
+Type based approaches to software development support a range of
+guarantees from basic data consistency to certified compliance with a
+formal specification. Research in the UK and Europe has produced 
+prototype languages and tools such as Agda, Epigram, Idris and Coq
+and in the US NUPRL, Twelf,  and the Trellys project. These systems are
+beginning to make their mark in safety critical application. Their
+advanced type technology is raided by more mainstream languages 
+such as Haskell, OCaml, Scala and C\# with significant industrial
+employment. 
 
+% Traditional methods of software verification based
+% upon testing only generate partial guarantees of correctness. Stronger
+% guarantees of software correctness are given by mathematical proofs
+% but the complexity of modern software means that hand written
+% mathematical proofs are untrustworthy. As a result, the only way to
+% ensure truly secure and reliable software is the gold standard of
+% formally verified software which offers machine-checked mathematical
+% proofs of software correctness.
 
+%  Several decades of pioneering work in
+% the UK and elsewhere have culminated in the development of
+% sophisticated and expressive type systems within which software
+% construction and formal verification can take place. State of the art
+% examples which are beginning to have industrial deployment are
+% Haskell, OCaml, Agda, Idris, Coq, and the NSF funded Trellys project. 
+% %txa: changed next sentence.
+One of the most pressing and fundamental
+open problems which all current systems face is to support abstraction
+to achieve modular replaceability and hence reusability
+but at the same time preserve the computational nature of the language.
+
+ % which equalities
+% should we compute with. If the strength of equality is too weak, then
+% we cannot compute effectively while if it is too strong then type
+% checking becomes undecidable.
 
 %The lack of an answer to this
 %question underpins the difficulties all current systems have with
@@ -185,16 +209,23 @@ checking becomes undecidable.
 revolutionary new approach to this problem which, although  widely regarded as
 a fundamental innovation with great potential, has yet to 
 significantly impact on programming languages and verification.
+% txa: added below
+The key concept in HoTT is to introduce a very liberal equality which
+identifies structures that are replacable. 
 %Its core is Voevodsky's {\em Univalence Axiom} asserting
 %that all provable equalities can be internalised as paths or, more
 %conceptually, that computation is invariant under change of
 %representation of the entities we compute with. 
-We believe that delivering on this potential requires i) further
+% txa: deleted we believe that
+% txa: changed par below.
+Delivering this potential requires i) further
 development of the foundations of HoTT; ii)
-a programming language and formal verification environment built on
-top of these foundations; and iii) examples illustrating the benefit
-of this environment to the broader programming languages and formal
-verification community. Therefore we intend to pursue a three-pronged
+a programming language and verification environment based on
+these foundations; and iii) applications demonstrating the effectiveness
+of this environment to the broader software development community.
+% programming languages and formal
+% verification community. 
+Therefore we intend to pursue a three-pronged
 research programme based upon a synthesis of theoretical, applied and
 impact-focussed research.
 
@@ -262,7 +293,8 @@ computers raised the possibility once more of achieving in practice
 the promise of mathematical certainty. This potential is now coming to
 fruition, eg systems such as Coq have been able to formally verify
 both large mathematical theorems such as the 4-Colour problem, and
-large software systems such as the C-kernel. However, these systems
+large software systems such as the CompCert C-compiler
+However, these systems
 are not {\em extensional} in that just because one can prove that
 objects are behaviourally indistinguishable, one cannot conclude that
 they are the same. This is a fundamental problem as it weakens the
