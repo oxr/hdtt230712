@@ -420,9 +420,14 @@ work shows that producing programming languages and proof assistants
 based upon HoTT is feasible in principle and we plan to
 collaborate closely with them.
 
-{\bf Parametricity:} One of the key features of Coquand's model is that
-the equality relation is defined recursively over the structure of
-types using an internalised form of parametricity. Parametricity
+{\bf Parametricity:} Coquand's model is closely reated to
+parametricity because we can view the interpretation in cubical sets
+as defining dependently typed logical relations.
+%txa: replacing
+% One of the key features of Coquand's model is that
+% the equality relation is defined recursively over the structure of
+% types using an internalised form of parametricity. 
+Parametricity
 itself is a fundamental technology within computer science and,
 research into it is currently being funded by EPSRC at Strathclyde. We
 will use the expertise at Strathclyde to see if variants of the
@@ -444,7 +449,7 @@ different sources
 \item The work of Coquand et al. which represents the current state of
   the art in constructive developments of HoTT.
 \item Our experience and those of others in parametricity which is
-  fundamental in the cubical set model of HoTT.
+  related to the cubical set model of HoTT.
 \item The diverse experience, perspectives and motivations of our collaborators.
 \end{itemize}
 These multiple sources will ensure that we neither slavishly follow
@@ -475,12 +480,16 @@ cubical sets, a general constructive model theory of HoTT does not yet
 exist. {\bf Joyal, J-beta in Coquand. Curry-Howard}
 
 We will attack this problem from the following directions: i) we will
-analyse current models (groupoids, globular sets, simplicial sets,
-cubical sets etc.) to isolate exactly where they fail to be
+analyze different smenatical approaches to HoTT (groupoids, globular sets, simplicial sets,
+cubical sets etc.) 
+% txa: not all of these are models, only simplical and cubical sets are.
+to isolate exactly where they fail to be
 constructive {\bf small object:} or how they ensure constructivity,
+%txa: this only applies to sSet?
 and thereby develop techniques to constructivize specific models; and
 ii) using intuitions from (i), we will define a notion of
 $\infty$-LCCCs {\bf Shulman 2012} which provide a general model theory for HoTT 
+%txa: is this a citation? What remains to be done?
 by adapting known methods for
 constructing Quillen model structures to a constructive setting.  
 Principally this will involve extending the use of logical relations
@@ -516,9 +525,11 @@ either directly or via the models of WP1.
 %meta-theoretic properties. Essential properties we require of a well
 %behaved type theory are
 
-We will begin by developing Altenkirch's preliminary type theory for
-cubical sets, which both internalises parametricity and adds Kan
-fillers to the theory. This will produce a variant of intentional
+% We will begin by developing Altenkirch's preliminary type theory for
+% cubical sets, which both internalises parametricity and adds Kan
+% fillers to the theory. 
+We will explore Altenkirch's recent observation that cubical sets are closely related to logical relation, 
+with the goal to produce a variant of intentional
 Martin-L\"of Type Theory which replaces the global identity type with
 a recursively defined higher-dimensional equality. We will then use
 the various models from WP1 to either justify that this is a canonical
@@ -968,7 +979,7 @@ pillars upon which this project is built.
 research will be demonstrated by developing the syntax (WP2) and
 semantics (WP1) 
 of a type theory (programming languages?) based upon the principles of HoTT
-(validating univalence), extending this to cover HiTs (WP3) and 
+(validating univalence), extending this to cover HITs (WP3) and 
 verifying the required properties of the language.
 The success of the languages and verification phase will be
 demonstrated by the implementation of a programming language (WP 5, 6, 7)  whose
