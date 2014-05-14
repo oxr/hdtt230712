@@ -346,6 +346,8 @@ Martin-L\" which produced a strong equality but at the price of
 loosing decidability of type checking. However, the problem of a strong but
 decidable theory of equality remained fundamentally unresolved for 40
 years. 
+
+{\bf OTT Section:}
 %power of methods
 %absolutely vital
 %very clear evidence
@@ -413,89 +415,112 @@ refinements of the cubical set model, and feed innovations in the use
 of parametricity within HoTT back into the general parametricity
 community.
 
+%Earleir motivation for OTT
+%Grant numbers below
+
+%Mention somewhere the prizes that Coq has been recently been awarded, as proof that this is cutting-edge technology
+
+%Mention somewhere that HoTT is having an impact on the design of (new versions of) Coq: there is ongoing work on implementing mechanisms for higher inductive types (Barras). Also: Bauer is working on new proof assistant based on ideas of Voevodsky.
+
+%Mention somewhere also the importance of type theory, Coq, Agda for
+%computer-assisted formalization of mathematical proofs 
 
 
 \section{Methodology and Research Programme:}
+
+
+
 Our general methodology to the development of HoTT-based software
-construction and verification will be to follow ideas from a number of
-different sources
-\begin{itemize}
-\item The existing literature of HoTT es exemplified in the HoTT book
-\item Our own experience in the definition and implementation of OTT as
-  this can be seen as a proof-irrelevant version of what we seek
-\item The work of Coquand et al. which represents the current state of
-  the art in constructive developments of HoTT.
-\item Our experience and those of others in parametricity which is
-  related to the cubical set model of HoTT.
-\item The diverse experience, perspectives and motivations of our collaborators.
-\end{itemize}
-These multiple sources will ensure that we neither slavishly follow
-the hype that inevitably surrounds significant innovation, nor are
-unaware of current and future advances in HoTT. We have divided the
-project into the following work packages with WP1-4 being hosted in
-Nottingham and WP5-8 in Strathclyde. Of course the reality will be
-that we all work very closely together.
- 
-{\bf WP1: Semantic Foundations of HoTT:} 
-A constructive model theory for HoTT is essential because: i)
+construction and verification will be to harness ideas from a number
+of different sources: i) the evolving state of the art, e.g. the HoTT
+book and the cubical sets construction of Coquand et al. as well as
+the ongoing dialogue with our collaborators; ii) our work on OTT which
+is a proof-irrelevant prototype of what we seek; iii) our work on the
+implementation of dependently typed programming languages (Epigram and
+$\Pi\Sigma$); iv) our work on datatypes (containers, indexed
+containers, induction-induction and induction-recursion); v) our work
+on parametricity; and vi) our work on constructing internal models of
+type theory. These multiple sources will ensure that we neither
+slavishly follow the hype that inevitably surrounds significant
+innovation, nor are unaware of current and future advances in HoTT. We
+have divided the project into the following work packages with WP1
+hosted in Leeds, WP2-4 in Nottingham and WP5-8 in Strathclyde. Of course
+the reality is that we will continue our established practice of
+working closely together.
+
+%Argue in justification for resources
+%Explain compute below 
+
+{\bf WP1: Semantic Foundations of HoTT:}  We
+seek semantic insights into HoTT akin to those provided by Cartesian
+closed categories for the simply typed
+$\lambda$-calculus.  A constructive model theory for HoTT is essential because: i)
 specific implementations of HoTT can be proven sound by giving a specific
-model of it; ii) 
+models of them; ii) 
 %since we don't know a priori what the best implementation
 %of HoTT will be, 
 a general model theory of HoTT will implicitly predict, and thereby
 guide, the design space of different presentations and implementations
-of HoTT --- compare for example the intimate relationship between the
-simply typed lambda calculus and Cartesian closed categories; iii)
-models of HoTT will provide algebraic techniques to reason about the
-correctness of implementations which complement syntactic
-techniques. These models need to be constructive to ensure that
-programs, even those using the Univalence Axiom, can be given
-computational behaviour. Unfortunately the standard model of HoTT
-based upon simplicial sets is not constructive, and while Coquand et
-al.\ have produced a specific constructive model of HoTT based upon
-cubical sets, a general constructive model theory of HoTT does not yet
-exist. {\bf Joyal, J-beta in Coquand. Curry-Howard}
+of HoTT; and iii) models of HoTT will provide algebraic techniques to
+reason about the correctness of implementations which complement
+syntactic techniques. These models need to be constructive so that
+programs, even those using Univalence, will compute. While the
+standard model of HoTT based upon simplicial sets is not constructive,
+Coquand et al.'s recent cubical set model is constructive and 
+has thus opened the door to a more general model theory.
+
+%Joyal
+%Back ground : Qullien model structures
 
 We will attack this problem from the following directions: i) we will
-analyze different semnatical approaches to HoTT (groupoids, globular sets, simplicial sets,
-cubical sets etc.) 
-% txa: not all of these are models, only simplical and cubical sets are.
-to isolate exactly where they fail to be
-constructive {\bf small object:} or how they ensure constructivity,
-%txa: this only applies to sSet?
-and thereby develop techniques to constructivize specific models; and
-ii) using intuitions from (i), we will define a notion of
-$\infty$-LCCCs {\bf Shulman 2012} which provide a general model theory for HoTT 
-%txa: is this a citation? What remains to be done?
-by adapting known methods for
-constructing Quillen model structures to a constructive setting.  
-Principally this will involve extending the use of logical relations
-(the core of the cubical set model) to other models.  In terms of
-risk, i) is certainly achievable as it involves only the analysis of
-already existing concrete models while ii) is a more ambitious
-goal. Nevertheless, our expertise on semantic models of logical
-relations (Ghani), {\bf what} (Gambino) and {\bf what} (Altenkirch)
-makes even this ambitious goal feasible. Deliverables from WP1 will be
-a broad class of models of HoTT which will not only considerably
-deepen our understanding of HoTT, but which individually can be used
-as the basis for a syntactic presentation of HoTT and which
-collectively describe the design space of such presentations.  {\bf
-  Nominals, large body of work on simplicial sets and model
-  categories. Many models $=>$ universally valid principles}
+analyse existing models (cubical sets, groupoids, strict
+$\omega$-groupoids, simplicial sets, globular sets) to isolate exactly
+how they ensure constructivity, or (where they fail to do so) how to 
+constructivize them; and ii) informed by i),
+we will develop a model theory for HoTT by both adapting known methods to
+define Quillen model structures (such as the small object argument)
+to the constructive setting and by showing how one can build  new
+constructive model structures from old (eg by
+slicing). A promising starting point for a constructive
+version of the small object argument comes from Garner's work, where
+it is related to the construction of free monads. In terms of risk,
+i) is certainly achievable since it involves only the analysis of
+existing concrete models, while ii) is a more ambitious
+goal. Nevertheless, our expertise on semantic models of parametricity (Ghani), model
+categories (Gambino) and models of type theory (Altenkirch) makes even this
+ambitious goal feasible. Deliverables from WP1 will be a broad class
+of models of HoTT which considerably deepen our
+understanding and map out the design space of its 
+syntactic presentations.
+
+% back ground work: NOMINAL SETS,
+
+%LARGE BODY OF
+%WORK ON SIMPLICIAL SETS AND MODEL CATEGORIES. MANY MODELS =>
+%UNIVERSALLY VALID PRINCIPLES.
+% Design space of the HoTT family earlier om
+
+%Background: current presentation (HoTT presentation and Thierry's)
+%dont have canonicity.
+
+{\bf WP2: Univalent Type Theory:} Building on WP1, we need syntactic
+presentations of our models of HoTT in the form of type theories. The
+challenge is to present the essential data of the model as built from
+a {\em finite} collection of type and term constructors - this is
+particularly difficult given the {\em arbitrary} higher dimensional
+structure of HoTT. One also must prove essential properties such as strong normalization, decidability of
+definitional equality and canonicity (i.e. all terms reduce to
+values). It is of particular interest to establish the expressive
+power of the associated equational theories, e.g. to distinguish
+carefully between which computation rules hold as definitional
+equalities and which as propositional equalities. Another key property
+(required for WP5) is that, as a foundational theory, our type theory
+ought to be expressive enough to describe its own models. These
+properties will be established either directly or via the models of
+WP1.
 
 
-{\bf WP2: Univalent Type Theory:} Next, we need a syntactic
-presentation of the models of HoTT derived in WP1 in the form of a
-type theory. This is difficult because one has to present all the data
-in the model as built from a finite collection of type and term
-constructors and then prove essential properties: strong normalisation
-and decidability of definitional equality, canonicity in that all
-terms reduce to values, and that the associated equational theory is
-strong enough, e.g.\ that the computation rule for identity types is
-valid definitionally in these theories. Another key property (required
-by WP5) is that, as a foundational theory, our type theory ought to be
-expressive enough to describe itself. These properties will be established
-either directly or via the models of WP1.
+
 
 %Different models will produce different theories and we
 %will analyse them in terms of their tractablility, concision and 
