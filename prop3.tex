@@ -336,18 +336,29 @@ the same thing, eg proofs are just particular forms of programs. As a
 result, by developing sophisticated type theories, we advance both the
 field of programming languages and the field of program verification.
 
-A major step forward within type theory was achieved by Martin L\"of
+A major step forward within type theory was achieved by Martin-L\"of
 who realised that type theory needed to be extended to cover equality
 within the system and he did this by introducing the intensional identity type.
 However, it soon became apparent that this notion of equality type was
 too weak, eg functions that are pointwise equal cannot be proven to
 be equal. To address this, Martin-L\"of then introduced extensional
-Martin-L\" which produced a strong equality but at the price of
-loosing decidability of type checking. However, the problem of a strong but
+Martin-L\"of Type Theory which produced a strong equality but at the price of
+losing decidability of type checking. However, the problem of a strong but
 decidable theory of equality remained fundamentally unresolved for 40
 years. 
 
-{\bf OTT Section:}
+{\bf Observational Type Theory} (OTT) is a step forward, proposed by
+Altenkirch and McBride in 2007. Its propositional equality is designed
+to fit the structure of types, and is hence extensional for functions,
+but its definitional equality remains decidable. However, equality of
+types themselves is rigidly structural, not up to isomorphism,
+allowing a proof-irrelevant implementation but precluding the
+exploitation of higher-dimensional structure. As we advance to a
+proof-relevant treatment of a more refined equality, OTT offers key
+insight and techniques to combine a strong equality with decidable
+type checking.
+
+
 %power of methods
 %absolutely vital
 %very clear evidence
@@ -363,20 +374,19 @@ years.
 % hott = int param + kan filllers + hits
 % what does univalence mean
 
-{\bf HoTT:} Homotopy Type Theory (HoTT) is a revolutionary new
-approach to the problem which seeks to use intuitions from homotopy
-theory to generate a new analysis of equality. In particular, we think
-of types as spaces, terms as elements within the space and the
-identity type as the space of paths in a space. At the core of HoTT,
-is the new Axiom of Univalence as introduced by Fields medalist
-Vladimir Voevodsky which – roughly – asserts that isomorphic types can
-be treated as equal. In particular, we can program and reason up to
-invariance of representation. Furthermore, univalence implies
-functions which behave the same on every input are in fact equal - a
-key property required in formal reasoning. HoTT also extends what we
-could previously do, eg the higher inductive types (HITs) include not
-only the usual inductive types, but also quotients and geometric
-objects such as spheres or circles.
+{\bf Homotopy Type Theory} (HoTT) is a revolutionary new analysis of
+equality based on intuitions from homotopy theory. Types are \emph{spaces};
+terms are \emph{elements} within a space; the equality type is the space of
+\emph{paths} in a space. The core of HoTT is the new Axiom of Univalence,
+introduced by Fields medalist Vladimir Voevodsky, asserting (roughly)
+that isomorphic types are equal. Crucially, equality proofs carry
+the data necessary to program and reason up to invariance of
+representation. HoTT subsumes function extensionality but also
+transcends what we could previously express, e.g.\ \emph{higher}
+inductive types (HITs) include the usual tree structures, but
+also quotients and geometric objects such as the torus, where the hole
+stops us deforming some paths into others. Such paths contain
+non-trivial structural information, necessitating a proof-relevant equality.
 
 %What is HoTT
 
@@ -530,27 +540,24 @@ WP1.
 % We will begin by developing Altenkirch's preliminary type theory for
 % cubical sets, which both internalises parametricity and adds Kan
 % fillers to the theory. 
-We will explore Altenkirch's recent observation that cubical sets are closely related to logical relation, 
-with the goal to produce a variant of intentional
-Martin-L\"of Type Theory which replaces the global identity type with
-a recursively defined higher-dimensional equality. We will then use
-the various models from WP1 to either justify that this is a canonical
-type theory for HoTT, or to refine the type theory further. {\bf Is
-  WP1's influence clear?} Our preliminary work, and our expertise in
-topics such as {\em Observational Type Theory} (Altenkirch,
-McBride)~\footnote{ Observational Type Theory can be thought of as a
-  proof-irrelevant version of the desired type theory.},
-normalisation by evaluation and big-step reduction (Altenkirch,
-McBride), the strengthening of definitional equality (McBride),
-parametricity (Ghani) means that there is a high probability in
-producing a type theory for HoTT. Our more ambitious, and hence more
-risky goal, is to produce a type theory which acts as the internal
-language of $\infty$-LCCCs in the same way that the extensional Martin
-L\"of Type Theory arises the internal language of LCCCs.  This
-work package's deliverable will be a type theory which will form the
-basis of our programming language and formal verification
-environment. {\bf Check TXA, Parametricity, AP-logic}.  {\bf Quillen
-  Models, Quillen model Structures etc. Coherence}
+Cubical sets share structure with logical relations, as Altenkirch has
+recently observed. We shall exploit this connection to replace the
+uniform identity type of intensional Martin-L\"of Type Theory with a
+higher-dimensional equality defined to fit the structure of types. The
+models from WP1 will drive refinement of our design, until we have a
+canonical presentation of HoTT. Our preliminary work, and our
+expertise in topics such as OTT (Altenkirch, McBride), normalisation
+by evaluation and big-step reduction (Altenkirch, McBride), the
+strengthening of definitional equality (McBride), parametricity
+(Ghani) means that there is a high probability in producing a type
+theory for HoTT. Our more ambitious, and hence more risky goal, is to
+produce a type theory which acts as the internal language of
+$\infty$-LCCCs in the same way that the extensional Martin L\"of Type
+Theory arises the internal language of LCCCs.  This work package's
+deliverable will be a type theory which will form the basis of our
+programming language and formal verification environment. {\bf Check
+  TXA, Parametricity, AP-logic}.  {\bf Quillen Models, Quillen model
+  Structures etc. Coherence}
 
 %We follow the
 %practise in WP1 of managing risk in this workpackage by first aiming
