@@ -348,7 +348,7 @@ decidable theory of equality remained fundamentally unresolved for 40
 years. 
 
 {\bf Observational Type Theory} (OTT) is a step forward, proposed by
-Altenkirch and McBride in 2007. Its propositional equality is designed
+Altenkirch and McBride in 2007, \cite{alti:ott-conf}. Its propositional equality is designed
 to fit the structure of types, and is hence extensional for functions,
 but its definitional equality remains decidable. However, equality of
 types themselves is rigidly structural, not up to isomorphism,
@@ -447,8 +447,11 @@ book and the cubical sets construction of Coquand et al. as well as
 the ongoing dialogue with our collaborators; ii) our work on OTT which
 is a proof-irrelevant prototype of what we seek; iii) our work on the
 implementation of dependently typed programming languages (Epigram and
-$\Pi\Sigma$); iv) our work on datatypes (containers, indexed
-containers, induction-induction and induction-recursion); v) our work
+$\Pi\Sigma$ \cite{alti:pisigma-new,alti:checking}); iv) our work on datatypes (containers, indexed
+containers, induction-induction and induction-recursion) 
+\cite{alti:fossacs03,alti:tlca03,alti:icalp04,alti:jpartial,alti:mpc04,alti:cont-tcs,alti:regular,alti:cats07,alti:jcats07,alti:lics09,
+txa:catind2}
+ ; v) our work
 on parametricity; and vi) our work on constructing internal models of
 type theory. These multiple sources will ensure that we neither
 slavishly follow the hype that inevitably surrounds significant
@@ -546,8 +549,8 @@ uniform identity type of intensional Martin-L\"of Type Theory with a
 higher-dimensional equality defined to fit the structure of types. The
 models from WP1 will drive refinement of our design, until we have a
 canonical presentation of HoTT. Our preliminary work, and our
-expertise in topics such as OTT (Altenkirch, McBride), normalisation
-by evaluation and big-step reduction (Altenkirch, McBride), the
+expertise in topics such as OTT (Altenkirch, McBride) \cite{alti:ott-conf}, normalisation
+by evaluation and big-step reduction (Altenkirch, McBride) \cite{alti:ctcs95,alti:lics96,alti:flops04,txa:jtait} the
 strengthening of definitional equality (McBride), parametricity
 (Ghani) means that there is a high probability in producing a type
 theory for HoTT. Our more ambitious, and hence more risky goal, is to
