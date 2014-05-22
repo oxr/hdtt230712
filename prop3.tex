@@ -348,7 +348,7 @@ decidable theory of equality remained fundamentally unresolved for 40
 years. 
 
 {\bf Observational Type Theory} (OTT) is a step forward, proposed by
-Altenkirch and McBride in 2007, \cite{alti:ott-conf}. Its propositional equality is designed
+Altenkirch and McBride~\cite{alti:ott-conf} in 2007. Its propositional equality is designed
 to fit the structure of types, and is hence extensional for functions,
 but its definitional equality remains decidable. However, equality of
 types themselves is rigidly structural, not up to isomorphism,
@@ -389,24 +389,25 @@ non-trivial structural information, necessitating a proof-relevant equality.
 
 %What is HoTT
 
-However, we do not yet have a satisfactory computational explanation of
-univalence. This is partly because almost all of our understanding of
-HoTT exists within a classical framework although this has changed
-recently with a significant advance in the form of Coquand's cubical
-model of HoTT together with an interpretation of Martin L\"of type
-theory which validates univalence. However, much remains to be done:
-there is not yet a computational interpretation of univalence in that
-terms currently only compute to denotations in the model rather than
-other terms. More generally, its not clear that this model is the
-right model in that it only validates a weak version of the
-computation rule for the identity type. Further, other models might
-provide better foundations for developing HoTT, while a proper
-development of the subject almost certainly requires a proper model
-theory for HoTT. Finally, no programming language or verification tools
-have been built for HoTT so far. Nevertheless, Coquand's and Huber's
-work shows that producing programming languages and proof assistants
-based upon HoTT is feasible in principle and we plan to
-collaborate closely with them.
+%However, we do not yet have a satisfactory computational explanation of
+%univalence. This is partly because almost all of our understanding of
+%HoTT exists within a classical framework 
+
+%Why us and not the United States of Awodey. Strong definitional equlity. 
+
+Coquand's \emph{cubical} model of HoTT interprets closed expressions
+as canonical denotations, demonstrating basic feasibility of computing
+with univalence. However, much work lies ahead: we need to give
+closed expressions normal forms \emph{within} HoTT, and to recover
+definitional equalities lost by the cubical interpretation. Further, other models might
+offer better computational foundations for HoTT, so practical progress
+towards programming languages and verification tools based on HoTT
+is best informed by a broader model theory.
+
+% Nevertheless, Coquand's and Huber's
+%work shows that producing programming languages and proof assistants
+%based upon HoTT is feasible in principle and we plan to
+%collaborate closely with them.
 
 {\bf Parametricity:} Coquand's model is closely reated to
 parametricity because we can view the interpretation in cubical sets
@@ -576,7 +577,7 @@ difficult. Higher inductive types (HITs) offer a new an exciting
 possibility ... one replaces equations by operations at higher
 dimensions. This has already had exciting consequences in that
 geometric objects such as spheres, the real numbers and the
-cummulative hierarchy of sets can all be seen as HITs.  In Computer
+cumulative hierarchy of sets can all be seen as HITs.  In Computer
 Science, HITs cover datatypes with permutable positions such as
 multisets, circular lists as well as the more general quotient
 containers \cite{alti:mpc04,
