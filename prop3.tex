@@ -347,6 +347,23 @@ losing decidability of type checking. However, the problem of a strong but
 decidable theory of equality remained fundamentally unresolved for 40
 years. 
 
+
+{\bf Logical Relations:} Coquand's model is closely reated to
+parametricity because we can view the interpretation in cubical sets
+as defining dependently typed logical relations.
+%txa: replacing
+% One of the key features of Coquand's model is that
+% the equality relation is defined recursively over the structure of
+% types using an internalised form of parametricity. 
+Parametricity
+itself is a fundamental technology within computer science and,
+research into it is currently being funded by EPSRC at Strathclyde. We
+will use the expertise at Strathclyde to see if variants of the
+standard presentations of parametricity lead to better behaved
+refinements of the cubical set model, and feed innovations in the use
+of parametricity within HoTT back into the general parametricity
+community. {\bf Needs Repair/rewrite}
+
 {\bf Observational Type Theory} (OTT) is a step forward, proposed by
 Altenkirch and McBride~\cite{alti:ott-conf} in 2007. Its propositional equality is designed
 to fit the structure of types, and is hence extensional for functions,
@@ -374,18 +391,34 @@ type checking.
 % what does univalence mean
 
 {\bf Homotopy Type Theory} (HoTT) is a revolutionary new analysis of
-equality based on intuitions from homotopy theory. Types are \emph{spaces};
-terms are \emph{elements} within a space; the equality type is the space of
-\emph{paths} in a space. The core of HoTT is the new Axiom of Univalence,
-introduced by Fields medalist Vladimir Voevodsky, asserting (roughly)
-that isomorphic types are equal. Crucially, equality proofs carry
-the data necessary to program and reason up to invariance of
-representation. HoTT subsumes function extensionality but also
-transcends what we could previously express, e.g.\ \emph{higher}
-inductive types (HITs) include the usual tree structures, but
-also quotients and geometric objects such as the torus, where the hole
-stops us deforming some paths into others. Such paths contain
-non-trivial structural information, necessitating a proof-relevant equality.
+equality based on intuitions from homotopy theory. Types are
+\emph{spaces}; terms are \emph{elements} within a space; the equality
+type is the space of \emph{paths} in a space. The core of HoTT is the
+new Axiom of Univalence, introduced by Fields medalist Vladimir
+Voevodsky, asserting (roughly) that isomorphic types are
+equal. Crucially, equality proofs carry the data necessary to program
+and reason up to invariance of representation. HoTT subsumes function
+extensionality but also transcends what we could previously express,
+e.g.\ \emph{higher} inductive types (HITs) include the usual tree
+structures, but also quotients and geometric objects such as the
+torus, where the hole stops us deforming some paths into others. Such
+paths contain non-trivial structural information, necessitating a
+proof-relevant equality. The same phenomenon occurs in computer
+science, e.g. lists are an inductive type; braids are lists with extra
+paths identifying lists upto twisting of any element past its
+neighbours, and bags are braids with paths-between-paths identifying
+braidings which yield the same permutation.
+{\bf general quotient
+containers \cite{alti:mpc04,
+  EPSRC_Containers}}
+
+% Finally, in combinatorics, HITs cover the
+% fundamental concept of species as species are quotient
+% structures. Despite the ubiquity of examples, there is however no
+% systematic and complete treatment of HITs which harnesses their power
+% and thereby deliver on their potential.
+
+
 
 %What is HoTT
 
@@ -404,26 +437,13 @@ offer better computational foundations for HoTT, so practical progress
 towards programming languages and verification tools based on HoTT
 is best informed by a broader model theory.
 
+
+
 % Nevertheless, Coquand's and Huber's
 %work shows that producing programming languages and proof assistants
 %based upon HoTT is feasible in principle and we plan to
 %collaborate closely with them.
 
-{\bf Parametricity:} Coquand's model is closely reated to
-parametricity because we can view the interpretation in cubical sets
-as defining dependently typed logical relations.
-%txa: replacing
-% One of the key features of Coquand's model is that
-% the equality relation is defined recursively over the structure of
-% types using an internalised form of parametricity. 
-Parametricity
-itself is a fundamental technology within computer science and,
-research into it is currently being funded by EPSRC at Strathclyde. We
-will use the expertise at Strathclyde to see if variants of the
-standard presentations of parametricity lead to better behaved
-refinements of the cubical set model, and feed innovations in the use
-of parametricity within HoTT back into the general parametricity
-community.
 
 %Earleir motivation for OTT
 %Grant numbers below
@@ -545,22 +565,22 @@ WP1.
 % fillers to the theory. 
 Cubical sets share structure with logical relations, as Altenkirch has
 recently observed. We shall exploit this connection to replace the
-uniform identity type of intensional Martin-L\"of Type Theory with a
+uniform identity type of intensional MLTT with a
 higher-dimensional equality defined to fit the structure of types. The
 models from WP1 will drive refinement of our design, until we have a
-canonical presentation of HoTT. Our preliminary work, and our
-expertise in topics such as OTT (Altenkirch, McBride) \cite{alti:ott-conf}, normalisation
-by evaluation and big-step reduction (Altenkirch, McBride) \cite{alti:ctcs95,alti:lics96,alti:flops04,txa:jtait} the
-strengthening of definitional equality (McBride), parametricity
-(Ghani) means that there is a high probability in producing a type
-theory for HoTT. Our more ambitious, and hence more risky goal, is to
-produce a type theory which acts as the internal language of
-$\infty$-LCCCs in the same way that the extensional Martin L\"of Type
-Theory arises the internal language of LCCCs.  This work package's
-deliverable will be a type theory which will form the basis of our
-programming language and formal verification environment. {\bf Check
-  TXA, Parametricity, AP-logic}.  {\bf Quillen Models, Quillen model
-  Structures etc. Coherence}
+canonical presentation of HoTT. Our preparatory work, and prior
+expertise in OTT \cite{alti:ott-conf}, normalisation by
+evaluation and big-step reduction
+\cite{alti:ctcs95,alti:lics96,alti:flops04,txa:jtait}, 
+strengthening definitional
+equality~\cite{Allais:2013:NEN:2502409.2502411}, and logical
+relations~\cite{bobandpatty} ensures a high probability of delivering
+an effective presentation of HoTT. Our more audacious goal is to find
+the generic internal
+language of $\infty$-LCCCs in the same way that extensional MLTT
+is the internal language of LCCCs.  {\em Deliverable: a type theory to
+  underpin our programming language and formal verification environment.} {\bf
+introduce MLTT abbreviation earlier and $\infty$-LCCC} 
 
 %We follow the
 %practise in WP1 of managing risk in this workpackage by first aiming
@@ -568,25 +588,7 @@ programming language and formal verification environment. {\bf Check
 %specific models and then aiming for the more ambitious goal of
 %integrating these presentations onto a unified framework.
 
-{\bf WP3: Higher Inductive Types:} In mathematics and computer science
-structures are often presented via operations and equations leading to
-a two-phase analysis: first one constructs a free algebra and then one
-constructs the quotient algebra. In computer science, while reasoning
-about free algebras is easy, reasoning about quotient structures is
-difficult. Higher inductive types (HITs) offer a new an exciting
-possibility ... one replaces equations by operations at higher
-dimensions. This has already had exciting consequences in that
-geometric objects such as spheres, the real numbers and the
-cumulative hierarchy of sets can all be seen as HITs.  In Computer
-Science, HITs cover datatypes with permutable positions such as
-multisets, circular lists as well as the more general quotient
-containers \cite{alti:mpc04,
-  EPSRC_Containers}.  Finally, in combinatorics, HITs cover the
-fundamental concept of species as species are quotient
-structures. Despite the ubiquity of examples, there is however no
-systematic and complete treatment of HITs which harnesses their power
-and thereby deliver on their potential.
-
+{\bf WP3: Higher Inductive Types:} 
 Our goal is to accomodate HITs in the semantics developed in WP1 and
 the syntactic framework of WP2. Our idea to achieve this is to develop
 a universal HIT playing the role for HITs that W-types play for
