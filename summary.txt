@@ -1,0 +1,15 @@
+This project is about a programming language, called Homotopy Type
+Theory (HoTT), in which we cannot only write programs, but also
+express properties of programs using types, and programs to express
+proofs that our programs are correct. The homotopy part comes from the
+work of the Mathematician Vladimir Voevodsky and others who
+established a new and exciting link between geometric objects and
+reasoning about equality.  In a nutshell HoTT allows us to treat
+objects which behave the same as equal (univalence). Another feature
+of HoTT is that we can model datatypes, such as bags, where elements
+can be exchanged easily (using what is called higher inductive
+types). We believe that these are essential ingredients to make formal
+verification possible by allowing us to reuse proofs and programs
+effectively. In this project we want to develop the theoretical
+foundations of the language which helps us to implement the language
+which we then want to use in examples to demonstrate its usefulness.
