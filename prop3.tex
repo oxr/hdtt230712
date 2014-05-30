@@ -11,6 +11,9 @@
 \usepackage[dvips]{graphics}
 \usepackage[dvips,all]{xy}
 \usepackage{multicol}
+\usepackage{natbib}
+\setlength{\bibsep}{0.0pt}
+
 
 %\newlength{\extraplusheight}
 %\newlength{\extrapluswidth}
@@ -351,23 +354,8 @@ decidable theory of equality remained fundamentally unresolved for 40
 years. 
 
 
-{\bf Logical Relations:} Coquand's model is closely reated to
-parametricity because we can view the interpretation in cubical sets
-as defining dependently typed logical relations.
-%txa: replacing
-% One of the key features of Coquand's model is that
-% the equality relation is defined recursively over the structure of
-% types using an internalised form of parametricity. 
-Parametricity
-itself is a fundamental technology within computer science and,
-research into it is currently being funded by EPSRC at Strathclyde. We
-will use the expertise at Strathclyde to see if variants of the
-standard presentations of parametricity lead to better behaved
-refinements of the cubical set model, and feed innovations in the use
-of parametricity within HoTT back into the general parametricity
-community. {\bf Needs Repair/rewrite}
-
-{\bf Observational Type Theory} (OTT) is a step forward, proposed by
+{\bf Observational Type Theory} (OTT) is a step forward towards a
+decidable type theory with a strong equality, proposed by
 Altenkirch and McBride~\cite{alti:ott-conf} in 2007. Its propositional equality is designed
 to fit the structure of types, and is hence extensional for functions,
 but its definitional equality remains decidable. However, equality of
@@ -403,7 +391,7 @@ equal. Crucially, equality proofs carry the data necessary to program
 and reason up to invariance of representation. HoTT subsumes function
 extensionality but also transcends what we could previously express,
 e.g.\ \emph{higher} inductive types (HITs) include the usual tree
-structures, but also quotients and geometric objects such as the
+structures, but also quotients \cite{alti:mpc04} and geometric objects such as the
 torus, where the hole stops us deforming some paths into others. Such
 paths contain non-trivial structural information, necessitating a
 proof-relevant equality. The same phenomenon occurs in computer
@@ -411,16 +399,28 @@ science, e.g. lists are an inductive type; braids are lists with extra
 paths identifying lists upto twisting of any element past its
 neighbours, and bags are braids with paths-between-paths identifying
 braidings which yield the same permutation.
-{\bf general quotient
-containers \cite{alti:mpc04,
-  EPSRC_Containers}}
-
 % Finally, in combinatorics, HITs cover the
 % fundamental concept of species as species are quotient
 % structures. Despite the ubiquity of examples, there is however no
 % systematic and complete treatment of HITs which harnesses their power
 % and thereby deliver on their potential.
 
+%txa: moved it to the end, after HoTTx
+{\bf Logical Relations:} Coquand's model is closely reated to
+parametricity because we can view the interpretation in cubical sets
+as defining dependently typed logical relations.
+%txa: replacing
+% One of the key features of Coquand's model is that
+% the equality relation is defined recursively over the structure of
+% types using an internalised form of parametricity. 
+Parametricity
+itself is a fundamental technology within computer science and,
+research into it is currently being funded by EPSRC at Strathclyde. We
+will use the expertise at Strathclyde to see if variants of the
+standard presentations of parametricity lead to better behaved
+refinements of the cubical set model, and feed innovations in the use
+of parametricity within HoTT back into the general parametricity
+community. {\bf Needs Repair/rewrite}
 
 
 %What is HoTT
@@ -522,8 +522,8 @@ version of the small object argument comes from Garner's work, where
 it is related to the construction of free monads. In terms of risk,
 i) is certainly achievable since it involves only the analysis of
 existing concrete models, while ii) is a more ambitious
-goal. Nevertheless, our expertise on semantic models of parametricity (Ghani), model
-categories (Gambino) and models of type theory (Altenkirch) makes even this
+goal. Nevertheless, our expertise on semantic models of parametricity \cite{neil2014relParamDep}, model
+categories (Gambino) and $\omega$-groupoids \cite{alti:csl12} makes even this
 ambitious goal feasible. Deliverables from WP1 will be a broad class
 of models of HoTT which considerably deepen our
 understanding and map out the design space of its 
@@ -596,7 +596,7 @@ Our goal is to accomodate HITs in the semantics developed in WP1 and
 the syntactic framework of WP2. Our idea to achieve this is to develop
 a universal HIT playing the role for HITs that W-types play for
 ordinary inductive types. This is feasible as partial progress has
-already been made ... one can often reduce HITs with higher
+already been made \dots one can often reduce HITs with higher
 dimensional constructors to ones with only 0- and 1-dimensional
 constructors (using the hubs-and-spoke construction). 
 Similarly, \cite{gylterud:thesis,kock:groupoids} has shown how quotient 
@@ -607,7 +607,7 @@ the universal HIT in the same way that strictly positive types provide
 a grammar for defining various W-types. This will feed into WP7.  Our
 most ambitious goal is to - time permitting - investigate other
 variations of HITs: coinductive HITs, mixed inductive/coinductive HITS
-\cite{txa-nisse}, HITs and inductive-inductive and inductive-recursive
+\cite{txa:mpc2010g}, HITs and inductive-inductive and inductive-recursive
 HITs which open the door towards a more concise representation of
 dependently typed syntax in type theory~\cite{chapman2009type} by
 introducing constructors and definitional equalities at the same
@@ -617,7 +617,7 @@ is related again to WP7. {\bf More on QCs}
 
 The risk within the first phase of this WP seems relatively low since we
 have already a good background from our previous work on data
-types~\cite{II_etc} including EPSRC grants on Containers and Induction
+types~\cite{alti:cont-tcs,alti:lics09,txa:cie10,alti:catind2} including EPSRC grants on Containers and Induction
 Recursion and because partial results already exist showing that
 results are available and also guiding the way towards fresh
 ones. While its not clear we can push the results as far as we imagine
@@ -736,7 +736,7 @@ the work in WP3.
 We are planning to use Haskell as an implementation language because
 there is considerable expertise at Nottingham and Strathclyde in using
 Haskell to implement type checkers for dependently typed languages
-including Epigram, $\Pi\Sigma$ and Agda \cite{epigram,easy,alti:pisigma-new}.
+including Epigram, $\Pi\Sigma$ and Agda \cite{alti:checking,easy,alti:pisigma-new}.
 In addition, our prototypical implementation of OTT will be
 particularly informative as it can be viewed as a precursor of HoTT as
 it has an recursively defined notion of equality. 
@@ -774,8 +774,10 @@ the developers of these systems to maximise compatibility and impact.
 The technical challenges we face are to restrict pattern matching so
 that it is compatible with HoTT --- we plan to build on recent work
 by Coeckx \cite{coeckx-without-k}. There are other issues
-related to the termination checker which need to be adressed
-\cite{coq-agda-issue-w-termination}. We also want to integrate pattern
+related to the termination checker which need to be adressed, 
+see recent discussions on the Agda and Coq mailing lists.
+%\cite{coq-agda-issue-w-termination}. 
+We also want to integrate pattern
 matching with HITs --- this is currently an open problem. {\bf The
 deliverables with consist of language extensions and some programs}
 
@@ -1102,24 +1104,20 @@ its potential for impact. See our {\em Pathways to
 
 %{%\small
 
+\newpage
+
+\begin{footnotesize}
+\begin{twocolumn}
 \bibliographystyle{plain}
+%\bibliographystyle{abbrv}
+%\bibliographystyle{plainnat}
 \bibliography{proposal,alti}
+\end{twocolumn}
+\end{footnotesize}
 
-%\vspace*{-0.25in}
-
-%\setlength{\parindent}{0in}
-%\setlength{\columnsep}{0.3in}
-%\setlength{\parskip}{-0.1ex}
-
-%\begin{multicols}{2}
-
-%M. Bezen and T. Coquand, ???
-
-%M. Bezem and T. Coquand and S. Huber, A cubical set model of type theory, Preprint available from Thierry Coquand's web page, March 25th 2014.
-
-%A. Pitts, Book on nominal sets.
-
-
-%}
+% \begin{multicols}{2}
+% \bibliographystyle{plain}
+% \bibliography{proposal,alti}
+% \end{multicols}{2}
 
 \end{document}
