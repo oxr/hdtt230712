@@ -653,47 +653,90 @@ working closely together.
 %Argue in justification for resources
 %Explain compute below 
 
-{\bf WP1: Semantic Foundations of HoTT:}  We
-seek semantic insights into HoTT akin to those provided by Cartesian
-closed categories for the simply typed
-$\lambda$-calculus.  A constructive model theory for HoTT is essential because: i)
-specific implementations of HoTT can be proven sound by giving a specific
-models of them; ii) 
-%since we don't know a priori what the best implementation
-%of HoTT will be, 
-a general model theory of HoTT will implicitly predict, and thereby
-guide, the design space of different presentations and implementations
-of HoTT; and iii) models of HoTT will provide algebraic techniques to
-reason about the correctness of implementations which complement
-syntactic techniques. These models need to be constructive so that
-programs, even those using Univalence, will compute. While the
-standard model of HoTT based upon simplicial sets is not constructive,
-Coquand et al.'s recent cubical set model is constructive and 
-has thus opened the door to a more general model theory.
 
-%Joyal
-%Back ground : Qullien model structures
 
-We will attack this problem from the following directions: i) we will
-analyse existing models (cubical sets, groupoids, strict
-$\omega$-groupoids, simplicial sets, globular sets) to isolate exactly
-how they ensure constructivity, or (where they fail to do so) how to 
-constructivize them; and ii) informed by i),
-we will develop a model theory for HoTT by both adapting known methods to
-define Quillen model structures (such as the small object argument)
-to the constructive setting and by showing how one can build  new
-constructive model structures from old (eg by
-slicing). A promising starting point for a constructive
-version of the small object argument comes from Garner's work, where
-it is related to the construction of free monads. In terms of risk,
-i) is certainly achievable since it involves only the analysis of
-existing concrete models, while ii) is a more ambitious
-goal. Nevertheless, our expertise on semantic models of parametricity \cite{neil2014relParamDep}, model
-categories (Gambino) and $\omega$-groupoids \cite{alti:csl12} makes even this
-ambitious goal feasible. Deliverables from WP1 will be a broad class
-of models of HoTT which considerably deepen our
-understanding and map out the design space of its 
-syntactic presentations.
+{\bf WP1: Semantic Foundations of HoTT.}  We seek semantic insights
+into HoTT akin to those provided by Cartesian closed categories for
+the simply typed $\lambda$-calculus.  A constructive model theory for
+HoTT is essential because: (1) a general model theory of HoTT will
+guide the design of different presentations and implementations of
+HoTT; (2) models of HoTT will provide algebraic techniques to reason
+about the correctness of implementations which complement syntactic
+techniques, and in particular (3) specific implementations of HoTT can
+be proven sound by giving a specific models of them.  These models
+need to be constructive so that programs, even those using the
+Univalence axiom, will compute ({i.e.} reduce to a normal form). While
+the standard model of HoTT based upon simplicial sets is not
+constructive, the cubical set model recently developed by Coquand et
+{al.}\ is constructive and raises the question of understanding it
+within a general model theory.
+
+ We will attack this problem from the following directions: (1) we
+ will analyse existing models ({e.g.} groupoids, strict
+ $\omega$-groupoids, simplicial sets, cubical sets) and isolate
+ exactly how they ensure constructivity or where they fail to do
+ so. In the latter case, we will investigate whether it is possible to
+ constructivize them; (2) on the basis of our experience with (1), we
+ will develop a model theory for HoTT by both adapting known methods
+ to construct new models from old (such as by the methods of slicing,
+ glueing, sheaves) to the setting of HoTT.
+
+For (2), our starting point will be the simple axiomatisation of the
+notion of a model of type theory obtained by Steve
+Awodey~\cite{AwodeyS:natmtt}.  On that basis and building on Joyal's
+work~\cite{JoyalA:cathl}, we will require the existence of additional
+structure, corresponding to the axioms of HoTT under consideration. In
+terms of risk, (1) is certainly achievable since it involves only the
+analysis of existing concrete models, while (2) is a more ambitious
+goal. Nevertheless, our expertise on semantics of type
+theories~\cite{neil2014relParamDep}, homotopical
+algebra~\cite{GambinoN:idetwfs,GambinoN:homl2c} and
+$\omega$-groupoids~\cite{alti:csl12} makes even this ambitious goal
+feasible. Deliverables from WP1 will be a broad class of models of
+HoTT which considerably deepen our understanding and map out the
+design space of its syntactic presentations.
+
+% {\bf WP1: Semantic Foundations of HoTT:}  We
+% seek semantic insights into HoTT akin to those provided by Cartesian
+% closed categories for the simply typed
+% $\lambda$-calculus.  A constructive model theory for HoTT is essential because: i)
+% specific implementations of HoTT can be proven sound by giving a specific
+% models of them; ii) 
+% %since we don't know a priori what the best implementation
+% %of HoTT will be, 
+% a general model theory of HoTT will implicitly predict, and thereby
+% guide, the design space of different presentations and implementations
+% of HoTT; and iii) models of HoTT will provide algebraic techniques to
+% reason about the correctness of implementations which complement
+% syntactic techniques. These models need to be constructive so that
+% programs, even those using Univalence, will compute. While the
+% standard model of HoTT based upon simplicial sets is not constructive,
+% Coquand et al.'s recent cubical set model is constructive and 
+% has thus opened the door to a more general model theory.
+
+% %Joyal
+% %Back ground : Qullien model structures
+
+% We will attack this problem from the following directions: i) we will
+% analyse existing models (cubical sets, groupoids, strict
+% $\omega$-groupoids, simplicial sets, globular sets) to isolate exactly
+% how they ensure constructivity, or (where they fail to do so) how to 
+% constructivize them; and ii) informed by i),
+% we will develop a model theory for HoTT by both adapting known methods to
+% define Quillen model structures (such as the small object argument)
+% to the constructive setting and by showing how one can build  new
+% constructive model structures from old (eg by
+% slicing). A promising starting point for a constructive
+% version of the small object argument comes from Garner's work, where
+% it is related to the construction of free monads. In terms of risk,
+% i) is certainly achievable since it involves only the analysis of
+% existing concrete models, while ii) is a more ambitious
+% goal. Nevertheless, our expertise on semantic models of parametricity \cite{neil2014relParamDep}, model
+% categories (Gambino) and $\omega$-groupoids \cite{alti:csl12} makes even this
+% ambitious goal feasible. Deliverables from WP1 will be a broad class
+% of models of HoTT which considerably deepen our
+% understanding and map out the design space of its 
+% syntactic presentations.
 
 % back ground work: NOMINAL SETS,
 
