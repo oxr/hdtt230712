@@ -1,18 +1,10 @@
-proposal.aux
-proposal.dvi
+*.aux
+*.log
 
-proposal.log
+*.synctex.gz
 
-proposal.pdf
-
-proposal.synctex.gz
-
-*.bbl
+*.pdf
+*.dvi
 
 *.bbl
-
-proposal.bbl
-
-proposal.blg
-
-prop3.blg
+*.blg
