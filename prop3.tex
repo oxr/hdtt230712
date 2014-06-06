@@ -880,7 +880,7 @@ which arise in dependently typed programming, or a full-scale integration
 of our results any in the language of WP7 will be more challenging.
 
 
-{\bf WP5 Formalisation of Meta-Theory of HoTT.}  As we intend to use
+{\bf WP5 Formalisation of Meta-Theory of HoTT:}  As we intend to use
 HoTT as a formal verification system, we need the highest possible
 level of trust in its correctness. Indeed, the complexity of HoTT
 semantics due to its higher dimensional nature, make a paper based
@@ -954,56 +954,70 @@ environment.
 % a notion of pattern matching which is consistent with HoTT and
 % formally verify this fact. 
 
-{\bf WP6: Implementing a Core Programming Language:} {\bf HoTT in
-  Agda:} In order showcase the potential for HoTT based programming
-languages to the wider programming languages community, and learn from
-their feedback, we need to build a prototypical implementation of a
-type checker and interpreter based on the type theory designed in WP2.
-This system forms a proof of concept implementation lacking most if
-not all bells and whistles present in modern implementations of Type
-Theory. That is, while we will implement the type theory of WP2, we
-will not attempt to implement a high-level syntax for datatypes,
-universe polymorphism, implicit arguments or pattern
-matching. However, the language will include a universal HIT based on
-the work in WP3.
+{\bf WP6: Implementing a Core Programming Language:} In order showcase
+the potential for HoTT based programming languages to the wider
+programming languages community, and learn from their feedback, we
+need to build a prototypical implementation of a type checker and
+interpreter based on the type theory designed in WP2.  This system
+forms a proof of concept implementation lacking most if not all bells
+and whistles present in modern implementations of Type Theory. That
+is, while we will implement the type theory of WP2, we will not
+attempt to implement a high-level syntax for datatypes, universe
+polymorphism, implicit arguments or pattern matching. However, we plan
+to incorporate the results from WP3 to support a generic version of
+HITs.
 
 We are planning to use Haskell as an implementation language because
 there is considerable expertise at Nottingham and Strathclyde in using
 Haskell to implement type checkers for dependently typed languages
-including Epigram, $\Pi\Sigma$ and Agda \cite{alti:checking,easy,alti:pisigma-new}.
-In addition, our prototypical implementation of OTT will be
-particularly informative as it can be viewed as a precursor of HoTT as
-it has an recursively defined notion of equality. 
+including Epigram, $\Pi\Sigma$ and Agda
+\cite{alti:checking,easy,alti:pisigma-new}.  In addition, our
+prototypical implementation of OTT will be particularly informative as
+it can be viewed as a precursor of HoTT as it has an recursively
+defined notion of equality. Another source of inspiration comes form parametricity 
+here there is considerable experience at Strathclyde.
+We plan to collaborate with people at
+Chalmers, especially building on Coquand and Huber's experiences with
+implementing the cubical set model - which also shows that our
+approach is feasible in principle.
 
-Coquand's and Huber's implementation of the cubical set model shows
-that our approach is feasible in principle and we plan to collaborate
-with them. However, we should be able to address particular issues
-such as the fact that certain definitional equalities don't hold in
-the cubical set model using the technology we have developed in the
-context of OTT \cite{alti:ott-conf} which is the subject of current
-work at Strathclyde.
+% Coquand's and Huber's implementation of the cubical set model shows
+% that our approach is feasible in principle and we plan to collaborate
+% with them. However, we should be able to address particular issues
+% such as the fact that certain definitional equalities don't hold in
+% the cubical set model using the technology we have developed in the
+% context of OTT \cite{alti:ott-conf} which is the subject of current
+% work at Strathclyde.
 
-The main difficulty within this WP is that the implementation of
-higher dimensional type theories is a new area --- nevertheless our
-experience in the implementation of dependent type theories leads us
-to believe this is still of low risk. Having said that, there is some
-risk that the implementation takes much longer than expected: we will
-manage this by keeping the scope of the language small. {\bf Play up OTT and Parametricity (Johann)}
+% The main difficulty within this WP is that the implementation of
+% higher dimensional type theories is a new area --- nevertheless our
+% experience in the implementation of dependent type theories leads us
+% to believe this is still of low risk. Having said that, there is some
+% risk that the implementation takes much longer than expected: we will
+% manage this by keeping the scope of the language small. {\bf Play up OTT and Parametricity (Johann)}
 
-{\bf WP7: A High Level Programming Language:}
-The aim of this WP is to make the language developed in the previous
-WPs usable in practice. This relies on a high-level syntax for
-datatypes including higher inductive types and on integrating known
-technology such as implicit arguments but also compilation and
-interfaces to other languages. A central question which needs to be
-answered is wether it is preferable to integrate our ideas with an
-existing system such as Agda, Coq or Idris or wether it is preferable
-to start from scratch. The advantages of the former approach is that
-we connect with significant user communities, can learn from their
-experience and avoid duplication of work. However, it is currently
-not clear wether this is feasible since it would affect the very
-core of these systems. Either way, we plan to collaborate closely with
-the developers of these systems to maximise compatibility and impact.
+{\bf WP7: A High Level Programming Language:} The aim of this WP is to
+make the language developed in the previous WPs usable in
+practice. This relies on a high-level syntax for datatypes including
+higher inductive types and on integrating known technology such as
+implicit arguments but also compilation and interfaces to other
+languages.
+
+An important question is wether it is possible to integrate our
+approach to HoTT with existing systems such as Agda or Coq, or wether
+it is preferable to start from scratch. We will explore both options
+in close collaboration with Coq developers (e.g. Hugo Herbelin,
+Matthieu Sozeau) and Agda developers (Andreas Abel, Ulf Norrell).
+
+ % A central question which needs to be
+% answered is wether it is preferable to integrate our ideas with an
+% existing system such as Agda, Coq or Idris or wether it is preferable
+% to start from scratch. The advantages of the former approach is that
+% we connect with significant user communities, can learn from their
+% experience and avoid duplication of work. However, it is currently
+% not clear wether this is feasible since it would affect the very
+% core of these systems. Either way, we plan to collaborate closely with
+% the developers of these systems to maximise compatibility and impact.
 
 The technical challenges we face are to restrict pattern matching so
 that it is compatible with HoTT --- we plan to build on recent work
@@ -1011,22 +1025,21 @@ by Coeckx \cite{coeckx-without-k}. There are other issues
 related to the termination checker which need to be adressed, 
 see recent discussions on the Agda and Coq mailing lists.
 %\cite{coq-agda-issue-w-termination}. 
-We also want to integrate pattern
-matching with HITs --- this is currently an open problem. {\bf The
-deliverables with consist of language extensions and some programs}
+We also would like to integrate pattern
+matching with HITs --- this is currently an open problem. 
 
-This is the most ambitious of our work packages because, if successful,
-we would have produced a new state of the art programming language for
-software construction and verification. Given the current interest in
-HoTT, it would immediately attract attention of significant
-numbers. However, the volume of work required to develop a practical
-language makes this also the most risky WP. Nevertheless, if all we
-produce are proof-of-concept implementations of some high level
-features, leaving significant amounts of the implementation of a
-practical language to future work, then the project as a whole will
-still be a massive success because both the foundational, practical
-and engineering groundwork for a homotopical programming language will
-have been done. {\bf Libraries for doing HoTT in Agda}
+% This is the most ambitious of our work packages because, if successful,
+% we would have produced a new state of the art programming language for
+% software construction and verification. Given the current interest in
+% HoTT, it would immediately attract attention of significant
+% numbers. However, the volume of work required to develop a practical
+% language makes this also the most risky WP. Nevertheless, if all we
+% produce are proof-of-concept implementations of some high level
+% features, leaving significant amounts of the implementation of a
+% practical language to future work, then the project as a whole will
+% still be a massive success because both the foundational, practical
+% and engineering groundwork for a homotopical programming language will
+% have been done. {\bf Libraries for doing HoTT in Agda}
 
 
 % In Agda pattern matching is one of the main devices to support
@@ -1148,7 +1161,7 @@ complemented at a more detailed level by our background in logical
 relations, containers, and OTT means we also bring technical novelty
 to the study of HoTT. This is crucial ... while we benefit from being
 part of a worldwide community working on HoTT, we also have great
-distinctiveness in our cummulative competancies and expriences leading to 
+distinctiveness in our cummulative competencies and experiences leading to 
 significant novelties in our approach.
  
 \vspace*{0.02in}
@@ -1206,7 +1219,7 @@ Within programming languages and program verification, we are aiming
 high.  The current state of the art in programming language design is
 limited by the lack of a clear understanding of how strong equality
 ought to be within a programming language. Our research will provide a
-step change in perogramming languages research where the current
+step change in programming languages research where the current
 ad-hoc treatments of equality will be replaced by one with a well
 understood foundation. Thus we expect the results of our research to
 become the cornerstone for the next generation of high level
@@ -1235,11 +1248,11 @@ project.
 \vspace*{0.02in}
 
 {\bf Success criteria:} We have clearly demonstrated success criteria
-for each workpakage in the form of a clearly delineated deliverable
+for each workpackage in the form of a clearly delineated deliverable
 and have argued why these deliverables are of great value individually
 but also are essential to the overall goal of the project. As for the
 overall project, its criteria for success will be threefold: i) new
-syntactic and semantic foundations for HoTT; ii) programmiung language
+syntactic and semantic foundations for HoTT; ii) programming language
 and verification tools for computing with HoTT; and iii) a code base
 of programs written in, and verified by, these tools thereby showing
 applied researchers how HoTT can be used in their daily practice.
