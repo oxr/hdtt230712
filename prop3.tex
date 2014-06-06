@@ -882,42 +882,67 @@ of our results any in the language of WP7 will be more challenging.
 
 {\bf WP5 Formalisation of Meta-Theory of HoTT.}  As we intend to use
 HoTT as a formal verification system, we need the highest possible
-level of trust in its correctness. This means we need to check that
-the model theory of HoTT, the associated type theory and their
-relationship are correct. Given that HoTT is inherently a complex and
-combinatorially intricate mathematical subject because of its higher
-dimensional structure, a purely paper based verification would be
-doubtful.  Thus, the only way to ensure the required high level of
-trust in the correctness of our work is to formally verify that this
-is the case.
+level of trust in its correctness. Indeed, the complexity of HoTT
+semantics due to its higher dimensional nature, make a paper based
+verification almsot unfeasible and certainly not trustworthy --- this
+issue was pointed out by Voevodsky recently \cite{voevodsky-ias14}.
 
-%Voevodsky ... fed up with errors in papers.
+As a starting point we will formalize the existing model theory
+(e.g. the cubical sets model) in conventional Type Theory using Agda
+--- this accompanies WP1. When moving on to the more syntactic
+approach of WP2 we plan to exploit HITs to achieve a feasible
+formalisation of dependently typed syntax. While initially working
+with an axiomatic approach to HoTT (i.e. adding univalence and HITs as
+postulates) we hope to be able to exploit the results of WPs 6 and 7
+in later stages of the project, enabling at least a partial self
+certification of HoTT in HoTT.  While this approach seems unsound at
+the first glance it is reasonable since it is unlikely that a bug in
+the theory leads to an unsound formalisation of the metatheory.
 
-We will begin with the relatively low risk task of formalising the
-cubical sets model of HoTT, our nascent cubical type theory and their
-relationship in Agda. However this approach will be unsatisfactory in
-the long run because of the limitations of Agda and hence we will
-switch to formal verification in our HoTT-based type theory and formal
-verification system as they are developed. Our belief is that formal
-verification in HoTT will actually be easier because the syntax of
-Type Theory will be more efficiently formalised as a HIT which
-represents not just the type and term constructors but also the
-associated definitional equality. This is low risk as there is already
-some formalisation of HoTT in Agda, and more generally, because we
-have significant expertise in both techniques (such as induction
-recursion and induction induction) required formalise type theory and
-also in the verification of properties of the formalisation~\cite{}.
-As the project progresses we will consider the more ambitious goals
-and risky goal of formally verifying properties of the core programming
-language developed in WP6. At the end of the work package we will have
+At the end of the work package we will have
 deliverables consisting of formal verification of the key properties
 of HoTT. Not only will this ensure the required level of trust in our
 system, but this will have a significant impact upon the formal
 verification community as it will be the first instance of formal
 verification in a {\em HoTT-based} formal verification
-environment.~\footnote{as opposed to formal verification in current
-  systems such as Agda and Coq}. {\bf Agda + non-computational
-  univalence is not HoTT!}
+environment.
+
+%  This means we need to check that
+% the model theory of HoTT, the associated type theory and their
+% relationship are correct. Given that HoTT is inherently a complex and
+% combinatorially intricate mathematical subject because of its higher
+% dimensional structure, a purely paper based verification would be
+% doubtful.  Thus, the only way to ensure the required high level of
+% trust in the correctness of our work is to formally verify that this
+% is the case.
+
+% %Voevodsky ... fed up with errors in papers.
+
+% We will begin with the relatively low risk task of formalising the
+% cubical sets model of HoTT, our nascent cubical type theory and their
+% relationship in Agda. However this approach will be unsatisfactory in
+% the long run because of the limitations of Agda and hence we will
+% switch to formal verification in our HoTT-based type theory and formal
+% verification system as they are developed. Our belief is that formal
+% verification in HoTT will actually be easier because the syntax of
+% Type Theory will be more efficiently formalised as a HIT which
+% represents not just the type and term constructors but also the
+% associated definitional equality. This is low risk as there is already
+% some formalisation of HoTT in Agda, and more generally, because we
+% have significant expertise in both techniques (such as induction
+% recursion and induction induction) required formalise type theory and
+% also in the verification of properties of the formalisation~\cite{}.
+% As the project progresses we will consider the more ambitious goals
+% and risky goal of formally verifying properties of the core programming
+% language developed in WP6. At the end of the work package we will have
+% deliverables consisting of formal verification of the key properties
+% of HoTT. Not only will this ensure the required level of trust in our
+% system, but this will have a significant impact upon the formal
+% verification community as it will be the first instance of formal
+% verification in a {\em HoTT-based} formal verification
+% environment.~\footnote{as opposed to formal verification in current
+%   systems such as Agda and Coq}. {\bf Agda + non-computational
+%   univalence is not HoTT!}
   
 
 
