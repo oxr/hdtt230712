@@ -801,39 +801,52 @@ introduce  $\infty$-LCCC}
 %specific models and then aiming for the more ambitious goal of
 %integrating these presentations onto a unified framework.
 
-{\bf WP3: Higher Inductive Types:} 
-Our goal is to accomodate HITs in the semantics developed in WP1 and
-the syntactic framework of WP2. Our idea to achieve this is to develop
-a universal HIT playing the role for HITs that W-types play for
-ordinary inductive types. This is feasible as partial progress has
-already been made \dots one can often reduce HITs with higher
-dimensional constructors to ones with only 0- and 1-dimensional
-constructors (using the hubs-and-spoke construction). 
-Similarly, \cite{gylterud:thesis,kock:groupoids} has shown how quotient 
-containers can be reduced to ordinary containers in a homotopical 
-setting. A secondary goal
-is to generate a high-level level syntax for HITs as an alternative to
-the universal HIT in the same way that strictly positive types provide
-a grammar for defining various W-types. This will feed into WP7.  Our
-most ambitious goal is to - time permitting - investigate other
-variations of HITs: coinductive HITs, mixed inductive/coinductive HITS
-\cite{txa:mpc2010g}, HITs and inductive-inductive and inductive-recursive
-HITs which open the door towards a more concise representation of
-dependently typed syntax in type theory~\cite{chapman2009type} by
-introducing constructors and definitional equalities at the same
-time. We will also investigate a pattern matching syntax for HITs this
-is related again to WP7. {\bf More on QCs}
+{\bf WP3: Higher Inductive Types:} Our goal is to accomodate HITs in
+the semantics developed in WP1 and the syntactic framework of WP2. To
+achieve this, we will develop a universal HIT playing the role for
+HITs that W-types play for ordinary inductive
+types~\cite{alti:icalp04}. This is feasible as partial progress has
+already been made: one can reduce HITs with higher dimensional
+constructors to HITs with only 0- and 1-dimensional ones (using the
+\emph{hub-and-spokes} construction~\cite{hott-book}).
+%fnf: is it counterproductive to cite the HoTT book here?
+Similarly, preliminary results suggest that quotient
+containers~\cite{abottAltenGhaniMcB:quotientContainers} can be reduced
+to ordinary containers in a homotopical setting 
+%fnf: weak sentence below
+(using ideas of Gylterud~\cite{gylterud:thesis} and
+Kock~\cite{kock:groupoids}).
+%
+A secondary goal is to generate a high-level syntax for HITs as
+an alternative to the universal HIT in the same way that strictly
+positive types provide a grammar for defining various
+W-types~\cite{alti:cont-tcs,alti:jcats07}.  This will feed into WP7.
+More ambitiously, we will %-- time permitting --
+investigate other variations of HITs such as coinductive HITs, mixed
+inductive/coinductive HITs \cite{txa:mpc2010g}, and
+inductive-inductive~\cite{fnf:indind} and
+inductive-recursive~\cite{DS:indrec} HITs. The latter will be useful
+in WP5, since it makes a more concise representation of dependently
+typed syntax~\cite{chapman2009type} possible by introducing
+constructors and the representation of definitional equality at the
+same time.
+%%fnf: the following is mentioned in WP7, and might fit better there:
+%We will also investigate a pattern matching syntax for HITs; this is
+%related again to WP7.
+{\bf More on QCs}
 
-
-The risk within the first phase of this WP seems relatively low since we
-have already a good background from our previous work on data
-types~\cite{alti:cont-tcs,alti:lics09,txa:cie10,alti:catind2} including EPSRC grants on Containers and Induction
-Recursion and because partial results already exist showing that
-results are available and also guiding the way towards fresh
-ones. While its not clear we can push the results as far as we imagine
-with respect to higher inductive recursive types etc, these results
-are not essential to the rest of the project.
-
+Our experience from previous work on data
+types~\cite{alti:cont-tcs,alti:lics09,txa:cie10,alti:catind2,ghani:fibredIR,gambinoHyland:welfoundedTrees,awodeyGamSoja:indTypesInHTT},
+including EPSRC grants on containers and induction-recursion, means
+that the first phase of this work package is relatively risk-free,
+especially since partial results already exist.
+% These show that results are available, and will also guide the way
+% towards further results.
+While it is not clear how far we can push the results with respect to
+e.g.\ higher inductive-recursive types, this phase of the work package
+is not essential to the rest of the project. {\em Deliverable: A
+  theory of HITs that is both foundational, and will underpin the
+  programming language developed in WP6 and WP7.}
 
 {\bf WP4: Programming with Effects:} {\bf Correctness via Types} Most
 programs interact with their environments, e.g., to read and/or write
