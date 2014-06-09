@@ -15,7 +15,6 @@
 \usepackage{natbib}
 \setlength{\bibsep}{0.0pt}
 
-
 %\newlength{\extraplusheight}
 %\newlength{\extrapluswidth}
 %\setlength{\extraplusheight}{4.7cm}
@@ -758,50 +757,57 @@ is not essential to the rest of the project. {\em Deliverable: A
   theory of HITs that is both foundational, and will underpin the
   programming language developed in WP6 and WP7.}
 
-{\bf WP4: Programming with Effects:} {\bf Correctness via Types} Most
-programs interact with their environments, e.g., to read and/or write
-to the memory and to detect and respond to errors such as attempts to
-divide by zero or to open files that don’t exist. Such programs are
-called effectful programs and are known to be inherently difficult to
-reason about because, for example, the result of a program might
-depend upon the evaluation order. One major advance was Eugenio
-Moggi’s idea that effects can be modelled semantically by monads and
-Wadler later showed that monads could internalised as syntactic sugar
-to structure effectful programs themselves, eg via the {\tt
-  do}-notation of Haskell. More recently, Plotkin and Power extended
-this analysis using Lawvere Theories to show how (all most all)
-computational monads arise from effect-generating operations and
-equations which these operations satisfy.
+{\bf WP4: Programming with Effects:}
+%fnf: references still missing for this WP
+%{\bf Correctness via Types} 
+Most programs interact with their environments,
+% , e.g., to read and/or write to the memory and to detect and respond
+% to errors such as attempts to divide by zero or to open files that
+% don’t exist.
+but such \emph{effectful} programs are known to be inherently difficult to
+reason about.
+ %because, for example, the result of a program might
+%depend upon the evaluation order. 
+Major advances have been done by Moggi~\cite{moggi:monad}, who
+realised that effects can be modelled semantically by monads, and
+% and Wadler later
+%showed that monads could internalised as syntactic sugar to structure
+%effectful programs themselves, eg via the {\tt do}-notation of
+%Haskell. More recently, 
+Plotkin and Power~\cite{PlotkinPower:Lawvere}, who showed that (almost
+all) computational monads arise from Lawvere Theories, i.e.\ can be
+presented as effect-generating operations and equations.
+Unfortunately, in general, equational theories cannot be represented
+in current programming languages such as Haskell, and one is therefore
+often forced to program not using the quotient algebra as desired, but
+using the free algebra and then check -- externally to the program --
+that the quotient structure is respected.  Of course this can be
+formally verified in HoTT, but HITs also allow us to go further and
+give an inductive presentation of such quotients. This means that we
+can program directly on the quotient algebra, as well as asserting the
+correctness of the program %via type checking.
+internally.  Not only is this a particularly efficient form of formal
+verification, but the correctness of one program can then be used to
+validate the preconditions of others.
 
-Unfortunately, in general, we cannot represent equational theories in
-current programming languages such as Haskell. Therefore one is often
-forced to program not using the quotient algebra as desired but using
-the free algebra and then check - externally to the program - that the
-program respects the quotient structure. Of course HoTT, can help us
-formally verify this. But HITs allow us to go further and give an
-inductive presentation of such quotient structures opening the way to
-program directly on the quotient algebra and assert the correctness of
-the program via type checking. Not only is this a particularly
-efficient form of formal verification, but the correctness of this
-program can then be used to validate the preconditions of other
-programs. Executing this research program means formalising both
-Lawvere Theories in HoTT (using HITs to represent effectful
-computations) and also the mathematical algebra of Lawvere theories
-such as tensor products which can be used to combine them. In doing
-this we will set ourselves the concrete goals of both simplifying and
-extending i) McBride and Andjelkovic's work on Frank from free monads
-to Lawvere Theories; ii) Brady's effects library for Idris; and iii)
-Bauer and Pretnar's treatments of effects in his programming language
-Eff.  We will do this both within the type theory of WP2 and reflect
-progress into the programming language of WP7.  This work package will
-therefore act as both validation for the theoretical research done by
+To make this possible, we intend to formalise both Lawvere Theories
+(using HITs to represent effectful computations) and their
+mathematical algebra (e.g.\ tensor products, sums) in HoTT.
+Concretely, we will both simplify and extend i) McBride, Andjelkovic
+and Lindley's effect handlers in Frank~\cite{conor:frank}; ii) Brady's
+effects library for Idris~\cite{brady:effects}; and iii) Bauer and
+Pretnar's treatment of effects in Eff~\cite{bauer:eff}.  This will be
+done within the type theory of WP2, and progress will be reflected
+into the programming language of WP7.  This work package will
+therefore act both as validation for the theoretical research done by
 RA1, and also generate impact by showing how that work can be used to
 tackle a major programming languages problem. Basic results should be
 low risk as the fundamental ideas of treating effects via algebraic
 theories and treating algebraic theories via HITs are established in
-principle. However, more advanced effects such as indexed-effects
-which arise in dependently typed programming, or a full-scale integration
-of our results any in the language of WP7 will be more challenging.
+principle. However, more advanced effects, such as indexed effects
+which arise in dependently typed programming, or a full-scale
+integration of our results in the language of WP7 will be more
+challenging.
 
 
 {\bf WP5 Formalisation of Meta-Theory of HoTT:}  As we intend to use
