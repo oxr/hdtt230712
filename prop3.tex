@@ -255,37 +255,7 @@ on a 3-year EPSRC grant on proof-theoretical aspects of HoTT.
 
 \section{Introduction}\label{sec:intro}
 
-\vspace*{-0.1in} 
-
-%txa: added heartbleed.
-%{\bf Cost of Software Failure:} The cost of software failure is truly
-%staggering. Well known individual cases include the Mars Climate
-%Orbiter failure ($\pounds 80$ million), Ariane Rocket disaster
-%($\pounds 350$ 
-%million), Pentium Chip Division failure ($\pounds 300$ million), most recently
-%the heartbleed bug (upto $\pounds 250$K per server) and there are
-%many, many more examples. Even worse, other software failures such as
-%one in the Patriot Missile System and another in the Therac-25 radiation system
-%have costs lives. More generally, a 2008 study by the US
-%government estimated that faulty software costs the US economy
-%$\pounds 40$ billion annually.  As a result, the human and economic
-%importance of ensuring programs run without error is hard to
-%over-estimate.
- 
-
-%The worldwide software market is estimated at
-%\pounds 250 billion pounds every year and this figure will grow
-%significantly in real terms as software becomes ever more ubiquitous
-%in our lives and economy. Although the requirements for software vary
-%enormously, a problem common to all software is to ensure programs run
-%without error. Restarting a phone is a simple, if inconvenient task;
-%restarting an aeroplane in mid-flight is not an option! Numerous
-%examples of expensive software errors about from the Mars Rover to be
-%recent Heartbleed Bug exposing a serious vulnerability in the popular
-%OpenSSL cryptographic software library.  In a nutshell, the cost of software bugs is almost
-%unbelievably staggering.
-
-{\bf Formal Verification.} The cost of software failure is truly
+{\bf Formal Verification:} The cost of software failure is truly
 staggering\footnote{see the section on National
   Importance.}. Traditional methods of software verification based
 upon testing only generate partial guarantees of correctness. Stronger
@@ -295,32 +265,28 @@ mathematical proofs are untrustworthy. As a result, the only way to
 ensure truly secure and reliable software is the gold standard of
 formally verified software, which offers machine-checked mathematical
 proofs of software correctness. Several decades of pioneering work in
-the UK and elsewhere have culminated in prototype languages and tools
+the UK and elsewhere have culminated in languages and tools
 such as Agda, Epigram, Idris and Coq and in the US NuPRL, Twelf, and
-the Trellys project. These systems are beginning to make their mark,
+the Trellys project. These systems are having significant impact,
 eg Coq has just won both the ACM Software award and the SIGPLAN
-Programming Languages Software award.
-%~\cite{}.  -not needed, txa
-The advanced
-type-theoretic technology of these systems is raided by more
-mainstream languages with significant industrial deployment such as
-Haskell, OCaml, Scala and C\#.
+Programming Languages Software award. The advanced type-theoretic
+technology of these systems is raided by more mainstream languages
+with significant industrial deployment such as Haskell, OCaml, Scala
+and C\#.
 
-{\bf The Project.} Despite these successes, such systems have a number
-of short comings in crucial areas, eg when programming with quotient
-types, supporting abstraction (that is, invariance under different
+{\bf The Project:} Despite these successes, such systems have a number
+of short comings in crucial areas, eg when programming with quotients,
+supporting abstraction (that is, invariance under different
 representations of the same structure) and extensional reasoning
 (proving that programs which behave the same are the same).  {\em
   Homotopy Type Theory} (HoTT) is widely regarded as a fundamental
 innovation with great potential to address these and other problems.
-Delivering this potential requires i) further
-development of the foundations of HoTT; ii)
-a programming language and verification environment based on
-these foundations; and iii) applications demonstrating the effectiveness
-of this environment to the broader software development community.
-Therefore we intend to pursue a three-pronged
-research programme based upon a synthesis of theoretical, applied and
-impact-focussed research.
+Delivering this potential requires i) further development of the
+foundations of HoTT; ii) programming language and verification tools
+based on these foundations; and iii) applications demonstrating their
+effectiveness to the broader community.  Therefore we intend to pursue
+a three-pronged research programme based upon a synthesis of
+theoretical, applied and impact-focussed research.
 
 %The key concept in HoTT is to introduce a very liberal
 %equality which identifies structures that are replacable.
@@ -328,44 +294,155 @@ impact-focussed research.
 %Its core is Voevodsky's {\em Univalence Axiom} asserting
 %that all provable equalities can be internalised as paths or, more
 %conceptually, that computation is invariant under change of
-%representation of the entities we compute with. 
+%representation of the entities we compute with.
 
 
-
-\begin{itemize}
-\item {\bf Theoretical Foundations.} Almost all of our understanding
+$\;\;\; \;\;\;$ {\em Theoretical Foundations:} Almost all of our understanding
   of HoTT exists within a classical framework and hence cannot be used
   to develop programming language and verification tools. Nevertheless, the recent
   work by Coquand et al. strongly suggests a constructive presentation of HoTT
   is possible. We will develop both specific constructive models
   and a general constructive model theory of HoTT, and then complement
   these models with type theoretic presentations of them.
-\item {\bf Programming Languages and Verification:} The key
+
+$\;\;\;\;\;\;$ {\em Programming Languages and Verification:} The key
   deliverable of the second strand of our research will be a
   programming language which simultaneously acts as a verification
   environment based upon HoTT. This is likely to become a major
   step forward in programming languages design and influence
   the development of all current and future systems in this area.
-\item {\bf Generating Impact:} Developing new and fundamentally
+
+$\;\;\;\;\;\;$ {\em Generating Impact:} Developing new and fundamentally
   better ways to construct formally verified software is not just an
   end in itself, but is also a key prerequisite for engaging others do
   do so.  To help ensure uptake of our research by the wider
   community, we will produce a number of case studies which will allow
   users to experiment with our results; at the same time, their
   practical experiences with it will feed back into our research.
-\end{itemize}
 
-{\bf Calibre and Ambition.} The foundational nature of HoTT, the
+{\bf Calibre and Ambition:} The foundational nature of HoTT, the
 consequent potential for solving key open problems in programming
 languages and formal verification research, and the resulting
-potential applications to software correctness attest to the quality
-and calibre of this project. Our ambition is demonstrated by the
+potential applications to software correctness attest to the quality,
+importance and calibre of this project. Our ambition is demonstrated by the
 breadth of our central belief that HoTT is not just a mathematical
-foundation for type theory, but can also be turned into a programming
-language and verification environment which - in its treatment of
+foundation, but can be turned into a programming
+language and verification tools which - in its treatment of
 quotients, representational invariance and equality - will become the
-benchmark standard which current and future systems will seek to
+benchmark standard current and future systems seek to
 emulate.
+
+% \vspace*{-0.1in} 
+
+% %txa: added heartbleed.
+% %{\bf Cost of Software Failure:} The cost of software failure is truly
+% %staggering. Well known individual cases include the Mars Climate
+% %Orbiter failure ($\pounds 80$ million), Ariane Rocket disaster
+% %($\pounds 350$ 
+% %million), Pentium Chip Division failure ($\pounds 300$ million), most recently
+% %the heartbleed bug (upto $\pounds 250$K per server) and there are
+% %many, many more examples. Even worse, other software failures such as
+% %one in the Patriot Missile System and another in the Therac-25 radiation system
+% %have costs lives. More generally, a 2008 study by the US
+% %government estimated that faulty software costs the US economy
+% %$\pounds 40$ billion annually.  As a result, the human and economic
+% %importance of ensuring programs run without error is hard to
+% %over-estimate.
+ 
+
+% %The worldwide software market is estimated at
+% %\pounds 250 billion pounds every year and this figure will grow
+% %significantly in real terms as software becomes ever more ubiquitous
+% %in our lives and economy. Although the requirements for software vary
+% %enormously, a problem common to all software is to ensure programs run
+% %without error. Restarting a phone is a simple, if inconvenient task;
+% %restarting an aeroplane in mid-flight is not an option! Numerous
+% %examples of expensive software errors about from the Mars Rover to be
+% %recent Heartbleed Bug exposing a serious vulnerability in the popular
+% %OpenSSL cryptographic software library.  In a nutshell, the cost of software bugs is almost
+% %unbelievably staggering.
+
+% {\bf Formal Verification.} The cost of software failure is truly
+% staggering\footnote{see the section on National
+%   Importance.}. Traditional methods of software verification based
+% upon testing only generate partial guarantees of correctness. Stronger
+% guarantees of software correctness are given by mathematical proofs
+% but the complexity of modern software means that hand written
+% mathematical proofs are untrustworthy. As a result, the only way to
+% ensure truly secure and reliable software is the gold standard of
+% formally verified software, which offers machine-checked mathematical
+% proofs of software correctness. Several decades of pioneering work in
+% the UK and elsewhere have culminated in prototype languages and tools
+% such as Agda, Epigram, Idris and Coq and in the US NuPRL, Twelf, and
+% the Trellys project. These systems are beginning to make their mark,
+% eg Coq has just won both the ACM Software award and the SIGPLAN
+% Programming Languages Software award.
+% %~\cite{}.  -not needed, txa
+% The advanced
+% type-theoretic technology of these systems is raided by more
+% mainstream languages with significant industrial deployment such as
+% Haskell, OCaml, Scala and C\#.
+
+% {\bf The Project.} Despite these successes, such systems have a number
+% of short comings in crucial areas, eg when programming with quotient
+% types, supporting abstraction (that is, invariance under different
+% representations of the same structure) and extensional reasoning
+% (proving that programs which behave the same are the same).  {\em
+%   Homotopy Type Theory} (HoTT) is widely regarded as a fundamental
+% innovation with great potential to address these and other problems.
+% Delivering this potential requires i) further
+% development of the foundations of HoTT; ii)
+% a programming language and verification environment based on
+% these foundations; and iii) applications demonstrating the effectiveness
+% of this environment to the broader software development community.
+% Therefore we intend to pursue a three-pronged
+% research programme based upon a synthesis of theoretical, applied and
+% impact-focussed research.
+
+% %The key concept in HoTT is to introduce a very liberal
+% %equality which identifies structures that are replacable.
+
+% %Its core is Voevodsky's {\em Univalence Axiom} asserting
+% %that all provable equalities can be internalised as paths or, more
+% %conceptually, that computation is invariant under change of
+% %representation of the entities we compute with. 
+
+
+
+% \begin{itemize}
+% \item {\bf Theoretical Foundations.} Almost all of our understanding
+%   of HoTT exists within a classical framework and hence cannot be used
+%   to develop programming language and verification tools. Nevertheless, the recent
+%   work by Coquand et al. strongly suggests a constructive presentation of HoTT
+%   is possible. We will develop both specific constructive models
+%   and a general constructive model theory of HoTT, and then complement
+%   these models with type theoretic presentations of them.
+% \item {\bf Programming Languages and Verification:} The key
+%   deliverable of the second strand of our research will be a
+%   programming language which simultaneously acts as a verification
+%   environment based upon HoTT. This is likely to become a major
+%   step forward in programming languages design and influence
+%   the development of all current and future systems in this area.
+% \item {\bf Generating Impact:} Developing new and fundamentally
+%   better ways to construct formally verified software is not just an
+%   end in itself, but is also a key prerequisite for engaging others do
+%   do so.  To help ensure uptake of our research by the wider
+%   community, we will produce a number of case studies which will allow
+%   users to experiment with our results; at the same time, their
+%   practical experiences with it will feed back into our research.
+% \end{itemize}
+
+% {\bf Calibre and Ambition.} The foundational nature of HoTT, the
+% consequent potential for solving key open problems in programming
+% languages and formal verification research, and the resulting
+% potential applications to software correctness attest to the quality
+% and calibre of this project. Our ambition is demonstrated by the
+% breadth of our central belief that HoTT is not just a mathematical
+% foundation for type theory, but can also be turned into a programming
+% language and verification environment which - in its treatment of
+% quotients, representational invariance and equality - will become the
+% benchmark standard which current and future systems will seek to
+% emulate.
 
 
 \section{Scientific and Technological Background:}
