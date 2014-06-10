@@ -496,39 +496,49 @@ same behaviour can be proved equal thereby advancing the state of the
 art here.
 
 
-{\bf Type Theory.} Underlying both formal verification systems and
+{\bf Type Theory.} Underlying formal verification systems and
 programming languages is the subject of type theory which grew out of
 Russell's attempts to deal with paradoxes in naive set theory. A major
 conceptual understanding afforded by type theory was the Curry-Howard
 correspondence which observed that programs and proofs are actually
 the same thing, \eg proofs are just particular forms of programs. As a
 result, by developing sophisticated type theories, we advance both the
-field of programming languages and the field of program verification.
-
-A major step forward within type theory was achieved by Martin-L\"of
-who realised that type theory needed to be extended to cover equality
-within the system and he did this by introducing the intensional
-identity type in Martin-L\"of Type Theory (MLTT).
-However, it soon became apparent that this notion of equality type was
-too weak, \eg functions that are pointwise equal cannot be proven to
-be equal. To address this, Martin-L\"of then introduced extensional
-MLTT which produced a strong equality but at the price of
-losing decidability of type checking. However, the problem of a strong but
-decidable theory of equality remained fundamentally unresolved for 40
-years. 
+fields of programming languages and program verification. A major step
+forward was Martin-L\"of's realisation that type
+theory needed to be extended to cover equality within the system. To
+do this, he introduced the intensional equality type in Martin-L\"of
+Type Theory (MLTT).  However, it soon became apparent that this
+equality type was too weak, \eg functions that are pointwise equal
+cannot be proven equal. To address this, Martin-L\"of then introduced
+extensional MLTT which produced a strong equality but at the price of
+losing decidability of type checking. However, the problem of a strong
+but decidable theory of equality remained fundamentally unresolved for
+40 years.
 
 
-{\bf Observational Type Theory} (OTT) is a step forward towards a
-decidable type theory with a strong equality, proposed by
-Altenkirch and McBride~\cite{alti:ott-conf} in 2007. Its propositional equality is designed
-to fit the structure of types, and is hence extensional for functions,
-but its definitional equality remains decidable. However, equality of
-types themselves is rigidly structural, not up to isomorphism,
-allowing a proof-irrelevant implementation but precluding the
-exploitation of higher-dimensional structure. As we advance to a
-proof-relevant treatment of a more refined equality, OTT offers key
-insight and techniques to combine a strong equality with decidable
-type checking.
+{\bf Observational Type Theory} (OTT) is a step towards a decidable
+type theory with a strong equality, proposed by Altenkirch and
+McBride~\cite{alti:ott-conf} in 2007. Equality is
+defined inductively on the structure of types (and is thus extensional for
+functions) but its definitional equality remains decidable. However,
+equality {\em of} types themselves is rigidly structural which, while
+allowing a proof-irrelevant implementation, precludes the exploitation
+of higher-dimensional structure. Thus HoTT can be seen as a higher
+dimensional extension of OTT - our experience in OTT will thus be
+invaluable in offering key insights and techniques for its development.
+
+{\bf Logical Relations.} Another important background technology is
+logical relations which uses induction on type structure to define
+relations at higher types. Indeed Coquand's model is closely related
+to logical relations because cubical sets arise naturally when one
+extends logical relations to higher dimensions. Research into logical
+relations is currently being funded by EPSRC at Strathclyde and we
+will use our expertise to see if higher dimensional variants of the
+standard presentations of logical relations (eg Kirpke and mixed arity
+logical relations) lead to better behaved refinements of the cubical
+set model.
+
+
 
 %power of methods
 %absolutely vital
@@ -563,37 +573,6 @@ science, e.g. lists are an inductive type; braids are lists with extra
 paths identifying lists up to twisting of any element past its
 neighbours, and bags are braids with paths-between-paths identifying
 braidings which yield the same permutation.
-% Finally, in combinatorics, HITs cover the
-% fundamental concept of species as species are quotient
-% structures. Despite the ubiquity of examples, there is however no
-% systematic and complete treatment of HITs which harnesses their power
-% and thereby deliver on their potential.
-
-%txa: moved it to the end, after HoTTx
-{\bf Logical Relations.} Coquand's model is closely related to
-parametricity because we can view the interpretation in cubical sets
-as defining dependently typed logical relations.
-%txa: replacing
-% One of the key features of Coquand's model is that
-% the equality relation is defined recursively over the structure of
-% types using an internalised form of parametricity. 
-Parametricity
-itself is a fundamental technology within computer science and,
-research into it is currently being funded by EPSRC at Strathclyde. We
-will use the expertise at Strathclyde to see if variants of the
-standard presentations of parametricity lead to better behaved
-refinements of the cubical set model, and feed innovations in the use
-of parametricity within HoTT back into the general parametricity
-community. {\bf Needs Repair/rewrite}
-
-
-%What is HoTT
-
-%However, we do not yet have a satisfactory computational explanation of
-%univalence. This is partly because almost all of our understanding of
-%HoTT exists within a classical framework 
-
-%Why us and not the United States of Awodey. Strong definitional equlity. 
 
 Coquand et al.'s model of HoTT based on \emph{cubical sets} interprets closed expressions
 as canonical denotations, demonstrating basic feasibility of computing
@@ -603,6 +582,14 @@ definitional equalities lost by the cubical interpretation. Further, other model
 offer better computational foundations for HoTT, so practical progress
 towards programming languages and verification tools based on HoTT
 is best informed by a broader model theory.
+
+
+
+%txa: replacing
+% One of the key features of Coquand's model is that
+% the equality relation is defined recursively over the structure of
+% types using an internalised form of parametricity. 
+
 
 
 
@@ -622,6 +609,8 @@ is best informed by a broader model theory.
 %Mention somewhere also the importance of type theory, Coq, Agda for
 %computer-assisted formalization of mathematical proofs 
 
+%Why us and not the United States of Awodey. Strong definitional
+%equlity. 
 
 \section{Methodology and Research Programme}
 
