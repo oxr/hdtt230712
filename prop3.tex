@@ -458,7 +458,7 @@ $\;\;\;\;\;\;$ {\em Generating Impact.} Developing new and fundamentally
 \vspace*{-0.1in} 
 
 {\bf Programming Languages.} Abstraction is essential in programming
-where identifying common structure is needed to ensure code is clear,
+as identifying common structure ensures code is clear,
 clean and concise. This has lead to the development of high level
 programming languages with expressive type systems capable of closing
 the {\em semantic gap} between what programmers know about
@@ -466,11 +466,11 @@ computational entities and what their types can express about them.
 The current state of the art are the {\em dependently typed
   programming languages} such as Agda, Epigram, Idris and Coq where
 the type of a program can express a
-continuum of precision from basic assertions up to a complete
+continuum of precision - from basic assertions up to a complete
 specification - about the program’s behaviour. This proposal seeks to
-become the first of a new breed of univalent dependently typed
-programming languages which advance the state of the art by offering a
-powerful, yet computationally tractable, equality and thereby bring to
+develop the first of a new breed of 
+such programming languages which advance the state of the art by offering a
+powerful yet computationally tractable equality, and thereby bring to
 reality the goal of programming up to invariance of representation.
 
 %Coq award
@@ -485,47 +485,43 @@ computers raised the possibility once more of achieving in practice
 the promise of mathematical certainty. This potential is now coming to
 fruition, \eg systems such as Coq have been able to formally verify
 both large mathematical theorems such as the 4-Colour problem, and
-large software systems such as the CompCert C-compiler
-However, these systems
-are not {\em extensional} in that just because one can prove that
-objects are behaviourally indistinguishable, one cannot conclude that
-they are the same. This is a fundamental problem as it weakens the
-power of the verification system. Our research will address this
-issue by producing a formal verification system where objects with the
-same behaviour can be proved equal thereby advancing the state of the
-art here.
+large software systems such as the CompCert C-compiler However, these
+systems are not {\em extensional} as objects which are behaviourally
+indistinguishable cannot be proven the same. This fundamental problem
+weakens the power of the verification system. In contrast, our
+research will producing a formal verification system where objects
+with the same behaviour can indeed be proved equal.
 
 
 {\bf Type Theory.} Underlying formal verification systems and
 programming languages is the subject of type theory which grew out of
 Russell's attempts to deal with paradoxes in naive set theory. A major
-conceptual understanding afforded by type theory was the Curry-Howard
-correspondence which observed that programs and proofs are actually
-the same thing, \eg proofs are just particular forms of programs. As a
-result, by developing sophisticated type theories, we advance both the
-fields of programming languages and program verification. A major step
-forward was Martin-L\"of's realisation that type
-theory needed to be extended to cover equality within the system. To
-do this, he introduced the intensional equality type in Martin-L\"of
-Type Theory (MLTT).  However, it soon became apparent that this
-equality type was too weak, \eg functions that are pointwise equal
-cannot be proven equal. To address this, Martin-L\"of then introduced
-extensional MLTT which produced a strong equality but at the price of
-losing decidability of type checking. However, the problem of a strong
-but decidable theory of equality remained fundamentally unresolved for
-40 years.
+step forward was the Curry-Howard correspondence which observed that
+programs and proofs are actually the same thing, \eg proofs are just
+particular forms of programs. As a result, by developing sophisticated
+type theories, we advance both the fields of programming languages and
+program verification. Another major advance was Martin-L\"of's realisation
+that type theory needed to be extended to cover equality within the
+system. To do this, he introduced the intensional equality type in
+Martin-L\"of Type Theory (MLTT).  However, it soon became apparent
+that this equality type was too weak, \eg functions that are pointwise
+equal cannot be proven equal. Martin-L\"of then
+introduced extensional MLTT which produced a strong equality but at
+the price of losing decidability of type checking. Fundamentally, the
+problem of a strong but decidable equality has remained
+unresolved for 40 years.
 
 
 {\bf Observational Type Theory} (OTT) is a step towards a decidable
 type theory with a strong equality, proposed by Altenkirch and
-McBride~\cite{alti:ott-conf} in 2007. Equality is
-defined inductively on the structure of types (and is thus extensional for
-functions) but its definitional equality remains decidable. However,
-equality {\em of} types themselves is rigidly structural which, while
+McBride~\cite{alti:ott-conf}. Equality is
+defined inductively on the structure of types (and is thus extensional) but its definitional equality remains decidable. However,
+the {\em equality of types} themselves is rigidly structural which, while
 allowing a proof-irrelevant implementation, precludes the exploitation
-of higher-dimensional structure. Thus HoTT can be seen as a higher
-dimensional extension of OTT - our experience in OTT will thus be
-invaluable in offering key insights and techniques for its development.
+of higher-dimensional structure. Nevertheless, our experience in OTT is
+invaluable in offering key insights and techniques for the development
+of HoTT as the later can be seen as a higher
+dimensional extension of OTT.
 
 {\bf Logical Relations.} Another important background technology is
 logical relations which uses induction on type structure to define
@@ -534,7 +530,7 @@ to logical relations because cubical sets arise naturally when one
 extends logical relations to higher dimensions. Research into logical
 relations is currently being funded by EPSRC at Strathclyde and we
 will use our expertise to see if higher dimensional variants of the
-standard presentations of logical relations (eg Kirpke and mixed arity
+standard presentations of logical relations (eg Kripke and mixed arity
 logical relations) lead to better behaved refinements of the cubical
 set model.
 
