@@ -1,0 +1,268 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\usepackage{mathptmx}
+\usepackage{epsf}           %\input{epsf}
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{url}
+ \usepackage[dvips]{graphics}
+\usepackage[dvips,all]{xy}
+\usepackage{multicol}
+
+%\newlength{\extraplusheight}
+%\newlength{\extrapluswidth}
+%\setlength{\extraplusheight}{4.7cm}
+%\setlength{\extrapluswidth}{4.7cm}
+%\addtolength{\textwidth}{\extrapluswidth}
+%\addtolength{\textheight}{\extraplusheight}
+%\addtolength{\oddsidemargin}{-.5\extrapluswidth}
+%\addtolength{\evensidemargin}{-.5\extrapluswidth}
+%\addtolength{\topmargin}{-0.5\extraplusheight}
+%\setlength{\parindent}{0 pt}
+%\setlength{\parskip}{1ex}
+
+\newcommand{\Int}[1]{[\![ #1 ]\!]}
+\newcommand{\malign}[1]{\begin{array}[t]{@{}l@{\;}l@{}l@{}} #1 \end{array}}
+\newcommand{\logrel}[2]{\Delta_{#1,#2}}
+\newsavebox{\fminibox}
+\newenvironment{fminipage}
+ {\begin{lrbox}{\fminibox}\begin{minipage}{8cm}\vspace*{-2ex}}
+ {\\[-2ex]\vspace*{-2ex}\end{minipage}\end{lrbox}\noindent\centerline{\fbox{\usebox{\fminibox}}}\vspace{0.5ex}}   
+
+\setlength{\parindent}{0.15in}
+%\setlength{\parskip}{0.3ex}
+
+% Discourage unnecessary hyphenation.
+\sloppy\hyphenpenalty 4000
+
+\newcommand{\ra}{\rightarrow}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Set}{\mbox{{\sf Set}}}
+\newcommand{\Nat}{\mathit{Nat}}
+\newcommand{\Alge}[1]{\mathit{Alg}_{#1}}
+\newcommand{\hash}{\#}
+
+
+
+\begin{document}
+
+\thispagestyle{plain}
+\begin{center}
+  {\Large \bf Homotopy Type Theory: Programming and Verification ---
+  Justification of Resources}\\[1ex]
+
+\vspace*{-0.1in}
+
+\rule{160mm}{.5mm}\\[2ex]
+\end{center}
+
+While EPSRC is principally interested in the quality of research,
+costs must be justified. It is argued below that i) all four investigators
+are required for the proposed research because they have
+distinct-but-necessary skills; ii) two RAs are required because of the
+breadth and volume of the work proposed; iii) the duration of the
+grant is appropriate given the volume of the work involved; iv) the
+hours per week spent on the grant by the investigators are required;
+v) the travel budget is needed to underpin the planned collaborations,
+workshop, and attendance at conferences; and vi) the requested
+consumables and are both minimal and necessary.
+
+\vspace{0.02in}
+
+\noindent {\bf The Investigators:} All four investigators have
+excellent track records in various areas of the proposed research: i)
+Altenkirch is an expert in type theory and the syntactic presentation
+of HoTT - in particular his work on OTT, Cubical Type Theory,
+Containers and the experimental programming language $\Pi\Sigma$ has
+direct relevance to WPs 2,3,6,7; ii) Gambino is an expert in category
+theory and the semantic foundations of HoTT with his work on dependent
+polynomials having direct relevance to WPs 3; iii) Ghani
+is an expert on the categorical foundations of programming languages
+with his work on logical relations, containers and units of measure
+being particularly relevant to WP1, 2, 3 and 8; and iv) McBride is an
+expert on the definition and implementation of programming languages
+with this work on containers OTT, effects and Epigram being
+particularly relevant to WPs 3,4,6,7. These skills directly
+map onto the management of the proposed research as follows. WP1 will
+be lead by Leeds as Gambino is the strongest researcher there, while
+WPs 2,3 and 5 will be lead by Nottingham as they reflect strengths of
+Dr Altenkirch. Finally WPs 4,6,7 and 8 will be lead by Strathclyde
+given their expertise in dependently typed programming. Ghani's role -
+apart from specific scientific contributions - will be to knit the
+theoretical research done at Nottingham and Leeds with the programming
+languages research done at Strathclyde. 
+
+Their general background and specific experience ranging from
+theoretical foundations to concrete implementations mean that the
+investigators are - perhaps - one of the few groups who could conduct
+this research. Indeed, removing any of them from the project would
+significantly reduce the strength of the team and the prospects for
+completion of the proposed research. As a result, having each
+investigator on the proposed research is indispensable. Of course, all
+investigators will work closely together and thus will in fact be
+involved in all areas of the research, even if they are not leading
+them so that they can contribute to, and be advised of, their
+progress.
+
+
+
+\vspace{0.02in}
+
+\noindent {\bf The RAs:} The volume of work in this substantial
+research programme is clearly too much to be undertaken by the
+investigators alone. Further, PhD students cannot be trained in
+subjects like category theory, type theory, and the use and
+development of program language and verification tools, and still have
+enough time to conduct the proposed research. Full-time RAs are
+therefore needed on this project. We had originally hoped that one RA
+would suffice, but both the volume of the work and the highly distinct
+skills needed between the theoretical foundations and the more
+practical aspects of programming language implementation and
+programming verification, mean that we need one RA with skills in each
+of these two areas.  The RAs will certainly need to have PhDs and,
+given the diverse and specialised nature of the research, will ideally
+have postdoctoral experience as well.  Such appointments are feasible
+because there are a number of PhD students and RAs working in exactly
+these areas, e.g., in the Coq and Agda development teams and also PhD
+students who have been following the numerous summer schools that
+interest in HoTT has sparked.  Although the RA will be expected to be
+able to work independently, our own strengths means the RAs will be
+closely managed by the investigators. They will be asked to work with
+the project partners and collaborators of the investigators, to push the project ahead; to
+contribute to the writing of papers and grant proposals; and, as part
+of their general training, to help mentor PhD students. A Grade 7,
+Point 29 salary of $\pounds$28,839 is the minimum for newly-minted
+PhDs, so a Grade 7, Point 31 salary of $\pounds$30,594 is appropriate
+for researchers with the qualifications required. While it may be
+possible to employ new PhDs who are appropriate for the project at
+Point 29, advertising a Point 31 salary will allow us to attract
+researchers with more experience to the position. 
+
+
+%The position will be
+%required for four years to have time to fully integrate the RAs into
+%the project, make progress on the proposed research, and then
+%evaluate and refine the results obtained. Given the fast moving nature
+%of this area of research, this length of time will allow us to absorb
+%progress as it is made across the world.
+
+\vspace{0.02in}
+
+\noindent {\bf Duration of the Grant:} We believe that the appropriate
+time required to achieve the objectives of this research is 4
+years. We have proposed 8 very high quality work packages. While we
+believe that some of the work package are conceptually fairly
+straightforward given our preliminary investigations and our specific
+previous experience, it would be a mistake underestimate amount the
+technical work required to formalise these concepts to the level of
+rigour required for a new foundations for programming languages,
+robust implementations of those foundations, and case studies
+detailing their use. On top of this, several work packages have
+ambitious goals we wish to strive for and they may require conceptual
+advances and the need to revise basic working assumptions. Finally
+HoTT is a fast-moving subject and four years will give us enough time
+to absorb and make use of breakthroughs likely to come in the next few
+years. Moreover, as anyone who has worked on an implementation will
+confirm, the time required to implement and formally prove properties
+within a proof system is an order of magnitude greater than for
+equivalent pencil-and-paper proofs. Allocating four years to the
+project gives us reasonable amounts of time to conclude the work in
+the various packages --- this will be a stiff challenge but we want to
+aim high and already have the ideas to make this feasible --- and also
+provides sufficient time at the end of the project to serve as a
+safety cushion in case any of the work packages run into unforeseen
+difficulties.
+
+%Given that four years is a reasonable amount of time to undertake the
+%proposed research, one may wonder if 
+We firmly believe that all the work packages we propose are
+necessary. Certainly WP1 is needed to provide the semantic criteria
+against which the correctness of the rest of our research can be
+judged, WP2 is needed to turn the semantic model of HoTT from WP1 into
+a syntactic presentation of HoTT, WP3 is needed since HITs are one of
+the exciting new features of HoTT and WP4 will be used to generate
+impact from HITS by applying them to a significant problem in computer
+science, namely the theory of effects. WP5 is needed to ensure our
+foundations correctness can be machine checked while WP6 and WP7 are
+together form the programming language we aim to develop. The value of
+them will be demonstrated with concerte examples in WP8.
+Thus dropping any of the work packages would diminish the project as a whole.
+
+\vspace{0.02in}
+
+\noindent {\bf Hours per Week:} %We now address the expenditure
+%concerning the time each of the investigators will spend on the grant
+%per week. 
+Each of the investigators wil spend 20\% of their time on the project
+... this menas that on average they will devote one
+full day per week the project. These workloads are standard for such projects, and
+our experience of research management suggests that they are
+realistic. They will allow the investigators to devote the significant
+time required by the proposed research proposal while still fully
+engaging with their other responsibilities.
+
+\vspace{0.02in}
+
+\noindent {\bf Travel Budget:} The investigators and the RA will
+attend conferences and workshops relevant to the research:
+international conferences such as LICS, ICFP, POPL, Types, TLCA, MPC,
+MSFP, TFP, CSL, and ICALP, and national conferences such as BCTCS,
+SPLS, ScotCats, and Fun in the Afternoon. Each team member will
+attend two conferences per year at an estimated average cost of
+$\pounds 1000$ per trip, for a total of $\pounds 48000$. Conference
+presentation and publication are the principal
+means of assessing quality and disseminating
+research results in computer science, and are vital to
+%attendance is vital to presenting the results of research, and to
+keeping abreast of the related research of other researchers. It is
+also a cost-effective mechanism for gaining high visibility for our
+own research results, and for getting feedback from the community on
+how to further meet the requirements of the users of the foundations
+we will develop.
+%Moreover, conference presentation and publication are the principal
+%means of assessing the quality and disseminating the results of
+%research in computer science.
+%Two conferences per person year is reasonable: 
+More than one person
+will attend each conference to take maximal advantage of the
+networking opportunities such meetings offer. The cost per conference
+is accurate since most conferences will be in Europe and cost
+approximately $\pounds 300$ for registration, $\pounds 250$ for
+travel, $\pounds 200$ for subsistence, and $\pounds 250$ for
+accommodation. The cost of the occasional conference further afield
+%(for example, in the US) 
+will be offset by savings on occasional conferences in the UK. We
+estimate that 25\% of the meetings will be within the UK and 75\% will
+be international.  We have also asked for $\pounds 16000$ for research
+visits to our eight project partners; we believe the active
+collaboration of other world leading experts in the proposed research
+will provide significant added value, and the costs of the research
+visits to enable this collaboration are relatively minimal when taken
+over a four-year period. We envisage two visits overall to each of our
+partners. Each visit will be for approximately one week, and two team
+members will participate in each visit.
+%a two-week visit per team member per year, with each visit costing
+%$\pounds 1750$. Of these visits, roughly 80\% will be in the UK and
+%20\% in Denmark.
+These are entirely standard costs covering travel and basic
+subsistence. Finally, Dr Gambino has held - and Prof Ghani will hold - a workshop on HoTT
+this year which was/is expected to be highly successful. To engender greater impact and
+facilitate the exchange of ideas, we propose to hold another such
+workshop, and so request $\pounds 2000$ to pay for speaker costs and
+$\pounds 750$ for catering.
+
+\vspace{0.02in}
+
+\noindent {\bf Consumables:} The RA will require a PC. However, PCs
+for RAs are not provided by the University, so we request one
+here. The cost for this is $\pounds 1000$. This is an entirely
+standard request with standard pricing.
+
+\end{document}
+
