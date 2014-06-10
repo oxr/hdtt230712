@@ -29,6 +29,8 @@
 \setlength{\parindent}{0 pt}
 \setlength{\parskip}{1ex}
 
+\newcommand{\eg}{{e.g.}\ }
+
 \newcommand{\Int}[1]{[\![ #1 ]\!]}
 \newcommand{\malign}[1]{\begin{array}[t]{@{}l@{\;}l@{}l@{}} #1 \end{array}}
 \newcommand{\logrel}[2]{\Delta_{#1,#2}}
@@ -75,14 +77,14 @@ Leicester and then a Reader at Nottingham he was appointed to a
 professorship at the University of Strathclyde where he founded the
 Mathematically Structured Programming (MSP) group. His research has
 focussed on a number of topics directly related to the subject of the
-current proposal, eg i) his work on data types (containers, quotient
+current proposal, \eg (1) his work on data types (containers, quotient
 containers, indexed containers and induction recursion) is directly
 related to our plans in WP3 to develop the theory of higher inductive
-types; ii) his work on logical relations is directly related to our
+types; (2) his work on logical relations is directly related to our
 plans in WP1 and WP2 to develop the model theory for HoTT as well as
-the syntactic presentation of this model theory as a type theory; iii)
+the syntactic presentation of this model theory as a type theory; (3)
 his work on the semantics of effects is directly related to the
-application of HoTT to effects as planned in WP4; and iv) his work on
+application of HoTT to effects as planned in WP4; and (4) his work on
 Units of Measure (via an IAA grant held in collaboration with
 Microsoft) directly relates to WP8 which applies HoTT to computing
 with algebraic structures such as within Units of Measure. Indeed,
@@ -197,31 +199,38 @@ to PhD students.
 
 \textbf{Dr Nicola Gambino.} Nicola Gambino received his PhD in
 Computer Science from the University of Manchester in 2002. After
-carrying out postdoctoral research he became an Assistant Professor in
+carrying out postdoctoral research, he became an Assistant Professor in
 Mathematical Logic at the University of Palermo in 2008. Since
 September 2012, he is an Associate Professor in Pure Mathematics at the
-University of Leeds. Nicola Gambino has a consistent record of
+University of Leeds. Nicola Gambino is one of the leading researchers on Homotopy 
+Type Theory:  his joint work with Richard Garner~\cite{gambinoGarner:ITwfs} 
+obtained one of the first results relating  type theory and homotopy theory.
+His expertise is directly relevant to the goals of the 
+proposal: (1) his experience with constructive mathematics and homotopical algebra~\cite{GambinoN:homl2c,GambinoN:weilsh}
+will be useful to study semantic models of HoTT in WP1; (2) his research on data
+types~\cite{gambinoHyland:welfoundedTrees,GambinoN:polfpm}, and especially his 
+recent work on inductive types in Homotopy Type Theory~\cite{awodeyGamSoja:indTypesInHTT}
+links directly to our goals in WP2 on higher inductive types; (3) his experience in
+proof theory and formalization of proofs in Coq will be beneficial for WP3, where we 
+seek to develop meta-mathematics within HoTT.
+
+
+
+
+Nicola Gambino has a consistent record of
 publications in leading journals and of invited lectures at
 international conferences, {e.g.}~at the 2010 Logic Colloquium in Paris
 and at the forthcoming joint 2014 RTA-TLCA conference in Vienna. He
-has held several visiting positions at prestigious research
-institutions, including the Institut Mittag-Leffler (Stockholm), the
+has held visiting positions at leading research centres, including the Institut Mittag-Leffler (Stockholm), the
 Fields Institute (Toronto) and the Institute of Advanced Study
 (Princeton), where he worked with Vladimir Voevodsky (the inventor of
 the Univalence Axiom).  He is currently an invited researcher to the
-Institut Henri Poincar\'e in occasion of the special trimester on
+Institut Henri Poincar\'e (Paris) in occasion of the special trimester on
 Semantics of Proofs and Certified Mathematics.  He is an editor of the
-journal Mathematical Structures in Computer Science and was awarded
-an EPSRC Postdoctoral Fellowship which he held at the University of Cambridge (2003-04), and supervises
+journal Mathematical Structures in Computer Science.
+He currently supervises
 an RA (funded by a grant from the US Air Force Office for Scientific
-Research) working on the foundations of HoTT. More generally, Nicola Gambino is
-one of the leading researchers on Homotopy Type Theory, {e.g.}  he has
-worked with some of the leading scholars in these areas, {e.g.}
-Aczel, Hyland, Joyal. His joint research with Richard
-Garner obtained one of the first results relating  type
-theory and homotopy theory~\cite{GambinoN:idetwfs}, while his recent work with Steve Awodey
-and Kristina Sojakova on inductive types in Homotopy Type Theory~\cite{AwodeyS:indtht} is
-very relevant for the proposed research.
+Research) working on the foundations of HoTT. 
 
 For further information,  see~\url{http://www.maths.leeds.ac.uk/~pmtng}.
 
@@ -255,7 +264,7 @@ on a 3-year EPSRC grant on proof-theoretical aspects of HoTT.
 
 \section{Introduction}\label{sec:intro}
 
-{\bf Formal Verification:} The cost of software failure is truly
+{\bf Formal Verification.} The cost of software failure is truly
 staggering\footnote{see the section on National
   Importance.}. Traditional methods of software verification based
 upon testing only generate partial guarantees of correctness. Stronger
@@ -266,16 +275,16 @@ ensure truly secure and reliable software is the gold standard of
 formally verified software, which offers machine-checked mathematical
 proofs of software correctness. Several decades of pioneering work in
 the UK and elsewhere have culminated in languages and tools
-such as Agda, Epigram, Idris and Coq and in the US NuPRL, Twelf, and
+such as Agda, Coq, Epigram, Idris, NuPRL, Twelf, and
 the Trellys project. These systems are having significant impact,
-eg Coq has just won both the ACM Software award and the SIGPLAN
+\eg Coq has won both the 2013 ACM Software award and the 2013 SIGPLAN
 Programming Languages Software award. The advanced type-theoretic
 technology of these systems is raided by more mainstream languages
 with significant industrial deployment such as Haskell, OCaml, Scala
 and C\#.
 
-{\bf The Project:} Despite these successes, such systems have a number
-of short comings in crucial areas, eg when programming with quotients,
+{\bf The Project.} Despite these successes, such systems have a number
+of short comings in crucial areas, \eg when programming with quotients,
 supporting abstraction (that is, invariance under different
 representations of the same structure) and extensional reasoning
 (proving that programs which behave the same are the same).  {\em
@@ -297,7 +306,7 @@ theoretical, applied and impact-focussed research.
 %representation of the entities we compute with.
 
 
-$\;\;\; \;\;\;$ {\em Theoretical Foundations:} Almost all of our understanding
+$\;\;\; \;\;\;$ {\em Theoretical Foundations.} Almost all of our understanding
   of HoTT exists within a classical framework and hence cannot be used
   to develop programming language and verification tools. Nevertheless, the recent
   work by Coquand et al. strongly suggests a constructive presentation of HoTT
@@ -305,14 +314,14 @@ $\;\;\; \;\;\;$ {\em Theoretical Foundations:} Almost all of our understanding
   and a general constructive model theory of HoTT, and then complement
   these models with type theoretic presentations of them.
 
-$\;\;\;\;\;\;$ {\em Programming Languages and Verification:} The key
+$\;\;\;\;\;\;$ {\em Programming Languages and Verification.} The key
   deliverable of the second strand of our research will be a
   programming language which simultaneously acts as a verification
   environment based upon HoTT. This is likely to become a major
   step forward in programming languages design and influence
   the development of all current and future systems in this area.
 
-$\;\;\;\;\;\;$ {\em Generating Impact:} Developing new and fundamentally
+$\;\;\;\;\;\;$ {\em Generating Impact.} Developing new and fundamentally
   better ways to construct formally verified software is not just an
   end in itself, but is also a key prerequisite for engaging others do
   do so.  To help ensure uptake of our research by the wider
@@ -320,7 +329,7 @@ $\;\;\;\;\;\;$ {\em Generating Impact:} Developing new and fundamentally
   users to experiment with our results; at the same time, their
   practical experiences with it will feed back into our research.
 
-{\bf Calibre and Ambition:} The foundational nature of HoTT, the
+{\bf Calibre and Ambition.} The foundational nature of HoTT, the
 consequent potential for solving key open problems in programming
 languages and formal verification research, and the resulting
 potential applications to software correctness attest to the quality,
@@ -375,7 +384,7 @@ emulate.
 % the UK and elsewhere have culminated in prototype languages and tools
 % such as Agda, Epigram, Idris and Coq and in the US NuPRL, Twelf, and
 % the Trellys project. These systems are beginning to make their mark,
-% eg Coq has just won both the ACM Software award and the SIGPLAN
+% \eg Coq has just won both the ACM Software award and the SIGPLAN
 % Programming Languages Software award.
 % %~\cite{}.  -not needed, txa
 % The advanced
@@ -384,7 +393,7 @@ emulate.
 % Haskell, OCaml, Scala and C\#.
 
 % {\bf The Project.} Despite these successes, such systems have a number
-% of short comings in crucial areas, eg when programming with quotient
+% of short comings in crucial areas, \eg when programming with quotient
 % types, supporting abstraction (that is, invariance under different
 % representations of the same structure) and extensional reasoning
 % (proving that programs which behave the same are the same).  {\em
@@ -445,7 +454,7 @@ emulate.
 % emulate.
 
 
-\section{Scientific and Technological Background:}
+\section{Scientific and Technological Background.}
 
 {\bf Programming Languages.} Abstraction is essential in programming
 where identifying common structure is needed to ensure code is clear,
@@ -467,13 +476,13 @@ reality the goal of programming up to invariance of representation.
 %transform
 %ahead of the curve
 
-{\bf Programme Verification.} While the advantages of the certainty
+{\bf Program Verification.} While the advantages of the certainty
 afforded by mathematical proof has been recognised for centuries, it
 has also been recognised that this certainty is undermined by the
 capacity for humans to make mistakes in their proofs. The advent of
 computers raised the possibility once more of achieving in practice
 the promise of mathematical certainty. This potential is now coming to
-fruition, eg systems such as Coq have been able to formally verify
+fruition, \eg systems such as Coq have been able to formally verify
 both large mathematical theorems such as the 4-Colour problem, and
 large software systems such as the CompCert C-compiler
 However, these systems
@@ -491,7 +500,7 @@ programming languages is the subject of type theory which grew out of
 Russell's attempts to deal with paradoxes in naive set theory. A major
 conceptual understanding afforded by type theory was the Curry-Howard
 correspondence which observed that programs and proofs are actually
-the same thing, eg proofs are just particular forms of programs. As a
+the same thing, \eg proofs are just particular forms of programs. As a
 result, by developing sophisticated type theories, we advance both the
 field of programming languages and the field of program verification.
 
@@ -500,7 +509,7 @@ who realised that type theory needed to be extended to cover equality
 within the system and he did this by introducing the intensional
 identity type in Martin-L\"of Type Theory (MLTT).
 However, it soon became apparent that this notion of equality type was
-too weak, eg functions that are pointwise equal cannot be proven to
+too weak, \eg functions that are pointwise equal cannot be proven to
 be equal. To address this, Martin-L\"of then introduced extensional
 MLTT which produced a strong equality but at the price of
 losing decidability of type checking. However, the problem of a strong but
@@ -535,7 +544,7 @@ type checking.
 % hott = int param + kan filllers + hits
 % what does univalence mean
 
-{\bf Homotopy Type Theory} (HoTT) is a revolutionary new analysis of
+{\bf Homotopy Type Theory.} HoTT is a revolutionary new analysis of
 equality based on intuitions from homotopy theory. Types are
 \emph{spaces}; terms are \emph{elements} within a space; the equality
 type is the space of \emph{paths} in a space. The core of HoTT is the
@@ -560,7 +569,7 @@ braidings which yield the same permutation.
 % and thereby deliver on their potential.
 
 %txa: moved it to the end, after HoTTx
-{\bf Logical Relations:} Coquand's model is closely related to
+{\bf Logical Relations.} Coquand's model is closely related to
 parametricity because we can view the interpretation in cubical sets
 as defining dependently typed logical relations.
 %txa: replacing
@@ -613,7 +622,7 @@ is best informed by a broader model theory.
 %computer-assisted formalization of mathematical proofs 
 
 
-\section{Methodology and Research Programme:}
+\section{Methodology and Research Programme}
 
 
 
@@ -712,7 +721,7 @@ design space of its syntactic presentations.
 % we will develop a model theory for HoTT by both adapting known methods to
 % define Quillen model structures (such as the small object argument)
 % to the constructive setting and by showing how one can build  new
-% constructive model structures from old (eg by
+% constructive model structures from old (\eg by
 % slicing). A promising starting point for a constructive
 % version of the small object argument comes from Garner's work, where
 % it is related to the construction of free monads. In terms of risk,
@@ -781,7 +790,7 @@ an effective presentation of HoTT.
 %specific models and then aiming for the more ambitious goal of
 %integrating these presentations onto a unified framework.
 
-{\bf WP3: Higher Inductive Types:} Our goal is to accomodate HITs in
+{\bf WP3: Higher Inductive Types.} Our goal is to accomodate HITs in
 the semantics developed in WP1 and the syntactic framework of WP2. To
 achieve this, we will develop a universal HIT playing the role for
 HITs that W-types play for ordinary inductive
@@ -828,7 +837,7 @@ is not essential to the rest of the project. {\em Deliverable: A
   theory of HITs that is both foundational, and will underpin the
   programming language developed in WP6 and WP7.}
 
-{\bf WP4: Programming with Effects:}
+{\bf WP4: Programming with Effects.}
 %fnf: references still missing for this WP
 %{\bf Correctness via Types} 
 Most programs interact with their environments,
@@ -843,7 +852,7 @@ Major advances have been done by Moggi~\cite{moggi:monad}, who
 realised that effects can be modelled semantically by monads, and
 % and Wadler later
 %showed that monads could internalised as syntactic sugar to structure
-%effectful programs themselves, eg via the {\tt do}-notation of
+%effectful programs themselves, \eg via the {\tt do}-notation of
 %Haskell. More recently, 
 Plotkin and Power~\cite{PlotkinPower:Lawvere}, who showed that (almost
 all) computational monads arise from Lawvere Theories, i.e.\ can be
@@ -881,7 +890,7 @@ integration of our results in the language of WP7 will be more
 challenging.
 
 
-{\bf WP5 Formalisation of Meta-Theory of HoTT:}  As we intend to use
+{\bf WP5 Formalisation of Meta-Theory of HoTT.}  As we intend to use
 HoTT as a formal verification system, we need the highest possible
 level of trust in its correctness. Indeed, the complexity of HoTT
 semantics due to its higher dimensional nature, make a paper based
@@ -955,7 +964,7 @@ environment.
 % a notion of pattern matching which is consistent with HoTT and
 % formally verify this fact. 
 
-{\bf WP6: Implementing a Core Programming Language:} In order showcase
+{\bf WP6: Implementing a Core Programming Language.} In order showcase
 the potential for HoTT based programming languages to the wider
 programming languages community, and learn from their feedback, we
 need to build a prototypical implementation of a type checker and
@@ -997,7 +1006,7 @@ approach is feasible in principle.
 % risk that the implementation takes much longer than expected: we will
 % manage this by keeping the scope of the language small. {\bf Play up OTT and Parametricity (Johann)}
 
-{\bf WP7: A High Level Programming Language:} The aim of this WP is to
+{\bf WP7: A High Level Programming Language.} The aim of this WP is to
 make the language developed in the previous WPs usable in
 practice. This relies on a high-level syntax for datatypes including
 higher inductive types and on integrating known technology such as
@@ -1064,7 +1073,7 @@ matching with HITs --- this is currently an open problem.
 
 
 
-{\bf WP8: Generating Impact Through Case Studies:} The ultimate goal
+{\bf WP8: Generating Impact Through Case Studies.} The ultimate goal
 of the proposed research is to support software construction and
 verification via HoTT. Our final work package comes full circle to our
 original motivation: we will apply our programming language to a
@@ -1117,7 +1126,7 @@ representatives, but we must work up to equality.
 \vspace*{-0.1in}
 
 
-{\bf Relevance to Beneficiaries:} This, perhaps more than many
+{\bf Relevance to Beneficiaries.} This, perhaps more than many
 projects, is an ambitious project which - by qualitatively advancing
 the very foundations of programming languages - has the potential to
 have a very significant impact on a large number of researchers. While
@@ -1130,7 +1139,7 @@ verify as this will provide them with a gateway to HoTT. The potential
 impact of this research can also be gauged by the adventure,
 timeliness and novelty:
 
-{\bf Calibre, Ambition, and Adventure:} The potential of HoTT to solve
+{\bf Calibre, Ambition, and Adventure.} The potential of HoTT to solve
 one of the deepest problems in programming languages and verification
 - namely the efficient computational treatment of equality - and the
 quality of our ideas for brining this potential to fruition all attest
@@ -1143,7 +1152,7 @@ fundamental research (WP1-WP3), to programming languages and
 verification (WP5-WP7), and to impact generation via case studies (WP4 and
 WP 8). The proposed research is also ...
 
-\noindent {\bf ...timely:} This is an extremely timely moment to
+\noindent {\bf Timeliness.} This is an extremely timely moment to
 embark on the proposed research. Not only do we have our own results
 to draw on, but there have also been significant recent advances in
 directly related areas, such as Coquand's cubical model of HoTT.
@@ -1151,7 +1160,7 @@ Moreover, the US government has just funded a \$7.5m complementary
 project applying HoTT to the foundations of mathematics, thereby
 further increasing timeliness.
 
-\noindent {\bf ...novel:} 
+\noindent {\bf Novelty.} 
 Our goal of turning cutting-edge developments in type theory straight
 into state-of-the-art programming language and verification techniques
 distinguishes our approach to HoTT from many others which typically
@@ -1167,7 +1176,7 @@ significant novelties in our approach.
  
 \vspace*{0.02in}
 
-{\bf Nationally Important:} The software market is estimated at \$500
+{\bf Nationally Importance.} The software market is estimated at \$500
 billion per year, and this figure is likely to grow 
 significantly in real terms 
 as software becomes ever more
@@ -1234,7 +1243,7 @@ verification over the next 10 to 50 years, and perhaps even beyond.
 
 \vspace*{0.02in}
 
-{\bf Feasible.} We are {\em very well-positioned} to conduct the
+{\bf Feasibility.} We are {\em very well-positioned} to conduct the
 proposed research. Drs Gambino and Altenkirch both attended the IAS
 Special Year on Univalent Foundations in Princeton and have published
 influential papers on HoTT as well as coauthoring the HoTT book~\cite{hott-book}. Prof
@@ -1248,7 +1257,7 @@ project.
 
 \vspace*{0.02in}
 
-{\bf Success criteria:} We have clearly demonstrated success criteria
+{\bf Success criteria.} We have clearly demonstrated success criteria
 for each workpackage in the form of a clearly delineated deliverable
 and have argued why these deliverables are of great value individually
 but also are essential to the overall goal of the project. As for the
@@ -1274,7 +1283,7 @@ applied researchers how HoTT can be used in their daily practice.
 
 \vspace*{0.02in}
 
-{\bf Management and Planning:} Apart from clearly planning the content
+{\bf Management and Planning.} Apart from clearly planning the content
 and methodology within individual work packages, their success
 criteria, the inherent balance between risk and ambition within them,
 and fall back positions to ensure the project will proceed even if
@@ -1302,7 +1311,7 @@ programming language and verification environment - for this reason we
 have separated the ambitious goal of a fully fledged system (WP7) from
 the relatively risk free goal of a core system (WP6).
 
-{\bf The RA and Their Training:} We will seek two RAs: one with
+{\bf The RA and Their Training.} We will seek two RAs: one with
 expertise in some of category theory, type theory, semantics of
 programming languages; and another with experience in the
 implementation of functional programming languages, software
@@ -1333,7 +1342,7 @@ of training.
 
 \vspace*{0.02in}
 
-{\bf Collaboration:} In carrying out the proposed research we will
+{\bf Collaboration.} In carrying out the proposed research we will
 collaborate with internationally leading researchers so as to maximise
 its potential for impact. See our {\em Pathways to
   Impact} statement for details.
