@@ -310,7 +310,7 @@ theoretical, applied and impact-focussed research.
 $\;\;\; \;\;\;$ {\em Theoretical Foundations.} Almost all of our understanding
   of HoTT exists within a classical framework and hence cannot be used
   to develop programming language and verification tools. Nevertheless, the recent
-  work by Coquand et al. strongly suggests a constructive presentation of HoTT
+  work by Bezem, Coquand and Huber~\cite{BezemM:cubsmt} strongly suggests a constructive presentation of HoTT
   is possible. We will develop both specific constructive models
   and a general constructive model theory of HoTT, and then complement
   these models with type theoretic presentations of them.
@@ -525,14 +525,14 @@ dimensional extension of OTT.
 
 {\bf Logical Relations.} Another important background technology is
 logical relations which uses induction on type structure to define
-relations at higher types. Indeed Coquand's model is closely related
+relations at higher types. Indeed the cubical sets model~\cite{BezemM:cubsmt} is closely related
 to logical relations because cubical sets arise naturally when one
 extends logical relations to higher dimensions. Research into logical
 relations is currently being funded by EPSRC at Strathclyde and we
 will use our expertise to see if higher dimensional variants of the
 standard presentations of logical relations (eg Kripke and mixed arity
 logical relations) lead to better behaved refinements of the cubical
-set model.
+sets model.
 
 
 
@@ -570,11 +570,12 @@ paths identifying lists up to twisting of any element past its
 neighbours, and bags are braids with paths-between-paths identifying
 braidings which yield the same permutation.
 
-Coquand et al.'s model of HoTT based on \emph{cubical sets} interprets closed expressions
-as canonical denotations, demonstrating basic feasibility of computing
-with univalence. However, much work lies ahead: we need to give
+The model of HoTT based on \emph{cubical sets} currently being developed~\cite{BezemM:cubsmt} interprets closed expressions
+as canonical denotations, which leads to basic feasibility of computing
+with the Univalence Axiom. However, much work lies ahead: we need to give
 closed expressions normal forms \emph{within} HoTT, and to recover
-definitional equalities lost by the cubical interpretation. Further, other models might
+definitional equalities lost by the cubical interpretation (such as the one in the
+computation rule for identity types). Further, other models might
 offer better computational foundations for HoTT, so practical progress
 towards programming languages and verification tools based on HoTT
 needs a broader model theory.
@@ -615,7 +616,7 @@ needs a broader model theory.
 Our general methodology to the development of HoTT-based software
 construction and verification will be to harness ideas from a number
 of different sources: i) the evolving state of the art, e.g. the HoTT
-book and the cubical sets construction of Coquand et al. as well as
+book and the cubical sets model  as well as
 the ongoing dialogue with our collaborators; ii) our work on OTT which
 is a proof-irrelevant prototype of what we seek; iii) our work on the
 implementation of dependently typed programming languages (Epigram and
@@ -650,8 +651,7 @@ be proven sound by giving a specific models of them.  These models
 need to be constructive so that programs, even those using the
 Univalence axiom, will compute ({i.e.} reduce to a normal form). While
 the standard model of HoTT based upon simplicial sets is not
-constructive, the cubical set model currently being developed by Coquand et
-{al.}\ is constructive and raises the question of understanding it
+constructive, the cubical sets model currently being developed~\cite{BezemM:cubsmt} is constructive and raises the question of understanding it
 within a general model theory.
 
  We will attack this problem from the following directions: (1) we
@@ -663,7 +663,7 @@ within a general model theory.
  will develop a model theory for HoTT by isolating the essential
  features of these models (especially those amenable of a constructive treatment)
  and  adapting known methods to construct Quillen model structures
- to the setting of HoTT ({c.f.}~\cite{ShulmanM:uniidh}, which however does not cover the cubical set model).
+ to the setting of HoTT ({c.f.}~\cite{ShulmanM:uniidh}, which however does not cover the cubical sets model).
 
 For (2), our starting point will be recent advances in axiomatizing the
 notion of a model of type theory in a simple way ({e.g..}~\cite{AwodeyS:natmtt}). On that basis, we will require the existence of additional
@@ -974,7 +974,7 @@ defined notion of equality. Another source of inspiration comes form parametrici
 here there is considerable experience at Strathclyde.
 We plan to collaborate with people at
 Chalmers, especially building on Coquand and Huber's experiences with
-implementing the cubical set model - which also shows that our
+implementing the cubical sets model - which also shows that our
 approach is feasible in principle.
 
 % Coquand's and Huber's implementation of the cubical set model shows
@@ -1128,7 +1128,7 @@ of this proposal in the introduction. The proposed research also has ...
 \noindent {\bf Timeliness.} This is an extremely timely moment to
 embark on the proposed research. Not only do we have our own results
 to draw on, but there have also been significant recent advances in
-directly related areas, such as Coquand's cubical model of HoTT.
+directly related areas, such as the cubical sets model of HoTT.
 Moreover, the US government has just funded a \$7.5m complementary
 project applying HoTT to the foundations of mathematics, thereby
 further increasing timeliness.
@@ -1217,8 +1217,8 @@ verification over the next 10 to 50 years, and perhaps even beyond.
 \vspace*{0.02in}
 
 {\bf Feasibility.} We are {\em very well-positioned} to conduct the
-proposed research. Drs Gambino and Altenkirch both attended the IAS
-Special Year on Univalent Foundations in Princeton and have published
+proposed research. Drs Gambino and Altenkirch both attended the 
+special year on Univalent Foundations at the Institute for Advanced Study in Princeton and have published
 influential papers on HoTT as well as coauthoring the HoTT book~\cite{hott-book}. Prof
 Ghani is an expert on logical relations (he is currently PI on an
 EPSRC grant on the subject) and Dr McBride is a world expert on
@@ -1271,12 +1271,16 @@ contributors. This is detailed in the associated Gantt chart.
 %and WP6 are independent, but WP1, WP2, and WP3 all feed into them. WP7
 %will be integrated with the others to the greatest extent possible by
 %starting work on it as soon as results from WP1 are available. 
-Risk {\em between} work packages is minimised since
+Risk {\em between} work packages is minimised since {\bf MISSING}
 
-Overall a significant positive outcome is virtually assured as the
-constructive nature of Coquand's model forms a proof of concept that
-programming with HoTT is possible, and we have sanity checked the
-ideas we will use within each workpackage. If any difficulty arises we
+%% This seems a crucial point where some restating was necessary to be more cautious
+%% Please rewrite as you see fit
+
+Overall a significant positive outcome is very realistic, as indicated by the recent advances in defining
+new models of HoTT~\cite{ShulmanM:uniidh} and in particular by the constructive development of
+the cubical sets model~\cite{BezemM:cubsmt}.
+We have already sanity checked the
+ideas we will use within each workpackage and, if any difficulty arises, we
 have the expertise of our collaborators to supplement our own as well
 as that of the highly active HoTT community. Indeed, the biggest risk
 is the huge amount of work required in the {\em engineering} of a
