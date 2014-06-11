@@ -59,7 +59,7 @@
 
 \thispagestyle{plain}
 \begin{center}
-  {\Large {\bf Homotopy Type Theory: Programming and Verification:}}\\[1ex] 
+  {\Large {\bf Homotopy Type Theory: Programming and Verification}}\\[1ex] 
 
 \vspace*{-0.1in}
 
@@ -273,24 +273,27 @@ mathematical proofs are untrustworthy. As a result, the only way to
 ensure truly secure and reliable software is the gold standard of
 formally verified software, which offers machine-checked mathematical
 proofs of software correctness. Several decades of pioneering work in
-the UK and elsewhere have culminated in languages and tools
+the UK and elsewhere has culminated in systems 
 such as Agda, Coq, Epigram, Idris, NuPRL, Twelf, and
-the Trellys project. These systems are having significant impact,
+the Trellys project which are now having significant impact,
 \eg Coq has won both the 2013 ACM Software award and the 2013 SIGPLAN
 Programming Languages Software award. The advanced type-theoretic
-technology of these systems is raided by more mainstream languages
+technology of these systems is also raided by more mainstream languages
 with significant industrial deployment such as Haskell, OCaml, Scala
 and C\#.
 
-{\bf The Project.} Despite these successes, such systems have a number
-of short comings in crucial areas, \eg when programming with quotients,
+%SWIFT
+%Other prizes for other systems
+%Economy of Trust
+
+{\bf The Project.} Despite their success, such systems have several
+fundamental limitations, \eg when programming with quotients,
 supporting abstraction (that is, invariance under different
 representations of the same structure) and extensional reasoning
 (proving that programs which behave the same are the same).  {\em
   Homotopy Type Theory} (HoTT) is widely regarded as a fundamental
 innovation with great potential to address these and other problems.
-To deliver on this potential we intend to pursue
-a three-pronged research programme based upon a synthesis of
+To realise this potential, we propose a synthesis of
 theoretical, applied and impact-focussed research.
 
 
@@ -310,7 +313,7 @@ theoretical, applied and impact-focussed research.
 $\;\;\; \;\;\;$ {\em Theoretical Foundations.} Almost all of our understanding
   of HoTT exists within a classical framework and hence cannot be used
   to develop programming language and verification tools. Nevertheless, the recent
-  work by Bezem, Coquand and Huber~\cite{BezemM:cubsmt} strongly suggests a constructive presentation of HoTT
+  work by Coquand et.al.~\cite{BezemM:cubsmt} strongly suggests a constructive presentation of HoTT
   is possible. We will develop both specific constructive models
   and a general constructive model theory of HoTT, and then complement
   these models with type theoretic presentations of them.
@@ -333,13 +336,13 @@ $\;\;\;\;\;\;$ {\em Generating Impact.} Developing new and fundamentally
   solve one of the deepest problems in programming languages and
   verification - namely the efficient computational treatment of
   equality/representational invariance - demonstrates our ambition to
-  fundementally transform the construction and validation of software.
+  fundamentally transform the construction and validation of software.
   The proposal's calibre is demonstrated by the depth and range
-  of the state-of-the-art ideas we propose to deploy during our
-  research. Finally, the proposal's adventurous nature 
-  is demonstrated by its scope, which ranges from fundamental research
-  (WP1-WP3), to programming languages and verification (WP5-WP7), and
-  to impact generation via case studies (WP4 and WP 8).
+  of the state-of-the-art ideas we will deploy in our
+  research. Finally, the proposal's adventure
+  is demonstrated by its scope, ranging from fundamental research
+  (WP1,2,3) to programming languages and verification (WP5,6,7) 
+  to impact generation via case studies (WP4,8).
 
 \vspace*{-0.1in} 
 
