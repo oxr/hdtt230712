@@ -662,12 +662,12 @@ as a more ambitious goal:
 
 {\bf WP1: Semantic Foundations of HoTT.}  We seek semantic insights
 for HoTT akin to those provided by Cartesian closed categories for
-the simply typed $\lambda$-calculus.  A constructive model theory for
-HoTT is essential because: (1) a general model theory 
+the simply typed $\lambda$-calculus.  A proper model theory for
+HoTT is essential because i) a general model theory 
 guides the design of different presentations and implementations of
-HoTT; (2) models of HoTT provide algebraic techniques to reason
+HoTT; ii) models of HoTT provide algebraic techniques to reason
 about the correctness of implementations which complement syntactic
-techniques, and in particular (3) specific implementations of HoTT can
+techniques; and iii) specific implementations of HoTT can
 be proven sound by giving a specific models of them.  These models
 need to be constructive so that programs, even those using the
 Univalence axiom, will compute ({i.e.} reduce to a normal form). While
@@ -675,29 +675,32 @@ the standard model of HoTT based upon simplicial sets is not
 constructive, the cubical sets model currently being developed~\cite{BezemM:cubsmt} is constructive and raises the question of understanding it
 within a general model theory.
 
- We will attack this problem from the following directions: (1) we
- will analyse existing models ({e.g.} groupoids~\cite{HofmannM:groitt}, strict
- $\omega$-groupoids~\cite{WarrenM:strgit}, simplicial sets~\cite{KapulkinC:simmuv}, cubical sets~\cite{BezemM:cubsmt}) and isolate
- exactly how they ensure constructivity or where they fail to do
- so. In the latter case, we will investigate whether it is possible to
- constructivize them; (2) on the basis of our experience with (1), we
- will develop a model theory for HoTT by isolating the essential
- features of these models (especially those amenable of a constructive treatment)
- and  adapting known methods to construct Quillen model structures
- to the setting of HoTT ({c.f.}~\cite{ShulmanM:uniidh}, which however does not cover the cubical sets model).
-
-For (2), our starting point will be recent advances in axiomatizing the
-notion of a model of type theory in a simple way ({e.g..}~\cite{AwodeyS:natmtt}). On that basis, we will require the existence of additional
-structure, corresponding to the axioms of HoTT under consideration. In
-terms of risk, (1) is certainly achievable since it involves only the
-analysis of existing concrete models, while (2) is a more ambitious
+We will attack this problem from the following directions: i) we will
+analyse existing models ({e.g.} groupoids~\cite{HofmannM:groitt},
+strict $\omega$-groupoids~\cite{WarrenM:strgit}, simplicial
+sets~\cite{KapulkinC:simmuv}, cubical sets~\cite{BezemM:cubsmt}) and
+isolate exactly how they ensure constructivity or where they fail to
+do so - in the latter case, we will attempt to constructivize them;
+ii) building on this, we will develop a general model theory for HoTT
+by isolating the essential features of these models and by adapting
+known methods to construct Quillen model structures to the setting of
+HoTT ({c.f.}~\cite{ShulmanM:uniidh}, which however does not cover the
+cubical sets model).  Our starting point will be recent advances in
+axiomatizing the notion of a model of type theory
+({e.g..}~\cite{AwodeyS:natmtt}) - will will then require the existence
+of additional structure corresponding to the axioms of HoTT. In terms
+of risk, i) is certainly achievable since it involves only the
+analysis of existing concrete models, while ii) is a more ambitious
 goal. Nevertheless, our expertise on semantics of type
 theories~\cite{neil2014relParamDep}, homotopical
 algebra~\cite{GambinoN:homl2c,GambinoN:weilsh} and
 $\omega$-groupoids~\cite{alti:csl12} makes even this ambitious goal
-feasible. Deliverables from WP1 will be a broad class of models of
-HoTT which considerably deepen our understanding and map out the
-design space of its syntactic presentations.
+feasible. {\em Deliverables: A broad class of models of HoTT which
+  considerably deepen our understanding of HoTT and thereby map out
+  the design space of its syntactic presentations. Collaborator: Prof
+  Steve Awodey}
+
+
 
 % {\bf WP1: Semantic Foundations of HoTT:}  We
 % seek semantic insights into HoTT akin to those provided by Cartesian
@@ -778,19 +781,21 @@ WP1.
 % We will begin by developing Altenkirch's preliminary type theory for
 % cubical sets, which both internalises parametricity and adds Kan
 % fillers to the theory. 
-Cubical sets share structure with logical relations, as Altenkirch has
-recently observed. We shall exploit this connection to replace the
-uniform identity type of intensional MLTT with a
-higher-dimensional equality defined to fit the structure of types. The
-models from WP1 will drive refinement of our design, until we have a
-canonical presentation of HoTT. Our preparatory work, and prior
-expertise in OTT \cite{alti:ott-conf}, normalisation by
+Our approach is to build on Altenkirch's observation that cubical sets
+share many similarities with logical relations. We shall exploit this
+connection to replace the uniform identity type of intensional MLTT
+with a higher-dimensional equality defined to fit the structure of
+types. The models from WP1 will drive refinement of our design, until
+we have a canonical presentation of HoTT. Our preparatory work, and
+prior expertise in OTT \cite{alti:ott-conf}, normalisation by
 evaluation and big-step reduction
-\cite{alti:ctcs95,alti:lics96,alti:flops04,txa:jtait}, 
-strengthening definitional
-equality~\cite{Allais:2013:NEN:2502409.2502411}, and logical
-relations~\cite{neil2014relParamDep} ensures a high probability of delivering
-an effective presentation of HoTT. 
+\cite{alti:ctcs95,alti:lics96,alti:flops04,txa:jtait}, strengthening
+definitional equality~\cite{Allais:2013:NEN:2502409.2502411}, and
+logical relations~\cite{neil2014relParamDep} ensures a high
+probability of delivering an effective presentation of HoTT.
+{\em Deliverable: A type theory within providing a language for
+  HoTT. Collaborator: Prof Thierry Coquand.}
+
 %We follow the
 %practise in WP1 of managing risk in this workpackage by first aiming
 %at the moderate goal of deriving specific presentations relating to
@@ -829,8 +834,6 @@ same time.
 %%fnf: the following is mentioned in WP7, and might fit better there:
 %We will also investigate a pattern matching syntax for HITs; this is
 %related again to WP7.
-{\bf More on QCs}
-
 Our experience from previous work on data
 types~\cite{alti:cont-tcs,alti:lics09,txa:cie10,alti:catind2,ghani:fibredIR,gambinoHyland:welfoundedTrees,awodeyGamSoja:indTypesInHTT},
 including EPSRC grants on containers and induction-recursion, means
@@ -842,26 +845,19 @@ While it is not clear how far we can push the results with respect to
 e.g.\ higher inductive-recursive types, this phase of the work package
 is not essential to the rest of the project. {\em Deliverable: A
   theory of HITs that is both foundational, and will underpin the
-  programming language developed in WP6 and WP7.}
+  programming language developed in WP6 and WP7. Collaborator: Prof
+  Mike Schulman. }
 
 {\bf WP4: Programming with Effects.}
-%fnf: references still missing for this WP
-%{\bf Correctness via Types} 
 Most programs interact with their environments,
-% , e.g., to read and/or write to the memory and to detect and respond
-% to errors such as attempts to divide by zero or to open files that
-% don’t exist.
 but such \emph{effectful} programs are known to be inherently difficult to
 reason about.
- %because, for example, the result of a program might
-%depend upon the evaluation order. 
-Major advances have been done by Moggi~\cite{moggi:monad}, who
-realised that effects can be modelled semantically by monads, and
+Major advances were Moggi's~\cite{moggi:monad} realisation that effects can be modelled semantically by monads, and
 % and Wadler later
 %showed that monads could internalised as syntactic sugar to structure
 %effectful programs themselves, \eg via the {\tt do}-notation of
 %Haskell. More recently, 
-Plotkin and Power~\cite{PlotkinPower:Lawvere}, who showed that (almost
+Plotkin and Power~\cite{PlotkinPower:Lawvere} who showed that (almost
 all) computational monads arise from Lawvere Theories, i.e.\ can be
 presented as effect-generating operations and equations.
 Unfortunately, in general, equational theories cannot be represented
