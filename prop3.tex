@@ -857,26 +857,24 @@ Major advances were Moggi's~\cite{moggi:monad} realisation that effects can be m
 %showed that monads could internalised as syntactic sugar to structure
 %effectful programs themselves, \eg via the {\tt do}-notation of
 %Haskell. More recently, 
-Plotkin and Power~\cite{PlotkinPower:Lawvere} who showed that (almost
+Plotkin and Power's~\cite{PlotkinPower:Lawvere} proof that (almost
 all) computational monads arise from Lawvere Theories, i.e.\ can be
 presented as effect-generating operations and equations.
 Unfortunately, in general, equational theories cannot be represented
-in current programming languages such as Haskell, and one is therefore
-often forced to program not using the quotient algebra as desired, but
+in current programming languages such as Haskell, and one is usually 
+forced to program not using the quotient algebra as desired, but
 using the free algebra and then check -- externally to the program --
-that the quotient structure is respected.  Of course this can be
-formally verified in HoTT, but HITs also allow us to go further and
-give an inductive presentation of such quotients. This means that we
-can program directly on the quotient algebra, as well as asserting the
-correctness of the program %via type checking.
-internally.  Not only is this a particularly efficient form of formal
-verification, but the correctness of one program can then be used to
-validate the preconditions of others.
+that the quotient structure is respected.  
 
-To make this possible, we intend to formalise both Lawvere Theories
+With HITs available, there is no need for such a convoluted process!
+Instead, we can program directly on the quotient algebra, as well as
+asserting the correctness of the program within its type.  Not only is
+this a particularly efficient form of formal verification, but the
+correctness of one program can then be used to validate the
+preconditions of others. Concretley, we will formalise both Lawvere Theories
 (using HITs to represent effectful computations) and their
 mathematical algebra (e.g.\ tensor products, sums) in HoTT.
-Concretely, we will both simplify and extend i) McBride, Andjelkovic
+This will both simplify and extend i) McBride, Andjelkovic
 and Lindley's effect handlers in Frank~\cite{conor:frank}; ii) Brady's
 effects library for Idris~\cite{brady:effects}; and iii) Bauer and
 Pretnar's treatment of effects in Eff~\cite{bauer:eff}.  This will be
@@ -890,7 +888,8 @@ theories and treating algebraic theories via HITs are established in
 principle. However, more advanced effects, such as indexed effects
 which arise in dependently typed programming, or a full-scale
 integration of our results in the language of WP7 will be more
-challenging.
+challenging. {\bf Deliverable: A treatment of Lawvere Theories within
+  HoTT. Collaborator: Dr Nick Benton.}
 
 
 {\bf WP5 Formalisation of Meta-Theory of HoTT.}  As we intend to use
@@ -920,52 +919,6 @@ verification community as it will be the first instance of formal
 verification in a {\em HoTT-based} formal verification
 environment.
 
-%  This means we need to check that
-% the model theory of HoTT, the associated type theory and their
-% relationship are correct. Given that HoTT is inherently a complex and
-% combinatorially intricate mathematical subject because of its higher
-% dimensional structure, a purely paper based verification would be
-% doubtful.  Thus, the only way to ensure the required high level of
-% trust in the correctness of our work is to formally verify that this
-% is the case.
-
-% %Voevodsky ... fed up with errors in papers.
-
-% We will begin with the relatively low risk task of formalising the
-% cubical sets model of HoTT, our nascent cubical type theory and their
-% relationship in Agda. However this approach will be unsatisfactory in
-% the long run because of the limitations of Agda and hence we will
-% switch to formal verification in our HoTT-based type theory and formal
-% verification system as they are developed. Our belief is that formal
-% verification in HoTT will actually be easier because the syntax of
-% Type Theory will be more efficiently formalised as a HIT which
-% represents not just the type and term constructors but also the
-% associated definitional equality. This is low risk as there is already
-% some formalisation of HoTT in Agda, and more generally, because we
-% have significant expertise in both techniques (such as induction
-% recursion and induction induction) required formalise type theory and
-% also in the verification of properties of the formalisation~\cite{}.
-% As the project progresses we will consider the more ambitious goals
-% and risky goal of formally verifying properties of the core programming
-% language developed in WP6. At the end of the work package we will have
-% deliverables consisting of formal verification of the key properties
-% of HoTT. Not only will this ensure the required level of trust in our
-% system, but this will have a significant impact upon the formal
-% verification community as it will be the first instance of formal
-% verification in a {\em HoTT-based} formal verification
-% environment.~\footnote{as opposed to formal verification in current
-%   systems such as Agda and Coq}. {\bf Agda + non-computational
-%   univalence is not HoTT!}
-  
-
-
-
-
-% However, there is no clear
-% theory or justification of the current implementation which also has
-% been proven to be unsound in several instances. Our goal is to develop
-% a notion of pattern matching which is consistent with HoTT and
-% formally verify this fact. 
 
 {\bf WP6: Implementing a Core Programming Language.} In order showcase
 the potential for HoTT based programming languages to the wider
@@ -1140,18 +1093,18 @@ scientists will of course be interested in the fundamental nature of
 HoTT, the most significant long term impact will be on those who
 program and those who verify programs. Many of these researchers are
 already intrigued by the potential of HoTT and our plan is to answer
-their needs by generate
+their needs by generating
 exactly the critical mass of examples of code and verification that
 will provide them with a gateway into HoTT. See {\em Patheways to
   Impact} for details.
 
 
-\noindent {\bf Timeliness and Novelty.} This research is extremely timely.
-In addition to our own results, there have also been ground-breaking
-recent advances in HoTT, \eg the constructive cubical sets model.  Moreover, the
+\noindent {\bf Timeliness and Novelty.} This research is extremely timely:
+in addition to our own results, there have been ground-breaking
+recent advances in HoTT, \eg the constructive cubical sets model. Moreover, the
 US government has just funded a \$7.5m complementary project applying
 HoTT to the foundations of mathematics, thereby further increasing
-timeliness. As for novely, our goal of turning cutting-edge
+timeliness. As for novelty, our goal of turning cutting-edge
 developments in type theory into state-of-the-art programming language
 and verification techniques distinguishes our approach to HoTT from
 many others which typically focus on one or the other. We make this
@@ -1166,132 +1119,101 @@ competencies, experiences, and hence approach.
 %\vspace*{0.02in}
 
 {\bf Nationally Importance.} The software market is estimated at
-$\pounds 300$
-billion per year, and this will grow 
-significantly in real terms 
-as software becomes ever more
-ubiquitous. It's thus essential to the UK's national interest to have 
-strong presence in this market. One crucial aspect of software is that
-it is correct, i.e., does what's intended and does not go wrong.  While
-failures of everyday devices like iPods and mobile phones are
-inconvenient,
-software leaking voting records or
-compromising 
-the global financial sector can lead to unprecedented and clearly
-unacceptable global uncertainties. As remarked earlier, the cost of
-software failure is truly staggering! 
-As a result, we are likely to see an increasing
-demand for provably correct software partly because testing
-inherently offers only partial guarantees of correctness, and partly because
+$\pounds 300$ billion per year, and this will grow significantly in
+real terms as software becomes ever more ubiquitous. It's thus
+essential to the UK's national interest to have strong presence in
+this market. One crucial aspect of software is that it is correct,
+i.e., does what's intended and does not go wrong.  While failures of
+everyday devices like iPods and mobile phones are inconvenient,
+software leaking voting records or compromising the global financial
+sector can lead to unprecedented and clearly unacceptable global
+uncertainties - as remarked earlier, the cost of software failure is
+truly staggering!  As a result, we are likely to see an increasing
+demand for provably correct software partly because testing inherently
+offers only partial guarantees of correctness, and partly because
 programming language technology is finally advancing to the stage
-where it is feasible to formally verify critical programs.
-EPSRC recognises that both programming languages and program verification 
-are areas of vital 
-national importance deserving increased funding and this proposal 
-lies squarely in the intersection of these areas. Within these areas, we are aiming
-high.  The current state of the art in programming language design is
-limited by the lack of a clear understanding of how strong equality
-ought to be within a programming language. Our research will provide a
-step change in programming languages research where the current
-ad-hoc and limited treatments of equality will be replaced by a
-powerful one with a well
-understood foundation. Thus the results of our research can be
-expected to have great impact on programming languages and program
-verification over the next 10 to 50 years by
-becoming the cornerstone for the next generation of high level
-programming languages.
+where it is feasible to formally verify critical programs.  EPSRC
+recognises that programming languages and program verification are
+areas of vital national importance deserving increased funding and
+this proposal lies squarely in the intersection of these areas. Within
+these areas, we are aiming high.  The current state of the art in
+programming language design is limited by a 40 year lack of a clear
+understanding of how to treat equality within a programming language -
+we propose a step change which replaces the current ad-hoc and limited
+treatments with a powerful one based upon solid foundations. Thus our
+research can be expected to have great impact 
+over the next 10 to 50 years by becoming the
+cornerstone for the next generation of high level programming and
+verification environments.
 
 %\vspace*{0.02in}
 
-{\bf Feasibility and Success Critieria.} We are {\em very well-positioned} to conduct the
-proposed research. Drs Gambino and Altenkirch both attended the 
-special year on Univalent Foundations at the Institute for Advanced Study in Princeton and have published
-influential papers on HoTT as well as coauthoring the HoTT book~\cite{hott-book}. Prof
-Ghani is an expert on logical relations (he is currently PI on an
-EPSRC grant on the subject) and Dr McBride is a world leader in
-programming languages. In a nutshell, the team are world leaders 
-in the key areas of category theory, type theory and
-programming languages which are the pillars upon which this project is
-built. Overall a significant positive outcome is very realistic, as indicated
-by the recent advances in defining new models of
-HoTT~\cite{ShulmanM:uniidh} and in particular by the constructive
-development of the cubical sets model~\cite{BezemM:cubsmt}.  We have
-already sanity checked the ideas we will use within each workpackage
-and, if any difficulty arises, we will supplement our own experience
-with the expertise of our collaborators and the highly active HoTT
-community. Each work package has clear success criteria
-as a clearly delineated deliverable
-and we have argued why these deliverables are of great value individually
-but also are essential to the overall goal of the project. As for the
-overall project, its criteria for success will be threefold: i) new
-syntactic and semantic foundations for HoTT; ii) programming language
-and verification tools for computing with HoTT; and iii) a code base
-of programs written in, and verified by, these tools which show 
-applied researchers how HoTT can aid their daily practice.
+{\bf Feasibility and Success Critieria.} We are {\em exceptionally
+  well-positioned} to conduct the proposed research: Drs Gambino and
+Altenkirch both attended the Special Year on HoTT in Princeton, have
+published influential papers on HoTT, as well as coauthoring the HoTT
+book~\cite{hott-book}. Prof Ghani is an expert on logical relations
+and Dr McBride is a world leader in programming languages - see the
+{\em Justification of Resources} for more details on our
+comptenancies. Overall a significant positive outcome is very
+realistic, as evidenced by our ideas and insights which we have sanity
+checked and by other ground-breaking recent advances in HoTT
+~\cite{ShulmanM:uniidh,BezemM:cubsmt}. If any
+difficulty arises, we will supplement our experience with that of our
+collaborators and the highly active HoTT community. Success criteria
+for each work package are given as clearly delineated deliverables -
+we have argued why these deliverables are of great value individually
+but also are essential to the overall goal of the project. The success
+criteria for the overall project are i) new syntactic and semantic
+foundations for HoTT; ii) programming language and verification tools
+for computing with HoTT; and iii) a code base of programs written in,
+and verified by, these tools which show applied researchers how HoTT
+aids their daily practice.
 
-% The success of the foundational phase of the proposed
-% research will be demonstrated by developing thccess criteria e syntax (WP2) and
-% semantics (WP1) 
-% of a type theory (programming languages?) based upon the principles of HoTT
-% (validating univalence), extending this to cover HITs (WP3) and 
-% verifying the required properties of the language.
-% The success of the languages and verification phase will be
-% demonstrated by the implementation of a programming language (WP 5, 6, 7)  whose
-% correctness has been formally verified and within which - for the
-% first time - HoTT programs can be run. Finally, the success of the impact phase
-% will be demonstrated by developing proof-of-concept applications of
-% our results to problems of interest to the wider programming languages
-% and program verification community.
+%40 years open => 40 years importance.
 
-%\vspace*{0.02in}
-
-{\bf Management, Planning and Collaboration:} Apart from clearly
+{\bf Planning, Collaboration and Management:} Apart from clearly
 planning the content and methodology of each work package, their
 success criteria, and the inherent balance between risk and ambition
-within them, we have also minimised risk {\em between} workpackages by
+within them, we have also minimised risk {\em between} work packages by
 planning fall back positions within each work package to ensure the
 project will proceed even if unexpected difficulties arise. We have
-also carefully planned how the workpackages fit together, who will
+also carefully planned how the work packages interact, who will
 lead them and who will be secondary contributors - see the Gantt
-chart. Indeed, the biggest risk is the huge amount of {\em
+chart. The biggest risk is the huge amount of {\em
   engineering} work required by a programming language and
 verification environment - we have thus separated the ambitious goal
 of a fully fledged system (WP7) from the relatively risk free goal of
 a core system (WP6). We have concrete plans to collaborate with
-experts on each work package - see {\em Pathways to Impact} for
-details. We have significant and succesful track records of working
-together and managing multi-institutional grants of this size and so
-feel the advantages of an informal management structure outweigh a
-more formal one.  Nevertheless, apart from 6 monthly regular meetings
-of the team, our collaborators will formally review our progress half
-way through the grant.
+experts on each work package - see {\em Pathways to Impact}. We will
+manage the project by 6-monthly  team meetings and by
+asking our collaborators to formally review our progress after two years.
+Our significant and succesful track records of
+working together - including managing multi-institutional grants of
+this size - 
+tells us this is the right management structure.
 
 % UK HoTT exists!
 
-{\bf The RAs and Their Training.} As explained in the {\em Justification of
-Resources}, we require two RAs. We know
-of several appropriately qualified researchers and recent
-events such as the Trimester in Certified Proof in Paris and the
-Special Year on HoTT in Princeton have created a significant pool of
-potential RAs. Nevertheless, we will advertise widely to recruit the
-best RAs possible. %Weekly
-FOP group, Leeds Logic, and MSP group meetings
-%To integrate the RA into the project, we will hold weekly MSP group
-%meetings to 
-provide regular opportunities to report on research progress and
-generate new ideas, and will help integrate the RA into the project
-and the highly conducive local environments. Further training will
-include i) reading groups for discussing relevant research papers; ii)
-ensuring the RAs play prominent roles in meetings (eg UK HoTT) we
-attend/
-organise; iii) the writing of papers and
-grant proposals; and iv) leading research activities and helping
-mentor PhD students.  Thus, at the end of the project, the RAs will
-possess highly-desirable knowledge and skills, and be well-positioned
-to lead future research and/or development efforts. This is important as
-the development of next generation programming languages requires more
-work than the active workforce can handle. Overall, the proposed
-project will have high impact in terms of training.
+{\bf The RAs and Training.} As explained in the {\em
+  Justification of Resources}, we require two RAs and recent events
+such as the Trimester in Certified Proof in Paris and the Special Year
+on HoTT in Princeton have created a significant pool of potential
+RAs. Nevertheless, we will advertise widely to recruit the best RAs
+possible.  FOP group, Leeds Logic, and MSP group meetings provide
+regular opportunities to report on research progress and generate new
+ideas, and will help integrate the RA into the project and the highly
+conducive local environments. Further training will include i) reading
+groups for studying relevant papers; ii) ensuring the RAs play
+prominent roles in meetings (eg UK HoTT, ScotCats, SPLS, MGS, FitA) we
+attend/organise; iii) writing of papers and grant proposals; and
+iv) leading research activities and helping mentor PhD students.
+The RAs will thus gain highly-desirable
+knowledge and skills and be well-positioned to lead future research
+and/or development work. This is vital as the development of
+next generation programming languages requires more work than the
+active workforce can handle. Overall, the proposed project will have
+high impact in terms of training.
 
 
 %\vspace{-0.15in}
