@@ -646,9 +646,11 @@ organise to ensure both dissemination of, and feedback about, our
 results. These multiple sources ensure that we neither slavishly
 follow the hype that inevitably surrounds significant innovation, nor
 are unaware of current and future advances in HoTT.  The project is
-divided into eight work packages, each having a named collaborator, a clear deliverable of
-relatively low risk (to ensure the overall project's success) as well
-as a more ambitious goal:
+structured as follows:
+
+%divided into eight work packages, each having a named collaborator, a clear deliverable of
+%relatively low risk (to ensure the overall project's success) as well
+%as a more ambitious goal:
 
 %with WP1
 %hosted in Leeds, WP2-4 in Nottingham and WP5-8 in Strathclyde. Of course
@@ -848,7 +850,7 @@ is not essential to the rest of the project. {\em Deliverable: A
   programming language developed in WP6 and WP7. Collaborator: Prof
   Mike Schulman. }
 
-{\bf WP4: Programming with Effects.}
+{\bf WP4: Impact I - Programming with Effects.}
 Most programs interact with their environments,
 but such \emph{effectful} programs are known to be inherently difficult to
 reason about.
@@ -867,34 +869,30 @@ using the free algebra and then check -- externally to the program --
 that the quotient structure is respected.  
 
 With HITs available, there is no need for such a convoluted process!
-Instead, we can program directly on the quotient algebra, as well as
-asserting the correctness of the program within its type.  Not only is
-this a particularly efficient form of formal verification, but the
-correctness of one program can then be used to validate the
-preconditions of others. Concretley, we will formalise both Lawvere Theories
-(using HITs to represent effectful computations) and their
-mathematical algebra (e.g.\ tensor products, sums) in HoTT.
-This will both simplify and extend i) McBride, Andjelkovic
-and Lindley's effect handlers in Frank~\cite{conor:frank}; ii) Brady's
-effects library for Idris~\cite{brady:effects}; and iii) Bauer and
-Pretnar's treatment of effects in Eff~\cite{bauer:eff}.  This will be
-done within the type theory of WP2, and progress will be reflected
-into the programming language of WP7.  This work package will
-therefore act both as validation for the theoretical research done by
-RA1, and also generate impact by showing how that work can be used to
-tackle a major programming languages problem. Basic results should be
-low risk as the fundamental ideas of treating effects via algebraic
-theories and treating algebraic theories via HITs are established in
-principle. However, more advanced effects, such as indexed effects
-which arise in dependently typed programming, or a full-scale
-integration of our results in the language of WP7 will be more
-challenging. {\bf Deliverable: A treatment of Lawvere Theories within
+Instead, we can program directly on the quotient algebra and
+assert the correctness of the program within its type thereby 
+efficiently formally verifying the program's correctness. Concretley, we will formalise both Lawvere
+Theories (using HITs to represent effectful computations) and their
+mathematical algebra (e.g.\ tensor products, sums) in HoTT.  This will
+both simplify and extend i) McBride, Andjelkovic and Lindley's effect
+handlers in Frank~\cite{conor:frank}; ii) Brady's effects library for
+Idris~\cite{brady:effects}; and iii) Bauer and Pretnar's treatment of
+effects in Eff~\cite{bauer:eff}.  This will be done within the type
+theory of WP2, and progress will be reflected into the programming
+language of WP7. This will both validate the theoretical research done
+by RA1, and also generate impact by showing how HoTT can transform a
+major programming languages topic. Basic results are low risk as,
+conceptually, we simply need to stitch together the treatment of
+quotients via HITs with that of effects via Lawvere theories.
+However, more advanced effects (\eg indexed effects) or the full-scale
+integration of our results into WP7 will be more challenging. {\em
+  Deliverable: A treatment of Lawvere Theories within
   HoTT. Collaborator: Dr Nick Benton.}
 
 
 {\bf WP5 Formalisation of Meta-Theory of HoTT.}  As we intend to use
 HoTT as a formal verification system, we need the highest possible
-level of trust in its correctness. Indeed, the complexity of HoTT
+level of trust in its correctness. Indeed, the complexity of HoTT's
 semantics due to its higher dimensional nature, make a paper based
 verification almsot unfeasible and certainly not trustworthy --- this
 issue was pointed out by Voevodsky recently \cite{voevodsky-ias14}.
@@ -909,18 +907,15 @@ postulates) we hope to be able to exploit the results of WPs 6 and 7
 in later stages of the project, enabling at least a partial self
 certification of HoTT in HoTT.  While this approach seems unsound at
 the first glance it is reasonable since it is unlikely that a bug in
-the theory leads to an unsound formalisation of the metatheory.
-
-At the end of the work package we will have
-deliverables consisting of formal verification of the key properties
-of HoTT. Not only will this ensure the required level of trust in our
-system, but this will have a significant impact upon the formal
-verification community as it will be the first instance of formal
-verification in a {\em HoTT-based} formal verification
-environment.
+the theory leads to an unsound formalisation of the metatheory.  Not
+only will WP5 ensure the required level of trust in our system, but it
+will have a significant impact upon the formal verification community
+as it will be the first instance of formal verification in a {\em
+  HoTT-based} formal verification environment. {\em Deliverable:
+  Formally verified proofs of the key properties of HoTT}
 
 
-{\bf WP6: Implementing a Core Programming Language.} In order showcase
+{\bf WP6: Implementing a Core Programming Language.} In order to showcase
 the potential for HoTT based programming languages to the wider
 programming languages community, and learn from their feedback, we
 need to build a prototypical implementation of a type checker and
@@ -933,16 +928,17 @@ polymorphism, implicit arguments or pattern matching. However, we plan
 to incorporate the results from WP3 to support a generic version of
 HITs.
 
-We are planning to use Haskell as an implementation language because
+We will use Haskell as an implementation language because
 there is considerable expertise at Nottingham and Strathclyde in using
 Haskell to implement type checkers for dependently typed languages
 including Epigram, $\Pi\Sigma$ and Agda
 \cite{alti:checking,easy,alti:pisigma-new}.  In addition, our
 prototypical implementation of OTT will be particularly informative as
 it can be viewed as a precursor of HoTT as it has an recursively
-defined notion of equality. Another source of inspiration comes form parametricity 
+defined notion of equality. Another source of inspiration comes from
+logical relations
 here there is considerable experience at Strathclyde.
-We plan to collaborate with people at
+We will collaborate with people at
 Chalmers, especially building on Coquand and Huber's experiences with
 implementing the cubical sets model - which also shows that our
 approach is feasible in principle.
@@ -962,18 +958,26 @@ approach is feasible in principle.
 % risk that the implementation takes much longer than expected: we will
 % manage this by keeping the scope of the language small. {\bf Play up OTT and Parametricity (Johann)}
 
-{\bf WP7: A High Level Programming Language.} The aim of this WP is to
-make the language developed in the previous WPs usable in
-practice. This relies on a high-level syntax for datatypes including
-higher inductive types and on integrating known technology such as
-implicit arguments but also compilation and interfaces to other
-languages.
+{\bf WP7: A High Level Programming Language.} We will make the
+language developed in WP6 more usable by adding a high-level syntax
+for datatypes including higher inductive types, by integrating known
+technology such as implicit arguments, and by adding compilation and
+interfaces to other languages. An important question is wether it is
+possible to integrate our approach to HoTT with existing systems such
+as Agda or Coq, or wether it is preferable to start from scratch. We
+will explore both options in close collaboration with Coq developers
+(e.g. Hugo Herbelin, Matthieu Sozeau) and Agda developers (Andreas
+Abel, Ulf Norrell). The technical challenges we face are to restrict pattern matching so
+that it is compatible with HoTT --- we plan to build on recent work
+by Coeckx \cite{coeckx-without-k}. There are other issues
+related to the termination checker which need to be adressed, 
+see recent discussions on the Agda and Coq mailing lists.
+%\cite{coq-agda-issue-w-termination}. 
+We also would like to integrate pattern
+matching with HITs --- this is currently an open problem. 
 
-An important question is wether it is possible to integrate our
-approach to HoTT with existing systems such as Agda or Coq, or wether
-it is preferable to start from scratch. We will explore both options
-in close collaboration with Coq developers (e.g. Hugo Herbelin,
-Matthieu Sozeau) and Agda developers (Andreas Abel, Ulf Norrell).
+
+
 
  % A central question which needs to be
 % answered is wether it is preferable to integrate our ideas with an
@@ -985,14 +989,6 @@ Matthieu Sozeau) and Agda developers (Andreas Abel, Ulf Norrell).
 % core of these systems. Either way, we plan to collaborate closely with
 % the developers of these systems to maximise compatibility and impact.
 
-The technical challenges we face are to restrict pattern matching so
-that it is compatible with HoTT --- we plan to build on recent work
-by Coeckx \cite{coeckx-without-k}. There are other issues
-related to the termination checker which need to be adressed, 
-see recent discussions on the Agda and Coq mailing lists.
-%\cite{coq-agda-issue-w-termination}. 
-We also would like to integrate pattern
-matching with HITs --- this is currently an open problem. 
 
 % This is the most ambitious of our work packages because, if successful,
 % we would have produced a new state of the art programming language for
@@ -1029,53 +1025,53 @@ matching with HITs --- this is currently an open problem.
 
 
 
-{\bf WP8: Generating Impact Through Case Studies.} The ultimate goal
+{\bf WP8: Impact II - Programming and Invariance.} The ultimate goal
 of the proposed research is to support software construction and
 verification via HoTT. Our final work package comes full circle to our
 original motivation: we will apply our programming language to a
-number of real-world programming problems thereby demonstrating the
-impact that HoTT can have. By abstracting recurring and effective
-patterns that arise, we will also develop new methodology to
-complement the new expressivity of programming in HoTT.
+number of real-world programming problem. By abstracting recurring and effective
+patterns that arise, we will also take the first steps in moving from
+programming with HoTT to software enginerering with HoTT! See {\em
+  Pathways to Impact}
 
-Firstly, HoTT's ability to ``work up to isomorphism'' opens the way to
-program correctly using simple and straightforward reference
-presentations of data structures and then replace these presentations
-with more efficient equivalents at runtime. For instance, we shall
-deliver treatments of \emph{numbers} (simple unary representations $\cong$
-efficient binary representations), \emph{sequences} (cons-lists $\cong$
-finger-trees) and \emph{matrices} (vector-of-vectors $\cong$ sparse
-encodings). %More generally, this opens the way for HoTT technology to
+%Firstly, HoTT's ability to ``work up to isomorphism'' opens the way to
+%program correctly using simple and straightforward reference
+%presentations of data structures and then replace these presentations
+%with more efficient equivalents at runtime. For instance, we shall
+%deliver treatments of \emph{numbers} (simple unary representations $\cong$
+%efficient binary representations), \emph{sequences} (cons-lists $\cong$
+%inger-trees) and \emph{matrices} (vector-of-vectors $\cong$ sparse
+%encodings). More generally, this opens the way for HoTT technology to
 %be applied to situations where methodologies such as {\em views} and
 %{\em worker-wrapper transformations} thereby influencing their
 %development too. 
-A similar phenomenon occurs with data structures which store redundant
-information to improve access time, e.g., databases with indices to
-cut search, and records with cached values to avoid
-recomputation. {\bf ornaments}. The technical challenge will be to
-ensure that the efficiency savings are not dominated by the cost of
-computing with isomorphisms at runtime. Our idea is to use fusion to
-minimise the number of isomorphisms present at runtime, and to enable
-the compiler to work with intermediate representations to give fine
-grain control of the cost of the isomorphisms involved.  This will
-ensure that we maximize the regions within which we use the efficient
-representations, converting data only at the boundaries.  In effect,
-we will have improved on \emph{data abstraction}, the state-of-the-art
-tool for managing the craft of implementation, by supporting the
-refinement of concrete computational models of data.
-
-Secondly, HoTT's richer notion of equality ensures that different
-representations of a value can be exploited for efficiency purposes
-but cannot yield inconsistency. For example, whilst treelike
-structures can be given a canonical form, data such as individual graphs, cycles
-and multisets often have multiple representatives which should be
-treated the same by operations. Today's technology presents the
-dilemma of whether to expose the representation and risk inconsistent
-treatment or to hide behind an abstraction barrier which offers a
-fixed repertoire of consistent operations but inhibits us from
-exploiting the representation to develop unforeseen operations
-efficiently. At last HoTT offers us a precise deal: we can work with
-representatives, but we must work up to equality. 
+%A similar phenomenon occurs with data structures which store redundant
+%information to improve access time, e.g., databases with indices to
+%cut search, and records with cached values to avoid
+%recomputation. {\bf ornaments}. The technical challenge will be to
+%ensure that the efficiency savings are not dominated by the cost of
+%computing with isomorphisms at runtime. Our idea is to use fusion to
+%minimise the number of isomorphisms present at runtime, and to enable
+%the compiler to work with intermediate representations to give fine
+%grain control of the cost of the isomorphisms involved.  This will
+%ensure that we maximize the regions within which we use the efficient
+%representations, converting data only at the boundaries.  In effect,
+%we will have improved on \emph{data abstraction}, the state-of-the-art
+%tool for managing the craft of implementation, by supporting the
+%refinement of concrete computational models of data.
+%
+%Secondly, HoTT's richer notion of equality ensures that different
+%representations of a value can be exploited for efficiency purposes
+%but cannot yield inconsistency. For example, whilst treelike
+%structures can be given a canonical form, data such as individual graphs, cycles
+%and multisets often have multiple representatives which should be
+%treated the same by operations. Today's technology presents the
+%dilemma of whether to expose the representation and risk inconsistent
+%treatment or to hide behind an abstraction barrier which offers a
+%fixed repertoire of consistent operations but inhibits us from
+%exploiting the representation to develop unforeseen operations
+%efficiently. At last HoTT offers us a precise deal: we can work with
+%representatives, but we must work up to equality. 
 
 \vspace*{-0.2in}
 
@@ -1173,25 +1169,23 @@ aids their daily practice.
 %40 years open => 40 years importance.
 
 {\bf Planning, Collaboration and Management:} Apart from clearly
-planning the content and methodology of each work package, their
-success criteria, and the inherent balance between risk and ambition
-within them, we have also minimised risk {\em between} work packages by
-planning fall back positions within each work package to ensure the
-project will proceed even if unexpected difficulties arise. We have
-also carefully planned how the work packages interact, who will
-lead them and who will be secondary contributors - see the Gantt
-chart. The biggest risk is the huge amount of {\em
-  engineering} work required by a programming language and
-verification environment - we have thus separated the ambitious goal
-of a fully fledged system (WP7) from the relatively risk free goal of
-a core system (WP6). We have concrete plans to collaborate with
-experts on each work package - see {\em Pathways to Impact}. We will
-manage the project by 6-monthly  team meetings and by
-asking our collaborators to formally review our progress after two years.
-Our significant and succesful track records of
-working together - including managing multi-institutional grants of
-this size - 
-tells us this is the right management structure.
+planning the content, methodology and success criteria of each work package, and the inherent balance between risk and ambition
+within them, we have also minimised risk {\em between} work packages
+by ensuring the deliverables are relatively low-risk and
+enable the project to proceed even if the
+more ambitious goals are unattainable. We have also carefully planned how the work
+packages interact, who will lead them and who will be secondary
+contributors - see the Gantt chart. The biggest risk is the huge
+amount of {\em engineering} work required by a programming language
+and verification tools - we have thus separated the ambitious
+goal of a fully fledged system (WP7) from the relatively risk free
+goal of a core system (WP6). We have concrete plans to collaborate
+with experts on each work package - see {\em Pathways to Impact}. We
+will manage the project by 6-monthly team meetings and by asking our
+collaborators to formally review our progress after two years.  Our
+significant and succesful track records of working together -
+including managing similar multi-institutional grants - indicate
+this is the right level of management.
 
 % UK HoTT exists!
 
