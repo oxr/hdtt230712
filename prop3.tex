@@ -519,35 +519,34 @@ with the same behaviour can indeed be proved equal.
 
 {\bf Type Theory.} Underlying formal verification systems and
 programming languages is the subject of type theory. A key idea is the
-Curry-Howard correspondence which observed that programs and proofs
+Curry-Howard correspondence asserting that programs and proofs
 are actually the same thing, \eg proofs are just particular forms of
-programs. As a result, by developing sophisticated type theories, we
-advance both the fields of programming languages and program
+programs. By developing sophisticated type theories, we
+thus advance both the fields of programming languages and program
 verification. Another major advance was Martin-L\"of's realisation
 that type theory needed to be extended to cover equality within the
 system. %This produced a sophisticated theory because not only could
 %one talk about proofs of the equality of terms, but also proofs that
 %such proofs were in fact the same.
-To do this, he introduced the intensional equality type in
-Martin-L\"of Type Theory (MLTT).  However, 
-this equality proved to be too weak, \eg functions that are pointwise
-equal cannot be proven equal. Martin-L\"of then
-introduced extensional MLTT which produced a strong equality but at
-the price of losing decidability of type checking. Fundamentally, the
-problem of a strong computational equality has remained
+To do this, he introduced extensional Matin-L\"of Type Theory which, while
+producing a strong notion of equality, had the fundmaental flaw
+that type checking became undecidable. He therefore 
+introduced intensional Martin-L\"of Type Theory (MLTT) but its
+equality proved to be too weak, \eg pointwise equal functions 
+cannot be proven equal. Finding a strong yet computationally tractable equality has remained
 unresolved for 40 years - HoTT is exciting precisely because
-it seems to offer a genuine advance on this most fundamental of problems. 
+it seems to offer a solution to this most fundamental of problems. 
 
 
-{\bf Observational Type Theory and Logical Relations:} (OTT) is a step
-towards a stronger equality, proposed by Altenkirch and
-McBride~\cite{alti:ott-conf}. Unlike the equality type of MLTT which
+{\bf Observational Type Theory and Logical Relations:} (OTT) was
+proposed by Altenkirch and McBride~\cite{alti:ott-conf} as a step
+towards such a stronger equality. Unlike the equality type of MLTT which
 defined equality uniformly for all types, OTT defines equality by
 induction on the structure of types (and is thus extensional) while
 its definitional equality remains decidable. However, the {\em
   equality of types} themselves is rigidly structural which means it
 is not strong enough to convert proofs about one type to proofs about
-an equivalent type. As HoTT can be seen as a higher dimensional
+an equivalent type. As HoTT can be seen as a proof-relevant
 extension of OTT, our experience in OTT will be invaluable throughout
 the project. Another important background technology is logical
 relations which again uses induction on type structure to define not
