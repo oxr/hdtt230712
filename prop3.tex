@@ -1,3 +1,18 @@
+%Economy of TRust
+%Nominal Sets
+%IAA
+%Previous UK HoTT
+%Nicola -> Awodey
+%Visit Wadler
+%Bib first names
+%TXA observation citation
+%WP relationships in S3
+% Standardise Delivs and collabs
+%Track records standfarise
+% Refs: Pitts, Striecher, Hoffman, Als, Bauer, Uday, Rathjen, Escardo
+% Changyu
+%swwift
+
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
@@ -152,6 +167,7 @@ University of Strathclyde is an active participant in the Scottish
 Informatics and Computer Science Alliance (SICSA). The MSP group also
 is active in other Scottish meetings, such as ScotCats and SPLS.
 
+\newpage
 \textbf{Dr Thorsten Altenkirch.}  Thorsten Altenkirch received his PhD in
 Computer Science from the University of Edinburgh in 1993. Since 2006
 he is Reader at the University of Nottingham,
@@ -180,7 +196,7 @@ subject (at HDACT in Lubljana in 2012, at the Curien-fest in Venice in
 For further information, see~\url{http://www.cs.nott.ac.uk/~txa}
 
 \textbf{Host institution: The University of Nottingham.}  The
-University of Nottingham is one of the leading Universities in the UK
+University of Nottingham is a leading UK University 
 and its School of Computer Science was ranked 8th in the last Research
 Assessment Exercise. The Functional Programming Lab (FP Lab) within the School
 is one of its four major research groups, with an international
@@ -232,7 +248,7 @@ Research) working on the foundations of HoTT.
 For further information,  see~\url{http://www.maths.leeds.ac.uk/~pmtng}.
 
 \textbf{Host Institution: The University of Leeds.} The University of
-Leeds is one of the leading universities in the UK and provides
+Leeds is a leading UK university providing
 excellent facilities for research. The School of Mathematics hosts the
 Mathematical Logic group, which includes seven members of staff, four
 research fellows and nineteen research students. The group has a
@@ -246,8 +262,8 @@ Type Theory. In particular, we intend to collaborate closely with
 Professor Michael Rathjen who is currently PI
 on a 3-year EPSRC grant on proof-theoretical aspects of HoTT. 
 
-\newpage
 
+\newpage
 \noindent
 {\bf \Large Part 2: The Proposed Research and Its Context}
 
@@ -266,9 +282,10 @@ on a 3-year EPSRC grant on proof-theoretical aspects of HoTT.
 {\bf Formal Verification.} The cost of software failure is truly
 staggering\footnote{see the section on National
   Importance.}. Traditional methods of software verification based
-upon testing only generate partial guarantees of correctness. Stronger
-guarantees of software correctness are given by mathematical proofs
-but the complexity of modern software means that hand written
+upon testing only generate partial guarantees of correctness and
+although stronger
+guarantees of software correctness can be given by mathematical
+proofs, the complexity of modern software means that hand written
 mathematical proofs are untrustworthy. As a result, the only way to
 ensure truly secure and reliable software is the gold standard of
 formally verified software, which offers machine-checked mathematical
@@ -310,39 +327,43 @@ theoretical, applied and impact-focussed research.
 %representation of the entities we compute with.
 
 
-$\;\;\; \;\;\;$ {\em Theoretical Foundations.} Almost all of our understanding
-  of HoTT exists within a classical framework and hence cannot be used
-  to develop programming language and verification tools. Nevertheless, the recent
-  work by Coquand et.al.~\cite{BezemM:cubsmt} strongly suggests a constructive presentation of HoTT
-  is possible. We will develop both specific constructive models
-  and a general constructive model theory of HoTT, and then complement
-  these models with type theoretic presentations of them.
+$\;\;\; \;\;\;$ {\em Theoretical Foundations.} Almost all of our
+understanding of HoTT exists within a classical framework and hence
+cannot be used to develop programming language and verification
+tools. However, the recent cubical sets model by Coquand
+et.al.~\cite{BezemM:cubsmt} is constructive and thus strongly suggests
+that HoTT has a
+purely constructive presentation. We will will develop
+both specific constructive models and a general constructive model
+theory of HoTT, and then complement these models with type theoretic
+presentations of them.
 
 $\;\;\;\;\;\;$ {\em Programming Language and Verification Tools.} The key
-  deliverable of the second strand of our research will be a
+  deliverable of the second strand of our research is a HoTT-based
   programming language which simultaneously acts as a verification
-  environment based upon HoTT. This is likely to become a major
-  step forward in programming languages design and influence
+  environment. We aim at a major
+  and transformational step forward in programming languages design
+  which will influence
   the development of all current and future systems in this area.
 
 $\;\;\;\;\;\;$ {\em Generating Impact.} Developing new and fundamentally
   better ways to construct formally verified software is not just an
   end in itself, but is also a key prerequisite for engaging others to
-  do the same.  To help ensure this, we will produce a number of case studies so
-  users can learn from, and experiment with, our results. At the same time, their
-  practical experiences with it will feed back into our research.
+  do the same.  To ensure this, we will produce a number of case studies so
+  users can learn from, and experiment with, our results. Their
+  practical experiences will also feed back into our research.
 
-  {\bf Calibre, Ambition, and Adventure.} The potential of HoTT to
-  solve one of the deepest problems in programming languages and
-  verification - namely the efficient computational treatment of
-  equality/representational invariance - demonstrates our ambition to
-  fundamentally transform the construction and validation of software.
-  The proposal's calibre is demonstrated by the depth and range
-  of the state-of-the-art ideas we will deploy in our
-  research. Finally, the proposal's adventure
-  is demonstrated by its scope, ranging from fundamental research
-  (WP1,2,3) to programming languages and verification (WP5,6,7) 
-  to impact generation via case studies (WP4,8).
+  {\bf Calibre, Ambition, and Adventure.} HoTT's potential to
+  solve one of the deepest and most fundamental problems in
+  programming languages and verification - namely the efficient
+  computational treatment of equality/representational invariance -
+  demonstrates our ambition to transform the field. The proposal's calibre is demonstrated by
+  the depth and range of the state-of-the-art ideas deployed and by the
+  stature of our collaborators. The
+  proposal's adventure is demonstrated by its scope, ranging from
+  fundamental research (WP1,2,3) to programming languages and
+  verification (WP5,6,7) to impact generation via case studies
+  (WP4,8).
 
 \vspace*{-0.1in} 
 
@@ -462,17 +483,17 @@ $\;\;\;\;\;\;$ {\em Generating Impact.} Developing new and fundamentally
 
 {\bf Programming Languages.} Abstraction is essential in programming
 as identifying common structure ensures code is clear,
-clean and concise. This has lead to the development of high level
+clean and concise. This leads to high level
 programming languages with expressive type systems capable of closing
 the {\em semantic gap} between what programmers know about
 computational entities and what their types can express about them.
-The current state of the art are the {\em dependently typed
+The current state-of-the-art are the {\em dependently typed
   programming languages} mentioned above where
 the type of a program can express a
 continuum of precision - from basic assertions up to a complete
-specification - about the program’s behaviour. This proposal seeks to
+specification - about the program’s behaviour. This proposal will
 develop the first of a new breed of 
-such programming languages which advance the state of the art by offering a
+such languages which advance the state-of-the-art by offering a
 powerful yet computationally tractable equality, and thereby bring to
 reality the goal of programming up to invariance of representation.
 
@@ -497,56 +518,48 @@ with the same behaviour can indeed be proved equal.
 
 
 {\bf Type Theory.} Underlying formal verification systems and
-programming languages is the subject of type theory which grew out of
-Russell's attempts to deal with paradoxes in naive set theory. A major
-step forward was the Curry-Howard correspondence which observed that
-programs and proofs are actually the same thing, \eg proofs are just
-particular forms of programs. As a result, by developing sophisticated
-type theories, we advance both the fields of programming languages and
-program verification. Another major advance was Martin-L\"of's realisation
+programming languages is the subject of type theory. A key idea is the
+Curry-Howard correspondence which observed that programs and proofs
+are actually the same thing, \eg proofs are just particular forms of
+programs. As a result, by developing sophisticated type theories, we
+advance both the fields of programming languages and program
+verification. Another major advance was Martin-L\"of's realisation
 that type theory needed to be extended to cover equality within the
 system. %This produced a sophisticated theory because not only could
 %one talk about proofs of the equality of terms, but also proofs that
 %such proofs were in fact the same.
 To do this, he introduced the intensional equality type in
-Martin-L\"of Type Theory (MLTT).  However, it soon became apparent
-that this equality type was too weak, \eg functions that are pointwise
+Martin-L\"of Type Theory (MLTT).  However, 
+this equality proved to be too weak, \eg functions that are pointwise
 equal cannot be proven equal. Martin-L\"of then
 introduced extensional MLTT which produced a strong equality but at
 the price of losing decidability of type checking. Fundamentally, the
-problem of a strong but decidable equality has remained
+problem of a strong computational equality has remained
 unresolved for 40 years - HoTT is exciting precisely because
 it seems to offer a genuine advance on this most fundamental of problems. 
 
 
-{\bf Observational Type Theory} (OTT) is a step towards a decidable
-type theory with a strong equality, proposed by Altenkirch and
-McBride~\cite{alti:ott-conf}. Unlike the equality type of Martin-L\"of
-which defined equality uniformly for all types, OTT defines equality
-by induction on the structure of types (and is thus extensional) while
+{\bf Observational Type Theory and Logical Relations:} (OTT) is a step
+towards a stronger equality, proposed by Altenkirch and
+McBride~\cite{alti:ott-conf}. Unlike the equality type of MLTT which
+defined equality uniformly for all types, OTT defines equality by
+induction on the structure of types (and is thus extensional) while
 its definitional equality remains decidable. However, the {\em
   equality of types} themselves is rigidly structural which means it
 is not strong enough to convert proofs about one type to proofs about
 an equivalent type. As HoTT can be seen as a higher dimensional
-extension of OTT, our experience in OTT will invaluable in offering key
-insights and techniques for its development.
-
-{\bf Logical Relations.} Another important background technology is
-logical relations which again uses induction on type structure to
-define not equlities, but rather relations, over all types. Logical
-relations have already been used~\cite{LicataHarper} to study a
-truncated form of HoTT. Moreover, what is
-particularly interesting is that Coquand's cubical sets
-model~\cite{BezemM:cubsmt} is closely related to logical relations
-because cubical sets arise naturally when one extends logical
-relations to higher dimensions via the pattern of set, relation,
-relation between relations etc. Ghani's research into logical relations is
-currently being funded by EPSRC at Strathclyde and we will use our
-results to see if higher dimensional variants of the standard
-presentations of logical relations (eg Kripke or mixed arity logical
-relations) lead to better behaved refinements of the cubical sets
-model. 
-
+extension of OTT, our experience in OTT will be invaluable throughout
+the project. Another important background technology is logical
+relations which again uses induction on type structure to define not
+equlities, but rather relations, over all types. Logical relations
+have already been used~\cite{LicataHarper} to study a truncated form
+of HoTT. Further, the cubical sets model~\cite{BezemM:cubsmt} is
+closely related to logical relations as cubical sets arise naturally
+when one extends logical relations to higher dimensions via the
+pattern of set, relation, relation between relations etc. Ghani's
+EPSRC funded research into logical relations will be used to inject
+advanced logical relations techniques - eg higher dimensional logical
+relations - into all areas of the project.
 
 
 %power of methods
@@ -565,33 +578,32 @@ model.
 % what does univalence mean
 
 {\bf Homotopy Type Theory.} HoTT is a revolutionary new analysis of
-equality based on intuitions from homotopy theory. Types are
+type theory based on intuitions from homotopy theory. Types are
 \emph{spaces}; terms are \emph{elements} within a space; the equality
-type is the space of \emph{paths} in a space. The core of HoTT is the
-new Axiom of Univalence, introduced by Fields medalist Vladimir
-Voevodsky, asserting (roughly) that isomorphic types are
-equal. Crucially, equality proofs carry the data necessary to program
-and reason up to invariance of representation. HoTT subsumes function
-extensionality but also transcends what we could previously express,
-e.g.\ \emph{higher} inductive types (HITs) include the usual tree
-structures, but also quotients \cite{alti:mpc04} and geometric objects such as the
-torus, where the hole stops us deforming some paths into others. Such
-paths contain non-trivial structural information, necessitating a
-proof-relevant equality. The same phenomenon occurs in computer
+type is the space of \emph{paths} in a space and such paths contain
+non-trivial structural information and thus generate a proof-relevant
+equality which enables one to program and reason up to invariance of
+representation. The core of HoTT is the new Axiom of Univalence,
+introduced by Fields medalist Vladimir Voevodsky, asserting (roughly)
+that isomorphic types are equal. HoTT subsumes function extensionality
+but also transcends what we could previously express, e.g.\
+\emph{higher} inductive types (HITs) include the usual tree-like data
+types, but also include quotients \cite{alti:mpc04} and geometric
+objects such as the circle and sphere. HITs also occur in computer
 science, e.g. lists are an inductive type; braids are lists with extra
 paths identifying lists up to twisting of any element past its
 neighbours, and bags are braids with paths-between-paths identifying
-braidings which yield the same permutation.
-
-The model of HoTT based on \emph{cubical sets} currently being developed~\cite{BezemM:cubsmt} interprets closed expressions
-as canonical denotations, which leads to basic feasibility of computing
-with the Univalence Axiom. However, much work lies ahead: we need to give
-closed expressions normal forms \emph{within} HoTT, and to recover
-definitional equalities lost by the cubical interpretation (such as the one in the
-computation rule for identity types). Further, other models might
+braidings which yield the same permutation. The recent cubical sets
+model of HoTT~\cite{BezemM:cubsmt} interprets closed expressions of
+HoTT within the model which proves the basic feasibility of computing
+with the Univalence Axiom. However, much work lies ahead: we need to
+interpret closed expressions not just within the model, but also as
+normal forms \emph{within} HoTT itself. We need to recover
+definitional equalities lost by the cubical interpretation (such as
+the computation rule for equality types). Further, other models may
 offer better computational foundations for HoTT, so practical progress
-towards programming languages and verification tools based on HoTT
-needs a broader model theory.
+towards HoTT-based programming languages and verification tools needs
+the broader model theory we propose.
 
 
 
@@ -622,7 +634,7 @@ needs a broader model theory.
 %Why us and not the United States of Awodey. Strong definitional
 %equlity. 
 
-\vspace*{-0.1in}
+\vspace*{-0.2in}
 
 \section{Methodology and Research Programme}
 \vspace*{-0.1in}
@@ -642,9 +654,9 @@ competancies as detailed in our track records and the {\em
 %theory; and 
 ii) the evolving state-of-the-art, our ongoing dialogue with our world
 leading collaborators, and the workshop and events we intend to
-organise to ensure both dissemination of, and feedback about, our
+organise and attend to ensure both dissemination of, and feedback about, our
 results. These multiple sources ensure that we neither slavishly
-follow the hype that inevitably surrounds significant innovation, nor
+follow the hype that inevitably surrounds such a significant innovation, nor
 are unaware of current and future advances in HoTT.  The project is
 structured as follows:
 
@@ -672,14 +684,15 @@ about the correctness of implementations which complement syntactic
 techniques; and iii) specific implementations of HoTT can
 be proven sound by giving a specific models of them.  These models
 need to be constructive so that programs, even those using the
-Univalence axiom, will compute ({i.e.} reduce to a normal form). While
-the standard model of HoTT based upon simplicial sets is not
-constructive, the cubical sets model currently being developed~\cite{BezemM:cubsmt} is constructive and raises the question of understanding it
-within a general model theory.
+Univalence axiom, will compute ({i.e.} reduce to a normal form). 
+%While
+%the standard model of HoTT based upon simplicial sets is not
+%constructive, the cubical sets model currently being developed~\cite{BezemM:cubsmt} is constructive and raises the question of understanding it
+%within a general model theory.
 
-We will attack this problem from the following directions: i) we will
-analyse existing models ({e.g.} groupoids~\cite{HofmannM:groitt},
-strict $\omega$-groupoids~\cite{WarrenM:strgit}, simplicial
+We propose to: i) analyse existing models ({e.g.}
+groupoids~\cite{HofmannM:groitt}, strict
+$\omega$-groupoids~\cite{WarrenM:strgit}, simplicial
 sets~\cite{KapulkinC:simmuv}, cubical sets~\cite{BezemM:cubsmt}) and
 isolate exactly how they ensure constructivity or where they fail to
 do so - in the latter case, we will attempt to constructivize them;
@@ -692,15 +705,14 @@ axiomatizing the notion of a model of type theory
 ({e.g..}~\cite{AwodeyS:natmtt}) - will will then require the existence
 of additional structure corresponding to the axioms of HoTT. In terms
 of risk, i) is certainly achievable since it involves only the
-analysis of existing concrete models, while ii) is a more ambitious
+analysis of existing concrete models, while ii) is our more ambitious
 goal. Nevertheless, our expertise on semantics of type
 theories~\cite{neil2014relParamDep}, homotopical
 algebra~\cite{GambinoN:homl2c,GambinoN:weilsh} and
 $\omega$-groupoids~\cite{alti:csl12} makes even this ambitious goal
-feasible. {\em Deliverables: A broad class of models of HoTT which
-  considerably deepen our understanding of HoTT and thereby map out
-  the design space of its syntactic presentations. Collaborator: Prof
-  Steve Awodey}
+feasible. {\em Deliverables: A broad collection of models of HoTT
+  which map out the design space of its syntactic
+  presentations. Collaborator: Prof Steve Awodey}
 
 
 
@@ -760,7 +772,7 @@ feasible. {\em Deliverables: A broad class of models of HoTT which
 presentations of our models of HoTT in the form of type theories. The
 challenge is to present the essential data of the model as built from
 a {\em finite} collection of type and term constructors - this is
-particularly difficult given the {\em arbitrary} higher dimensional
+particularly intricate given the {\em arbitrary} higher dimensional
 structure of HoTT. One also must prove essential properties such as strong normalisation, decidability of
 definitional equality and canonicity (i.e. all terms reduce to
 values). It is of particular interest to establish the expressive
@@ -783,20 +795,19 @@ WP1.
 % We will begin by developing Altenkirch's preliminary type theory for
 % cubical sets, which both internalises parametricity and adds Kan
 % fillers to the theory. 
-Our approach is to build on Altenkirch's observation that cubical sets
-share many similarities with logical relations. We shall exploit this
-connection to replace the uniform identity type of intensional MLTT
-with a higher-dimensional equality defined to fit the structure of
-types. The models from WP1 will drive refinement of our design, until
-we have a canonical presentation of HoTT. Our preparatory work, and
-prior expertise in OTT \cite{alti:ott-conf}, normalisation by
-evaluation and big-step reduction
-\cite{alti:ctcs95,alti:lics96,alti:flops04,txa:jtait}, strengthening
-definitional equality~\cite{Allais:2013:NEN:2502409.2502411}, and
-logical relations~\cite{neil2014relParamDep} ensures a high
-probability of delivering an effective presentation of HoTT.
-{\em Deliverable: A type theory within providing a language for
-  HoTT. Collaborator: Prof Thierry Coquand.}
+We will build on Altenkirch's observation that cubical sets share
+many similarities with logical relations by replacing the uniform
+identity type of intensional MLTT with a higher-dimensional equality
+defined to fit the structure of types. The models from WP1 will drive
+refinement of our design, until we have a canonical presentation of
+HoTT. Our preparatory work, and prior expertise in OTT
+\cite{alti:ott-conf}, normalisation by evaluation and big-step
+reduction \cite{alti:ctcs95,alti:lics96,alti:flops04,txa:jtait},
+strengthening definitional
+equality~\cite{Allais:2013:NEN:2502409.2502411}, and logical
+relations~\cite{neil2014relParamDep} ensures a high probability of
+delivering an effective presentation of HoTT.  {\em Deliverable: A
+  type theory for HoTT. Collaborator: Prof Thierry Coquand.}
 
 %We follow the
 %practise in WP1 of managing risk in this workpackage by first aiming
@@ -806,7 +817,7 @@ probability of delivering an effective presentation of HoTT.
 
 {\bf WP3: Higher Inductive Types.} Our goal is to accomodate HITs in
 the semantics developed in WP1 and the syntactic framework of WP2. To
-achieve this, we will develop a universal HIT playing the role for
+achieve this, we will first develop a universal HIT playing the role for
 HITs that W-types play for ordinary inductive
 types~\cite{alti:icalp04}. This is feasible as partial progress has
 already been made: one can reduce HITs with higher dimensional
@@ -825,7 +836,7 @@ an alternative to the universal HIT in the same way that strictly
 positive types provide a grammar for defining various
 W-types~\cite{alti:cont-tcs,alti:jcats07}.  This will feed into WP7.
 More ambitiously, we will %-- time permitting --
-investigate other variations of HITs such as coinductive HITs, mixed
+investigate extensions such as coinductive HITs, mixed
 inductive/coinductive HITs \cite{txa:mpc2010g}, and
 inductive-inductive~\cite{fnf:indind} and
 inductive-recursive~\cite{DS:indrec} HITs. The latter will be useful
@@ -836,15 +847,15 @@ same time.
 %%fnf: the following is mentioned in WP7, and might fit better there:
 %We will also investigate a pattern matching syntax for HITs; this is
 %related again to WP7.
-Our experience from previous work on data
+Our work on data
 types~\cite{alti:cont-tcs,alti:lics09,txa:cie10,alti:catind2,ghani:fibredIR,gambinoHyland:welfoundedTrees,awodeyGamSoja:indTypesInHTT},
-including EPSRC grants on containers and induction-recursion, means
-that the first phase of this work package is relatively risk-free,
-especially since partial results already exist.
+including our EPSRC grants on containers and induction-recursion, means
+our first and second goals
+are relatively risk-free,
+especially since partial results already exist, 
 % These show that results are available, and will also guide the way
 % towards further results.
-While it is not clear how far we can push the results with respect to
-e.g.\ higher inductive-recursive types, this phase of the work package
+while progress on our more ambitious goal 
 is not essential to the rest of the project. {\em Deliverable: A
   theory of HITs that is both foundational, and will underpin the
   programming language developed in WP6 and WP7. Collaborator: Prof
@@ -868,10 +879,11 @@ forced to program not using the quotient algebra as desired, but
 using the free algebra and then check -- externally to the program --
 that the quotient structure is respected.  
 
-With HITs available, there is no need for such a convoluted process!
-Instead, we can program directly on the quotient algebra and
-assert the correctness of the program within its type thereby 
-efficiently formally verifying the program's correctness. Concretley, we will formalise both Lawvere
+With HITs, there is no need for such a convoluted process!
+as one
+can program directly on the quotient algebra,
+assert the correctness of the program within its type, and thereby 
+efficiently formally verify the program's correctness. Concretley, we will formalise both Lawvere
 Theories (using HITs to represent effectful computations) and their
 mathematical algebra (e.g.\ tensor products, sums) in HoTT.  This will
 both simplify and extend i) McBride, Andjelkovic and Lindley's effect
@@ -894,7 +906,7 @@ integration of our results into WP7 will be more challenging. {\em
 HoTT as a formal verification system, we need the highest possible
 level of trust in its correctness. Indeed, the complexity of HoTT's
 semantics due to its higher dimensional nature, make a paper based
-verification almsot unfeasible and certainly not trustworthy --- this
+verification almost unfeasible and certainly not trustworthy --- this
 issue was pointed out by Voevodsky recently \cite{voevodsky-ias14}.
 
 As a starting point we will formalize the existing model theory
@@ -903,7 +915,7 @@ As a starting point we will formalize the existing model theory
 approach of WP2 we plan to exploit HITs to achieve a feasible
 formalisation of dependently typed syntax. While initially working
 with an axiomatic approach to HoTT (i.e. adding univalence and HITs as
-postulates) we hope to be able to exploit the results of WPs 6 and 7
+postulates) we plan to exploit the results of WPs 6 and 7
 in later stages of the project, enabling at least a partial self
 certification of HoTT in HoTT.  While this approach seems unsound at
 the first glance it is reasonable since it is unlikely that a bug in
@@ -912,7 +924,8 @@ only will WP5 ensure the required level of trust in our system, but it
 will have a significant impact upon the formal verification community
 as it will be the first instance of formal verification in a {\em
   HoTT-based} formal verification environment. {\em Deliverable:
-  Formally verified proofs of the key properties of HoTT}
+  Formally verified proofs of the key properties of
+  HoTT. Collaborator: Vladimir Voevodsky}
 
 
 {\bf WP6: Implementing a Core Programming Language.} In order to showcase
@@ -920,7 +933,7 @@ the potential for HoTT based programming languages to the wider
 programming languages community, and learn from their feedback, we
 need to build a prototypical implementation of a type checker and
 interpreter based on the type theory designed in WP2.  This system
-forms a proof of concept implementation lacking most if not all bells
+forms a proof of concept implementation lacking most of the bells
 and whistles present in modern implementations of Type Theory. That
 is, while we will implement the type theory of WP2, we will not
 attempt to implement a high-level syntax for datatypes, universe
@@ -934,14 +947,15 @@ Haskell to implement type checkers for dependently typed languages
 including Epigram, $\Pi\Sigma$ and Agda
 \cite{alti:checking,easy,alti:pisigma-new}.  In addition, our
 prototypical implementation of OTT will be particularly informative as
-it can be viewed as a precursor of HoTT as it has an recursively
+it can be viewed as a precursor of HoTT as it has a recursively
 defined notion of equality. Another source of inspiration comes from
 logical relations
 here there is considerable experience at Strathclyde.
 We will collaborate with people at
 Chalmers, especially building on Coquand and Huber's experiences with
 implementing the cubical sets model - which also shows that our
-approach is feasible in principle.
+approach is feasible in principle. {\em Deliverable: A simple
+  HoTT-based programminmg language. Collaborator: Mattieu Sozeau}
 
 % Coquand's and Huber's implementation of the cubical set model shows
 % that our approach is feasible in principle and we plan to collaborate
@@ -975,7 +989,7 @@ see recent discussions on the Agda and Coq mailing lists.
 %\cite{coq-agda-issue-w-termination}. 
 We also would like to integrate pattern
 matching with HITs --- this is currently an open problem. 
-
+{\em Deliverable: Collaborator: Edwin Brady}
 
 
 
@@ -1032,7 +1046,7 @@ original motivation: we will apply our programming language to a
 number of real-world programming problem. By abstracting recurring and effective
 patterns that arise, we will also take the first steps in moving from
 programming with HoTT to software enginerering with HoTT! See {\em
-  Pathways to Impact}
+  Pathways to Impact}. {\em Deliverable: ,Collaborator: Dr A Kennedy} 
 
 %Firstly, HoTT's ability to ``work up to isomorphism'' opens the way to
 %program correctly using simple and straightforward reference
@@ -1123,21 +1137,21 @@ i.e., does what's intended and does not go wrong.  While failures of
 everyday devices like iPods and mobile phones are inconvenient,
 software leaking voting records or compromising the global financial
 sector can lead to unprecedented and clearly unacceptable global
-uncertainties - as remarked earlier, the cost of software failure is
-truly staggering!  As a result, we are likely to see an increasing
-demand for provably correct software partly because testing inherently
-offers only partial guarantees of correctness, and partly because
+uncertainties. Indeed, as remarked earlier, the cost of software failure is
+truly staggering!  Therefore the
+demand for provably correct software is likely to grow significantly because testing inherently
+offers only partial guarantees of correctness, and because
 programming language technology is finally advancing to the stage
 where it is feasible to formally verify critical programs.  EPSRC
-recognises that programming languages and program verification are
+also recognises that programming languages and program verification are
 areas of vital national importance deserving increased funding and
 this proposal lies squarely in the intersection of these areas. Within
 these areas, we are aiming high.  The current state of the art in
 programming language design is limited by a 40 year lack of a clear
 understanding of how to treat equality within a programming language -
-we propose a step change which replaces the current ad-hoc and limited
+our step change will replace current ad-hoc and limited
 treatments with a powerful one based upon solid foundations. Thus our
-research can be expected to have great impact 
+research is expected to have great impact 
 over the next 10 to 50 years by becoming the
 cornerstone for the next generation of high level programming and
 verification environments.
