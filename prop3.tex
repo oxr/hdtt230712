@@ -190,7 +190,7 @@ in Princeton in occasion of the special year on the subject in 2013. There, he c
 subject~\cite{hott-book}.  He has given invited lectures on the
 subject (at HDACT in Lubljana in 2012, at the Curien-fest in Venice in
 2013, at MSC in Lyon and at the Institut Henri Poincar\'e in Paris in
-2014). He has already published several papers on HoTT
+2014 \cite{txa-ihp14}). He has already published several papers on HoTT
 \cite{altenkirch:extSetoids,alti:ott-conf,alti:csl12,alti:tlca13-hedberg}.
 
 For further information, see~\url{http://www.cs.nott.ac.uk/~txa}
@@ -221,7 +221,7 @@ the University of Leeds. Nicola Gambino has a consistent record of
 publications in leading journals and of invited lectures at
 international conferences, {e.g.}~at the 2010 Logic Colloquium in Paris
 and at the forthcoming joint 2014 RTA-TLCA conference in Vienna. He
-held visiting positions at several prestigeous research centres, including the Institut Mittag-Leffler (Stockholm), the
+held visiting positions at several prestigious research centres, including the Institut Mittag-Leffler (Stockholm), the
 Fields Institute (Toronto) and the Institute of Advanced Study
 (Princeton), where he worked in contact with Vladimir Voevodsky (the inventor of 
 the Univalence Axiom).  He is currently an invited researcher to the
@@ -525,19 +525,19 @@ system. %This produced a sophisticated theory because not only could
 %such proofs were in fact the same.
 To do this, he introduced extensional Martin-L\"of Type Theory which, while
 producing a strong notion of equality, had the fundamental flaw
-that type checking became undecidable. He therefore 
-introduced intensional Martin-L\"of Type Theory (MLTT) but its
+that type checking is undecidable. He then 
+formulated intensional Martin-L\"of Type Theory (MLTT) but its
 equality proved to be too weak, \eg pointwise equal functions 
 cannot be proven equal. Finding a strong yet computationally tractable equality has remained
 unresolved for 40 years - HoTT is exciting precisely because
 it seems to offer a solution to this most fundamental of problems. 
 
 
-{\bf Observational Type Theory and Logical Relations:} (OTT) was
+{\bf Observational Type Theory (OTT) and Logical Relations:} OTT was
 proposed by Altenkirch and McBride~\cite{alti:ott-conf} as a step
 towards such a stronger equality. Unlike the equality type of MLTT which
-defined equality uniformly for all types, OTT defines equality by
-induction on the structure of types (and is thus extensional) while
+defined equality uniformly for all types, OTT defines an extensional equality by
+induction on the structure of types while
 its definitional equality remains decidable. However, the {\em
   equality of types} themselves is rigidly structural which means it
 is not strong enough to convert proofs about one type to proofs about
@@ -545,7 +545,7 @@ an equivalent type. As HoTT can be seen as a proof-relevant
 extension of OTT, our experience in OTT will be invaluable throughout
 the project. Another important background technology is logical
 relations which again uses induction on type structure to define not
-equlities, but rather relations, over all types. Logical relations
+equalities, but rather relations, over all types. Logical relations
 have already been used~\cite{licataHarper:canonicity2d} to study a
 truncated form of HoTT. Further, the cubical sets
 model~\cite{BezemM:cubsmt} is closely related to logical relations as
@@ -571,12 +571,12 @@ higher dimensional logical relations -- into all areas of the project.
 % hott = int param + kan filllers + hits
 % what does univalence mean
 
-{\bf Homotopy Type Theory.} HoTT is a revolutionary new analysis of
+{\bf Homotopy Type Theory.} HoTT is a revolutionary new understanding of
 type theory based on intuitions from homotopy theory. Types are
 \emph{spaces}; terms are \emph{elements} within a space; the equality
 type is the space of \emph{paths} in a space and such paths contain
 non-trivial structural information and thus generate a proof-relevant
-equality which enables one to program and reason up to invariance of
+equality which enables us to program and reason up to invariance of
 representation. The core of HoTT is the new Axiom of Univalence,
 introduced by Fields medalist Vladimir Voevodsky, asserting (roughly)
 that isomorphic types are equal. HoTT subsumes function extensionality
@@ -634,7 +634,7 @@ the broader model theory we propose.
 \vspace*{-0.1in}
 
 Our methodology will harness ideas from i) our own experiences and
-competancies as detailed in our track records and the {\em
+competencies as detailed in our track records and the {\em
   Justification of Resources}; and 
 %different sources: i) our work on logical relations and on OTT
 %which can be seen as proof-irrelevant variants of what we propose; ii)
@@ -696,7 +696,7 @@ known methods to construct Quillen model structures to the setting of
 HoTT ({c.f.}~\cite{ShulmanM:uniidh}, which however does not cover the
 cubical sets model).  Our starting point will be recent advances in
 axiomatizing the notion of a model of type theory
-({e.g..}~\cite{AwodeyS:natmtt}) - will will then require the existence
+({e.g.}~\cite{AwodeyS:natmtt}) - will will then require the existence
 of additional structure corresponding to the axioms of HoTT. In terms
 of risk, i) is certainly achievable since it involves only the
 analysis of existing concrete models, while ii) is our more ambitious
@@ -706,7 +706,7 @@ algebra~\cite{GambinoN:homl2c,GambinoN:weilsh} and
 $\omega$-groupoids~\cite{alti:csl12} makes even this ambitious goal
 feasible. {\em Deliverables: A broad collection of models of HoTT
   which map out the design space of its syntactic
-  presentations. Collaborator: Prof Steve Awodey}
+  presentations. Collaborator: Steve Awodey.}
 
 
 
@@ -789,7 +789,7 @@ WP1.
 % We will begin by developing Altenkirch's preliminary type theory for
 % cubical sets, which both internalises parametricity and adds Kan
 % fillers to the theory. 
-We will build on Altenkirch's observation that cubical sets share
+We will build on Altenkirch's observation \cite{txa-ihp14} that cubical sets share
 many similarities with logical relations by replacing the uniform
 identity type of intensional MLTT with a higher-dimensional equality
 defined to fit the structure of types. The models from WP1 will drive
@@ -801,7 +801,7 @@ strengthening definitional
 equality~\cite{Allais:2013:NEN:2502409.2502411}, and logical
 relations~\cite{neil2014relParamDep} ensures a high probability of
 delivering an effective presentation of HoTT.  {\em Deliverable: A
-  type theory for HoTT. Collaborator: Prof Thierry Coquand.}
+  type theory for HoTT. Collaborator: Thierry Coquand.}
 
 %We follow the
 %practise in WP1 of managing risk in this workpackage by first aiming
@@ -852,7 +852,7 @@ especially since partial results already exist,
 while progress on our more ambitious goal 
 is not essential to the rest of the project. {\em Deliverable: A
   theory of HITs that is both foundational, and will underpin the
-  programming language developed in WP6 and WP7. Collaborator: Prof
+  programming language developed in WP6 and WP7. Collaborator: 
   Mike Schulman. }
 
 {\bf WP4: Impact I - Programming with Effects.}
@@ -873,19 +873,19 @@ forced to program not using the quotient algebra as desired, but
 using the free algebra and then check -- externally to the program --
 that the quotient structure is respected.  
 
-With HITs, there is no need for such a convoluted process!
+With HITs, there is no need for such a convoluted process
 as one
 can program directly on the quotient algebra,
 assert the correctness of the program within its type, and thereby 
-efficiently formally verify the program's correctness. Concretley, we will formalise both Lawvere
+efficiently formally verify the program's correctness. Concretely, we will formalise both Lawvere
 Theories (using HITs to represent effectful computations) and their
-mathematical algebra (e.g.\ tensor products, sums) in HoTT.  This will
+mathematical algebra (e.g.\ tensor products, sums) in HoTT.  We will
 both simplify and extend i) McBride, Andjelkovic and Lindley's effect
 handlers in Frank~\cite{conor:frank}; ii) Brady's effects library for
 Idris~\cite{brady:effects}; and iii) Bauer and Pretnar's treatment of
 effects in Eff~\cite{bauer:eff}.  This will be done within the type
 theory of WP2, and progress will be reflected into the programming
-language of WP7. This will both validate the theoretical research done
+language of WP7, validating both the theoretical research done
 by RA1, and also generate impact by showing how HoTT can transform a
 major programming languages topic. Basic results are low risk as,
 conceptually, we simply need to stitch together the treatment of
@@ -893,7 +893,7 @@ quotients via HITs with that of effects via Lawvere theories.
 However, more advanced effects (\eg indexed effects) or the full-scale
 integration of our results into WP7 will be more challenging. {\em
   Deliverable: A treatment of Lawvere Theories within
-  HoTT. Collaborator: Dr Nick Benton.}
+  HoTT. Collaborator: Nick Benton.}
 
 
 {\bf WP5 Formalisation of Meta-Theory of HoTT.}  As we intend to use
@@ -948,8 +948,8 @@ here there is considerable experience at Strathclyde.
 We will collaborate with people at
 Chalmers, especially building on Coquand and Huber's experiences with
 implementing the cubical sets model - which also shows that our
-approach is feasible in principle. {\em Deliverable: A simple
-  HoTT-based programminmg language. Collaborator: Mattieu Sozeau}
+approach is feasible in principle. {\em Deliverable: A typechecker and evaluator for 
+  core HoTT. Collaborator: Matthieu Sozeau}
 
 % Coquand's and Huber's implementation of the cubical set model shows
 % that our approach is feasible in principle and we plan to collaborate
@@ -972,18 +972,19 @@ for datatypes including higher inductive types, by integrating known
 technology such as implicit arguments, and by adding compilation and
 interfaces to other languages. An important question is wether it is
 possible to integrate our approach to HoTT with existing systems such
-as Agda or Coq, or wether it is preferable to start from scratch. We
-will explore both options in close collaboration with Coq developers
+as Agda or Coq or, maybe preferable,  a more recent development such as Idris, or wether it is better to start from scratch. 
+We
+will explore both options in close collaboration with Idris developers (Edwin Brady), Coq developers
 (e.g. Hugo Herbelin, Matthieu Sozeau) and Agda developers (Andreas
 Abel, Ulf Norrell). The technical challenges we face are to restrict pattern matching so
 that it is compatible with HoTT --- we plan to build on recent work
 by Coeckx \cite{coeckx-without-k}. There are other issues
 related to the termination checker which need to be adressed, 
-see recent discussions on the Agda and Coq mailing lists.
+see recent discussions on the Agda and Coq mailing lists, e.g. \cite{agda-issue}.
 %\cite{coq-agda-issue-w-termination}. 
 We also would like to integrate pattern
 matching with HITs --- this is currently an open problem. 
-{\em Deliverable: Collaborator: Edwin Brady}
+{\em Deliverable: Basic software tools for a high level HoTT based programming language. Collaborator: Edwin Brady}
 
 
 
@@ -1039,7 +1040,7 @@ verification via HoTT. Our final work package comes full circle to our
 original motivation: we will apply our programming language to a
 number of real-world programming problem. By abstracting recurring and effective
 patterns that arise, we will also take the first steps in moving from
-programming with HoTT to software enginerering with HoTT! See {\em
+programming with HoTT to software engineering with HoTT! See {\em
   Pathways to Impact}. {\em Deliverable: ,Collaborator: Dr A Kennedy} 
 
 %Firstly, HoTT's ability to ``work up to isomorphism'' opens the way to
@@ -1094,12 +1095,12 @@ of programming languages within the
 introduction. As a result, our research has the potential to have a
 very significant impact over the long run: while theoretical computer
 scientists will of course be interested in the fundamental nature of
-HoTT, the most significant long term impact will be on those who
-program and those who verify programs. Many of these researchers are
+HoTT, the most significant long term impact will be on programmers, especially those who
+are interested in formal certification. Many of these researchers are
 already intrigued by the potential of HoTT and our plan is to answer
 their needs by generating
 exactly the critical mass of examples of code and verification that
-will provide them with a gateway into HoTT. See {\em Patheways to
+will provide them with a gateway into HoTT. See {\em Pathways to
   Impact} for details.
 
 
@@ -1122,12 +1123,12 @@ competencies, experiences, and hence approach.
  
 %\vspace*{0.02in}
 
-{\bf Nationally Importance.} The software market is estimated at
+{\bf National Importance.} The software market is estimated at
 $\pounds 300$ billion per year, and this will grow significantly in
 real terms as software becomes ever more ubiquitous. It's thus
 essential to the UK's national interest to have strong presence in
 this market. One crucial aspect of software is that it is correct,
-i.e., does what's intended and does not go wrong.  While failures of
+i.e., it does what is intended and does not go wrong.  While failures of
 everyday devices like iPods and mobile phones are inconvenient,
 software leaking voting records or compromising the global financial
 sector can lead to unprecedented and clearly unacceptable global
@@ -1152,7 +1153,9 @@ verification environments.
 
 %\vspace*{0.02in}
 
-{\bf Feasibility and Success Critieria.} We are {\em exceptionally
+{\bf Feasibility and Success Critieria.} 
+% paragraph below is clumsy! txa
+We are {\em exceptionally
   well-positioned} to conduct the proposed research: Drs Gambino and
 Altenkirch both attended the Special Year on HoTT in Princeton, have
 published influential papers on HoTT, as well as coauthoring the HoTT
@@ -1160,8 +1163,9 @@ book~\cite{hott-book}. Prof Ghani is an expert on logical relations
 and Dr McBride is a world leader in programming languages - see the
 {\em Justification of Resources} for more details on our
 comptenancies. Overall a significant positive outcome is very
-realistic, as evidenced by our ideas and insights which we have sanity
-checked and by other ground-breaking recent advances in HoTT
+realistic, as evidenced by our ideas and insights 
+%which we have sanity checked 
+and by other ground-breaking recent advances in HoTT
 ~\cite{ShulmanM:uniidh,BezemM:cubsmt}. If any
 difficulty arises, we will supplement our experience with that of our
 collaborators and the highly active HoTT community. Success criteria
