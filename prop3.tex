@@ -831,7 +831,7 @@ same time.
 %We will also investigate a pattern matching syntax for HITs; this is
 %related again to WP7.
 Our work on data
-types~\cite{alti:cont-tcs,alti:lics09,txa:cie10,alti:catind2,ghani:fibredIR,gambinoHyland:welfoundedTrees,awodeyGamSoja:indTypesInHTT},
+types~\cite{alti:cont-tcs,alti:lics09,alti:catind2,ghani:fibredIR,gambinoHyland:welfoundedTrees,awodeyGamSoja:indTypesInHTT},
 including our EPSRC grants on containers and induction-recursion, means
 our first and second goals
 are relatively risk-free,
@@ -954,24 +954,24 @@ principle.  {\em Deliverable: A typechecker and evaluator for core
 % manage this by keeping the scope of the language small. {\bf Play up OTT and Parametricity (Johann)}
 
 {\bf WP7: A High Level Programming Language.} We will make the
-language developed in WP6 more usable by adding a high-level syntax
-for datatypes including higher inductive types, by integrating known
-technology such as implicit arguments, and by adding compilation and
-interfaces to other languages. An important question is whether it is
-possible to integrate our approach to HoTT with existing systems such
-as Agda or Coq or, maybe preferable, a more recent development such as
-Idris, or whether it is better to start from scratch.  We will explore
-both options in close collaboration with Idris developers (Edwin
-Brady), Coq developers (\eg Hugo Herbelin, Matthieu Sozeau) and Agda
-developers (Andreas Abel, Ulf Norrell). The technical challenges we
-face are to restrict pattern matching so that it is compatible with
+language developed in WP6 more usable by adding high-level syntax for
+higher inductive types, by integrating known technology such as
+implicit arguments, and by adding compilation and interfaces to other
+languages. An important question is whether it is possible to
+integrate our approach to HoTT with existing systems such as Agda, Coq
+or Idris, or whether it is better to start from scratch.  We will
+explore both options in close collaboration with Idris developers
+(Edwin Brady), Coq developers (\eg Hugo Herbelin, Matthieu Sozeau) and
+Agda developers (Andreas Abel, Ulf Norrell). The technical challenges
+we face are to restrict pattern matching so that it is compatible with
 HoTT --- we plan to build on recent work by Coeckx
 \cite{coeckx-without-k}. There are other issues related to the
 termination checker which need to be addressed, see recent discussions
-on the Agda and Coq mailing lists, e.g. \cite{agda-issue}.
-We also would like to integrate pattern
-matching with HITs --- this is currently an open problem. 
-{\em Deliverable: Basic software tools for a high level HoTT based programming language. Collaborator: Edwin Brady.}
+on the Agda and Coq mailing lists, e.g. \cite{agda-issue}.  We also
+would like to integrate pattern matching with HITs --- this is
+currently an open problem.  {\em Deliverable: Basic software tools for
+  a high level HoTT based programming language. Collaborator: Edwin
+  Brady.}
 
 
 
@@ -1024,11 +1024,10 @@ matching with HITs --- this is currently an open problem.
 {\bf WP8: Impact II - Programming and Invariance.} %The ultimate goal
 %of the proposed research is to support software construction and
 %verification via HoTT. 
-Our final work package comes full circle to our original motivation:
-we will apply our research to real world software construction and
-verification.  By abstracting recurring and effective patterns that
-arise, we will also take the first steps in moving from programming
-with HoTT to software engineering with HoTT! See {\em Pathways to
+Our final work package returns to our original motivation:
+we apply our research to real world software construction and
+verification and, by abstracting recurring and effective patterns that
+arise, we take the first steps in software engineering with HoTT! See {\em Pathways to
   Impact}. {\em Deliverable: Case Studies of HoTT-based programming
   and verification. Collaborator: Andrew Kennedy.}
 
@@ -1078,20 +1077,16 @@ with HoTT to software engineering with HoTT! See {\em Pathways to
 \vspace*{-0.1in}
 
 
-{\bf Relevance to Beneficiaries.} We have already discussed the
+{\bf Relevance to Beneficiaries.} The introduction discussed the
 calibre, ambition, and adventure inherent in recasting the foundations
-of programming languages within the 
-introduction. Our research thus has the potential to have a
-very significant impact over the long run: while theoretical computer
-scientists will of course be interested in the fundamental nature of
-HoTT, the most significant long term impact will be on programmers, especially those who
-are interested in formal certification. Many of these researchers are
-already intrigued by the potential of HoTT and our plan is to answer
-their needs by generating
-exactly the critical mass of examples of code and verification that
-will provide them with a gateway into HoTT. See {\em Pathways to
-  Impact} for details.
-
+of programming languages. As usual, fellow academics
+will benefit from this proposal, but more excitingly, this proposal will have a very
+significant, long-term impact on programmers, especially those
+who are interested in formal verification. These researchers are
+already intrigued by HoTT and our plan is to answer their needs by
+generating exactly the critical mass of examples of code and
+verification that will provide them with a gateway into HoTT. See {\em
+  Pathways to Impact} for details. 
 
 \noindent {\bf Timeliness and Novelty.} This research is extremely timely:
 in addition to our own results, there have been ground-breaking
@@ -1116,25 +1111,24 @@ competencies, experiences, and hence approach.
 $\pounds 300$ billion per year, and this will grow significantly in
 real terms as software becomes ever more ubiquitous. It's thus
 essential to the UK's national interest to have strong presence in
-this market. One crucial aspect of software is that it is correct,
-i.e., it does what is intended and does not go wrong.  While failures of
-everyday devices like iPods and mobile phones are inconvenient,
+this market. One crucial aspect of software is that it is correct - while failures of
+iPods and mobile phones are inconvenient,
 software leaking voting records or compromising the global financial
 sector can lead to unprecedented and clearly unacceptable global
 uncertainties. Indeed, as remarked earlier, the cost of software failure is
 truly staggering!  Therefore the
 demand for provably correct software is likely to grow significantly because testing inherently
 offers only partial guarantees of correctness, and because
-programming language technology is finally advancing to the stage
+programming language technology has finally advanced to the stage
 where it is feasible to formally verify critical programs.  EPSRC
-also recognises that programming languages and program verification are
+also recognises that both programming languages and program verification are
 areas of vital national importance deserving increased funding and
-this proposal lies squarely in the intersection of these areas. Within
+this proposal lies squarely in the intersection of both of these areas. Within
 these areas, we are aiming high.  The current state of the art in
 programming language design is limited by a 40 year lack of a clear
 understanding of how to treat equality within a programming language -
 our step change will replace current ad-hoc and limited
-treatments with a powerful one based upon solid foundations. Thus our
+treatments with a powerful one with solid foundations. Thus our
 research is expected to have great impact 
 over the next 10 to 50 years by becoming the
 cornerstone for the next generation of high level programming and
