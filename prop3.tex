@@ -491,7 +491,7 @@ The current state-of-the-art are the {\em dependently typed
   programming languages} mentioned above where
 the type of a program can express a
 continuum of precision - from basic assertions up to a complete
-specification - about the program’s behaviour. This proposal will
+specification - about the program's behaviour. This proposal will
 develop the first of a new breed of 
 such languages which advance the state-of-the-art by offering a
 powerful yet computationally tractable equality, and thereby bring to
@@ -502,19 +502,18 @@ reality the goal of programming up to invariance of representation.
 %ahead of the curve
 
 {\bf Program Verification.} While the advantages of the certainty
-afforded by mathematical proof has been recognised for centuries, 
-this certainty is undermined by the
-capacity for humans to make mistakes in proofs. The advent of
-computers raised the possibility once more of achieving in practice
-the promise of mathematical certainty. This potential is now coming to
-fruition, \eg systems such as Coq have been able to formally verify
-both large mathematical theorems such as the 4-Colour problem, and
-large software systems such as the CompCert C-compiler. However, these
-systems are not {\em extensional} behaviourally
-indistinguishable objects cannot be proven the same and this fundamental problem
-significantly weakens the system's verification power. We will
-rectify this by producing a system where objects
-with the same behaviour can indeed be proved equal.
+afforded by mathematical proof has been recognised for centuries, this
+certainty is undermined by the capacity for humans to make mistakes in
+proofs. The advent of computers raised the possibility once more of
+achieving in practice the promise of mathematical certainty. This
+potential is now coming to fruition, \eg systems such as Coq have been
+able to formally verify both large mathematical theorems such as the
+4-Colour problem, and large software systems such as the CompCert
+C-compiler. However, these systems are not {\em extensional}:
+behaviourally indistinguishable objects cannot be proven to be the
+same and this fundamental problem significantly weakens the system's
+usability. We will rectify this by producing a system where
+objects with the same behaviour can indeed be proved equal.
 
 
 {\bf Type Theory.} Underlying formal verification systems and
@@ -542,7 +541,9 @@ decidable equality by induction on the type structure. However, the
 {\em equality of types} themselves is rigidly structural preventing 
 conversion of proofs about one type into proofs about an equivalent type. As
 HoTT can be seen as a proof-relevant extension of OTT, our experience
-in OTT will be invaluable throughout the project. Logical relations also use induction on type structure
+in OTT will be invaluable.
+% throughout the project. 
+Logical relations also use induction on type structure
 to define not equalities, but rather relations, over all
 types. They have already been
 used~\cite{licataHarper:canonicity2d} to study a truncated form of
@@ -789,7 +790,7 @@ strengthening definitional
 equality~\cite{Allais:2013:NEN:2502409.2502411}, and logical
 relations~\cite{neil2014relParamDep} ensures a high probability of
 delivering an effective presentation of HoTT.  {\em Deliverable: A
-  type theory for HoTT. Collaborator: Thierry Coquand.}
+  type theory for HoTT. Collaborator: Vladimir Voevodsky.}
 
 %We follow the
 %practise in WP1 of managing risk in this workpackage by first aiming
@@ -807,7 +808,7 @@ constructors to HITs with only 0- and 1-dimensional ones (using the
 \emph{hub-and-spokes} construction~\cite{hott-book}).
 %fnf: is it counterproductive to cite the HoTT book here?
 Similarly, preliminary results suggest that our quotient
-containers~\cite{abottAltenGhaniMcB:quotientContainers} can be reduced
+containers~\cite{alti:mpc04} can be reduced
 to ordinary containers in a homotopical setting 
 %fnf: weak sentence below
 (using ideas of Gylterud~\cite{gylterud:thesis} and
@@ -903,7 +904,7 @@ will also have a significant impact upon the formal verification
 community, as it will be the first instance of formal verification in
 a {\em HoTT-based} formal verification environment. {\em Deliverable:
   Formally verified proofs of the key properties of
-  HoTT. Collaborator: Vladimir Voevodsky.}
+  HoTT. Collaborator: Matthieu Sozeau.}
 
 
 {\bf WP6: Implementing a Core Programming Language.} In order to showcase
@@ -932,12 +933,10 @@ particularly informative as it can be viewed as a precursor of HoTT.
 %
 %fnf: this does not make sense: we need to say that we will collaborate with
 % Matthieu, not Chalmers people for the collaborator to work!
-We will collaborate with people at
-Chalmers, especially building on Coquand and Huber's experiences with
-implementing the cubical sets model - which also shows that our
-approach is feasible in principle.
-{\em Deliverable: A typechecker and evaluator for core
-  HoTT. Collaborator: Matthieu Sozeau.}
+We will build on Coquand and Huber's experiences with implementing the
+cubical sets model --- this also shows that our approach is feasible in
+principle.  {\em Deliverable: A typechecker and evaluator for core
+  HoTT. Collaborator: Thierry Coquand.}
 
 % Coquand's and Huber's implementation of the cubical set model shows
 % that our approach is feasible in principle and we plan to collaborate
@@ -1031,7 +1030,7 @@ verification.  By abstracting recurring and effective patterns that
 arise, we will also take the first steps in moving from programming
 with HoTT to software engineering with HoTT! See {\em Pathways to
   Impact}. {\em Deliverable: Case Studies of HoTT-based programming
-  and verification. Collaborator: Andrew Kennedy}
+  and verification. Collaborator: Andrew Kennedy.}
 
 %Firstly, HoTT's ability to ``work up to isomorphism'' opens the way to
 %program correctly using simple and straightforward reference
