@@ -1,13 +1,10 @@
 %All current and future systems.
 %Economy of TRust
-%Nominal Sets
 %Hutton Heartbleed Hits email
 %IAA
 %Previous UK HoTT
 %Nicola -> Awodey
 %Visit Wadler
-%Bib first names
-%TXA observation citation
 %WP relationships in S3
 % Standardise Delivs and collabs
 %Track records standfarise
@@ -15,7 +12,6 @@
 % Changyu
 %swwift
 %HD vs proof relevant
-%relatonships between wps
 
 \documentclass[a4paper,11pt]{article}
 
@@ -332,17 +328,17 @@ theoretical, applied, and impact-focussed research.
 %representation of the entities we compute with.
 
 
-$\;\;\; \;\;\;$ {\em Theoretical Foundations.} Almost all of our
+$\;\;\; \;\;\;$ {\em Theoretical Foundations.} Almost all our
 understanding of HoTT exists within a classical framework and hence
 cannot be used to develop programming language and verification
-tools. However, the recent cubical sets model by Coquand
-et al.\ ~\cite{BezemM:cubsmt} is constructive and thus strongly suggests
+tools. However, the recent cubical sets model~\cite{BezemM:cubsmt} (and its equivalent presentation~\cite{nominal})
+is constructive and thus strongly suggests
 that HoTT has a
 purely constructive presentation. We will develop
 both specific constructive 
 models 
 and a general constructive model theory 
-of HoTT, and then complement these models with type theoretic
+of HoTT, and complement these models with type theoretic
 presentations of them.
 
 $\;\;\;\;\;\;$ {\em Programming Language and Verification Tools.} The key
@@ -602,7 +598,8 @@ not just within the model. Definitional equalities lost by the cubical interpret
 the computation rule for equality types) must be recovered. Further, other models may
 offer better computational foundations for HoTT, so practical progress
 towards HoTT-based programming languages and verification tools needs
-the broader model theory we propose.
+the broader model theory we propose. And, finally, we need to build those
+tools - exactly the main focus of this proposal.
 
 
 
@@ -707,7 +704,8 @@ algebra~\cite{GambinoN:homl2c,GambinoN:weilsh}, and
 $\omega$-groupoids~\cite{alti:csl12} makes even this ambitious goal
 feasible. {\em Deliverables: A broad collection of models of HoTT
 mapping the design space of its syntactic presentations.
-Collaborator: Steve Awodey.}
+%Collaborator: Steve Awodey.
+}
 
 
 
@@ -797,7 +795,9 @@ strengthening definitional
 equality~\cite{Allais:2013:NEN:2502409.2502411}, and logical
 relations~\cite{neil2014relParamDep} ensures a high probability of
 delivering an effective presentation of HoTT.  {\em Deliverable: A
-  type theory for HoTT. Collaborator: Vladimir Voevodsky.}
+  type theory for HoTT. 
+%Collaborator: Vladimir Voevodsky.
+}
 
 %We follow the
 %practise in WP1 of managing risk in this workpackage by first aiming
@@ -823,15 +823,15 @@ Kock~\cite{kock:groupoids}).
 %
 A secondary goal is to generate a high-level syntax for HITs as
 an alternative to the universal HIT in the same way that strictly
-positive types provide a grammar for defining various
+positive types provide a grammar for defining 
 W-types~\cite{alti:cont-tcs,alti:jcats07}.  This will feed into WP7.
 More ambitiously, we will %-- time permitting --
 investigate extensions such as coinductive HITs, mixed
-inductive/coinductive HITs \cite{txa:mpc2010g}, and
+inductive/coinductive HITs \cite{txa:mpc2010g}, 
 inductive-inductive~\cite{fnf:indind} and
-inductive-recursive~\cite{DS:indrec} HITs. The latter will be useful
-in WP5 since it makes a more concise representation of dependently
-typed syntax~\cite{chapman2009type} possible by introducing
+inductive-recursive~\cite{DS:indrec} HITs. The latter would be useful
+in WP5 since it offers a more concise representation of dependently
+typed syntax~\cite{chapman2009type} by introducing
 constructors and the representation of definitional equality at the
 same time.
 %%fnf: the following is mentioned in WP7, and might fit better there:
@@ -848,8 +848,9 @@ especially since partial results already exist,
 while progress on our more ambitious goal 
 is not essential to the rest of the project. {\em Deliverable: A
   theory of HITs that is both foundational and will underpin the
-  programming language developed in WP6 and WP7. Collaborator: 
-  Michael Shulman. }
+  programming language developed in WP6 and WP7. 
+%Collaborator: Michael Shulman. 
+}
 
 {\bf WP4: Impact I - Programming with Effects.}
 Most programs interact with their environments,
@@ -887,7 +888,9 @@ quotients via HITs with that of effects via Lawvere theories.
 However, more advanced effects (\eg indexed effects) or the full-scale
 integration of our results into WP7 will be more challenging. {\em
   Deliverable: A treatment of Lawvere Theories within
-  HoTT. Collaborator: Nick Benton.}
+  HoTT. 
+%Collaborator: Nick Benton.
+}
 
 
 {\bf WP5 Formalisation of Meta-Theory of HoTT.}  As we intend to use
@@ -911,7 +914,9 @@ will also have a significant impact upon the formal verification
 community as it will be the first instance of formal verification in
 a {\em HoTT-based} formal verification environment. {\em Deliverable:
   Formally verified proofs of the key properties of
-  HoTT. Collaborator: Matthieu Sozeau.}
+  HoTT. 
+%Collaborator: Matthieu Sozeau.
+}
 
 
 {\bf WP6: Implementing a Core Programming Language.} In order to showcase
@@ -943,7 +948,9 @@ particularly informative as it can be viewed as a precursor of HoTT.
 We will build on Coquand and Huber's experiences with implementing the
 cubical sets model, which exploits nominal sets \cite{nominal}--- this also shows that our approach is feasible in
 principle.  {\em Deliverable: A typechecker and evaluator for core
-  HoTT. Collaborator: Thierry Coquand.}
+  HoTT. 
+%Collaborator: Thierry Coquand.
+}
 
 % Coquand's and Huber's implementation of the cubical set model shows
 % that our approach is feasible in principle and we plan to collaborate
@@ -977,8 +984,9 @@ termination checker which need to be addressed, see recent discussions
 on the Agda and Coq mailing lists, e.g. \cite{agda-issue}.  We also
 would like to integrate pattern matching with HITs --- this is
 currently an open problem.  {\em Deliverable: Basic software tools for
-  a high level HoTT-based programming language. Collaborator: Edwin
-  Brady.}
+  a high level HoTT-based programming language. 
+%Collaborator: Edwin Brady.
+}
 
 
 
@@ -1036,7 +1044,9 @@ we apply our research to real world software construction and
 verification and, by abstracting recurring and effective patterns that
 arise, we take the first steps in software engineering with HoTT! See {\em Pathways to
   Impact}. {\em Deliverable: Case Studies of HoTT-based programming
-  and verification. Collaborator: Andrew Kennedy.}
+  and verification. 
+%Collaborator: Andrew Kennedy.
+}
 
 %Firstly, HoTT's ability to ``work up to isomorphism'' opens the way to
 %program correctly using simple and straightforward reference
@@ -1115,7 +1125,7 @@ competencies, experiences, and hence approach.
 %\vspace*{0.02in}
 
 {\bf National Importance.} The software market is estimated at
-$\pounds 300$ billion per year, and this will grow significantly in
+$\pounds 300$ billion per year, and will grow significantly in
 real terms as software becomes ever more ubiquitous. It is thus
 essential to the UK's national interest to have strong presence in
 this market. One crucial aspect of software is that it is correct - while failures of
