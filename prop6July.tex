@@ -1,3 +1,4 @@
+%Our WP5 record?
 %Verification in WP8 and WP5
 %Katya, pazzaz and unflashy hard work in quotes.
 % Insiders 
@@ -156,7 +157,7 @@ relations~\cite{neil2014relParamDep} is directly related to WP1 and
 WP2 which develops semantic and syntactic presentations of Homotopy
 Type Theory (HoTT); ii) his work on data types (containers, quotient
 containers, indexed containers and induction
-recursion)~\cite{AbbottAltenkirchGhani:CategoriesOfContainers,abottAltenGhaniMcB:quotientContainers,altenkirchGhaniHancockMcBrideMorris:indexedContainers,AbbotAltenkirchGhani:Constructing}
+recursion)~\cite{alti:mpc04,altenkirchGhaniHancockMcBrideMorris:indexedContainers,alti:cont-tcs}
 is directly related to WP3 which develops the theory of higher
 inductive types; iii) his work on the semantics of effects~\cite{atkeyGhaniJacobsJohann:effects} is
 directly related to the application of HoTT to effects in WP4; and iv)
@@ -204,16 +205,16 @@ programming. After this, he worked as an RA at the Universities of
 Durham and Nottingham before becoming a lecturer at the University of
 Strathclyde in 2008. His work on the foundations and implementations
 of non-dependently and dependently typed
-programming~\cite{viewftl,altenBride:towardsOTT,easy}
+programming~\cite{viewftl,alti:ott-conf,easy}
 has become very influential, both via his own programming language
 Epigram and via his work with the Agda, Coq, and Haskell teams. He is
 now widely regarded as a leader of his field as illustrated by his
 widely cited papers (\eg ~\cite{viewftl} has been cited 320 times) and
 invitations to keynote addresses at conferences etc. Taken with his
 experience developing and implementing Observational Type Theory (a
-proof irrelevant form of HoTT)~\cite{altenBride:towardsOTT}, he is
+proof irrelevant form of HoTT)~\cite{alti:ott-conf}, he is
 thus the ideal person to lead WP6 and WP7. Furthermore, Dr McBride's
-work on containers~\cite{abottAltenGhaniMcB:quotientContainers} and
+work on containers~\cite{alti:mpc04} and
 effects~\cite{conor:frank} feed into WP3 and WP4 while his experience
 in dependently typed programming will feed into WP8.
 
@@ -320,7 +321,7 @@ Semantics of Proofs and Certified Mathematics.  He is an editor of the
 journal Mathematical Structures in Computer Science. 
 Nicola Gambino is one of the leading researchers on HoTT; in particular,
 his combination of expertise in type theory~\cite{GambinoN:gentti}, category 
-theory~\cite{gambinoHyland:welfoundedTrees,GambinoN:polfpm} and
+theory~\cite{GambinoN:polfpm} and
 homotopical algebra~\cite{GambinoN:homl2c,GambinoN:weilsh} allowed
 him to obtain, in collaboration with Richard Garner, 
 one of the very first results relating type theory and homotopy theory~\cite{GambinoN:idetwfs}
@@ -378,7 +379,7 @@ pioneering work in the UK and elsewhere have culminated in systems
 such as Agda, Coq, Epigram, HoL, Idris, Isabelle, NuPRL, Twelf, and the Trellys
 project which are having significant impact, \eg Coq won both the 2013
 ACM Software and the 2013 SIGPLAN Programming Languages Software
-awards while HoL is used extensively by Intel~\cite{harisson:intel,harrison:sfm}. The technology
+awards while HoL is used extensively by Intel~\cite{harrison:sfm}. The technology
 behind these
 systems is also exploited by 
 more mainstream languages with
@@ -914,7 +915,7 @@ Collaborator: Vladimir Voevodsky.
 %specific models and then aiming for the more ambitious goal of
 %integrating these presentations onto a unified framework.
 
-{\bf WP3: Higher Inductive Types (HITs).} Our goal is to accommodate HITs in
+{\bf WP3: Higher Inductive Types (HITs).}  We will accommodate HITs in
 the semantics developed in WP1 and the syntactic framework of WP2. To
 achieve this, we will first develop a universal HIT playing the role for
 HITs that W-types play for ordinary inductive
@@ -933,12 +934,12 @@ Kock~\cite{kock:groupoids}).
 A secondary goal is to generate a high-level syntax for HITs as
 an alternative to the universal HIT in the same way that strictly
 positive types provide a grammar for defining 
-W-types~\cite{alti:cont-tcs,alti:jcats07}.  This will feed into WP7.
+W-types~\cite{alti:cont-tcs}.  This will feed into WP7.
 More ambitiously, we will %-- time permitting --
 investigate extensions such as coinductive HITs, mixed
 inductive/coinductive HITs \cite{txa:mpc2010g}, 
-inductive-inductive~\cite{fnf:indind} and
-inductive-recursive~\cite{DS:indrec} HITs. The latter would be useful
+inductive-inductive~\cite{alti:catind2} and
+inductive-recursive~\cite{DS:indrec,ghani:fibredIR} HITs. The latter would be useful
 in WP5 since it offers a more concise representation of dependently
 typed syntax~\cite{chapman2009type} by introducing
 constructors and the representation of definitional equality at the
@@ -947,7 +948,9 @@ same time.
 %We will also investigate a pattern matching syntax for HITs; this is
 %related again to WP7.
 Our work on data
-types~\cite{alti:cont-tcs,alti:lics09,alti:catind2,ghani:fibredIR,gambinoHyland:welfoundedTrees,awodeyGamSoja:indTypesInHTT},
+types~\cite{alti:cont-tcs,
+altenkirchGhaniHancockMcBrideMorris:indexedContainers,
+alti:catind2,ghani:fibredIR,GambinoN:polfpm,awodeyGamSoja:indTypesInHTT},
 including our EPSRC grants on containers and induction-recursion, means
 our first and second goals
 are relatively risk-free,
