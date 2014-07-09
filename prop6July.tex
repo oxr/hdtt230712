@@ -1,3 +1,5 @@
+%Verification in WP8 and WP5
+%Katya, pazzaz and unflashy hard work in quotes.
 % Insiders 
 %Decide salary
 % Internal group trave. 2 visits per person per year @500. 12k
@@ -961,7 +963,7 @@ Collaborator: Michael Shulman.
 
 {\bf WP4: Impact I --- Programming with Effects.}  Most programs
 interact with their environments, but such \emph{effectful} programs
-are known to be inherently difficult to reason about.  Major advances
+are inherently difficult to reason about.  Major advances
 were Moggi's~\cite{moggi:monad} realisation that effects can be
 modelled semantically by monads, Wadler's use of monads~\cite{wadler:monads} to structure
 effectful programs themselves and Plotkin and
@@ -969,31 +971,28 @@ Power's~\cite{PlotkinPower:Lawvere} proof that many computational
 monads arise from Lawvere Theories, i.e.\ can be presented as
 effect-generating operations and equations.  Unfortunately, the lack
 of a satisfactory computational understanding of equality means that
-%equational theories cannot be satisfactorially represented in current
-%programming languages. Thus, 
-one is forced to program not using the
-quotient algebra as desired, but using the free algebra and then check
--- externally to the program -- that the quotient structure is
-respected.  With HITs, there is no need for such a convoluted process
---- one can program directly on the quotient algebra, assert the
-correctness of the program within its type, and thereby efficiently
-and formally verify the program's correctness. Concretely, we will
-formalise both Lawvere Theories (using HITs to represent effectful
-computations) and their mathematical algebra (e.g.\ tensor products,
-sums) in HoTT.  We will both simplify and extend i) McBride,
-Andjelkovic, and Lindley's effect handlers in
-Frank~\cite{conor:frank}; ii) Brady's effects library for
+one is forced to program not in the quotient algebra as desired, but
+within the free algebra and then check (externally to the program)
+that the quotient structure is respected.  With HITs, we can avoid
+such a convoluted process --- we can program directly on the quotient
+algebra, thus assert the correctness of the program within its type, and
+hence efficiently and formally verify the program's
+correctness. Concretely, we will formalise both Lawvere Theories
+(using HITs to represent effectful computations) and their
+mathematical algebra (e.g.\ tensor products, sums) in HoTT.  This will
+simplify and extend i) McBride, Andjelkovic, and Lindley's effect
+handlers in Frank~\cite{conor:frank}; ii) Brady's effects library for
 Idris~\cite{brady:effects}; and iii) Bauer and Pretnar's treatment of
-effects in Eff~\cite{bauer:eff}.  This will use the type theory of
-WP2, and progress will feed into the programming language of WP7,
-validating both the theoretical research done by RA1, and also
-generating impact by showing the relevance of HoTT to programming
-languages. Basic results are low risk as, conceptually, we simply need
-to stitch together the treatment of quotients via HITs with that of
-effects via Lawvere theories.  However, more advanced effects (\eg
-indexed effects) or the full-scale integration of our results into WP7
-will be more challenging. {\em Deliverable: A treatment of Lawvere
-  Theories within HoTT.  Collaborator: Nick Benton.  }
+ effects in Eff~\cite{bauer:eff}.  Our work will use the type theory of
+WP2, feed into the programming language of WP7, validate the
+theoretical research done by RA1 and generate impact by showing the
+relevance of HoTT to programming. Basic results are low risk as,
+conceptually, we need only stitch together the treatment of quotients
+via HITs with that of effects via Lawvere theories.  However, more
+advanced effects (\eg indexed effects) or the full-scale integration
+of our results into WP7 is more ambitious. {\em Deliverable: A
+treatment of Lawvere Theories within HoTT.  Collaborator: Nick
+Benton.  }
 
 
 {\bf WP5 Formalisation of Meta-Theory of HoTT.}  As we intend to use
@@ -1002,14 +1001,14 @@ be formally verified. Indeed, as Voevodsky pointed out
 \cite{voevodsky-ias14}, the complexity of the higher dimensional
 semantics of HoTT make a paper-based verification almost unfeasible,
 and certainly not trustworthy. We begin by formally verifying in Agda
-the key properties of i) our model theory of HoTT as developed in WP1;
-ii) and our type theory for HoTT developed in WP2. We aim to use HITs
-developed in WP3 to represent the syntax of the actual type theory.
-In this initial phase we will take an an axiomatic approach to HoTT
-(i.e., adding univalence and HITs as postulates). To replace these
-postulates with computational interpretations, we will later switch
-from Agda to the system developed in WP6 and WP7 thereby enabling a
-partial formalisation of HoTT within itself.
+the key properties of i) our model theory of HoTT as developed in WP1; and
+ii) our type theory for HoTT developed in WP2 which we will
+formalise with HITs developed in WP3.  In this less ambitious initial
+phase we will take an an axiomatic approach to HoTT (i.e., adding
+univalence and HITs as postulates). To replace these postulates with
+computational interpretations, we will later take a more ambitious
+approach, switch from Agda to the system developed in WP6 and WP7
+thereby enabling a partial formalisation of HoTT within itself.
 %We begin by formalising the existing model
 %theory (\eg the cubical sets model) in conventional Type Theory using
 %Agda --- this accompanies WP1. When moving on to the more syntactic
@@ -1026,15 +1025,18 @@ partial formalisation of HoTT within itself.
 %first glance, it is reasonable since it is unlikely that a bug in
 %the theory leads to an unsound formalisation of the metatheory.  
 Therefore, WP5 will not only ensure the required level of trust in our
-system, but will also have a significant impact upon the formal
-verification community as it will be the first instance of formal
-verification in a {\em HoTT-based} formal verification
-environment. Risk of failure is minimal as we are bound to achieve
-some formal verification and no other WPs are dependent on WP5. On the
-other hand, we will push to achieve the ambitious goal of {\bf formally
-verifying all of the key theorems of HoTT.} 
-. {\em Deliverable: Formally verified proofs
-  of the key properties of HoTT.  Collaborator: Matthieu Sozeau.  }
+system and impact the formal verification community as the first
+instance of formal verification in a {\em HoTT-based} environment, but
+it will also establish that HoTT (like any foundational theory) can
+describe its own meta-theory. Risk of failure in our basic goal is low
+as we - and others - have begun formalising parts of HoTT. Further, our
+experience of formalising type theory in itself~\cite{} makes us well
+positioned wrt our more ambitious goal. Either way, no other WPs are
+dependent on WP5. {\em Deliverable: Formally verified proofs of the
+key properties of HoTT.  Collaborator: Matthieu Sozeau.  }
+
+
+
 
 
 {\bf WP6: Implementing a Core Programming Language.} In order to
@@ -1077,25 +1079,21 @@ that our approach is feasible in principle.  {\em Deliverable: A
 
 {\bf WP7: A High Level Programming Language.} We will make the
 language developed in WP6 more usable by adding high-level syntax for
-higher inductive types, by integrating known technology such as
-implicit arguments, and by adding compilation and interfaces to other
-languages. An important question is whether it is possible to
-integrate our approach to HoTT with existing systems such as Agda, Coq
-or Idris, or whether it is better to start from scratch.  We will
-explore both options in close collaboration with Idris developers
-(Edwin Brady), Coq developers (\eg Hugo Herbelin, Matthieu Sozeau) and
-Agda developers (Andreas Abel, Ulf Norrell). The technical challenges
-we face are to restrict pattern matching so that it is compatible with
-HoTT --- we plan to build on recent work by Cockx
-\cite{cockx-without-k}. There are other issues related to the
-termination checker which need to be addressed, see recent discussions
-on the Agda and Coq mailing lists, e.g. \cite{agda-issue}.  We also
-would like to integrate pattern matching with HITs --- this is
-currently an open problem.  {\em Deliverable: Basic software tools for
-  a high level HoTT-based programming language. 
-Collaborator: Edwin Brady.
-}
-
+(higher) inductive types and by integrating known technology such as
+implicit arguments. There is a real problem here in that HoTT is
+incompatible with structural recursion as termination fails. We will
+tackle this by building on recent work by Cockx \cite{cockx-without-k}
+to find minimal restrictions on pattern matching which do not destroy
+termination when combined with HoTT. Our more ambitious goal will be
+to extend these initial results and solve the open problem of
+integrating pattern matching with HITs. We will also explore the
+possibility of adding compilation and interfaces to other languages
+such as Agda, Coq or Idris to increase impact by allowing users of
+these sytems access to our results.  We will do this in close
+collaboration with Idris developers (Edwin Brady), Coq developers (\eg
+Hugo Herbelin, Matthieu Sozeau) and Agda developers (Andreas Abel, Ulf
+Norrell).  {\em Deliverable: Basic software tools for a high level
+HoTT-based programming language.  Collaborator: Edwin Brady.  }
 
 
  % A central question which needs to be
