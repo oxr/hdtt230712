@@ -1,0 +1,15 @@
+Our general objective is to make Homotopy Type Theory (HoTT) available to researchers and programmers so that they are able to apply this new foundational systemt in formal verification and high level program development. In more detail this leads to the following objectives:
+
+1. Determine wether and how HoTT can be used to increase reusability and modularity in formal verification and dependently typed programming.
+This includes a study how HoTT can be sued in the context of programming with effects.
+(WPs 4 , 8)
+
+2. Provide high level tools which other researchers who want to use HoTT can use and apply. 
+(WPs 6, 7)
+
+3. Develop a clear definition and implementation of core HoTT satsifying basic metatheoretical properties such as normalisiation and canonicty (eg. all closed numbers reduce to numerals) including a general notion of higher inductive types.
+(WP 2, 3, 6)
+
+4. Develop the metatheory of HoTT by classifying existing model construction and use this to analyze potential extensions of HoTT.
+(WP 1)
+
