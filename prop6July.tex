@@ -378,14 +378,15 @@ pioneering work in the UK and elsewhere have culminated in systems
 such as Agda, Coq, Epigram, HoL, Idris, Isabelle, NuPRL, Twelf, and the Trellys
 project which are having significant impact, \eg Coq won both the 2013
 ACM Software and the 2013 SIGPLAN Programming Languages Software
-awards while HoL is used extensively by Intel~\cite{harisson:intel,harrison:sfm}. The technology
+awards while HoL is used extensively by Intel~\cite{harrison:sfm,harisson:intel}. The technology
 behind these
 systems is also exploited by 
 more mainstream languages with
 significant industrial deployment such as Haskell, OCaml, Scala and C\#.
 
 {\bf The Project.} Despite their success, such systems have 
-fundamental limitations, \eg when programming with quotients,
+fundamental limitations, \eg when programming with quotient data-types (identifying objects up to some 
+equivalence relation),
 supporting abstraction (invariance under different
 representations of the same structure) and extensional reasoning
 (interchangeability of programs with the same behaviour).
@@ -435,7 +436,7 @@ tools. However, the recent cubical sets model~\cite{BezemM:cubsmt}
 thus strongly suggests that HoTT has a purely constructive
 presentation. We will develop both specific constructive models and a
 general constructive model theory of HoTT, and complement these models
-with type theoretic presentations of them (WP1,2,3).
+with type-theoretic presentations of them (WP1,2,3).
 
 $\;\;\;\;\;\;$ {\em Programming Language and Verification Tools.} The key
   deliverable of the second strand of our research is a HoTT-based
@@ -616,7 +617,7 @@ reality the goal of programming up to invariance of representation.
 
 {\bf Program Verification.} While the advantages of the certainty
 afforded by mathematical proof has been recognised for centuries, this
-certainty is undermined by our ability to make mistakes in
+certainty is undermined by the risk of making mistakes in
 proofs. The advent of computers raised the possibility once more of
 achieving in practice the promise of mathematical certainty. This
 potential is now coming to fruition, \eg systems such as Coq have been
@@ -693,7 +694,7 @@ that isomorphic types are equal. HoTT subsumes function extensionality
 but also transcends what we could previously express, e.g.\
 \emph{higher} inductive types (HITs) include the usual tree-like data
 types, but also include quotients \cite{alti:mpc04} and geometric
-objects such as the circle and sphere. HITs also occur in computer
+objects such as the circle and sphere. HITs occur naturally in computer
 science, e.g. lists are an inductive type; braids are lists with extra
 paths identifying lists up to twisting of any element past its
 neighbours, and bags are braids with paths-between-paths identifying
@@ -702,8 +703,8 @@ The interpretation of closed expressions of HoTT within the cubical
 sets model~\cite{BezemM:cubsmt, nominal} proves the basic feasibility of computing
 with the Univalence Axiom. However, much work remains: closed
 expressions  must be interpreted  \emph{within} HoTT itself and 
-not just within the model. Definitional equalities lost by the cubical interpretation (such as
-the computation rule for equality types) must be recovered. Further, other models may
+not just within the model. It would also be desirable to recover the definitional equalities lost by the cubical interpretation (such as
+the computation rule for equality types). Further, other models may
 offer better computational foundations for HoTT, so practical progress
 towards HoTT-based programming languages and verification tools needs
 the broader model theory we propose. And, finally, we need to build those
@@ -758,11 +759,11 @@ competencies detailed within the work packages, our track records and the {\em
  % alti:catind2}; iv) our work on constructing internal models of type
 %theory; and 
 ii) our ongoing dialogue with our
-world leading collaborators, and the workshop/events we intend to
+world-leading collaborators, and the workshop/events we intend to
 organise/attend to foster interaction. This balance of multiple sources ensure that we neither
 slavishly follow the hype that inevitably surrounds such a significant
 innovation, nor are unaware of current and future advances. The
-project is structured as follows:
+project is structured as follows.
 
 %divided into eight work packages, each having a named collaborator, a clear deliverable of
 %relatively low risk (to ensure the overall project's success) as well
@@ -870,21 +871,35 @@ Collaborator: Steve Awodey.
 %Background: current presentation (HoTT presentation and Thierry's)
 %dont have canonicity.
 
-{\bf WP2: Univalent Type Theory.} Building on WP1, we need syntactic
-presentations of our models of HoTT in the form of type theories. The
-challenge is to present the essential data of the model as built from
-a {\em finite} collection of type and term constructors --- this is
-particularly intricate given the  higher dimensional
-structure of HoTT. We must prove essential properties such as strong normalisation, decidability of
-definitional equality, and canonicity (i.e. all terms reduce to
-values). We must also establish the expressive
-power of the associated equational theories, e.g. to distinguish
-carefully between which computation rules hold as definitional
-equalities and which as propositional equalities. Another key property
-(required for WP5) is that, as a foundational theory, our type theory
-ought to be expressive enough to describe its own models. These
-properties will be established either directly or via the models of
-WP1.
+{\bf WP2: Univalent Type Theory.} On the basis of WP1, we will isolate the essential
+structure of the constructive models of HoTT in the form of new type theories. The
+challenge here is to present the relevant structure as built from
+a {\em finite} collection of type and term constructors --- a 
+particularly intricate task because of the  higher dimensional
+structure of HoTT. These new type theories will enjoy the benefits of
+HoTT but retain the essential properties of traditional type theories, such as strong normalisation, decidability of
+definitional equality, and canonicity ({i.e.}~all terms reduce to
+values). We will also establish the expressive
+power of the associated equational theories, {e.g.}~by analyzing
+carefully whether computation rules  hold as definitional
+equalities or as propositional equalities. Another key property  (required for WP5) that our type theories
+should have is that they should be expressive enough to describe their own models. This will be established either 
+directly or via the theory developed in WP1.
+%Building on WP1, we need syntactic
+%presentations of our models of HoTT in the form of type theories. The
+%challenge is to present the essential data of the model as built from
+%a {\em finite} collection of type and term constructors --- this is
+%particularly intricate given the  higher dimensional
+%structure of HoTT. We must prove essential properties such as strong normalisation, decidability of
+% definitional equality, and canonicity (i.e. all terms reduce to
+%values). We must also establish the expressive
+%power of the associated equational theories, e.g. to distinguish
+%carefully between which computation rules hold as definitional
+%equalities and which as propositional equalities. Another key property
+% (required for WP5) is that, as a foundational theory, our type theory
+%ought to be expressive enough to describe its own models. These
+% properties will be established either directly or via the models of
+% WP1.
 %Different models will produce different theories and we
 %will analyse them in terms of their tractablility, concision and 
 %meta-theoretic properties. Essential properties we require of a well
@@ -892,7 +907,8 @@ WP1.
 % We will begin by developing Altenkirch's preliminary type theory for
 % cubical sets, which both internalises parametricity and adds Kan
 % fillers to the theory. 
-We will build on Altenkirch's observation \cite{txa-ihp14} that cubical sets share
+In order to achieve these goals, 
+we will build on Altenkirch's observation \cite{txa-ihp14} that cubical sets share
 many similarities with logical relations by replacing the uniform
 identity type of intensional MLTT with a higher-dimensional equality
 defined to fit the structure of types. The models from WP1 will drive
@@ -904,7 +920,7 @@ strengthening definitional
 equality~\cite{Allais:2013:NEN:2502409.2502411}, and logical
 relations~\cite{neil2014relParamDep} ensures a high probability of
 delivering an effective presentation of HoTT.  {\em Deliverable: A
-  type theory for HoTT validating univalence 
+  type theory for HoTT validating univalence.
 Collaborator: Vladimir Voevodsky.
 }
 
