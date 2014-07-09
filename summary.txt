@@ -3,23 +3,24 @@ Theory (HoTT), which has been recently formulated during a special
 year at the Institute of Advanced Study in Princeton. In this language
 we cannot only write programs, but also express properties of programs
 using types, and programs to express proofs that our programs are
-correct. It is called HOMOTOPY Type Theory because concepts from
+correct. It is called Homotopy Type Theory because concepts from
 Homotopy Theory which investigates abstract properties of geometric
-objects.  The Filed Medallist Vladimir Voevodsky and others have
+objects.  The Fields Medallist Vladimir Voevodsky and others have
 established a new and exciting link between geometry and reasoning
-about equality.  In a nutshell HoTT allows us to treat objects which
-behave the same as equal (univalence). Another feature of HoTT is that
-we can model datatypes, such as bags, where elements can be exchanged
+about equality.  In a nutshell, HoTT allows us to treat objects which
+behave the same as equal (a feature encapsulated by the so-called Univalence Axiom). Another feature of HoTT is that we can model datatypes, such as bags, where elements can be exchanged
 easily (using what is called higher inductive types). We believe that
-these are essential ingredients to make formal verification possible
-by allowing us to reuse proofs and programs effectively.
+these are essential ingredients to make formal verification possible, since
+they allow us to reuse proofs and programs effectively.
 
-Homotopy Type Theory is a possible foundational language for
-Mathematics - this has already been established by a book on Homotopy
-Theiry which can be downloaded for free. However, it is not clear in
-the moment how we could write a compiler or interpreter for HoTT. The
+Homotopy Type Theory is also possible foundational language for
+Mathematics, an aspect which has already been explored extensively in 
+a recent book (freely available download online). 
+
+A fundamental open problem concerning Homotopy Type Theory is that at present
+it is not clear how we could write a compiler or interpreter for HoTT. The
 goal of this project is to address this issue by foundational research
 based on some recent and promising ideas and to implement tools which
-make HoTT available to interested people such as researchers and
+make HoTT available to researchers and
 programmers. We will also study some concrete examples in program
 verification to see wether and if how we can take advantage of HoTT.
