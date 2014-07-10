@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=0.75]
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-5, 0) {};
+		\node [style=none] (1) at (-2, 0) {};
+		\node [style=none] (2) at (-5, 0.75) {$A^l$};
+		\node [style=none] (3) at (2, -0.75) {$A$};
+		\node [style=none] (4) at (5, -0.75) {$A^l$};
+		\node [style=none] (5) at (2, 0) {};
+		\node [style=none] (6) at (5, 0) {};
+		\node [style=none] (7) at (-2, 0.75) {$A$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [thick, bend right=90, looseness=1.50] (0.center) to (1.center);
+		\draw [thick, bend left=90, looseness=1.75] (5.center) to (6.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

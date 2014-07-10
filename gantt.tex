@@ -1,17 +1,55 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper]{article}
 
-\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
-
-\usepackage[dvips,pdftex]{graphicx}
-
+\usepackage{pgfgantt}
 
 \begin{document}
-\newpage
-\begin{figure}
-\centering
-\includegraphics{Gantt.eps}
-\caption{Gantt chart depicting the order and division of work on work packages}
-\end{figure}
-\newpage
+%\hspace{-3cm}
+{\centering
+\begin{tikzpicture}
+\begin{ganttchart}[x unit=2.7cm,vgrid]{1}{4}
+  \gantttitle{2015}{1}
+  \gantttitle{2016}{1}
+  \gantttitle{2017}{1}
+  \gantttitle{2018}{1}\\
+%  \ganttgroup{Foundations}{1}{2}\\
+  \ganttbar{WP1}{1}{2}\\
+%  \ganttgroup{Theory}{1}{3}\\
+  \ganttbar{WP2}{1}{2}\\
+  \ganttbar{WP3}{2}{3}\\
+ \ganttbar{WP4}{4}{4}\\
+%  \ganttgroup{Implementation}{1}{4}\\
+  \ganttbar{WP5}{1}{1}\\
+  \ganttbar{WP6}{2}{3}\\
+  \ganttbar{WP7}{3}{4}\\
+%  \ganttgroup{Application}{1}{4}\\
+  \ganttbar{WP8}{4}{4}
+  % \ganttgroup{Group 1}{1}{4} \\
+  % \ganttbar{Task 1}{1}{2} \\
+  % \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
+  % \ganttmilestone{Milestone}{7} \ganttnewline
+  % \ganttbar{Final Task}{8}{12}
+  % \ganttlink{elem2}{elem3}
+  % \ganttlink{elem3}{elem4}
+\end{ganttchart}
+\end{tikzpicture}
+}
 
+\bigskip
+The work will start simultaneously in Leeds on Semantic
+Foundations (WP1), in Nottingham on Univalent Type Theory (WP2) and in
+Strathclyde by work on Formalisation of the required Meta-Theory
+(WP5). We expect this work to be heavily intertwined and proceeding in
+parallel. After progress is made on WP2, Nottingham will start looking
+into Higher Inductive Types (WP3) as we expect these to be useful in
+WP2 as well. As the work on WP1 progresses and comes to a successfull
+end, the attention of Nicola Gambino in Leeds will move to HITs as
+well, given his expertise in the area. In the meantime, Strathclyde,
+having laid the matfoundations in WP5 will begin formalising the Type
+Theory produced in WP2 in Nottingham. As the work on implementation
+progresses, higher level will be considered (WP6) with the findings
+back propagating both to WP5 and WP3. In the final stage Nottingham
+will seek apply the type theory to formalising effectful programming
+(WP4) while Strathclyde gradually move onto case studies. However the
+work on WP7 is not finished until it's utility is tested in WP8. Both
+teams will depend on Leeds support in foundational matters in this period. 
 \end{document}

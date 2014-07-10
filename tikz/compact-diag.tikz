@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=0.75]
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-9, -1) {};
+		\node [style=none] (1) at (-7, -1) {};
+		\node [style=none] (2) at (-7, 1) {};
+		\node [style=none] (3) at (-9, 1) {};
+		\node [style=none] (4) at (-8, 0) {$f$};
+		\node [style=none] (5) at (-8, 1) {};
+		\node [style=none] (6) at (-8, 2) {};
+		\node [style=none] (7) at (-8, -1) {};
+		\node [style=none] (8) at (-8, -2) {};
+		\node [style=none] (9) at (-8, 2.5) {$A$};
+		\node [style=none] (10) at (-8, -2.5) {$B$};
+		\node [style=none] (11) at (-2.5, 2) {};
+		\node [style=none] (12) at (-2.5, -2) {};
+		\node [style=none] (13) at (-1.75, 0) {$A$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=thick] (3.center) to (0.center);
+		\draw [style=thick] (3.center) to (2.center);
+		\draw [style=thick] (2.center) to (1.center);
+		\draw [style=thick] (1.center) to (0.center);
+		\draw [style=thick] (6.center) to (5.center);
+		\draw [style=thick] (7.center) to (8.center);
+		\draw [style=thick] (11.center) to (12.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
