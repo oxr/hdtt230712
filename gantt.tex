@@ -1,37 +1,101 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\usepackage{mathptmx}
+\usepackage{epsf}           %\input{epsf}
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{url}
+%\usepackage[dvips]{graphics}
+\usepackage[dvips,pdftex]{graphicx}
+\usepackage[dvips,all]{xy}
+\usepackage{multicol}
+\usepackage{natbib}
+\setlength{\bibsep}{0.0pt}
+
+\usepackage{hyperref}
+
+%\newlength{\extraplusheight}
+%\newlength{\extrapluswidth}
+%\setlength{\extraplusheight}{4.7cm}
+%\setlength{\extrapluswidth}{4.7cm}
+%\addtolength{\textwidth}{\extrapluswidth}
+%\addtolength{\textheight}{\extraplusheight}
+%\addtolength{\oddsidemargin}{-.5\extrapluswidth}
+%\addtolength{\evensidemargin}{-.5\extrapluswidth}
+%\addtolength{\topmargin}{-0.5\extraplusheight}
+\setlength{\parindent}{0 pt}
+\setlength{\parskip}{.5ex}
+%\documentclass[a4paper]{article}
 
 \usepackage{pgfgantt}
+  
 
 \begin{document}
 %\hspace{-3cm}
-{\centering
-\begin{tikzpicture}
-\begin{ganttchart}[x unit=2.7cm,vgrid]{1}{4}
+{
+\centering
+{\Large Gantt Chart}
+\medskip
+
+\setganttlinklabel{s-s}{}
+\setganttlinklabel{f-f}{}
+\setganttlinklabel{s-f}{}
+
+\begin{tikzpicture}[y=0.5cm]  
+\begin{ganttchart}[x unit=3.5cm,y unit chart=.5cm,y unit title=.5cm,vgrid,
+canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+hgrid style/.style={draw=black!5, line width=.75pt},
+vgrid={*1{draw=black!5, line width=.75pt}},
+  title/.style={draw=none, fill=black!5},
+%  title label node/.append style={below=0pt},
+  include title in canvas=false,
+  bar label font=\mdseries\small\color{black!70},
+  bar label node/.append style={left=.5cm},
+  bar/.append style={draw=none, fill=magenta!63},
+%  bar incomplete/.append style={fill=barblue},
+%  bar progress label font=\mdseries\footnotesize\color{black!70},
+%  group incomplete/.append style={fill=groupblue},
+%  group left shift=0,
+%  group right shift=0,
+%  group height=.5,
+%  group peaks tip position=0,
+%  group label node/.append style={left=.6cm},
+%  group progress label font=\bfseries\small,
+ link/.style={-latex, line width=0.5pt, black},
+ link label font=\scriptsize\bfseries,
+ link label node/.append style={below left=-2pt and 0pt},
+ title height=.75, title top shift=0,
+% title label anchor={below=-1.5ex},
+%,
+% bar top shift=-0.1, 
+ bar height=0.5
+  ]{1}{4}
   \gantttitle{2015}{1}
   \gantttitle{2016}{1}
   \gantttitle{2017}{1}
   \gantttitle{2018}{1}\\
-%  \ganttgroup{Foundations}{1}{2}\\
   \ganttbar{WP1}{1}{2}\\
-%  \ganttgroup{Theory}{1}{3}\\
   \ganttbar{WP2}{1}{2}\\
   \ganttbar{WP3}{2}{3}\\
- \ganttbar{WP4}{4}{4}\\
-%  \ganttgroup{Implementation}{1}{4}\\
-  \ganttbar{WP5}{1}{1}\\
+  \ganttbar{WP4}{3}{4}\\
+  \ganttbar{WP5}{1}{2}\\
   \ganttbar{WP6}{2}{3}\\
   \ganttbar{WP7}{3}{4}\\
-%  \ganttgroup{Application}{1}{4}\\
-  \ganttbar{WP8}{4}{4}
-  % \ganttgroup{Group 1}{1}{4} \\
-  % \ganttbar{Task 1}{1}{2} \\
-  % \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  % \ganttmilestone{Milestone}{7} \ganttnewline
-  % \ganttbar{Final Task}{8}{12}
-  % \ganttlink{elem2}{elem3}
-  % \ganttlink{elem3}{elem4}
+  \ganttbar{WP8}{3}{4}
+  \ganttlink[link type=s-s]{elem0}{elem1}
+  \ganttlink[link type=s-s]{elem0}{elem2}
+  \ganttlink[link type=s-s]{elem0}{elem4}
+  \ganttlink[link type=s-s]{elem1}{elem2}
+  \ganttlink[link type=s-s]{elem1}{elem4}
+  \ganttlink[link type=s-s]{elem1}{elem5}
+  \ganttlink[link type=s-s]{elem2}{elem3}
+  \ganttlink[link type=s-s]{elem5}{elem4}
 \end{ganttchart}
 \end{tikzpicture}
+
 }
 
 \bigskip
