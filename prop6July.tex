@@ -1,4 +1,11 @@
 %TXA M$ studentship. Appsem, Types
+%TXA-Jes. obj, summary,acad ok. impact summary from p2i
+
+%Katya HD HoTT difficult math for PL. We have a track record of
+%redilding it!
+
+%Why homotopty ... uniquely HD
+%Why has no one done it before. Have we balls or insight
 
 %Good research, someone will do it, we want to be the first.
 %Everyone else ... mathemarticians wanting to formalise mathematics
@@ -15,6 +22,12 @@
 
 %Jor
 %Balance
+%We conjecture that
+%  the sophisticated mathematical techniques used within HoTT make it
+%  inaccessible to programming language researchers.
+
+
+
 
 %Overeall: Excellent research, excellent people, excellent impact,
 %important research
@@ -382,54 +395,45 @@ the 2013 SIGPLAN Programming Languages Software awards while HoL is
 used extensively by Intel~\cite{harrison:sfm}. The technology behind
 these systems is also exploited by more mainstream languages with
 significant industrial deployment such as Haskell, OCaml, Scala and
-C\#.
+C\#. 
 
-{\bf The Project.} Such systems have fundamental limitations, \eg when
-programming with quotients (identifying objects upto an equivalence
-relation), supporting abstraction (invariance under different
-representations of the same structure) and extensional reasoning
-(proving programs with the same behaviour are the same). This reflects
-an even more fundamental problem --- we lack a satisfactory
-computational theory of equality.  {\em Homotopy Type Theory} (HoTT)
-is widely regarded as a breakthrough capable of solving
-%is widely regarded as a breakthrough with the potential to solve 
-these and other problems.
-To realise this potential, we propose a synthesis of theoretical, applied, and impact-focussed research.
+{\bf The Problem with Equality:} However, such systems have
+fundamental limitations, \eg when programming with quotients
+(identifying objects upto an equivalence relation), supporting
+abstraction (invariance under different representations of the same
+structure) and extensional reasoning (proving programs with the same
+behaviour are the same). These limitations are manifestations of
+an even more fundamental problem unresolved for over 40
+years, namely the lack of a satisfactory computational theory of
+equality. The problem is that, to be computational (\eg to allow proof
+checking), it is not enough to know when things are equal and we must
+instead know how we proved such an equality. And then one needs to
+address the question of when such proofs are equal! This leads to a
+intricate higher dimensional structure which we have so far not
+understood.
 
-%We will use HoTT to transform the foundations of software
-%construction and verification as follows:
-%with great potential to solve these and many other
-%problems.
-%HoTT paths homotopies, hgher.
-%, \eg Prof Awodey was just awarded a $\$7.5$M grant to use HoTT to
-%transform the foundations of mathematics. 
-%This complementary project will 
-%similarly transform the 
-%foundations of programming languages and
-%formal verification:
+{\bf Homotopy Type Theory:} HoTT is widely regarded as a breakthrough
+capable of solving this problem via a revolutionary new understanding
+of type theory based on homotopy theory. Types are regarded as
+\emph{spaces}; terms are \emph{points} within a space; and equality is
+represented by \emph{paths} in a space. Decades of research in
+homotopy theory has uncovered the structural information
+contained within such paths and HoTT uses this structural
+information as the basis of a new computational theory of
+equality. Excitingly, within homotopy theory, one naturally studies
+higher homotopies of paths between paths and this gives exactly the
+understanding of the higher dimensional structure of equality we
+lacked. The importance of HoTT can be seen from the ACM
+including the HoTT book~\cite{hott-book} on its list of notable books
+of 2013, the Special Year on HoTT in Princeton where 30 of the world's
+leading researchers spent a year developing HoTT, and the recent award
+of a complementary of $\$ 7.5$m to US mathematician Steve Awodey to
+use HoTT to redevelop the foundations of mathematics.
 
-%To realise this potential, we propose the following three pronged
-%research strategy:
-
-
-% %~\footnote{For example, 
-% %some of
-% %the world's leading experts spent a year in Princeton at the
-% %Special Year on Homotopy Type Theory and, recently, 
-% %Prof
-% %Steve Awodey was awarded a grant of $\$7.5$M to use HoTT to
-% %transform the foundations of mathematics.}.
-% To realise this potential, we propose a synthesis of theoretical,
-% applied, and impact-focussed research.
-%{\em Homotopy Type Theory} (HoTT) is widely regarded as a
-%significant innovation where equalities are regarded as paths in a
-%space. 
-%This project aims to use
-%these foundational advances in our understanding of equality to
-%similarly transform the foundations of programming languages and
-%formal verification. To achieve this, we propose a synthesis of
-%theoretical, applied, and impact-focussed research.
-
+{\bf The Project:} HoTT has just as much potential to
+transform the foundations of programming. We will leap
+ahead of the field via the following
+synthesis of theoretical, applied, and impact-focussed research.
 
 $\;\;\; \;\;\;$ {\em Theoretical Foundations.} 
 Almost all our understanding of HoTT is classical and hence
@@ -456,24 +460,22 @@ $\;\;\;\;\;\;$ {\em Programming Language and Verification Tools.} The key
   learn from, and experiment with, our results. Their practical
   experiences will also feed back into our research (WP4,8).
 
-  {\bf Calibre, Ambition, Adventure and Distinctiveness} The potential
-  of HoTT to solve one of the deepest and most fundamental problems in
-  programming languages and verification --- namely the efficient
-  computational treatment of equality/representational invariance ---
-  demonstrates our ambition to transform the field. The proposal's
-  calibre is demonstrated by the depth and range of the
+  {\bf Quality, Ambition, Adventure and Distinctiveness} Our goal of
+  using HoTT to transform the foundations of programming languages by
+  delivering an efficient computational treatment of
+  equality/representational invariance demonstrates our ambition. The
+  proposal's quality is demonstrated by the depth and range of the
   state-of-the-art ideas deployed and by the stature of our
-  collaborators. The proposal's adventure is demonstrated by its
-  scope, ranging from fundamental research (WP1,2,3) to programming
-  languages and verification (WP5,6,7) to impact generation via case
-  studies (WP4,8). As for distinctiveness, our goal of turning
-  cutting-edge foundational development in HoTT into
-  state-of-the-art programming language and verification tools
-  distinguishes us from others who typically focus on one or the
-  other. Indeed, as confirmed by our collaborators, we know of no
-  other groups who share our ambition to construct HoTT-based
-  programming languages and verification tools, let alone apply them
-  to specific case studies. The distinctiveness of our goals is
+  collaborators. The proposal's adventure is its interdisciplinary
+  nature in breaking down boundaries between homotopy theory, theoretical
+  computer science, programming languages and programming
+  verification. This is reflected in its scope, ranging from
+  fundamental research (WP1,2,3) to programming languages and
+  verification (WP5,6,7) to impact generation via case studies
+  (WP4,8). As for distinctiveness, we have checked with our
+  collaborators and know of no other groups who share our ambition to
+  construct HoTT-based programming languages and verification tools,
+  let alone apply them to specific case studies. The distinctiveness of our goals is
   matched by the distinctiveness of our ideas and expertise covering
   logical relations, containers, observational type theory, cubical
   type theory and dependently typed programming. This is crucial ---
@@ -483,21 +485,6 @@ $\;\;\;\;\;\;$ {\em Programming Language and Verification Tools.} The key
 
 \vspace*{-0.1in} 
 
-% %txa: added heartbleed.
-% %{\bf Cost of Software Failure:} The cost of software failure is truly
-% %staggering. Well known individual cases include the Mars Climate
-% %Orbiter failure ($\pounds 80$ million), Ariane Rocket disaster
-% %($\pounds 350$ 
-% %million), Pentium Chip Division failure ($\pounds 300$ million), most recently
-% %the heartbleed bug (upto $\pounds 250$K per server) and there are
-% %many, many more examples. Even worse, other software failures such as
-% %one in the Patriot Missile System and another in the Therac-25 radiation system
-% %have costs lives. More generally, a 2008 study by the US
-% %government estimated that faulty software costs the US economy
-% %$\pounds 40$ billion annually.  As a result, the human and economic
-% %importance of ensuring programs run without error is hard to
-% %over-estimate.
- 
 
 % %The worldwide software market is estimated at
 % %\pounds 250 billion pounds every year and this figure will grow
@@ -530,88 +517,25 @@ $\;\;\;\;\;\;$ {\em Programming Language and Verification Tools.} The key
 % The advanced
 % type-theoretic technology of these systems is raided by more
 % mainstream languages with significant industrial deployment such as
-% Haskell, OCaml, Scala and C\#.
+% Ha
 
-% {\bf The Project.} Despite these successes, such systems have a number
-% of short comings in crucial areas, \eg when programming with quotient
-% types, supporting abstraction (that is, invariance under different
-% representations of the same structure) and extensional reasoning
-% (proving that programs which behave the same are the same).  {\em
-%   Homotopy Type Theory} (HoTT) is widely regarded as a fundamental
-% innovation with great potential to address these and other problems.
-% Delivering this potential requires i) further
-% development of the foundations of HoTT; ii)
-% a programming language and verification environment based on
-% these foundations; and iii) applications demonstrating the effectiveness
-% of this environment to the broader software development community.
-% Therefore we intend to pursue a three-pronged
-% research programme based upon a synthesis of theoretical, applied and
-% impact-focussed research.
-
-% %The key concept in HoTT is to introduce a very liberal
-% %equality which identifies structures that are replacable.
-
-% %Its core is Voevodsky's {\em Univalence Axiom} asserting
-% %that all provable equalities can be internalised as paths or, more
-% %conceptually, that computation is invariant under change of
-% %representation of the entities we compute with. 
-
-
-
-% \begin{itemize}
-% \item {\bf Theoretical Foundations.} Almost all of our understanding
-%   of HoTT exists within a classical framework and hence cannot be used
-%   to develop programming language and verification tools. Nevertheless, the recent
-%   work by Coquand et al. strongly suggests a constructive presentation of HoTT
-%   is possible. We will develop both specific constructive models
-%   and a general constructive model theory of HoTT, and then complement
-%   these models with type theoretic presentations of them.
-% \item {\bf Programming Languages and Verification:} The key
-%   deliverable of the second strand of our research will be a
-%   programming language which simultaneously acts as a verification
-%   environment based upon HoTT. This is likely to become a major
-%   step forward in programming languages design and influence
-%   the development of all current and future systems in this area.
-% \item {\bf Generating Impact:} Developing new and fundamentally
-%   better ways to construct formally verified software is not just an
-%   end in itself, but is also a key prerequisite for engaging others do
-%   do so.  To help ensure uptake of our research by the wider
-%   community, we will produce a number of case studies which will allow
-%   users to experiment with our results; at the same time, their
-%   practical experiences with it will feed back into our research.
-% \end{itemize}
-
-% {\bf Calibre and Ambition.} The foundational nature of HoTT, the
-% consequent potential for solving key open problems in programming
-% languages and formal verification research, and the resulting
-% potential applications to software correctness attest to the quality
-% and calibre of this project. Our ambition is demonstrated by the
-% breadth of our central belief that HoTT is not just a mathematical
-% foundation for type theory, but can also be turned into a programming
-% language and verification environment which --- in its treatment of
-% quotients, representational invariance and equality --- will become the
-% benchmark standard which current and future systems will seek to
-% emulate.
 
 \vspace*{-0.1in} 
 \section{Scientific and Technological Background.}
 \vspace*{-0.1in} 
 
 {\bf Programming Languages.} Abstraction is essential in programming
-as identifying common structure ensures code is clear,
-clean, and concise. This leads to high-level
-programming languages with expressive type systems capable of closing
-the {\em semantic gap} between what programmers know about
-computational entities and what their types can express about them.
+as identifying common structure ensures code is clear, clean, and
+concise. This leads to high-level programming languages with
+expressive type systems capable of closing the gap between what
+programmers know about their code and what their types can express.
 The current state-of-the-art are the {\em dependently typed
-  programming languages} mentioned above where
-the type of a program can express a
+  programming languages} where the type of a program can express a
 continuum of precision --- from basic assertions up to a complete
-specification --- about its behaviour. This proposal will
-develop the first of a new breed of 
-such languages which advance the state-of-the-art by offering a
-powerful yet computationally tractable notion of equality, and thereby bring to
-reality the goal of programming up to invariance of representation.
+specification --- about its behaviour. This proposal will develop the
+first of a new breed of such languages which offer a powerful yet
+computationally tractable notion of equality, thereby achieving the
+the goal of programming up to invariance of representation.
 
 
 %transform
@@ -632,8 +556,8 @@ system. We will transform the area by producing a system where
 objects with the same behaviour can indeed be proven equal.
 
 
-{\bf Type Theory.} Underlying formal verification systems and
-programming languages is the subject of type theory. The
+{\bf Type Theory.} Type theory underlyies formal verification systems and
+programming languages. The
 Curry-Howard correspondence asserts that programs and proofs are
 actually the same thing, \eg proofs are just particular forms of
 programs --- developing sophisticated type theories thus advances both 
@@ -652,23 +576,20 @@ solution to this most fundamental of problems.
 {\bf Observational Type Theory (OTT) and Logical Relations:} OTT was
 proposed by Altenkirch and McBride~\cite{alti:ott-conf} as a step
 towards such a stronger equality. While the equality type of MLTT is
-defined uniformly over types, OTT defines an extensional and
-decidable equality by induction on the type structure. However, the
-{\em equality of types} themselves is rigidly structural, preventing 
-conversion of proofs about one type into proofs about an equivalent type. As
-HoTT can be seen as a proof-relevant extension of OTT, our experience
-in OTT will be invaluable.
-% throughout the project. 
-Logical relations also use induction on type structure
-to define not equalities, but rather relations, over all
-types. They have already been
+defined uniformly over types, OTT defines an extensional and decidable
+equality by induction on the type structure. However, the {\em
+  equality of types} themselves is rigidly structural, preventing
+conversion of proofs about one type into proofs about an equivalent
+type. As HoTT can be seen as a proof-relevant extension of OTT, our
+experience in OTT will be invaluable. Logical relations also use
+induction on type structure to define not equalities, but rather
+relations, over all types. They have already been
 used~\cite{licataHarper:canonicity2d} to study a truncated form of
-HoTT. Further, cubical sets~\cite{BezemM:cubsmt} 
-arise naturally when one extends logical
-relations to higher dimensions via the pattern of set, relation,
-relation between relations etc. Ghani's EPSRC-funded research on
-logical relations will be used to inject advanced logical relations
-ideas, \eg higher dimensional logical relations, throughout
+HoTT. Further, cubical sets~\cite{BezemM:cubsmt} arise naturally when
+one extends logical relations to higher dimensions via the pattern of
+set, relation, relation between relations etc. Ghani's EPSRC-funded
+research on logical relations will be used to inject advanced logical
+relations ideas, \eg higher dimensional logical relations, throughout
 the project.
 
 
@@ -681,51 +602,25 @@ the project.
 % strength of propositional equality (= identity type)
 % strength of definitional equality beta
 
+{\bf Homotopy Type Theory.} HoTT introduces new ideas, \eg i) the new Univalence
+Axiom, introduced by Fields medalist Vladimir Voevodsky, asserting
+(roughly) that isomorphic types are equal; and ii) \emph{higher} inductive types (HITs)
+which go beyond the usual tree-like data types --- while lists are an
+inductive type, braids are lists with extra paths identifying lists up
+to twisting of any element past its neighbours, and bags are braids
+with paths-between-paths identifying braidings which yield the same
+permutation.  The interpretation of closed expressions of HoTT within
+the cubical sets model~\cite{BezemM:cubsmt, nominal} proves the basic
+feasibility of computing with the Univalence Axiom.  However, much
+work remains: closed expressions must be interpreted \emph{within}
+HoTT itself and not just within the model. Definitional equalities
+lost by the cubical interpretation (such as the computation rule for
+equality types) must be recovered. And, we need to build
+those programming language and verification tools and demonstrate their value via case studies --- exactly
+the central and distinctive core of this proposal.
 
-
-
-
-{\bf Homotopy Type Theory.} HoTT is a revolutionary new understanding of
-type theory based on intuitions from homotopy theory. Types are
-\emph{spaces}; terms are \emph{points} within a space; the equality
-type is the space of \emph{paths} in a space. Such paths contain
-non-trivial structural information enabling us to program and reason up to invariance of
-representation. The core of HoTT is the new Univalence Axiom,
-introduced by Fields medalist Vladimir Voevodsky, asserting (roughly)
-that isomorphic types are equal. HoTT is extensional and also 
-extends what we could previously do, e.g.\
-\emph{higher} inductive types (HITs) include the usual tree-like data
-types, but also include quotients \cite{alti:mpc04} and geometric
-objects such as the circle and sphere. HITs occur naturally in computer
-science, e.g. lists are an inductive type; braids are lists with extra
-paths identifying lists up to twisting of any element past its
-neighbours, and bags are braids with paths-between-paths identifying
-braidings which yield the same permutation. 
-The interpretation of closed expressions of HoTT within the cubical
-sets model~\cite{BezemM:cubsmt, nominal} proves the basic feasibility of computing
-with the Univalence Axiom. However, much work remains: closed
-expressions  must be interpreted  \emph{within} HoTT itself and 
-not just within the model. Definitional equalities lost by the cubical interpretation (such as
-the computation rule for equality types) must be recovered. Further, other models may
-offer better computational foundations for HoTT, so practical progress
-towards HoTT-based programming languages and verification tools needs
-the broader model theory we propose. And, finally, we need to build those
-tools and demonstrate their value via case studies --- exactly the central core of this
-proposal and exactly what makes this proposal
-distinctive from other research. 
-
-%txa: replacing
-% One of the key features of Coquand's model is that
-% the equality relation is defined recursively over the structure of
-% types using an internalised form of parametricity. 
-
-
-
-
-% Nevertheless, Coquand's and Huber's
-%work shows that producing programming languages and proof assistants
-%based upon HoTT is feasible in principle and we plan to
-%collaborate closely with them.
+% and exactly what makes this proposal
+%distinctive from other research.
 
 
 %Earleir motivation for OTT
@@ -746,9 +641,8 @@ distinctive from other research.
 \section{Methodology and Research Programme}
 \vspace*{-0.1in}
 
-Our methodology harnesses i) our distinctive
-experiences, ideas, results and
-competencies detailed within the work packages, our track records and the {\em
+Our overall methodology harnesses i) our distinctive
+ideas and competencies detailed within the work packages, our track records and the {\em
   Justification of Resources}; and 
 %different sources: i) our work on logical relations and on OTT
 %which can be seen as proof-irrelevant variants of what we propose; ii)
@@ -762,9 +656,8 @@ competencies detailed within the work packages, our track records and the {\em
 %theory; and 
 ii) our ongoing dialogue with our
 world-leading collaborators, and the workshop/events we intend to
-organise/attend to foster interaction. This balance of multiple sources ensure that we neither
-slavishly follow the hype that inevitably surrounds such a significant
-innovation, nor are unaware of current and future advances. The
+organise/attend to foster interaction. This ensures both rapid
+feedback on our results and that we are aware of advances elsewhere. The
 project is structured as follows.
 
 %divided into eight work packages, each having a named collaborator, a clear deliverable of
@@ -1221,7 +1114,7 @@ Collaborator: Andrew Kennedy.
 
 
 {\bf Relevance to Beneficiaries.} The introduction discussed the
-calibre, ambition, adventure and distinctiveness inherent in our
+quality, ambition, adventure and distinctiveness inherent in our
 recasting the foundations of programming languages and formal
 verification. As with most proposals, fellow academics will benefit
 from this proposal, but more excitingly, this proposal will have a
@@ -1336,26 +1229,24 @@ this is the right level of management.
 
 % UK HoTT exists!
 
-{\bf The RAs and Training.} As explained in the
-{\em Justification of Resources}, we require two RAs.
-Recent events such as the Trimester in Certified Proof in Paris
-and the Special Year on HoTT in Princeton have created a significant pool of
-potential RAs. Nevertheless, we will advertise widely to recruit the best RAs
-possible.  FPLab group, Leeds Logic, and MSP group meetings provide
-regular opportunities to report on research progress and generate new
-ideas, and will help integrate the RA into the project and the highly
-conducive local environments. Further training will include i) reading
-groups for studying relevant papers; ii) ensuring the RAs play
+{\bf The RAs and Training.} Research group meetings provide regular opportunities to report on
+progress, generate new ideas, and integrate the
+RAs into the local environments. Further training includes i)
+reading groups for studying relevant papers; ii) ensuring the RAs play
 prominent roles in meetings (eg UK HoTT, ScotCats, SPLS, MGS, FitA) we
-attend/organise; iii) writing of papers and grant proposals; and
-iv) leading research activities and helping mentor PhD students.
-The RAs will thus gain highly-desirable
-knowledge and skills and be well-positioned to lead future research
-and/or development work. This is vital as the development of
-next generation programming languages requires more work than the
-active workforce can handle. Overall, the proposed project will have
-high impact in terms of training.
+attend/organise; iii) writing of papers and grant proposals; and iv)
+leading research activities and helping mentor PhD students.  The RAs
+will thus be well-positioned to lead future research and/or
+development work. This is vital as the development of next generation
+programming languages requires more work than the active workforce can
+handle. Overall, the project will have high impact in terms
+of training.
 
+
+%As explained in the {\em Justification of
+ % Resources}, we require two RAs.  Recent events such as the Trimester
+%in Certified Proof i and the Special Year on HoTT in Princeton have
+%created a significant pool of potential RAs.
 
 %\vspace{-0.15in}
 
