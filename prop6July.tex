@@ -4,6 +4,8 @@
 %Katya HD HoTT difficult math for PL. We have a track record of
 %redilding it!
 
+%Whole > sum of parts. Each WPa small detailed step but collectively
+%produce something new. 
 %Why homotopty ... uniquely HD
 %Why has no one done it before. Have we balls or insight
 
@@ -912,7 +914,7 @@ Benton.  }
 HoTT as a formal verification system, the key properties of HoTT must
 be formally verified. Indeed, as Voevodsky pointed out
 \cite{voevodsky-ias14}, the complexity of the higher dimensional
-semantics of HoTT make a paper-based verification almost unfeasible,
+semantics of HoTT make a paper-based verification almost infeasible,
 and certainly not trustworthy. We begin by formally verifying in Agda
 the key properties of i) our model theory of HoTT as developed in WP1; and
 ii) our type theory for HoTT developed in WP2 which we will
@@ -1005,7 +1007,7 @@ such as Agda, Coq or Idris to increase impact by allowing users of
 these sytems access to our results.  We will do this in close
 collaboration with Idris developers (Edwin Brady), Coq developers (\eg
 Hugo Herbelin, Matthieu Sozeau) and Agda developers (Andreas Abel, Ulf
-Norrell).  {\em Deliverable: Basic software tools for a high level
+Norell).  {\em Deliverable: Basic software tools for a high level
 HoTT-based programming language.  Collaborator: Edwin Brady.  }
 
 
@@ -1060,8 +1062,9 @@ HoTT-based programming language.  Collaborator: Edwin Brady.  }
 %verification via HoTT. 
 Our final work package returns to our original motivation:
 we apply our research to real world software construction and
-verification and, by abstracting recurring and effective patterns that
-arise, we take the first steps in software engineering with HoTT! See {\em Pathways to
+verification and, by abstracting recurring patterns that
+arise, we take the first steps in software engineering with HoTT!
+Details are given in {\em Pathways to
   Impact}. {\em Deliverable: Case Studies of HoTT-based programming
   and verification. 
 Collaborator: Andrew Kennedy.
@@ -1121,9 +1124,8 @@ from this proposal, but more excitingly, this proposal will have a
 very significant, long-term impact on programmers beginning with those
 who are interested in formal verification and broadening out to the
 wider community. Many people are
-already intrigued by HoTT and our plan is to answer their needs by
-generating exactly the critical mass of examples of code and
-verification that will provide them with a gateway into HoTT. See {\em
+intrigued by HoTT and our critical mass of examples of verified code
+will provide them with a gateway into HoTT. See {\em
   Pathways to Impact} for details. 
  
 %\vspace*{0.02in}
@@ -1134,7 +1136,7 @@ verification that will provide them with a gateway into HoTT. See {\em
 The cost of software failure is truly staggering, \eg the annual cost
 to the US economy alone of avoidable software errors was estimated at
 $\$ 20$ and $\$60$ billion~\cite{grandchallenges} in 2002.  As a
-result, both EPSRC and the Grand Challenges in Computing both
+result, both EPSRC and the UK Grand Challenges in Computing both
 recognise formal methods guaranteeing software correctness as
 essential to the success of the UK's economy. For example, EPSRC is
 growing its funding in both programming languages and in programme
@@ -1146,18 +1148,20 @@ unified framework'' to compare approaches to formal verification,
 ``building an integrated suite of tools" to achieve formal
 verification, and ``a repository of formally specified and verified
 code'' as its three main objectives. The three strands of our research
-(foundational, language development, and impact-generating
-case studies) contribute in turn significantly to each of these objectives.
-The current state of the art is limited by a 40-year lack of a
-satisfactory treatment of equality within a programming language - by
-solving this problem our research will have great impact over the next
-10 to 50 years by becoming the cornerstone for the next generation of
-high-level programming languages and verification environments.  Over
-the long term, we will contribute to the emerging industry of formal
-verification and also to other research areas by providing tools to
+(foundational, language development, and impact-generating case
+studies) contribute significantly to each of these objectives in turn.
+Indeed, with the US support for HoTT, and the French support of the
+Coq system, this grant will help the UK to retain a strong position in
+the emerging industry of formal verification. Our tools are likely to become the
+cornerstone for the next generation of high-level programming
+and verification environments meaning our research will
+have great impact over the next 10 to 50 years. Over this time frame,
+we will also impact other research areas by providing tools to
 formally verify results and thereby increase trust in them. By
 increasing trust in software, our research also feeds into the EPSRC
-Digital Economy theme.
+Digital Economy theme, the Global Uncertainties 
+theme and contribute
+to cyber security.
 
 
 %In safety-critical situations - where
@@ -1180,27 +1184,27 @@ Digital Economy theme.
 {\bf Timeliness, Feasibility and Success Criteria.}  This research is
 extremely timely: in addition to our results, there have been
 ground-breaking recent advances in
-HoTT~\cite{ShulmanM:uniidh,BezemM:cubsmt, nominal} and Prof Awodey has
-just been awarded a \$7.5m complementary grant applying HoTT to the
-foundations of mathematics. Gambino is a member of that team, ensuring
-a swift and seamless communication of ideas between these projects. We
-are {\em exceptionally well-positioned} to execute the proposal ---
-see our track records and the {\em Justification of Resources} for our
-competancies. We are also {\em very well-balanced} in that Altenkirch,
+HoTT~\cite{ShulmanM:uniidh,BezemM:cubsmt, nominal} and Awodey has just
+been awarded a \$7.5m complementary grant applying HoTT to the
+foundations of mathematics. Gambino is a coinvestigator in that grant,
+while its key members (Awodey, Voevodsky and Coquand) are
+collaborators here --- this ensures swift and seamless communication
+between these projects.  Overall a succesful outcome is very realistic
+as evidenced by our track records and our competancies (see {\em
+  Justification of Resources}), our ideas and insights and by other
+ground-breaking recent advances in HoTT which together act as
+proof-of-concept for the proposal. The input of our collaborators and
+the highly active HoTT community further increases the likelihood of
+success. Success criteria for each work package are given clear
+deliverables. We are also {\em very well-balanced} in that Altenkirch,
 Gambino and Ghani are fully versed in foundations, Aktenkirch and
 McBride are adept at the implementation of programming languages, and
-Ghani and McBride already collaborate with Microsoft.
-Our collaborators are also well-balanced across the scope of the
-proposal. Overall a succesful outcome is very realistic, as
-evidenced by our ideas and insights and by other ground-breaking
-recent advances in HoTT which together act as proof-of-concept for the
-proposal. The input of our collaborators and the highly active HoTT
-community further increases the likelihood of success. Success criteria for each work package are given as clearly
-delineated deliverables.  The success criteria for the overall project
-are i) new syntactic and semantic foundations for HoTT; ii)
-programming language and verification tools for computing with HoTT;
-and iii) a code base of programs written in, and verified by, these
-tools.
+Ghani and McBride already collaborate with Microsoft.  Our
+collaborators are equally well-balanced across the scope of the
+proposal.  The success criteria for the overall project are i) new
+syntactic and semantic foundations for HoTT; ii) programming language
+and verification tools for computing with HoTT; and iii) a code base
+of programs written in, and verified by, these tools.
 
 % show applied researchers how HoTT aids their daily
 %practice.
@@ -1223,7 +1227,7 @@ our plans to collaborate
 with experts on each work package --- see {\em Pathways to Impact}. We
 will manage the project by 6-monthly team meetings and by asking our
 collaborators to formally review our progress after two years.  Our
-significant and successful track records of working together -
+significant and successful track records of working together ---
 including managing similar multi-institutional grants --- indicate
 this is the right level of management.
 
