@@ -1,3 +1,20 @@
+%WP8
+%First safety critical, then more generally ...
+%Balance, IAA, 3 monhs summer, Adam.
+%Say we dont do Agda scale systems so Power-esque quotes possible.
+%TIC
+%Wkshops, Summer Scools, IAA + 2 New IAA
+%WP8 does verification
+% Changyu
+
+%This project treads a
+%fine balance between being well scoped so that we can achieve theirs
+%goals within the allocated period of study while simultaneously being
+%ambitious enough to have a major and lasting impact upon how we
+%compute.  
+
+
+
   \documentclass[a4paper,11pt]{article}
 
 
@@ -131,16 +148,16 @@ Pathways to Impact}}\\[1ex]
 staggering. Well known individual cases include the Mars Climate
 Orbiter failure ($\pounds 80$ million), Ariane Rocket disaster
 ($\pounds 350$ million), Pentium Chip Division failure ($\pounds 300$
-million), and more recently the heartbleed bug (est.\ $\pounds 400$ million).
-There are many, many more examples. Even worse, other
+million), and more recently the heartbleed bug (est.\ $\pounds 400$
+million).  There are many, many more examples. Even worse, other
 software failures such as one in the Patriot Missile System and
 another in the Therac-25 radiation system have cost lives. More
 generally, a 2008 study by the US government estimated that faulty
-software costs the US economy $\pounds 40$ billion annually.  As a
-result, the human and economic importance of ensuring programs run
-without error is hard to over-estimate. Further, this importance will
-only grow significantly as software becomes ever more ubiquitous in
-our lives and economy.
+software costs the US economy $\pounds 100$ billion annually~\cite{cnet08}.
+As a result, the human and economic importance of ensuring programs
+run without error is hard to over-estimate. Further, this importance
+will only grow significantly as software becomes ever more ubiquitous
+in our lives and economy.
 
 Formal verification uses mathematical techniques to prove that
 programs actually perform the computations they are intended to
@@ -150,12 +167,13 @@ successful compilation of programs provides machine certification of
 their correctness. Language-based verification thus supports the
 development of software that is {\em correct by construction}, which
 is the logical conclusion of the persistent trend in software
-engineering toward ever earlier program verification; examples of
-their use are given in the main body of the proposal. Although the
-proposed research --- namely, the construction of the first of a new
-breed of programming language and verification environments based upon
-HoTT --- does not lend itself to immediate industrial uptake, we have
-devised the following five-point plan for maximising its impact:
+engineering toward ever earlier program verification. Thus although
+the proposed research is definitely foundational in nature, the fact
+that it addresses a problem of such economic importance means that our
+Pathways to Impact document is stronger than many similarly
+foundational proposals, including dedicated impact generating
+workpackages --- each with industrial collaborators --- and plans for
+Impact Accelerator Accounts.
 
 \vspace*{0.02in}
 
@@ -170,40 +188,38 @@ publication of important results to keep pace with the rapidly
 changing nature of the discipline. We will therefore also seek to
 publish our key results in top conferences. We expect each of our work
 packages to result in at least two publications and several to result
-in more.
+in more. This is feasable as we have substantial track records of
+doing this.
 
-\vspace*{0.02in} $\bullet$ {\bf Scientific
-  Interaction:} %We are active members of our
-To increase the impact of our research, we will continue to interact
-with our research community via %the internet,
-conferences, research visits, and other meetings. For example, within the UK, Prof
-Ghani co-founded the Scottish Category Theory Seminar, while Dr McBride
-co-founded Fun in the Afternoon. They are both active members of the
-Scottish Programming Languages Seminar and SICSA, the Scottish computer science pooling
-body. More generally, Scotland is an excellent place to interact with
-other researchers on a regular informal basis: there
-are %. Indeed, there are
-strong programming languages and verification research groups at Edinburgh, Glasgow,
-Heriot Watt, and St Andrews, and there are also Scottish Theorem
-Proving meetings. Further afield, we will interact with researchers
-from across the UK. We have excellent contacts at all the major
-relevant research groups, and although distance will make interactions
-with them less frequent, that in itself will provide fresh
-perspectives as the grant progresses. 
+\vspace*{0.02in} $\bullet$ {\bf Scientific Interaction:} To increase
+the impact of our research, we will continue to interact with our
+research community via conferences, research visits, and other
+meetings. For example, within the UK, Prof Ghani co-founded the
+Scottish Category Theory Seminar, while Dr McBride co-founded Fun in
+the Afternoon. They are both active members of the Scottish
+Programming Languages Seminar and SICSA, the Scottish computer science
+pooling body. More generally, Scotland is an excellent place to
+interact with other researchers on a regular informal basis: there are
+strong programming languages and verification research groups at
+Edinburgh, Glasgow, Heriot Watt, and St Andrews, and there are also
+Scottish Theorem Proving meetings. Similarly Nottingham is a leading
+member of the MGS --- a collaboration with Birmingham and Leicester
+which provides educational training to young PhD students from accross
+Europe. Lcturing on our results there will increase impact. At a more
+detailed level, Strathclyde will host a specialist workshop in HoTT at
+Strathclyde in 2015 which has been partially funded by the LMS. This
+workshop is exactly the kind of high-impact event --- targeted at a
+small number of experts and in a very specific area --- that truly
+aids and disseminates research. Our experience is that by careful
+choice of time and location, we can attract significant numbers from
+both Europe and further afield to such workshops and the
+attractiveness of our workshops will be enhanced by inviting key
+leaders in the field. Because of the value of such workshops, we
+intend to hold a follow-up workshop during the project. Finally, to
+generate impact by educating others about our results and
+methodologies, we will hold a summer school at the end of the project
+which will provide an excellent platform to disseminate our results.
 
-At a more detailed level, we are already committed to host a
-specialist workshop in HoTT at Strathclyde towards the end of 2014,
-which has been partially funded by the LMS. This workshop is exactly
-the kind of high-impact event --- targeted at a small number of
-experts and in a very specific area --- that truly aids and
-disseminates research. Our experience is that by careful choice of
-time and location, we can attract significant numbers from both Europe
-and further afield to such workshops and the attractiveness of our
-workshops will be enhanced by inviting key leaders in the
-field. Because of the value of such workshops, we intend to hold a
-follow-up workshop during the project and have therefore requested
-funding for this within the proposal budget.  The cost is entirely
-minimal compared to the opportunities such focussed meetings offer.
 
 
 
@@ -220,31 +236,102 @@ quality of the proposed research. Secondly, working with these
 partners will mean that they are intimately involved with the proposed
 research; in effect, thorough dissemination of our ideas will be
 occurring with our partners even as the work is being done, and this
-will %kick-start the process of getting 
-help get our ideas out into the broader
+will help get our ideas out into the broader
 research community. Finally, drawing on a variety of different
 perspectives will help ensure that the proposed research does not
 become overly insular, but instead is outward-looking and
 solves important problems in key application areas.
 
+Our project partners are Prof~Steve Awodey (CMU, WP1), Prof Vladimir
+Voevodsky (Princeton, WP2), Dr Mike Schulman (UCSD, WP3), Dr Nick
+Benton (Microsoft, WP4), Dr Matthieu Sozeau (Paris 7, WP5),
+Prof~Thierry Coquand (Chalmers, WP6), Dr Edwin Brady (St. Andrews,
+WP7) and Dr Andrew Kennedy (Microsoft, WP8). One could not imagine a
+stronger set of collaborators --- in particular we have secured the
+involvement of an industrial partner for each of the impact generating
+work packages while Brady and Sozeau are leaders of the Idris and Coq
+projects and their involvement will ensure impact of our research via
+these projects. In terms of maximising impact, the collaboration with
+Kennedy is the closest we come to actual industrial crossover as
+Kennedy's original units of measure system has been incorporated as
+code in Microsoft's commercial $F\#$ language. Although it is not the
+main focus of the proposed research, we will certainly investigate
+this possibility.
+
+\vspace*{0.02in}
+
+$\bullet$ {\bf The Work Packages:} Our main consideration in
+developing our work packages is the quality of the scientific ideas
+underlying them as necessitated by high-impact research.
+For the specific research proposed here it also requires
+i) not just a much better understanding of the current
+literature on HoTT but substantial contributions to it; ii) not just
+theoretical ideas presented in a way that theoreticians can
+understand, but also concrete program languages and verification tools
+that programmers can understand and use on their own terms; and iii)
+not just evidence of the overall power of our new tools, but also a
+collection of examples outlining a methodology for deploying them.
+These three requirements guided our designing the work packages. WP1-3
+make significant contributions to the literature on HoTT while WP4
+generates impact from these work packages by developing examples to
+illustrate their results. Similarly, WP5-7 focusses on taking the
+theoretical results we will achieve and using them to build our
+tools. Finally, WP8 generates impact from these tools by developing
+case studies where they are used thereby making them
+directly usable by non-specialists.  Since WP8 focusses on 
+applying our results to existing industrial software, we have the
+capacity for generating actual industrial impact within this project
+and so we describe it here
+
+\vspace*{0.02in}
+
+$\bullet$ {\bf WP8: HoTT and Units of Measure} Andrew Kennedy of
+Microsoft Research recently~\cite{aknn97} incorporated dimensional
+analysis into type-checking, thus making it possible to detect
+dimensional errors --- such as the units mismatch that caused the Mars
+orbiter's famous \$125 million ``metric mishap''~\cite{wp99} --- at
+compile time. This feature, dubbed {\em units of measure}, has been
+integrated into Microsoft's $F\#$ and, more recently has been
+extended~\cite{ajk} to a more general notion of algebraically 
+
+from dimensional analysis to cover geomteric
+computation and security analysis.
+
+Kennedy's key observation is that units of measure form a free abelian
+group (i.e., can be multiplied and divided to get, e.g., square metres
+or metres per second). But in fact the algebraic structure on units
+can be generalised to arbitrary equational theories;~\cite{ajk}
+develops such {\em generalised units of measure}. Fortunately, the
+equational theory of abelian groups has a particualrly simple normal
+form but this wont be the case in other algenbra
 
 
-Our project partners are Prof~Steve Awodey (CMU, WP1), Prof~Thierry
-Coquand (Chalmers, WP2), ?? (??, WP3), Dr Nick Benton (Microsoft,
-WP4), ?? (??, WP5), ?? (??, WP6), ?? (??, WP7) and Dr Andrew Kennedy
-(Microsoft, WP8). We have thus secured the involvement of an
-industrial partner for each of the impact generating work packages.
-In terms of maximising impact, the collaboration with Kennedy is
-the closest we come to actual industrial crossover. Since Kennedy's
-original units of measure system has been incorporated into
-Microsoft's $F\#$, the generalisation we propose to develop may do so as
-well. Although it is not the main focus of the proposed research, we
-will certainly investigate this possibility. 
-%\item 
+
+
+Significantly, 
+each of~\cite{ajk} and~\cite{ken97} define exactly one logical relation
+for the unit-indexed language it considers; this hardwires in the
+notion of ``relatedness'' of programs, and so is too restrictive. To
+remedy this, we propose to develop an axiomatic approach to logical
+relations for units of measure. We will first use our axiomatic
+framework from WP1 to construct logical relations for Kennedy's
+original language; preliminary investigations show that, in addition
+to the usual structure required of fibrations, its base category will
+need an abelian group object. We will then use our framework to
+construct logical relations for the language of~\cite{ajk}. This will
+require that the base category has a representing object for the
+particular algebraic structure given by the equational theory. The
+flexibility of fibrations is crucial because different equational
+theories on units require different base categories.
 
 
 
 \vspace*{0.02in}
+
+$\bullet$ {\bf Impact Accelerator Accounts:} 
+
+\vspace*{0.02in}
+
 
 $\bullet$ {\bf The Stream Model:} One prevalent model of research is
 the {\em stream model}. Under this model, to solve a problem one looks
@@ -269,27 +356,6 @@ programming languages community.
 
 \vspace*{0.02in}
 
-$\bullet$ {\bf The Work Packages:} Our main consideration in
-developing our work packages is the quality of the scientific ideas
-underlying them as necessitated by high-impact research.
-For the specific research proposed here it also requires
-i) not just a much better understanding of the current
-literature on HoTT but substantial contributions to it; ii) not just
-theoretical ideas presented in a way that theoreticians can
-understand, but also concrete program languages and verification tools
-that programmers can understand and use on their own terms; and iii)
-not just evidence of the overall power of our new tools, but also a
-collection of examples outlining a methodology for deploying them.
-These three requirements guided our designing the work packages. WP1-3
-make significant contributions to the literature on HoTT while WP4
-generates impact from these work packages by developing examples to
-illustrate their results. Similarly, WP5-7 focusses on taking the
-theoretical results we will achieve and using them to build our
-tools. Finally, WP8 generates impact from these tools by developing
-case studies where they are used thereby making them
-directly usable by non-specialists.  
-
-\vspace*{0.02in}
 
 $\bullet$ {\bf Hidden Foundations:} Although the language and
 verification tools produced will be based on HoTT, what users of our
@@ -337,14 +403,13 @@ all of our research to the highest extent possible.
 
 \begin{multicols}{2}
 
-
-
-\bibitem{galorath11}
-Cost of Independent Software Verification \&
-Validation. 2011. At {\tt http://www.galorath.com/wp/}\\
-{\tt cost-of-independent-software-verification}\\
-{\tt -validation-ivv.php}
-
+%
+%
+%\bibitem{galorath11}
+%Cost of Independent Software Verification \&
+%Validation. 2011. At {\tt http://www.galorath.com/wp/}\\
+%{\tt cost-of-independent-software-verification}\\
+%{\tt -validation-ivv.php}
 
 
 \bibitem{cnet08}
@@ -352,7 +417,21 @@ Total economic cost of insecure software: \$180 billion a year in the
 U.S. 2008. At {\tt http://news.}\\
 {\tt cnet.com/8301-13846$\_$3-9978812-62.html}
 
+\bibitem{wp99}
+Mystery of Orbiter Crash Solved. Available at
+{\tt http://www.tysknews.com/Depts/Metrication}\\
+{\tt /mystery$\_$of$\_$orbiter$\_$crash$\_$solved.htm} 
 
+\bibitem{aknn97}
+A. Kennedy,  {\em Relational parametricity and units of measure},
+Procs. of POPL'97, 442-455. ACM Press, 1997.
+
+
+\bibitem{ajk}
+R. Atkey, P. Johann and A. Kennedy, 
+{\em 
+Abstraction and invariance for algebraically indexed types}
+Procs. of POPL'13, 87-100. ACM Press, 2013.
 
 
 
