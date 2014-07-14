@@ -332,16 +332,16 @@ on a 3-year EPSRC grant on proof-theoretical aspects of HoTT.
 {\bf Formal Verification.} The cost of software failure is truly
 staggering\footnote{see the sections on National Importance and
   Pathways to Impact.}. There are many successful approaches to
-software verification (\eg testing, model checking etc) with the most
+software verification (\eg testing, model checking etc), with the most
 rigorous offering mathematical guarantees of software
 correctness. However, the complexity of modern software means that
 hand-written mathematical proofs can be untrustworthy and this has led
 to a growing desire for machine-checked proofs of software
 correctness. Several decades of pioneering work in the UK and
-elsewhere have culminated in systems such as Agda, Coq, Epigram, HoL,
+elsewhere have culminated in systems such as Agda, Coq, Epigram, HOL,
 Idris, Isabelle, NuPRL, Twelf, and the Trellys project which are
 having significant impact, \eg Coq won both the 2013 ACM Software and
-the 2013 SIGPLAN Programming Languages Software awards while HoL is
+the 2013 SIGPLAN Programming Languages Software awards while HOL is
 used extensively by Intel~\cite{harrison:sfm}. The technology behind
 these systems is also exploited by more mainstream languages with
 significant industrial deployment such as Haskell, OCaml, Scala and
@@ -351,7 +351,7 @@ C\#.
 fundamental limitations, \eg when programming with quotients
 (identifying objects upto an equivalence relation), supporting
 abstraction (invariance under different representations of the same
-structure) and extensional reasoning (proving programs with the same
+structure) and extensional reasoning (proving that programs with the same
 behaviour are the same). These limitations are manifestations of
 an even more fundamental problem unresolved for over 40
 years, namely the lack of a satisfactory computational theory of
@@ -373,11 +373,11 @@ information as the basis of a new computational theory of
 equality. Excitingly, within homotopy theory, one naturally studies
 higher homotopies of paths between paths and this gives exactly the
 understanding of the higher dimensional structure of equality we
-lacked. The importance of HoTT can be seen from the ACM
-including the HoTT book~\cite{hott-book} on its list of notable books
+lacked. The importance of HoTT can be seen from ACM's
+inclusion of the HoTT book~\cite{hott-book} on its list of notable books
 of 2013, the Special Year on HoTT in Princeton where 30 of the world's
 leading researchers spent a year developing HoTT, and the recent award
-of a complementary of $\$ 7.5$m to US mathematician Steve Awodey to
+of a complementary of $\$ 7.5$M to US mathematician Steve Awodey to
 use HoTT to redevelop the foundations of mathematics.
 
 {\bf The Project:} HoTT has just as much potential to
@@ -506,7 +506,7 @@ system. We will transform the area by producing a system where
 objects with the same behaviour can indeed be proven equal.
 
 
-{\bf Type Theory.} Type theory underlyies formal verification systems and
+{\bf Type Theory.} Type theory underlies formal verification systems and
 programming languages. The
 Curry-Howard correspondence asserts that programs and proofs are
 actually the same thing, \eg proofs are just particular forms of
@@ -795,7 +795,7 @@ More ambitiously, we will %-- time permitting --
 investigate extensions such as coinductive HITs, mixed
 inductive/coinductive HITs \cite{txa:mpc2010g}, 
 inductive-inductive~\cite{alti:catind2} and
-inductive-recursive~\cite{DS:indrec,ghani:fibredIR} HITs. The latter would be useful
+inductive-recursive~\cite{DS:indrec,alti:tlca13-small-ir} HITs. The latter would be useful
 in WP5 since it offers a more concise representation of dependently
 typed syntax~\cite{chapman2009type} by introducing
 constructors and the representation of definitional equality at the
@@ -854,7 +854,7 @@ treatment of Lawvere Theories within HoTT.  Collaborator: Nick
 Benton.  }
 
 
-{\bf WP5 Formalisation of Meta-Theory of HoTT.}  As we intend to use
+{\bf WP5 Formalisation of the Meta-Theory of HoTT.}  As we intend to use
 HoTT as a formal verification system, the key properties of HoTT must
 be formally verified. Indeed, as Voevodsky pointed out
 \cite{voevodsky-ias14}, the complexity of the higher dimensional
@@ -866,7 +866,7 @@ formalise with HITs developed in WP3.  In this less ambitious initial
 phase we will take an an axiomatic approach to HoTT (i.e., adding
 univalence and HITs as postulates). To replace these postulates with
 computational interpretations, we will later take a more ambitious
-approach, switch from Agda to the system developed in WP6 and WP7
+approach and switch from Agda to the system developed in WP6 and WP7,
 thereby enabling a partial formalisation of HoTT within itself.
 %We begin by formalising the existing model
 %theory (\eg the cubical sets model) in conventional Type Theory using
@@ -888,9 +888,9 @@ system and impact the formal verification community as the first
 instance of formal verification in a {\em HoTT-based} environment, but
 it will also establish that HoTT (like any foundational theory) can
 describe its own meta-theory. Risk of failure in our basic goal is low
-as we - and others - have begun formalising parts of HoTT. Further, our
-experience of formalising type theory in itself~\cite{} makes us well
-positioned wrt our more ambitious goal. Either way, no other WPs are
+as we --- and others --- have begun formalising parts of HoTT. Further, our
+experience of formalising type theory in itself~\cite{mcbride:outrageous} makes us well
+positioned with respect to our more ambitious goal. Either way, no other WPs are
 dependent on WP5. {\em Deliverable: Formally verified proofs of the
 key properties of HoTT.  Collaborator: Matthieu Sozeau.  }
 
@@ -940,19 +940,20 @@ that our approach is feasible in principle.  {\em Deliverable: A
 language developed in WP6 more usable by adding high-level syntax for
 (higher) inductive types and by integrating known technology such as
 implicit arguments. There is a real problem here in that HoTT is
-incompatible with structural recursion as termination fails. We will
-tackle this by building on recent work by Cockx \cite{cockx-without-k}
-to find minimal restrictions on pattern matching which do not destroy
-termination when combined with HoTT. Our more ambitious goal will be
-to extend these initial results and solve the open problem of
-integrating pattern matching with HITs. We will also explore the
-possibility of adding compilation and interfaces to other languages
-such as Agda, Coq or Idris to increase impact by allowing users of
-these sytems access to our results.  We will do this in close
-collaboration with Idris developers (Edwin Brady), Coq developers (\eg
-Hugo Herbelin, Matthieu Sozeau) and Agda developers (Andreas Abel, Ulf
-Norell).  {\em Deliverable: Basic software tools for a high level
-HoTT-based programming language.  Collaborator: Edwin Brady.  }
+incompatible with unlimited pattern matching, and traditional
+termination checking becomes unsound. We will tackle this by building on
+recent work by Cockx \cite{cockx-without-k} to find minimal
+restrictions on pattern matching which do not destroy consistency when
+combined with HoTT, and extend termination checking to take equivalences into account. Our more ambitious goal will be to extend these
+initial results and solve the open problem of integrating pattern
+matching with HITs. We will also explore the possibility of adding
+compilation and interfaces to other languages such as Agda, Coq or
+Idris to increase impact by allowing users of these sytems access to
+our results.  We will do this in close collaboration with Idris
+developers (Edwin Brady), Coq developers (\eg Hugo Herbelin, Matthieu
+Sozeau) and Agda developers (Andreas Abel, Ulf Norell, Nils Anders Danielsson).  {\em
+  Deliverable: Basic software tools for a high level HoTT-based
+  programming language.  Collaborator: Edwin Brady.  }
 
 
  % A central question which needs to be
@@ -1078,9 +1079,9 @@ will provide them with a gateway into HoTT. See {\em
 % 400$ billion per year~\cite{gartner}, and will grow significantly in
 % real terms as software becomes ever more ubiquitous. 
 The cost of software failure is truly staggering, \eg the annual cost
-to the US economy alone of avoidable software errors was estimated at
+to the US economy alone of avoidable software errors was estimated between
 $\$ 20$ and $\$60$ billion~\cite{grandchallenges} in 2002.  As a
-result, both EPSRC and the UK Grand Challenges in Computing both
+result, both EPSRC and the UK Grand Challenges in Computing
 recognise formal methods guaranteeing software correctness as
 essential to the success of the UK's economy. For example, EPSRC is
 growing its funding in both programming languages and in programme
@@ -1129,11 +1130,11 @@ to cyber security.
 extremely timely: in addition to our results, there have been
 ground-breaking recent advances in
 HoTT~\cite{ShulmanM:uniidh,BezemM:cubsmt, nominal} and Awodey has just
-been awarded a \$7.5m complementary grant applying HoTT to the
+been awarded a \$7.5M complementary grant applying HoTT to the
 foundations of mathematics. Gambino is a coinvestigator in that grant,
 while its key members (Awodey, Voevodsky and Coquand) are
 collaborators here --- this ensures swift and seamless communication
-between these projects.  Overall a succesful outcome is very realistic
+between these projects.  Overall a successful outcome is very realistic
 as evidenced by our track records and our competancies (see {\em
   Justification of Resources}), our ideas and insights and by other
 ground-breaking recent advances in HoTT which together act as
@@ -1141,7 +1142,7 @@ proof-of-concept for the proposal. The input of our collaborators and
 the highly active HoTT community further increases the likelihood of
 success. Success criteria for each work package are given as clear
 deliverables. We are also {\em very well-balanced} in that Altenkirch,
-Gambino and Ghani are fully versed in foundations, Aktenkirch and
+Gambino and Ghani are fully versed in foundations, Altenkirch and
 McBride are adept at the implementation of programming languages, and
 Ghani and McBride already collaborate with Microsoft.  Our
 collaborators are equally well-balanced across the scope of the
