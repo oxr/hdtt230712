@@ -50,10 +50,10 @@
 \setganttlinklabel{s-f}{}
 
 \begin{tikzpicture}[y=0.5cm]  
-\begin{ganttchart}[x unit=3.5cm,y unit chart=.5cm,y unit title=.5cm,vgrid,
+\begin{ganttchart}[x unit=1.75cm,y unit chart=.5cm,y unit title=.5cm,vgrid,
 canvas/.append style={fill=none, draw=black!5, line width=.75pt},
 hgrid style/.style={draw=black!5, line width=.75pt},
-vgrid={*1{draw=black!5, line width=.75pt}},
+vgrid={*1{draw=black!4,dashed,line width=.5pt},*1{draw=black!5, line width=.75pt}},
   title/.style={draw=none, fill=black!5},
 %  title label node/.append style={below=0pt},
   include title in canvas=false,
@@ -77,19 +77,19 @@ vgrid={*1{draw=black!5, line width=.75pt}},
 %,
 % bar top shift=-0.1, 
  bar height=0.5
-  ]{1}{4}
-  \gantttitle{2015}{1}
-  \gantttitle{2016}{1}
-  \gantttitle{2017}{1}
-  \gantttitle{2018}{1}\\
-  \ganttbar{WP1}{1}{2}\\
-  \ganttbar{WP2}{1}{2}\\
-  \ganttbar{WP3}{2}{3}\\
-  \ganttbar{WP4}{3}{4}\\
-  \ganttbar{WP5}{1}{2}\\
-  \ganttbar{WP6}{2}{3}\\
-  \ganttbar{WP7}{3}{4}\\
-  \ganttbar{WP8}{3}{4}
+  ]{1}{8}
+  \gantttitle{2015}{2}
+  \gantttitle{2016}{2}
+  \gantttitle{2017}{2}
+  \gantttitle{2018}{2}\\
+  \ganttbar{WP1}{1}{4}\\
+  \ganttbar{WP2}{1}{4}\\
+  \ganttbar{WP3}{3}{6}\\
+  \ganttbar{WP4}{5}{8}\\
+  \ganttbar{WP5}{1}{4}\ganttbar{WP5}{7}{8}\\
+  \ganttbar{WP6}{3}{6}\\
+  \ganttbar{WP7}{5}{8}\\
+  \ganttbar{WP8}{6}{8}
   % \ganttlink[link type=s-s]{elem0}{elem1}
   % \ganttlink[link type=s-s]{elem0}{elem2}
   % \ganttlink[link type=s-s]{elem0}{elem4}
