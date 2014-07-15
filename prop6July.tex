@@ -25,7 +25,7 @@
 %Collabs time
 %EPSRC Impact guidance.
 
-
+%NI - Emerging Industry
 %Long lasting research
 %Dissing others (AS + PW). We are formal methods (GC)
 %rebuilding it - our track record of converting maths to PL
@@ -33,7 +33,7 @@
 %Why has no one done it before. Have we balls or insight
 %Good research, someone will do it, we want to be the first.
 %Challenge = relatively few span the gap, and amongst those, even
-%fewer have the resources.
+%fewer have the resources. But it will be done.
 
 %Leeds P2I
 %track records as insiders in main case (Bob John)
@@ -114,7 +114,6 @@
 \thispagestyle{plain}
 \begin{center}
   {\Large {\bf Homotopy Type Theory: Programming and Verification}}\\[1ex] 
-
 \vspace*{-0.1in}
 
 %  {\Large \bf Case for Support}\\[1ex]
@@ -136,7 +135,7 @@ Type Theory (HoTT); ii) his work on data types
 containers~\cite{alti:mpc04}, indexed
 containers~\cite{altenkirchGhaniHancockMcBrideMorris:indexedContainers}
 and
-induction-recursion~\cite{alti:tlca13-small-ir})
+induction-recursion~\cite{ghani:fibredIR})
 %~\cite{alti:mpc04,altenkirchGhaniHancockMcBrideMorris:indexedContainers,alti:cont-tcs}
 is directly related to WP3 which develops the theory of higher
 inductive types; iii) his work on the semantics of
@@ -231,7 +230,7 @@ which feed into WP2; ii) his work on data types
 containers~\cite{alti:mpc04}, indexed
 containers~\cite{altenkirchGhaniHancockMcBrideMorris:indexedContainers}
 and
-induction-recursion~\cite{alti:tlca13-small-ir})
+induction-recursion~\cite{ghain:fibredIR})
 %~\cite{alti:mpc04,altenkirchGhaniHancockMcBrideMorris:indexedContainers}
 feeds into WP3; iii) his work on
 induction-induction~\cite{alti:catind2} feeds into the
@@ -804,7 +803,7 @@ More ambitiously, we will %-- time permitting --
 investigate extensions such as coinductive HITs, mixed
 inductive/coinductive HITs \cite{txa:mpc2010g}, 
 inductive-inductive~\cite{alti:catind2} and
-inductive-recursive~\cite{DS:indrec,alti:tlca13-small-ir} HITs. The latter would be useful
+inductive-recursive~\cite{DS:indrec,ghani:fibredIR} HITs. The latter would be useful
 in WP5 since it offers a more concise representation of dependently
 typed syntax~\cite{chapman2009type} by introducing
 constructors and the representation of definitional equality at the
@@ -898,12 +897,12 @@ instance of formal verification in a {\em HoTT-based} environment, but
 it will also establish that HoTT (like any foundational theory) can
 describe its own meta-theory. Risk of failure in our basic goal is low
 as we --- and others --- have begun formalising parts of HoTT. Further, our
-experience of formalising type theory in itself~\cite{mcbride:outrageous} makes us well
+experience of formalising type theory in itself~\cite{easy} makes us well
 positioned with respect to our more ambitious goal. Either way, no other WPs are
 dependent on WP5. {\em Deliverable: Formally verified proofs of the
 key properties of HoTT.  Collaborator: Matthieu Sozeau.  }
 
-
+%cite conors outrageous
 
 
 
@@ -948,19 +947,18 @@ that our approach is feasible in principle.  {\em Deliverable: A
 {\bf WP7: A High Level Programming Language.} We will make the
 language developed in WP6 more usable by adding high-level syntax for
 (higher) inductive types and by integrating known technology such as
-implicit arguments. There is a real problem here in that HoTT is
+implicit arguments. There is a real problem here --- HoTT is
 incompatible with unlimited pattern matching, and traditional
 termination checking becomes unsound. We will tackle this by building on
 recent work by Cockx \cite{cockx-without-k} to find minimal
 restrictions on pattern matching which do not destroy consistency when
-combined with HoTT, and extend termination checking to take equivalences into account. Our more ambitious goal will be to extend these
+combined with HoTT, and extend termination checking to take equivalences into account. Our more ambitious goal is to extend these
 initial results and solve the open problem of integrating pattern
 matching with HITs. We will also explore the possibility of adding
-compilation and interfaces to other languages such as Agda, Coq or
+compilation and interfaces to languages such as Agda, Coq or
 Idris to increase impact by allowing users of these sytems access to
-our results.  We will do this in close collaboration with Idris
-developers (Edwin Brady), Coq developers (\eg Hugo Herbelin, Matthieu
-Sozeau) and Agda developers (Andreas Abel, Ulf Norell, Nils Anders Danielsson).  {\em
+our results.  We will work in close collaboration with developers of
+Idris (Brady), Coq (\eg Herbelin, Sozeau) and Agda (Abel, Norell, Danielsson).  {\em
   Deliverable: Basic software tools for a high level HoTT-based
   programming language.  Collaborator: Edwin Brady.  }
 
