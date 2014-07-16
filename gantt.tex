@@ -82,14 +82,14 @@ vgrid={*1{draw=black!4,dashed,line width=.5pt},*1{draw=black!5, line width=.75pt
   \gantttitle{2016}{2}
   \gantttitle{2017}{2}
   \gantttitle{2018}{2}\\
-  \ganttbar{WP1}{1}{4}\\
-  \ganttbar{WP2}{1}{4}\\
-  \ganttbar{WP3}{3}{6}\\
-  \ganttbar{WP4}{5}{8}\\
+  \ganttbar{WP1}{1}{3}\\
+  \ganttbar{WP2}{2}{5}\\
+  \ganttbar{WP3}{4}{6}\\
+  \ganttbar{WP4}{6}{8}\\
   \ganttbar{WP5}{1}{4}\ganttbar{WP5}{7}{8}\\
   \ganttbar{WP6}{3}{6}\\
   \ganttbar{WP7}{5}{8}\\
-  \ganttbar{WP8}{6}{8}
+  \ganttbar{WP8}{7}{8}
   % \ganttlink[link type=s-s]{elem0}{elem1}
   % \ganttlink[link type=s-s]{elem0}{elem2}
   % \ganttlink[link type=s-s]{elem0}{elem4}
@@ -107,40 +107,59 @@ vgrid={*1{draw=black!4,dashed,line width=.5pt},*1{draw=black!5, line width=.75pt
 
 {\bf Relationships between workpackages:} The following direct
 relationships between workpackages feed into the design of the above
-Gantt Chart. WP1 and WP2 can start immediately because, while WP2 is
-influenced by WP1, we can begin WP2 by developing Altenkirch's Cubical
-type theory. WP5 can start immeidately as it starts with the
-formalisation of the cubical set model before proceeding to formalise
-the results of WP1 and WP2. WP3 and WP6 start later so that the results of
-WP1 and WP2 can feed into it. WP4, WP7 start even later so that the
-results of WP3 and WP6 can feed into them. Finally, WP8 starts last so
-that the maximum results will 
+Gantt Chart. WP1,5 start immediately as both have no prerequisites ---
+the later will begin by formalising the cubical set model. We want to
+start WP2 early as this is one of the key workpackages and we already
+have a ideas to pursue within Altenkirch's Cubical Type Theory. As WP1
+progresses, its results will feed into WP2. Similarly, another key
+workpackage is our core language of WP6 so we start this one year into
+the project enabling the results of WP2 to feed into it. WP3 needs to
+be integrated with our syntactic and semantic foundations and so
+starts after these work packages have had time to deliver
+results. Similarly, WP7 builds upon WP6 and WP3 and so starts after
+those work packages have had time to deliver results. WP4 builds upon
+WP3 as is reflected in its start date. Finally, once most of our tools
+are developed, we start WP8.
+
+{\bf Duration:} The longest work package is WP5 as this is where our
+formal verificaton takes place. We want to formally verifiy as many
+rsults as possible, particularly about our model theory, about our
+type theory, about our programming language, and about our application
+to Units of Measure. As a result this is the longest workpackage which
+(with a break for language development) will be undertaken at both the
+beginning and the end of the project. The next most important
+workpackages in terms of overall goals and impact at WP2,6,7 and so
+they are allocated 2 years each. The other work packages are slightly
+less fundamental and so are given 1.5yrs apart from WP8 which we think
+will only need 1yr as WP8 is more tightly scoped than the other
+workpackages and so probably requires only one year.
+
+Nevertheless, there is flexibility in these lengths to either extend
+or shorten workpackages as the pace of progress within them becomes
+evident. For example, if our work on WP6,7 delivers the requird
+platform, we will start work on WP8 earlier and look for extensions
+to the research proposed. The timing and duration of these work
+packages means we are in a fortunate position in that both the more
+theoretical RA at Nottignham (WP1-4) and the more applied RA (WP5-8)
+will not have to work on more than one work package at a time.
+
+{\bf Leadership:} WP1 will be jointly led by Nottignham and Leeds as
+both sites have considerable experience there. Having joint leadership
+in this work package will not be a problem due to the close proximity
+and the experiece we have gained of working together over this
+proposal. Indeed, this will be advantageous as the Nottigham RA will
+get to work closely with Gambino. Ghani's experience in category
+theory will make him a secondary contributor on WP1. WP2-4 will be led
+at Nottingham as Altenkirch has signfiicant epxerience in all of these
+areas. Neverthless, McBride's experience in type theory and Ghani's
+experience in logical relations will mean they are secondary
+contributors to WP2. All investigators have experince in, and hence
+will contribute to, WP3. Ghani and McBride will similarly contribute
+to WP4 because of their work on effects. WP5-8 will be led at
+Strathclyde but Altenkirch will be a secondary contributor to
+WP5,6,7. McBride will take the lead on WP5,6,7 while Ghani will take
+the lead on WP8 because of his experience working with Kennedy on
+Units of Measure.
 
 
-{\bf Workloads:} RA1 will over the more theoretical research of WP
-
-
- feeds directly into WP2 and WP3 and hence preceeds
-them. WP2 feeds dirctly into 
-
-
-
-
-The work will start simultaneously in Leeds on Semantic
-Foundations (WP1), in Nottingham on Univalent Type Theory (WP2) and in
-Strathclyde by work on Formalisation of the required Meta-Theory
-(WP5). We expect this work to be heavily intertwined and proceeding in
-parallel. After progress is made on WP2, Nottingham will start looking
-into Higher Inductive Types (WP3) as we expect these to be useful in
-WP2 as well. As the work on WP1 progresses and comes to a successfull
-end, the attention of Nicola Gambino in Leeds will move to HITs as
-well, given his expertise in the area. In the meantime, Strathclyde,
-having laid the matfoundations in WP5 will begin formalising the Type
-Theory produced in WP2 in Nottingham. As the work on implementation
-progresses, higher level will be considered (WP6) with the findings
-back propagating both to WP5 and WP3. In the final stage Nottingham
-will seek apply the type theory to formalising effectful programming
-(WP4) while Strathclyde gradually move onto case studies. However the
-work on WP7 is not finished until it's utility is tested in WP8. Both
-teams will depend on Leeds support in foundational matters in this period. 
 \end{document}
