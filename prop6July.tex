@@ -36,8 +36,13 @@
 % the sophisticated mathematical techniques used within HoTT make it
 % inaccessible to programming language researchers.
 
+% Mention somewhere that HoTT is having an impact on the design of
+% (new versions of) Coq: there is ongoing work on implementing
+% mechanisms for higher inductive types (Barras). Also: Bauer is
+% working on new proof assistant based on ideas of Voevodsky.
 
-
+%potential vs achieved
+%Axioms vs type theories
 %We want to do impact
 %interdisciplinary
 %No overstretch (POC)
@@ -376,26 +381,23 @@ address the question of when such proofs are equal! This leads to a
 intricate higher dimensional structure which we have so far not
 understood.
 
-{\bf Homotopy Type Theory:} %HoTT was developed by 
-Fields medalist
-Vladimir Voevodsky introduced HoTT to enable machine checking of
-mathematical proofs.  HoTT is 
-a revolutionary new synthesis of type theory and homotopy
+{\bf Homotopy Type Theory:} Fields medalist Vladimir Voevodsky
+introduced HoTT to enable machine checking of mathematical proofs.
+HoTT is a revolutionary new synthesis of type theory and homotopy
 theory --- types are regarded as \emph{spaces}; terms are
 \emph{points} within a space; and equality is represented by
 \emph{paths} in a space. Decades of research in homotopy theory has
 understood the structure of such paths and HoTT uses this structure as
-the basis of a new theory of equality. Excitingly,
-within homotopy theory, one naturally studies higher homotopies of
-paths between paths and this gives exactly the %understanding of the
-higher dimensional structure of equality we lacked. %This is big ---
-HoTT is widely regarded as a huge advance, \eg
-articles on HoTT have appeared in the New Scientist and in Scientific
-American, the HoTT book~\cite{hott-book} is on the ACM's list
-of notable books of 2013, thirty of the world's leading researchers
-spent a year developing HoTT at Princeton's Special Year on HoTT, and
-Prof Awodey was recently awarded a complementary grant of $\$ 7.5$M to
-redevelop the entire foundations of mathematics using HoTT.
+the basis of a new theory of equality. Excitingly, within homotopy
+theory, one naturally studies higher homotopies of paths between paths
+and this gives exactly the higher dimensional structure of equality we
+lacked.  HoTT is widely regarded as a huge advance, \eg articles on
+HoTT have appeared in the New Scientist and in Scientific American,
+the HoTT book~\cite{hott-book} is on the ACM's list of notable books
+of 2013, thirty of the world's leading researchers spent a year
+developing HoTT at Princeton's Special Year on HoTT, and Prof Awodey
+was recently awarded a complementary grant of $\$ 7.5$M to redevelop
+the entire foundations of mathematics using HoTT.
 
 
 {\bf The Project:} We believe HoTT has just as much potential to
@@ -429,30 +431,27 @@ $\;\;\;\;\;\;$ {\em Programming Language and Verification Tools.} The key
   experiences will also feed back into our research (WP4,8).
 
   {\bf Quality, Ambition, Adventure and Distinctiveness} Our goal of
-  transforming the foundations of programming languages by
-  delivering the first of a new breed of HoTT-based programming languages
-%an efficient computational treatment of equality/representational
-%invariance 
-demonstrates our ambition. The
-  proposal's quality is demonstrated by the depth and range of the
-  state-of-the-art ideas deployed and by the stature of our
-  collaborators. The proposal's adventure is its interdisciplinary
-  nature in breaking down boundaries between homotopy theory, theoretical
-  computer science, programming languages and programming
-  verification. This is reflected in its scope, ranging from
-  fundamental research (WP1,2,3) to programming languages and
-  verification (WP5,6,7) to impact generation via case studies
+  transforming the foundations of programming languages by delivering
+  the first of a new breed of HoTT-based programming languages
+  demonstrates our ambition. The proposal's quality is demonstrated by
+  the depth and range of the state-of-the-art ideas deployed and by
+  the stature of our collaborators. The proposal's adventure is its
+  interdisciplinary nature in breaking down boundaries between
+  homotopy theory, theoretical computer science, programming languages
+  and programming verification. This is reflected in its scope,
+  ranging from fundamental research (WP1,2,3) to programming languages
+  and verification (WP5,6,7) to impact generation via case studies
   (WP4,8). As for distinctiveness, we have checked with our
   collaborators and know of no other groups who share our ambition to
   construct HoTT-based programming languages and verification tools,
-  let alone apply them to specific case studies. The distinctiveness of our goals is
-  matched by the distinctiveness of our ideas and expertise covering
-  logical relations, containers, observational type theory, cubical
-  type theory and dependently typed programming. Overall, our
-  central belief is that i) this research clearly ought to be
-  done for both its scientific and impact value; and
-   ii) our competancies, ideas and connections with HoTT's key developers
-  make us the ideal team.
+  let alone apply them to specific case studies. The distinctiveness
+  of our goals is matched by the distinctiveness of our ideas and
+  expertise covering logical relations, containers, observational type
+  theory, cubical type theory and dependently typed
+  programming. Overall, our central belief is that i) this research
+  clearly ought to be done for both its scientific and impact value;
+  and ii) our competancies, ideas and connections with HoTT's key
+  developers make us the ideal team.
 
 
 %This is crucial ---
@@ -482,9 +481,6 @@ computationally tractable notion of equality, thereby achieving the
 the goal of programming up to invariance of representation.
 
 
-%transform
-%ahead of the curve
-
 {\bf Program Verification.} While the advantages of the certainty
 afforded by mathematical proof has been recognised for centuries, this
 certainty is undermined by the risk of making mistakes in
@@ -500,22 +496,21 @@ system. We will transform the area by producing a system where
 objects with the same behaviour can indeed be proven equal.
 
 
-{\bf Type Theory.} Type theory underlies formal verification systems and
-programming languages. The
-Curry-Howard correspondence asserts that programs and proofs are
-actually the same thing, \eg proofs are just particular forms of
-programs --- developing sophisticated type theories thus advances both 
-the fields of programming and verification. Another
-major advance was Martin-L\"of's realisation that type theory needed
-to cover equality --- however, although 
-extensional Martin-L\"of Type Theory produced
-a strong equality, it had the fundamental flaw that type
-checking was undecidable. He then formulated intensional Martin-L\"of
-Type Theory (MLTT), but its equality proved to be too weak, \eg
-pointwise equal functions cannot be proven equal. Defining a strong yet
-computationally tractable equality has remained unresolved for 40
-years --- HoTT is so exciting and attracts so much attention precisely because it offers a
-solution to this most fundamental of problems.
+{\bf Type Theory.} Type theory underlies formal verification systems
+and programming languages. The Curry-Howard correspondence asserts
+that programs and proofs are actually the same thing, \eg proofs are
+just particular forms of programs --- developing sophisticated type
+theories thus advances both the fields of programming and
+verification. Another major advance was Martin-L\"of's realisation
+that type theory needed to cover equality --- however, although
+extensional Martin-L\"of Type Theory produced a strong equality, it
+had the fundamental flaw that type checking was undecidable. He then
+formulated intensional Martin-L\"of Type Theory (MLTT), but its
+equality proved to be too weak, \eg pointwise equal functions cannot
+be proven equal. Defining a strong yet computationally tractable
+equality has remained unresolved for 40 years --- HoTT is so exciting
+and attracts so much attention precisely because it offers a solution
+to this most fundamental of problems.
 
 {\bf Observational Type Theory (OTT) and Logical Relations:} OTT was
 proposed by Altenkirch and McBride~\cite{alti:ott-conf} as a step
@@ -537,48 +532,26 @@ relations ideas, \eg higher dimensional logical relations, throughout
 the project.
 
 
-%power of methods
-%absolutely vital
-%very clear evidence
-
-% invariance of representation = iso == equal
-%vs
-% strength of propositional equality (= identity type)
-% strength of definitional equality beta
-
-{\bf Homotopy Type Theory.} HoTT introduces new ideas, \eg i) the new Univalence
-Axiom, introduced by Fields medalist Vladimir Voevodsky, asserting
-(roughly) that isomorphic types are equal; and ii) \emph{higher} inductive types (HITs)
-which go beyond the usual tree-like data types, \eg while lists are an
-inductive type, braids are lists with extra paths identifying lists up
-to twisting of any element past its neighbours, and bags are braids
-with paths-between-paths identifying braidings which yield the same
+{\bf Homotopy Type Theory.} HoTT introduces new ideas, \eg i) the new
+Univalence Axiom, introduced by Fields medalist Vladimir Voevodsky,
+asserting (roughly) that isomorphic types are equal; and ii)
+\emph{higher} inductive types (HITs) which go beyond the usual
+tree-like data types, \eg while lists are an inductive type, braids
+are lists with extra paths identifying lists up to twisting of any
+element past its neighbours, and bags are braids with
+paths-between-paths identifying braidings which yield the same
 permutation.  The interpretation of closed expressions of HoTT within
 the cubical sets model~\cite{BezemM:cubsmt, nominal} proves the basic
-feasibility of computing with the Univalence Axiom.  However, much
-work remains: closed expressions must be interpreted \emph{within}
-HoTT itself and not just within the model. Definitional equalities
-lost by the cubical interpretation (such as the computation rule for
-equality types) must be recovered. And, we need to build
-those programming language and verification tools and demonstrate their value via case studies --- exactly
-the central and distinctive core of this proposal.
-
-% and exactly what makes this proposal
-%distinctive from other research.
+feasibility of computing with Univalence.  However, much work remains:
+we need a type theory (as opposed to a model) within which closed
+expressions are interpreted.  Definitional equalities lost by the
+cubical interpretation (such as the computation rule for equality
+types) must be recovered. And, we need to build those programming
+language and verification tools and demonstrate their value via case
+studies --- exactly the central and distinctive core of this proposal.
 
 
-%Earleir motivation for OTT
-%Grant numbers below
 
-%Mention somewhere the prizes that Coq has been recently been awarded, as proof that this is cutting-edge technology
-
-%Mention somewhere that HoTT is having an impact on the design of (new versions of) Coq: there is ongoing work on implementing mechanisms for higher inductive types (Barras). Also: Bauer is working on new proof assistant based on ideas of Voevodsky.
-
-%Mention somewhere also the importance of type theory, Coq, Agda for
-%computer-assisted formalization of mathematical proofs 
-
-%Why us and not the United States of Awodey. Strong definitional
-%equlity. 
 
 \vspace*{-0.2in}
 
@@ -587,36 +560,11 @@ the central and distinctive core of this proposal.
 
 Our overall methodology harnesses i) our distinctive
 ideas and competencies detailed within the work packages, our track records and the {\em
-  Justification of Resources}; and 
-%different sources: i) our work on logical relations and on OTT
-%which can be seen as proof-irrelevant variants of what we propose; ii)
-%our work on the implementation of dependently typed programming
-%languages (Epigram and $\Pi\Sigma$
-%\cite{alti:pisigma-new,alti:checking}); iii) our work on datatypes
-%(containers, indexed containers, induction-induction and
-%induction-recursion)
-%\cite{alti:fossacs03,alti:tlca03,alti:icalp04,alti:jpartial,alti:mpc04,alti:cont-tcs,alti:regular,alti:cats07,alti:jcats07,alti:lics09,
- % alti:catind2}; iv) our work on constructing internal models of type
-%theory; and 
-ii) our ongoing dialogue with our
+  Justification of Resources}; and ii) our ongoing dialogue with our
 world-leading collaborators, and the workshop/events we intend to
 organise/attend to foster interaction. This ensures both rapid
 feedback on our results and that we are aware of advances elsewhere. The
 project is structured as follows.
-
-%divided into eight work packages, each having a named collaborator, a clear deliverable of
-%relatively low risk (to ensure the overall project's success) as well
-%as a more ambitious goal:
-
-%with WP1
-%hosted in Leeds, WP2-4 in Nottingham and WP5-8 in Strathclyde. Of course
-%the reality is that we will continue our established practice of
-%working closely together.
-
-%Argue in justification for resources
-%Explain compute below 
-
-
 
 {\bf WP1: Semantic Foundations of HoTT.}  %We seek semantic insights
 %for HoTT akin to those provided by Cartesian closed categories for
