@@ -1,10 +1,10 @@
-%Ondrej
-%Case studies -> Case study. Or WP4 + WP8
+%Ondrej CV.
 
+%URL for CTT
+
+%case studies includes WP4
 %WP5 Methodology. Conor. Replace Chapman with CTM+NB
-%WPS structure: Problem, importance, why us = methodology. WP4/5
 %WP relationships and methodology (katya)
-%WPs: What, why, how, difficulty, risk, distinctiveness, deliverable. feasable
 %WP2 is fundamental so proof of concept/prep work done! 
 %Do WPS say waht they need to, eg wP5 verifies WP1,2,6
 %WP7 is still POC.
@@ -14,8 +14,9 @@
 %Frank, HoTT in HoTT, ??, ??, UoM
 %check leadership and seconds, esp WP4,5
 %All WPS are POCs for our technology.
-%Whole > sum of parts. Each WPa small detailed step but collectively
-%Flag Methodology
+%Whole > sum of parts. Each WPa small detailed step but
+%collectively. In feasability.
+
 
 %checks
 %====
@@ -24,26 +25,17 @@
 %EPSRC Impact guidance.
 %Brotherstone
 
+
 %Why no one else (JoR)
 %Indivdual small steps are being taken
 %==========
 %Developed by mathematicians
 %rebuilding it - our track record of converting maths to PL
 %Why has no one done it before. Have we balls or insight
-%Challenge = relatively few span the gap, and amongst those, even
-%fewer have the resources. But it will be done.
-%We conjecture that
-% the sophisticated mathematical techniques used within HoTT make it
-% inaccessible to programming language researchers.
-
-%Impact
-%=====
-% Mention somewhere that HoTT is having an impact on the design of
-% (new versions of) Coq: there is ongoing work on implementing
-% mechanisms for higher inductive types (Barras). Also: Bauer is
-% working on new proof assistant based on ideas of Voevodsky. (Impact)
 
 
+%Some constructions paper TXA OR
+%Unify JoR, WPs and TRs
 %potential vs achieved
 %Axioms vs type theories
 %We want to do impact
@@ -51,15 +43,18 @@
 %No overstretch (POC)
 %Collabs time
 %cite UoM fibrations? cubical TT draft.
-%RA1,2 cross competancies
 %Dissing others (AS + PW). We are formal methods (GC)
-%Leeds P2I
 %TXA M$ studentship. 
 %Management by planning
 %Video, CTT available
 %Coquand et al. Ghani, Neil Ghani, %Spell, fullsptop
-%Equalities of types and terms.
+%Equalities of types and terms. Universes.
 %Only type checking needs to be decidable, not type inference
+% or is it Fsharp (intro, p1)
+%check jes
+%TXA Vat
+% Reference consistency
+
 
 \documentclass[a4paper,11pt]{article}
 
@@ -152,7 +147,7 @@ effects~\cite{atkeyGhaniJacobsJohann:effects} is directly related to
 the application of HoTT to effects in WP4; and iv) his work on Units
 of Measure (via an Impact Accelerator Account grant held in
 collaboration with Microsoft) directly relates to WP8 which applies
-HoTT to computing with algebraic structures. More generally, Neil
+HoTT to computing with algebraically indexed types. More generally, Neil
 Ghani is a world expert on the use of semantic structures to drive the
 development of type theory and programming languages, exactly the
 methodology to be followed in this proposal.
@@ -163,7 +158,7 @@ grants.  Indeed, results obtained during his following EPSRC grants
 feed directly into this proposal: Theory And Applications of Induction
 Recursion (EP/G03298X/1), Reusability and Dependent Types
 (EP/G034109/1), Logical Relations for Program Verification
-(EP/K023837/1), and Theory and Applications Of Containers
+(EP/K023837/1), and Theory and Applications of Containers
 (EP/C511964/2). The first two of these were 3-site grants similar in
 nature to this proposal and thus demonstrates Ghani's track record in
 successfully managing distributed grants of this size. More generally,
@@ -205,7 +200,7 @@ are all of these grants of direct relevance to this project, but they
 show both his experience of working in large distributed grant
 projects and that our plans for generating industrial impact through
 Microsoft are built on solid and successful pre-existing
-foundations. Connections with Microsoft wil be further deepened by Dr
+foundations. Connections with Microsoft will be further deepened by Dr
 McBride working at Microsoft over the summer of 2014.  Dr McBride has
 also supervised two PhD students, 2 postdocs and currently supervises
 a further two PhD students. He also leads the MSP group.
@@ -253,7 +248,7 @@ Microsoft). Especially relevant for this project is
 Observational Equality For Dependently Typed Programming
 (EP/C512022/1), Theory And Applications of Induction Recursion
 (EP/G03298X/1), Reusability and Dependent Types (EP/G034109/1) and
-Theory and Applications Of Containers (EP/C511964/2).  Altenkirch,
+Theory and Applications of Containers (EP/C511964/2).  Altenkirch,
 Ghani and McBride collaborated successfully on the third grant above
 demonstrating their effectiveness as a team. More
 generally, Altenkirch is one of the leading researchers in HoTT as
@@ -404,11 +399,11 @@ transform the foundations of programming and will leap
 ahead of the field via the following
 synthesis of theoretical, applied, and impact-focussed research.
 
-$\;\;\; \;\;\;$ {\em Theoretical Foundations.} 
-Almost all our understanding of HoTT is classical and hence
-cannot be used to develop programming language and verification
-tools. However, the recent cubical sets model~\cite{BezemM:cubsmt,nominal} is constructive and
-thus strongly suggests that HoTT has a purely constructive
+$\;\;\; \;\;\;$ {\em Foundations.} 
+While most of our understanding of HoTT is classical, and hence
+cannot be used to develop programming and verification
+tools, the recent cubical sets model~\cite{BezemM:cubsmt,nominal} %is constructive and
+strongly suggests that HoTT has a purely constructive
 presentation. We will develop both specific constructive models and a
 general constructive model theory of HoTT, and complement these models
 with type-theoretic presentations of them (WP1,2,3).
@@ -429,28 +424,46 @@ $\;\;\;\;\;\;$ {\em Programming Language and Verification Tools.} The key
   learn from, and experiment with, our results. Their practical
   experiences will also feed back into our research (WP4,8).
 
-  {\bf Quality, Ambition, Adventure and Distinctiveness} Our goal of
+  {\bf Quality, Ambition, Adventure and Distinctiveness:} Our goal of
   transforming the foundations of programming languages by delivering
   the first of a new breed of HoTT-based programming languages
-  demonstrates our ambition. The proposal's quality is demonstrated by
-  the depth and range of the state-of-the-art ideas deployed and by
+  demonstrates our ambition. Quality is demonstrated by
+  the depth and range of our state-of-the-art ideas and by
   the stature of our collaborators. The proposal's adventure is its
   interdisciplinary nature in breaking down boundaries between
   homotopy theory, theoretical computer science, programming languages
-  and programming verification. This is reflected in its scope,
+  and verification. This is reflected in its scope,
   ranging from fundamental research (WP1,2,3) to programming languages
   and verification (WP5,6,7) to impact generation via case studies
-  (WP4,8). As for distinctiveness, we have checked with our
-  collaborators and know of no other groups who share our ambition to
-  construct HoTT-based programming languages and verification tools,
-  let alone apply them to specific case studies. The distinctiveness
-  of our goals is matched by the distinctiveness of our ideas and
-  expertise covering logical relations, containers, observational type
-  theory, cubical type theory and dependently typed
-  programming. Overall, our central belief is that i) this research
-  clearly ought to be done for both its scientific and impact value;
-  and ii) our competancies, ideas and connections with HoTT's key
-  developers make us the ideal team.
+  (WP4,8). As for distinctiveness, neither we nor our collaborators
+  know of other groups who share our ambition to construct HoTT-based
+  programming languages and verification tools, let alone apply them
+  to specific case studies. The distinctiveness of our goals is
+  matched by the distinctiveness of our ideas and expertise covering
+  logical relations, containers, observational type theory, cubical
+  type theory and dependently typed programming.  Overall, our central
+  belief is that i) this research clearly ought to be done for both
+  its scientific and impact value; and ii) our experience in both the
+  sophisticated mathematical foundations of HoTT, and in the intricate
+  engineering techniques of implementation makes us the ideal team.
+  Indeed, the breadth of this research prevents most others from undertaking
+  this project.
+
+%competancies, ideas and connectons with HoTT's key
+%  developers make us the ideal team. 
+
+
+
+%
+
+% to
+%  undertake this proposal when many others couldn't. 
+
+
+% coolabs?
+%hard maths + hard implementation 
+%Constructive models
+
 
 
 %This is crucial ---
@@ -557,31 +570,28 @@ studies --- exactly the central and distinctive core of this proposal.
 \section{Methodology and Research Programme}
 \vspace*{-0.1in}
 
-Our overall methodology harnesses i) our distinctive
-ideas and competencies detailed within the work packages, our track records and the {\em
-  Justification of Resources}; and ii) our ongoing dialogue with our
-world-leading collaborators, and the workshop/events we intend to
-organise/attend to foster interaction. This ensures both rapid
-feedback on our results and that we are aware of advances elsewhere. The
-project is structured as follows.
+Our overall methodology harnesses i) our distinctive ideas and
+competencies detailed below and within  our track records and
+the {\em Justification of Resources}; ii) our ongoing dialogue with
+our world-leading collaborators, and iii) the workshops we 
+organise to foster interaction. Additionally, each work package has
+its own problem description, specific methodology, risk analysis, 
+concrete deliverable, and  associated collaborator. 
 
-{\bf WP1: Semantic Foundations of HoTT.}  %We seek semantic insights
-%for HoTT akin to those provided by Cartesian closed categories for
-%the simply typed $\lambda$-calculus.  
-A proper model theory for
-HoTT is essential because i) a general model theory 
-guides the design of different presentations and implementations of
-HoTT; ii) models of HoTT provide algebraic techniques to reason
-about the correctness of implementations which complement syntactic
-techniques; and iii) specific implementations of HoTT can
-be proven sound by giving a specific model of them.  These models
-need to be constructive so that all programs reduce to a normal form.
-%While
-%the standard model of HoTT-based upon simplicial sets is not
-%constructive, the cubical sets model currently being developed~\cite{BezemM:cubsmt} is constructive and raises the question of understanding it
-%within a general model theory.
-We will: i) analyse existing models ({e.g.}
-groupoids~\cite{HofmannM:groitt}, simplicial
+%This ensures both rapid
+%feedback on our results and that we are aware of advances elsewhere. 
+%The
+%project is structured as follows.
+
+{\bf WP1: Semantic Foundations of HoTT.}  A proper model theory for
+HoTT is essential because i) a general model theory guides the design
+of different presentations and implementations of HoTT; ii) models of
+HoTT provide algebraic techniques to reason about the correctness of
+implementations which complement syntactic techniques; and iii)
+specific implementations of HoTT can be proven sound by giving a
+specific model of them.  These models need to be constructive so that
+all programs reduce to a normal form.  We will: i) analyse existing
+models ({e.g.}  groupoids~\cite{HofmannM:groitt}, simplicial
 sets~\cite{KapulkinC:simmuv}, cubical sets~\cite{BezemM:cubsmt}) and
 isolate exactly how they ensure constructivity or where they fail to
 do so --- in the latter case, we will attempt to constructivise them;
@@ -590,18 +600,16 @@ by isolating the essential features of these models and by adapting
 known methods to construct Quillen model structures to the setting of
 HoTT ({c.f.}~\cite{ShulmanM:uniidh}, which however does not cover the
 cubical sets model).  The challenge is to take the recent advances in
-axiomatizing models of type theory
-({e.g.}~\cite{AwodeyS:natmtt}) and blend in the additional structure of HoTT. In terms
-of risk, i) is certainly achievable as it involves only the
-analysis of existing concrete models, while ii) is a more ambitious
-goal. Nevertheless, our expertise on semantics of type
-theories~\cite{neil2014relParamDep}, homotopical
-algebra~\cite{GambinoN:homl2c,GambinoN:weilsh}, and
+axiomatizing models of type theory ({e.g.}~\cite{AwodeyS:natmtt}) and
+blend in the additional structure of HoTT. In terms of risk, i) is
+certainly achievable as it involves only the analysis of existing
+concrete models, while ii) is a more ambitious goal. Nevertheless, our
+expertise on semantics of type theories~\cite{neil2014relParamDep},
+homotopical algebra~\cite{GambinoN:homl2c,GambinoN:weilsh}, and
 $\omega$-groupoids~\cite{alti:csl12} makes even this ambitious goal
 feasible. {\em Deliverables: A broad collection of models of HoTT
-mapping the design space of its syntactic presentations.
-Collaborator: Steve Awodey.
-}
+  mapping the design space of its syntactic presentations.
+  Collaborator: Steve Awodey.  }
 
 
 
@@ -652,8 +660,8 @@ Collaborator: Steve Awodey.
 
 
 {\bf WP2: Univalent Type Theory.}  Possibly the biggest open problem
-in HoTT is the lack of a type theory which validates key HoTT concepts
-such as Univalence. Such a type theory must also be proved to retain key
+in HoTT is the lack of a type theory where key HoTT concepts
+such as Univalence are validated computationally as opposed to axiomatically. Such a type theory must be proved to retain key
 properties of traditional type theories such as strong normalisation,
 decidability of definitional equality, and canonicity ({i.e.}~all
 terms reduce to values). We must also establish the expressive power
@@ -661,15 +669,15 @@ of the associated equational theories, {e.g.}~by analyzing carefully
 whether computation rules hold definitionally or
 propositionally. Another key property (needed for WP5) is that these
 type theories should be expressive enough to describe their own
-models. These proprties will be established either directly or via the theory
+models. These properties will be established either directly or via the theory
 developed in WP1. We start with Altenkirch's observation \cite{txa-ihp14} that cubical
 sets share many similarities with logical relations in replacing the
 uniform identity type of intensional MLTT with a higher-dimensional
 equality designed to fit the structure of types. Altenkirch's proposed
-Cubical Type Theory formalises this idea by internalising logical
+Cubical Type Theory~\cite{alti-ctt} formalises this idea by internalising logical
 relations --- and adding Kan fillers --- so as to derive Univalence as a consequence. Indeed, the use
-of internal logical relations distinguishes our apporach from Brunerie
-and Licata.  The models from WP1 will drive refinement of our design
+of internal logical relations distinguishes our approach from Brunerie
+and Licata's (unpublished).  The models from WP1 will drive refinement of our design
 until we have a canonical presentation of HoTT. Our preparatory
 work~\cite{txa-ihp14}, and prior expertise in OTT
 \cite{alti:ott-conf}, normalisation by evaluation and big-step
@@ -677,8 +685,8 @@ reduction \cite{alti:lics96}, %alti:ctcs95,alti:flops04,txa:jtait
 strengthening definitional
 equality~\cite{Allais:2013:NEN:2502409.2502411}, and logical
 relations~\cite{neil2014relParamDep} ensures a high probability of
-delivering an effective presentation of HoTT.  {\em Deliverable: A
-  type theory for HoTT validating univalence.  Collaborator: Vladimir
+success.  {\em Deliverable: A
+  type theory validating Univalence.  Collaborator: Vladimir
   Voevodsky.  } 
 
 
@@ -707,33 +715,27 @@ delivering an effective presentation of HoTT.  {\em Deliverable: A
 
 {\bf WP3: Higher Inductive Types (HITs).}  We will accommodate HITs in
 the semantics developed in WP1 and the syntactic framework of WP2. To
-achieve this, we will first develop a universal HIT playing the role for
-HITs that W-types play for ordinary inductive
+achieve this, we will first develop a universal HIT playing the role
+for HITs that W-types play for ordinary inductive
 types~\cite{alti:cont-tcs}. This is feasible as partial progress has
 already been made: one can reduce HITs with higher dimensional
 constructors to HITs with only 0- and 1-dimensional ones (using the
-\emph{hub-and-spokes} construction~\cite{hott-book}).
-%fnf: is it counterproductive to cite the HoTT book here?
-Similarly, preliminary results suggest that our quotient
-containers~\cite{alti:mpc04} can be reduced
-to ordinary containers in a homotopical setting 
-%fnf: weak sentence below
-(using ideas of Gylterud~\cite{gylterud:thesis} and
-Kock~\cite{kock:groupoids}).
-%
-A secondary goal is to generate a high-level syntax for HITs as
-an alternative to the universal HIT in the same way that strictly
-positive types provide a grammar for defining 
-W-types~\cite{alti:cont-tcs}.  This will feed into WP7.
-More ambitiously, we will %-- time permitting --
-investigate extensions such as coinductive HITs, mixed
-inductive/coinductive HITs \cite{txa:mpc2010g}, 
+\emph{hub-and-spokes} construction~\cite{hott-book}). As further evidence, our
+preliminary results suggest that quotient
+containers~\cite{alti:mpc04} (special 1-dimensional HITs)
+can be reduced to containers in
+a homotopical setting (using ideas of Gylterud~\cite{gylterud:thesis}
+and Kock~\cite{kock:groupoids}).  Another basic goal is to generate a
+high-level syntax for HITs as an alternative to the universal HIT in
+the same way that strictly positive types provide a grammar for
+defining W-types~\cite{alti:cont-tcs}.  This will feed into WP7.  More
+ambitiously, we will %-- time permitting --
+investigate extensions such as coinductive HITs, 
 inductive-inductive~\cite{alti:catind2} and
-inductive-recursive~\cite{DS:indrec,ghani:fibredIR} HITs. The latter would be useful
-in WP5 since it offers a more concise representation of dependently
-typed syntax by introducing
-constructors and the representation of definitional equality at the
-same time.
+inductive-recursive~\cite{DS:indrec,ghani:fibredIR} HITs. The latter
+would be useful in WP5 since it offers a more concise representation
+of dependently typed syntax by introducing the representation of terms and 
+ definitional equality at the same time.
 %%fnf: the following is mentioned in WP7, and might fit better there:
 %We will also investigate a pattern matching syntax for HITs; this is
 %related again to WP7.
@@ -751,18 +753,19 @@ while progress on our more ambitious goal
 is not essential to the rest of the project. {\em Deliverable: A
   theory of HITs that is both foundational and can underpin the
   programming language developed in WP6 and WP7. 
-Collaborator: Michael Shulman. 
+Collaborator: Mike Shulman. 
 }
 
 {\bf WP4: Impact I --- Programming with Effects.}  Most programs
 interact with their environments, but such \emph{effectful} programs
 are inherently difficult to reason about.  Major advances
-were Moggi's~\cite{moggi:monad} realisation that effects can be
-modelled semantically by monads, Wadler's use of monads~\cite{wadler:monads} to structure
-effectful programs themselves and Plotkin and
-Power's~\cite{PlotkinPower:Lawvere} proof that many computational
-monads arise from Lawvere Theories, i.e.\ can be presented as
-effect-generating operations and equations.  Unfortunately, the lack
+were the semantic 
+modelling of effects by monads~\cite{moggi:monad}, the use of monads
+to structure
+effectful programs~\cite{wadler:monads} and the representation of many computational
+monads as Lawvere Theories, i.e. their presentation as
+effect-generating operations and
+equations~\cite{PlotkinPower:Lawvere}. Unfortunately, the lack
 of a satisfactory computational understanding of equality means that
 one is forced to program not in the quotient algebra as desired, but
 within the free algebra and then check (externally to the program)
@@ -773,35 +776,48 @@ hence efficiently and formally verify the program's
 correctness. Concretely, we will formalise both Lawvere Theories
 (using HITs to represent effectful computations) and their
 mathematical algebra (e.g.\ tensor products, sums) in HoTT.  This will
-simplify and extend i) McBride, Andjelkovic, and Lindley's effect
-handlers in Frank~\cite{conor:frank}; ii) Brady's effects library for
-Idris~\cite{brady:effects}; and iii) Bauer and Pretnar's treatment of
+simplify and extend i) McBride and Lindley's effect
+handlers in Frank~\cite{conor:frank}; ii) Benton, Hofmann and Nigam's Abstract Effects
+(see attached letter); iii) Brady's effects library for
+Idris~\cite{brady:effects}; and iv) Bauer and Pretnar's treatment of
  effects in Eff~\cite{bauer:eff}.  Our work will use the type theory of
 WP2, feed into the programming language of WP7, validate the
 theoretical research done by RA1 and generate impact by showing the
-relevance of HoTT to programming. Basic results are low risk as,
+relevance of HoTT to work by Benton at Microsoft. Basic results are low risk as,
 conceptually, we need only stitch together the treatment of quotients
 via HITs with that of effects via Lawvere theories.  However, more
 advanced effects (\eg indexed effects) or the full-scale integration
-of our results into WP7 is more ambitious. {\em Deliverable: A
-treatment of Lawvere Theories within HoTT.  Collaborator: Nick
+of our results into WP7 is more ambitious. {\em Deliverable: A HoTT
+treatment of Lawvere Theories.  Collaborator: Nick
 Benton.  }
 
 
-{\bf WP5 Formalisation of the Meta-Theory of HoTT.}  As we intend to use
-HoTT as a formal verification system, the key properties of HoTT must
-be formally verified. Indeed, as Voevodsky pointed out
+{\bf WP5 Formalisation of the Meta-Theory of HoTT.}  As we intend to
+use HoTT as a formal verification system, the key properties of HoTT
+must be formally verified. Indeed, as Voevodsky pointed out
 \cite{voevodsky-ias14}, the complexity of the higher dimensional
 semantics of HoTT make a paper-based verification almost infeasible,
-and certainly not trustworthy. We begin by formally verifying in Agda
-the key properties of i) our model theory of HoTT as developed in WP1; and
-ii) our type theory for HoTT developed in WP2 which we will
-formalise with HITs developed in WP3.  In this less ambitious initial
-phase we will take an an axiomatic approach to HoTT (i.e., adding
-univalence and HITs as postulates). To replace these postulates with
-computational interpretations, we will later take a more ambitious
-approach and switch from Agda to the system developed in WP6 and WP7,
-thereby enabling a partial formalisation of HoTT within itself.
+and certainly not trustworthy. We begin by formalising our current
+understanding of HoTT using current tools such as Agda. In this less
+ambitious initial phase we will take an an axiomatic approach to HoTT
+(i.e., adding univalence and HITs as postulates). As the project
+develops we will become more ambitous by i) formally verifying key
+results across all our work packages; and ii) replacing the axiomatic
+approach to HoTT with a computational one by switching from Agda to
+the system developed in WP6 and WP7, thereby enabling a partial
+formalisation of HoTT within itself. Therefore, WP5 will not only ensure the required level of trust in our
+system and impact the formal verification community as the first
+instance of formal verification in a {\em HoTT-based} environment, but
+it will also establish that HoTT (like any foundational theory) can
+describe its own meta-theory. Risk of failure in our basic goal is low
+as we have begun formalising parts of HoTT~\cite{alti:csl12,}. Further, our
+experience of formalising the syntax of type theory in itself~\cite{mcbride:outrageous,ghani:fibredIR,alti:catind2} makes us well
+positioned with respect to our more ambitious goals. Either way, no other WPs are
+dependent on WP5. {\em Deliverable: Formally verified proofs of the
+key properties of HoTT.  Collaborator: Matthieu Sozeau.  }
+
+%cite conors outrageous
+
 %We begin by formalising the existing model
 %theory (\eg the cubical sets model) in conventional Type Theory using
 %Agda --- this accompanies WP1. When moving on to the more syntactic
@@ -817,20 +833,6 @@ thereby enabling a partial formalisation of HoTT within itself.
 %While this approach seems unsound at
 %first glance, it is reasonable since it is unlikely that a bug in
 %the theory leads to an unsound formalisation of the metatheory.  
-Therefore, WP5 will not only ensure the required level of trust in our
-system and impact the formal verification community as the first
-instance of formal verification in a {\em HoTT-based} environment, but
-it will also establish that HoTT (like any foundational theory) can
-describe its own meta-theory. Risk of failure in our basic goal is low
-as we --- and others --- have begun formalising parts of HoTT. Further, our
-experience of formalising type theory in itself~\cite{easy} makes us well
-positioned with respect to our more ambitious goal. Either way, no other WPs are
-dependent on WP5. {\em Deliverable: Formally verified proofs of the
-key properties of HoTT.  Collaborator: Matthieu Sozeau.  }
-
-%cite conors outrageous
-
-
 
 {\bf WP6: Implementing a Core Programming Language.} In order to
 showcase the potential for HoTT-based programming languages to the
