@@ -1,12 +1,9 @@
 %Ondrej CV.
-%URL for CTT
+%URL for CTT - short!!!!
 %Status of Nott JES
 %Vat 
 
-%case studies includes WP4
-%WP5 Methodology. Conor. Replace Chapman with CTM+NB
 %WP relationships and methodology (katya)
-%WP2 is fundamental so proof of concept/prep work done! 
 %Do WPS say waht they need to, eg wP5 verifies WP1,2,6
 %WP7 is still POC.
 %In risk ok .. too much, too little? Feasability. Structured with
@@ -38,7 +35,6 @@
 %drafts out of track record
 %Unify JoR, WPs and TRs
 %potential vs achieved
-%Axioms vs type theories
 %We want to do impact
 %interdisciplinary
 %No overstretch (POC)
@@ -47,13 +43,9 @@
 %TXA M$ studentship. 
 %Management by planning
 %Coquand et al. Ghani, Neil Ghani, %Spell, fullsptop
-%Equalities of types and terms. Universes.
-%Only type checking needs to be decidable, not type inference
-% or is it Fsharp (intro, p1)
 %check jes
-%TXA Vat
-% Reference consistency
-
+%References consistency of citation and in bibliogrpahy
+%Axomatic vs type theoretic HoTT
 
 \documentclass[a4paper,11pt]{article}
 
@@ -357,7 +349,7 @@ the 2013 SIGPLAN Programming Languages Software awards while HOL is
 used extensively by Intel~\cite{harrison:sfm}. The technology behind
 these systems is also exploited by more mainstream languages with
 significant industrial deployment such as Haskell, OCaml, Scala and
-C\#. 
+F\#. 
 
 {\bf The Problem with Equality:} However, such systems have
 fundamental limitations, \eg when programming with quotients
@@ -557,8 +549,8 @@ feasibility of computing with Univalence.  However, much work remains:
 we need a type theory (as opposed to a model) within which closed
 expressions are interpreted.  Definitional equalities lost by the
 cubical interpretation (such as the computation rule for equality
-types) must be recovered. And, we need to build those programming
-language and verification tools and demonstrate their value via case
+types) must be recovered. And, we need to build programming
+language and verification tools, and demonstrate their value via case
 studies --- exactly the central and distinctive core of this proposal.
 
 
@@ -777,7 +769,7 @@ correctness. Concretely, we will formalise both Lawvere Theories
 mathematical algebra (e.g.\ tensor products, sums) in HoTT.  This will
 simplify and extend i) McBride and Lindley's effect
 handlers in Frank~\cite{conor:frank}; ii) Benton, Hofmann and Nigam's Abstract Effects
-(see attached letter); iii) Brady's effects library for
+(see Benton's attached letter); iii) Brady's effects library for
 Idris~\cite{brady:effects}; and iv) Bauer and Pretnar's treatment of
  effects in Eff~\cite{bauer:eff}.  Our work will use the type theory of
 WP2, feed into the programming language of WP7, validate the
@@ -841,36 +833,26 @@ wider programming languages
 community,%, and learn from their feedback,
 we will produce an implementation of the type theory of WP2.  Because
 of the amount of engineering work required to implement a programming
-language we will not, at this stage, attempt to implement advanced
-features such as a high-level syntax for datatypes, universe
-polymorphism, implicit arguments, or pattern matching. Instead, we
-will produce a basic proof of concept implementaton containing i) a
-prototypical implementation of a type checker; ii) an interpreter for
-the type theory computing values for closed expressions; and iii)
-incorporate the results from WP3 to support a generic version of
-HITs
-
-
-
-
-
-
-. The later is possible as we will use eliminators in our
-implementation and thereby avoid the problems of pattern matching (see WP7)
-
-
-
-We will use Haskell as an implementation language because we
-have had significant success with using Haskell to implement type
-checkers for dependently typed languages, including Epigram and
+language we will not, at this stage, implement advanced features such
+as a high-level syntax for datatypes, implicit arguments, or pattern
+matching. Instead, we will produce a basic proof of concept
+implementaton containing i) a prototypical implementation of a type
+checker; ii) an interpreter for the type theory computing values for
+closed expressions; and iii) incorporate the results from WP3 to
+support a generic version of HITs based upon eliminators. We will
+achieve this by adapting bidirectional type checking to the type
+theory of WP2, to get syntax directed rules from which a type checking
+algorithm can be read off. We will use Haskell as an implementation
+language because we have had significant success with using Haskell to
+implement similar type checkers for dependently typed languages,
+including Epigram and
 $\Pi\Sigma$~\cite{alti:checking,easy,alti:pisigma-new}.  In addition,
 our prototypical implementation of OTT will be particularly
-informative as it can be viewed as a precursor of HoTT.  We will build
-on Coquand and Huber's experiences with implementing the cubical sets
-model, which exploits nominal sets \cite{nominal}--- this also shows
-that our approach is feasible in principle.  {\em Deliverable: A
-  typechecker and evaluator for core HoTT.  Collaborator: Thierry
-  Coquand.  }
+informative as it can be viewed as a precursor of HoTT.  Coquand et
+al.'s interpretation of the axiomatic presentation of HoTT into their
+cubical sets model also shows that our goal is feasible. {\em
+  Deliverable: A typechecker and evaluator for core HoTT.
+  Collaborator: Thierry Coquand.  }
 
 % Coquand's and Huber's implementation of the cubical set model shows
 % that our approach is feasible in principle and we plan to collaborate
@@ -889,21 +871,31 @@ that our approach is feasible in principle.  {\em Deliverable: A
 
 {\bf WP7: A High Level Programming Language.} We will make the
 language developed in WP6 more usable by adding high-level syntax for
-(higher) inductive types and by integrating known technology such as
-implicit arguments. There is a real problem here --- HoTT is
-incompatible with unlimited pattern matching, and traditional
-termination checking becomes unsound. We will tackle this by building on
-recent work by Cockx \cite{cockx-without-k} to find minimal
-restrictions on pattern matching which do not destroy consistency when
-combined with HoTT, and extend termination checking to take equivalences into account. Our more ambitious goal is to extend these
-initial results and solve the open problem of integrating pattern
+(higher) inductive types and by integrating technology such as
+implicit arguments and pattern matching. There are real problems here
+--- HoTT is inconsistent with both unlimited pattern matching and with
+traditional termination checking. We will tackle the first problem by
+finding minimal restrictions on pattern matching which do not destroy
+consistency when combined with HoTT --- recent work by Cockx
+\cite{cockx-without-k}, building on McBride~\cite{viewftl}, shows this is feasable. 
+The problem with termination checking is that isomorphism of types
+does not preserve subterm structure.
+% and hence transporting a smaller
+%recursive call across an isomorphism need not result in a smaller
+%recursive call. 
+Our proposal is to use the proof relevant nature of
+HoTT to broaden the notion of size to include structural
+information about equivalences. More ambitiously we aim to
+solve the open problem of integrating pattern
 matching with HITs. We will also explore the possibility of adding
-compilation and interfaces to languages such as Agda, Coq or
-Idris to increase impact by allowing users of these sytems access to
-our results.  We will work in close collaboration with developers of
-Idris (Brady), Coq (\eg Herbelin, Sozeau) and Agda (Abel, Norell, Danielsson).  {\em
-  Deliverable: Basic software tools for a high level HoTT-based
-  programming language.  Collaborator: Edwin Brady.  }
+interfaces to Idris, Coq and
+Agda to increase impact by giving users of these systems access to
+our results. To do this, we will work closely 
+with the developers of
+Idris (Brady), Coq (Herbelin, Sozeau) and Agda (Abel, Norell). {\em Deliverable: A high level
+  HoTT-based
+programming language.  Collaborator: Edwin Brady.  
+}
 
 
  % A central question which needs to be
@@ -1035,25 +1027,25 @@ into HoTT. See {\em Pathways to Impact}.
 The cost of software failure is truly staggering, \eg the annual cost
 to the US economy alone of avoidable software errors was estimated
 between $\$ 20$ and $\$60$ billion~\cite{grandchallenges} in 2002.  As
-a result, both EPSRC and the UK Grand Challenges in Computing
-recognise formal methods guaranteeing software correctness as
-essential to the success of the UK's economy. For example, EPSRC is
-growing its funding in both programming languages and in programme
+a result, both EPSRC and the UK Grand Challenges in
+Computing~\cite{grandchallenges} recognise formal methods guaranteeing
+software correctness as essential to the UK's economy. For example,
+EPSRC is growing its funding in both programming languages and
 verification. Our project contributes to both of these
 areas. Similarly, Grand Challenge 6 seeks to create a ``body of code
 that has been verified to the highest standards of rigour'' and that
-is exactly the end goal of our project. Further, it sees
-``establishing a unified framework'' to compare approaches to formal
-verification, ``building an integrated suite of tools" to achieve
-formal verification, and ``a repository of formally specified and
-verified code'' as its three main objectives. The three strands of our
-research (foundational, language development, and impact-generating
-case studies) contribute significantly to each of these objectives in
-turn.  Indeed, formal verification is an emerging industry the UK
-would do well to support, especially given the US support for HoTT,
-and the French support of the Coq system. This is long lasting
-research, \eg our tools are likely to become the cornerstone for the
-next generation of high-level programming and verification
+is exactly the end goal of our project. Further, it sees i) ``a
+unified framework'' to compare approaches to formal verification; ii)
+``an integrated suite of tools" to achieve formal verification; and
+iii) ``a repository of formally specified and verified code'' as its
+three main objectives. The three strands of our research
+(foundational, language development, and impact generation) contribute
+significantly to each of these objectives in turn.  Indeed, formal
+verification is an emerging industry the UK would do well to support,
+especially given %the US support for HoTT, and
+the French support of the Coq system. This is long lasting research,
+\eg our tools are likely to become the cornerstone for the next
+generation of high-level programming and verification
 environments. Our research will thus have great impact over the next
 10 to 50 years.  Over this time frame, we will also impact other
 research areas by providing tools to formally verify results and
@@ -1073,7 +1065,9 @@ between these projects.  Overall a successful outcome is very realistic
 as evidenced by our track records and our competancies (see {\em
   Justification of Resources}), our ideas and by recent 
 ground-breaking advances in HoTT which together act as
-proof-of-concept for the proposal. The input of our collaborators and
+proof-of-concept for the proposal. The central importance of WP2 to the
+overall proposal is reflected in the extra preparatory work for it~\cite{alti-ctt,txa-ihp14}.
+The input of our collaborators and
 the highly active HoTT community further increases the likelihood of
 success. We are also {\em very well-balanced} in that Altenkirch,
 Gambino and Ghani are fully versed in foundations, Altenkirch and
@@ -1096,24 +1090,22 @@ them, we have also minimised risk {\em between} work packages by
 ensuring the deliverables required to enable the project to proceed
 are relatively low-risk --- see the {\em Gantt chart} for details on
 this and on how the work packages interact, who will lead them, and
-who will be secondary contributors. We
-will manage the project by 6-monthly team meetings and by asking our
-collaborators to formally review our progress after two years.  Our
-significant and successful track records of working together ---
-including managing similar multi-institutional grants --- indicate
-this is the right level of management. Research group meetings provide regular opportunities to report on
-progress, generate new ideas, and integrate the
-RAs into the local environments. Further training includes i)
-reading groups for relevant papers; ii) ensuring the RAs play
-prominent roles in meetings (eg UK HoTT, ScotCats, SPLS, MGS, FitA) we
-attend/organise; iii) writing of papers and grant proposals; iv)
-leading research activities and mentoring PhD students; and v)
-participation in the large and active HoTT comunity. The RAs
-will thus be able to lead future research/development work
---- vital as  
-programming languages research requires more work than the active workforce can
-handle. Overall, the project will thus have high impact in terms
-of training.
+who will be secondary contributors. We will manage the project by i)
+6-monthly team meetings; and ii) asking our collaborators to formally
+review our progress after two years.  Our successful
+track records of working together --- including managing similar
+multi-institutional grants --- indicate this is the right level of
+management. Research group meetings provide regular opportunities to
+report on progress, generate new ideas, and integrate the RAs into the
+local environments. Further training includes i) reading groups for
+relevant papers; ii) ensuring the RAs play prominent roles in meetings
+(eg UK HoTT, ScotCats, SPLS, MGS, FitA) we attend/organise; iii)
+writing of papers and grant proposals; iv) leading research activities
+and mentoring PhD students; and v) participation in the large and
+active HoTT comunity. The RAs will thus be able to lead future
+research/development work --- vital as programming languages research
+requires more work than the active workforce can handle. The
+project will thus have high impact in terms of training.
 
 
 
