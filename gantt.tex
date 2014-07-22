@@ -1,17 +1,165 @@
+%relationships between WPs
+%length
+%lead and seconds
+%WP5 in Yr4, WP8 = 1.5 yrs
+
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
+\usepackage{mathptmx}
+\usepackage{epsf}           %\input{epsf}
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{url}
+%\usepackage[dvips]{graphics}
 \usepackage[dvips,pdftex]{graphicx}
+\usepackage[dvips,all]{xy}
+\usepackage{multicol}
+\usepackage{natbib}
+\setlength{\bibsep}{0.0pt}
 
+\usepackage{hyperref}
+
+%\newlength{\extraplusheight}
+%\newlength{\extrapluswidth}
+%\setlength{\extraplusheight}{4.7cm}
+%\setlength{\extrapluswidth}{4.7cm}
+%\addtolength{\textwidth}{\extrapluswidth}
+%\addtolength{\textheight}{\extraplusheight}
+%\addtolength{\oddsidemargin}{-.5\extrapluswidth}
+%\addtolength{\evensidemargin}{-.5\extrapluswidth}
+%\addtolength{\topmargin}{-0.5\extraplusheight}
+\setlength{\parindent}{0 pt}
+\setlength{\parskip}{.5ex}
+%\documentclass[a4paper]{article}
+
+\usepackage{pgfgantt}
+  
 
 \begin{document}
-\newpage
-\begin{figure}
+%\hspace{-3cm}
+{
 \centering
-\includegraphics{Gantt.eps}
-\caption{Gantt chart depicting the order and division of work on work packages}
-\end{figure}
-\newpage
+{\Large HoTT : Programming and Verification Gantt Chart}
+\medskip
+
+\setganttlinklabel{s-s}{}
+\setganttlinklabel{f-f}{}
+\setganttlinklabel{s-f}{}
+
+\begin{tikzpicture}[y=0.5cm]  
+\begin{ganttchart}[x unit=1.75cm,y unit chart=.5cm,y unit title=.5cm,vgrid,
+canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+hgrid style/.style={draw=black!5, line width=.75pt},
+vgrid={*1{draw=black!4,dashed,line width=.5pt},*1{draw=black!5, line width=.75pt}},
+  title/.style={draw=none, fill=black!5},
+%  title label node/.append style={below=0pt},
+  include title in canvas=false,
+  bar label font=\mdseries\small\color{black!70},
+  bar label node/.append style={left=.5cm},
+  bar/.append style={draw=none, fill=magenta!63},
+%  bar incomplete/.append style={fill=barblue},
+%  bar progress label font=\mdseries\footnotesize\color{black!70},
+%  group incomplete/.append style={fill=groupblue},
+%  group left shift=0,
+%  group right shift=0,
+%  group height=.5,
+%  group peaks tip position=0,
+%  group label node/.append style={left=.6cm},
+%  group progress label font=\bfseries\small,
+ link/.style={-latex, line width=0.5pt, black},
+ link label font=\scriptsize\bfseries,
+ link label node/.append style={below left=-2pt and 0pt},
+ title height=.75, title top shift=0,
+% title label anchor={below=-1.5ex},
+%,
+% bar top shift=-0.1, 
+ bar height=0.5
+  ]{1}{8}
+  \gantttitle{2015}{2}
+  \gantttitle{2016}{2}
+  \gantttitle{2017}{2}
+  \gantttitle{2018}{2}\\
+  \ganttbar{WP1}{1}{3}\\
+  \ganttbar{WP2}{2}{5}\\
+  \ganttbar{WP3}{4}{6}\\
+  \ganttbar{WP4}{6}{8}\\
+  \ganttbar{WP5}{1}{4}\ganttbar{WP5}{7}{8}\\
+  \ganttbar{WP6}{3}{6}\\
+  \ganttbar{WP7}{5}{8}\\
+  \ganttbar{WP8}{7}{8}
+  % \ganttlink[link type=s-s]{elem0}{elem1}
+  % \ganttlink[link type=s-s]{elem0}{elem2}
+  % \ganttlink[link type=s-s]{elem0}{elem4}
+  % \ganttlink[link type=s-s]{elem1}{elem2}
+  % \ganttlink[link type=s-s]{elem1}{elem4}
+  % \ganttlink[link type=s-s]{elem1}{elem5}
+  % \ganttlink[link type=s-s]{elem2}{elem3}
+  % \ganttlink[link type=s-s]{elem5}{elem4}
+\end{ganttchart}
+\end{tikzpicture}
+
+}
+
+\bigskip
+
+{\bf Relationships between workpackages:} The following direct
+relationships between workpackages feed into the design of the above
+Gantt Chart. WP1,5 start immediately as both have no prerequisites ---
+the later will begin by formalising the cubical set model. We want to
+start WP2 early as this is one of the key workpackages and we already
+have a ideas to pursue within Altenkirch's Cubical Type Theory. As WP1
+progresses, its results will feed into WP2. Similarly, another key
+workpackage is our core language of WP6 so we start this one year into
+the project enabling the results of WP2 to feed into it. WP3 needs to
+be integrated with our syntactic and semantic foundations and so
+starts after these work packages have had time to deliver
+results. Similarly, WP7 builds upon WP6 and WP3 and so starts after
+those work packages have had time to deliver results. WP4 builds upon
+WP3 as is reflected in its start date. Finally, once most of our tools
+are developed, we start WP8.
+
+{\bf Duration:} The longest work package is WP5 as this is where our
+formal verificaton takes place. We want to formally verifiy as many
+rsults as possible, particularly about our model theory, about our
+type theory, about our programming language, and about our application
+to Units of Measure. As a result this is the longest workpackage which
+(with a break for language development) will be undertaken at both the
+beginning and the end of the project. The next most important
+workpackages in terms of overall goals and impact at WP2,6,7 and so
+they are allocated 2 years each. The other work packages are slightly
+less fundamental and so are given 1.5yrs apart from WP8 which we think
+will only need 1yr as WP8 is more tightly scoped than the other
+workpackages and so probably requires only one year.
+
+Nevertheless, there is flexibility in these lengths to either extend
+or shorten workpackages as the pace of progress within them becomes
+evident. For example, if our work on WP6,7 delivers the requird
+platform, we will start work on WP8 earlier and look for extensions
+to the research proposed. The timing and duration of these work
+packages means we are in a fortunate position in that both the more
+theoretical RA at Nottignham (WP1-4) and the more applied RA (WP5-8)
+will not have to work on more than one work package at a time.
+
+{\bf Leadership:} WP1 will be jointly led by Nottignham and Leeds as
+both sites have considerable experience there. Having joint leadership
+in this work package will not be a problem due to the close proximity
+and the experiece we have gained of working together over this
+proposal. Indeed, this will be advantageous as the Nottigham RA will
+get to work closely with Gambino. Ghani's experience in category
+theory will make him a secondary contributor on WP1. WP2-4 will be led
+at Nottingham as Altenkirch has signfiicant epxerience in all of these
+areas. Neverthless, McBride's experience in type theory and Ghani's
+experience in logical relations will mean they are secondary
+contributors to WP2. All investigators have experince in, and hence
+will contribute to, WP3. Ghani and McBride will similarly contribute
+to WP4 because of their work on effects. WP5-8 will be led at
+Strathclyde but Altenkirch will be a secondary contributor to
+WP5,6,7. McBride will take the lead on WP5,6,7 while Ghani will take
+the lead on WP8 because of his experience working with Kennedy on
+Units of Measure.
+
 
 \end{document}

@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-2, 0) {};
+		\node [style=none] (1) at (-2, 1) {$n$};
+		\node [style=none] (2) at (0, 1) {$n^rs$};
+		\node [style=none] (3) at (-6.75, 0) {};
+		\node [style=none] (4) at (-5.25, 0) {};
+		\node [style=none] (5) at (-3.75, 1) {$n^l$};
+		\node [style=none] (6) at (-5.25, 1) {$(n^rs)^l$};
+		\node [style=none] (7) at (-6.75, 1) {$s$};
+		\node [style=none] (8) at (-3.75, 0) {};
+		\node [style=none] (9) at (0, 0) {};
+		\node [style=none] (10) at (-6.75, -1.5) {};
+		\node [style=none] (11) at (-5.25, 2) {Q};
+		\node [style=none] (12) at (-2, 2) {Sbj};
+		\node [style=none] (13) at (0, 2) {Verb};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right=90, looseness=2.00] (8.center) to (0.center);
+		\draw [bend right=90, looseness=1.25] (4.center) to (9.center);
+		\draw (3.center) to (10.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

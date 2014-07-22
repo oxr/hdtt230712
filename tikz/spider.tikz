@@ -1,0 +1,55 @@
+\begin{tikzpicture}[scale=0.75]
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-4.75, 3.25) {};
+		\node [style=none] (1) at (-2.75, 3.25) {};
+		\node [draw, thick, style=none, minimum size=0.2 cm, circle, fill=white] (2) at (-3.75, 2.25) {};
+		\node [style=none] (3) at (-1.75, 2.25) {};
+		\node [style=none] (4) at (-1.75, 3.25) {};
+		\node [draw, thick, style=none, minimum size=0.2 cm, circle, fill=white] (5) at (-2.75, 1.25) {};
+		\node [style=none] (6) at (-1.75, -0.25) {};
+		\node [style=none] (7) at (-0.5, 3.25) {};
+		\node [style=none] (8) at (0.5, -0.75) {$=$};
+		\node [style=none] (9) at (2.25, 1) {};
+		\node [style=none] (10) at (5.75, 1) {};
+		\node [draw, thick, style=none, minimum size=0.2 cm, circle, fill=white] (11) at (4, -0.75) {};
+		\node [style=none] (12) at (3, 1) {};
+		\node [style=none] (13) at (4.5, 1) {$\cdots$};
+		\node [style=none] (14) at (2.25, -2.5) {};
+		\node [style=none] (15) at (5.75, -2.5) {};
+		\node [style=none] (16) at (4.75, -2.5) {$\cdots$};
+		\node [style=none] (17) at (-5.25, -4.5) {};
+		\node [style=none] (18) at (-3.25, -4.5) {};
+		\node [draw, thick, style=none, minimum size=0.2 cm, circle, fill=white] (19) at (-4.25, -3.5) {};
+		\node [style=none] (20) at (-3.25, -2.5) {};
+		\node [style=none] (21) at (-1, -4.5) {};
+		\node [style=none] (22) at (-1.75, -1) {};
+		\node [style=none] (23) at (-2.25, -3.5) {};
+		\node [style=none] (24) at (-2.25, -4.5) {};
+		\node [draw, thick, style=none, minimum size=0.2 cm, circle, fill=white] (25) at (-3.25, -2.5) {};
+		\node [draw, thick, style=none, minimum size=0.2 cm, circle, fill=white] (26) at (4, -0.75) {};
+		\node [style=none] (27) at (3, -2.5) {};
+		\node [draw, thick, style=none, minimum size=0.2 cm, circle, fill=white] (28) at (-1.75, -0.25) {};
+		\node [draw, thick, style=none, minimum size=0.2 cm, circle, fill=white] (29) at (-1.75, -1) {};
+		\node [style=none] (30) at (-2.75, -1.75) {$\cdot$};
+		\node [style=none] (31) at (-2.5, -1.5) {$\cdot$};
+		\node [style=none] (32) at (-2.25, -1.25) {$\cdot$};
+		\node [style=none] (33) at (-2.5, 0.75) {$\cdot$};
+		\node [style=none] (34) at (-2.25, 0.5) {$\cdot$};
+		\node [style=none] (35) at (-2, 0.25) {$\cdot$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=thick, bend right=90, looseness=1.75] (0.center) to (1.center);
+		\draw [style=thick, bend right=90, looseness=1.75] (2.center) to (3.center);
+		\draw [style=thick] (4.center) to (3.center);
+		\draw [style=thick, bend left=270, looseness=1.75] (9.center) to (10.center);
+		\draw [style=thick] (12.center) to (11.center);
+		\draw [style=thick, bend left=90, looseness=1.50] (14.center) to (15.center);
+		\draw [style=thick, in=90, out=-15, looseness=0.75] (22.center) to (21.center);
+		\draw [style=thick, in=30, out=-90] (7.center) to (6.center);
+		\draw [thick, bend left=90, looseness=1.75] (17.center) to (18.center);
+		\draw [thick, bend left=90, looseness=1.75] (19.center) to (23.center);
+		\draw [style=thick](23.center) to (24.center);
+		\draw [style=thick](27.center) to (26.center);
+		\draw [style=thick](6.center) to (22.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

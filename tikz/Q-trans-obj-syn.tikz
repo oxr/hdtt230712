@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (0, 0) {};
+		\node [style=none] (1) at (-4.25, 0) {};
+		\node [style=none] (2) at (-2.75, 1) {$sn^l$};
+		\node [style=none] (3) at (-4.25, 1) {$n^r$};
+		\node [style=none] (4) at (-2.75, 0) {};
+		\node [style=none] (5) at (-6.5, 0) {};
+		\node [style=none] (6) at (-3.5, 2) {Verb};
+		\node [style=none] (7) at (0.5, 2) {Det};
+		\node [style=none] (8) at (1, 1.25) {$n^l$};
+		\node [style=none] (9) at (3.25, 2) {Obj};
+		\node [style=none] (10) at (3.25, 1) {$n$};
+		\node [style=none] (11) at (1, 0) {};
+		\node [style=none] (12) at (3.25, 0) {};
+		\node [style=none] (13) at (0, 1) {$n$};
+		\node [style=none] (14) at (-6.5, 2) {Sbj};
+		\node [style=none] (15) at (-6.5, 1) {$n$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right=90, looseness=1.50] (4.center) to (0.center);
+		\draw [bend right=270, looseness=1.50] (1.center) to (5.center);
+		\draw [bend right=90, looseness=1.50] (11.center) to (12.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
