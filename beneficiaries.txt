@@ -1,0 +1,20 @@
+Researchers in Type Theory and formal verification
+	   who can use the theory and the tools we are developing
+
+Designers of programming languages
+	  who can exploit our theoretical results
+
+Users of interactive proof systems
+      who can take advantage of the tools we are developing
+
+Mathematicans 
+      who can use our tools to formally verify the results using HoTT
+
+Interested public
+      who is interested in foundations of mathematics
+
+Programmers
+      who can take advantages of HoTT's features to structure and effectively develop certified software.
+
+The general public
+     who in the long run will profit from reduced errors in software developed using HoTT.
