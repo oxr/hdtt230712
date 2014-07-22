@@ -1,6 +1,7 @@
 %Ondrej CV.
-
 %URL for CTT
+%Status of Nott JES
+%Vat 
 
 %case studies includes WP4
 %WP5 Methodology. Conor. Replace Chapman with CTM+NB
@@ -16,6 +17,7 @@
 %All WPS are POCs for our technology.
 %Whole > sum of parts. Each WPa small detailed step but
 %collectively. In feasability.
+%WP5 and higher IR - needed or nice.
 
 
 %checks
@@ -33,8 +35,7 @@
 %rebuilding it - our track record of converting maths to PL
 %Why has no one done it before. Have we balls or insight
 
-
-%Some constructions paper TXA OR
+%drafts out of track record
 %Unify JoR, WPs and TRs
 %potential vs achieved
 %Axioms vs type theories
@@ -42,11 +43,9 @@
 %interdisciplinary
 %No overstretch (POC)
 %Collabs time
-%cite UoM fibrations? cubical TT draft.
 %Dissing others (AS + PW). We are formal methods (GC)
 %TXA M$ studentship. 
 %Management by planning
-%Video, CTT available
 %Coquand et al. Ghani, Neil Ghani, %Spell, fullsptop
 %Equalities of types and terms. Universes.
 %Only type checking needs to be decidable, not type inference
@@ -792,9 +791,9 @@ treatment of Lawvere Theories.  Collaborator: Nick
 Benton.  }
 
 
-{\bf WP5 Formalisation of the Meta-Theory of HoTT.}  As we intend to
-use HoTT as a formal verification system, the key properties of HoTT
-must be formally verified. Indeed, as Voevodsky pointed out
+{\bf WP5 Formalisation of the Meta-Theory of HoTT.}  Since we need to
+trust verification conducted within HoTT, the key properties of HoTT
+must themselves be formally verified. Indeed, as Voevodsky pointed out
 \cite{voevodsky-ias14}, the complexity of the higher dimensional
 semantics of HoTT make a paper-based verification almost infeasible,
 and certainly not trustworthy. We begin by formalising our current
@@ -805,12 +804,14 @@ develops we will become more ambitous by i) formally verifying key
 results across all our work packages; and ii) replacing the axiomatic
 approach to HoTT with a computational one by switching from Agda to
 the system developed in WP6 and WP7, thereby enabling a partial
-formalisation of HoTT within itself. Therefore, WP5 will not only ensure the required level of trust in our
+formalisation of HoTT within itself. If possible, we will simplify our
+formalisation by using inductive-recursive HITs of WP3.
+Overall, WP5 will not only ensure the required level of trust in our
 system and impact the formal verification community as the first
 instance of formal verification in a {\em HoTT-based} environment, but
 it will also establish that HoTT (like any foundational theory) can
 describe its own meta-theory. Risk of failure in our basic goal is low
-as we have begun formalising parts of HoTT~\cite{alti:csl12,}. Further, our
+as we have begun formalising parts of HoTT~\cite{alti:csl12,AltenkirchLiRypacek14}. Further, our
 experience of formalising the syntax of type theory in itself~\cite{mcbride:outrageous,ghani:fibredIR,alti:catind2} makes us well
 positioned with respect to our more ambitious goals. Either way, no other WPs are
 dependent on WP5. {\em Deliverable: Formally verified proofs of the
@@ -836,16 +837,30 @@ key properties of HoTT.  Collaborator: Matthieu Sozeau.  }
 
 {\bf WP6: Implementing a Core Programming Language.} In order to
 showcase the potential for HoTT-based programming languages to the
-wider programming languages community, and learn from their feedback,
-we need to build a prototypical implementation of a type checker and
-interpreter based on the type theory designed in WP2.  This system
-forms a proof of concept implementation lacking most of the bells and
-whistles present in modern implementations of Type Theory. That is,
-while we will implement the type theory of WP2, we will not attempt to
-implement a high-level syntax for datatypes, universe polymorphism,
-implicit arguments, or pattern matching. However, we plan to
+wider programming languages
+community,%, and learn from their feedback,
+we will produce an implementation of the type theory of WP2.  Because
+of the amount of engineering work required to implement a programming
+language we will not, at this stage, attempt to implement advanced
+features such as a high-level syntax for datatypes, universe
+polymorphism, implicit arguments, or pattern matching. Instead, we
+will produce a basic proof of concept implementaton containing i) a
+prototypical implementation of a type checker; ii) an interpreter for
+the type theory computing values for closed expressions; and iii)
 incorporate the results from WP3 to support a generic version of
-HITs. We will use Haskell as an implementation language because we
+HITs
+
+
+
+
+
+
+. The later is possible as we will use eliminators in our
+implementation and thereby avoid the problems of pattern matching (see WP7)
+
+
+
+We will use Haskell as an implementation language because we
 have had significant success with using Haskell to implement type
 checkers for dependently typed languages, including Epigram and
 $\Pi\Sigma$~\cite{alti:checking,easy,alti:pisigma-new}.  In addition,
@@ -940,13 +955,18 @@ Idris (Brady), Coq (\eg Herbelin, Sozeau) and Agda (Abel, Norell, Danielsson).  
 {\bf WP8: Impact II --- Programming and Invariance.} %The ultimate goal
 %of the proposed research is to support software construction and
 %verification via HoTT. 
-Our final work package returns to our original motivation:
-we apply our research to real world software construction and
-verification and, by abstracting recurring patterns that
-arise, we take the first steps in software engineering with HoTT!
+We will validate the applied research done by RA2 and generate impact
+by showing its relevance to work by Kennedy on Units of Measure at
+Microsoft. This builds on Ghani's ideas~\cite{uom} and his Impact
+Accelerator Account grant
+with Kennedy.
+%
+%Our final work package returns to our original motivation:%
+%we apply our research to real world software construction and
+%verification and, by abstracting recurring patterns that
+%arise, we take the first steps in software engineering with HoTT!
 Details are given in {\em Pathways to
-  Impact}. {\em Deliverable: Case Studies of HoTT-based programming
-  and verification. 
+  Impact}. {\em Deliverable: A HoTT based generalisation of Units of Measure
 Collaborator: Andrew Kennedy.
 }
 
@@ -1069,30 +1089,19 @@ of programs written in, and verified by, these tools.
 % show applied researchers how HoTT aids their daily
 %practice.
 
-{\bf Planning, Risk, and Management:} Apart from clearly
-planning the content, methodology, and success criteria of each work package,
-and the inherent balance between risk and ambition
-within them, we have also minimised risk {\em between} work packages
-by ensuring the deliverables required to enable the project to proceed 
-are relatively low-risk. The Gantt chart describes how the work
-packages interact, who will lead them, and who will be secondary
-contributors. The largest risk is the 
-amount of {\em engineering} work required by programming language
-and verification tools --- this risk is mitigated by Dr McBride's
-presence in the team and our 
-separation of the ambitious
-goal of a fully fledged system (WP7) from the more modest
-goal of a core system (WP6). Risk throughout the project is reduced by
-our plans to collaborate
-with experts on each work package --- see {\em Pathways to Impact}. We
+{\bf Planning, Risk, Management and RA Training:} Apart from clearly
+planning the content, methodology, and success criteria of each work
+package, and the inherent balance between risk and ambition within
+them, we have also minimised risk {\em between} work packages by
+ensuring the deliverables required to enable the project to proceed
+are relatively low-risk --- see the {\em Gantt chart} for details on
+this and on how the work packages interact, who will lead them, and
+who will be secondary contributors. We
 will manage the project by 6-monthly team meetings and by asking our
 collaborators to formally review our progress after two years.  Our
 significant and successful track records of working together ---
 including managing similar multi-institutional grants --- indicate
-this is the right level of management.
-
-
-{\bf The RAs and Training.} Research group meetings provide regular opportunities to report on
+this is the right level of management. Research group meetings provide regular opportunities to report on
 progress, generate new ideas, and integrate the
 RAs into the local environments. Further training includes i)
 reading groups for relevant papers; ii) ensuring the RAs play
