@@ -1,11 +1,7 @@
 %WP7 Fred
 %URL for CTT - short!!!!
 %Inflation
-%EPSRC form
-%Risk variation
-%Other comments
 %Coquand et al. Ghani, Neil Ghani, %Spell, fullsptop
-%RA1, RA2
 %TXA M$
 %check leadership and seconds, esp WP4,5
 %choice of collabs - went for the best.
@@ -19,13 +15,8 @@
 %First safety critical, then more generally ...
 %Say we dont do Agda scale systems so Power-esque quotes possible.
 %TIC
-%WP8 does verification
 %Changyu
-%Who will benefit?
 %Already HoTT is impacting Coq
-%Reduce Risk
-
-
 
 %cross documents
 %============
@@ -369,6 +360,7 @@ Intel~\cite{harrison:sfm}. The technology behind these systems is also
 exploited by more mainstream languages with significant industrial
 deployment such as Haskell, OCaml, Scala and F\#.
 
+
 {\bf The Problem with Equality.} However, such systems have
 fundamental limitations, \eg when programming with quotients
 (identifying objects up to an equivalence relation), supporting
@@ -402,10 +394,11 @@ was recently awarded a complementary grant of $\$ 7.5$M to redevelop
 the entire foundations of mathematics using HoTT.
 
 
-{\bf Project Aim.} This project will prove that HoTT has just as much
+{\bf Project Aim.}  This project will show that HoTT has just as much
 potential to transform the foundations of programming and formal
 verification via a synthesis of theoretical, applied, and
 impact-focussed research:
+
 
 
 $\;\;\; \;\;\;$ {\em Foundations.} 
@@ -433,21 +426,22 @@ influence all future systems which compute with equalities (WP5,6,7).
   results. Their practical experiences will also feed back into our
   research (WP4,8).
 
-  {\bf Quality, Ambition, Adventure and Distinctiveness.} Our goal of
-  developing the first of a new breed of HoTT-based programming
-  languages capable of supporting machine checked proofs of software
-  correctness demonstrates our ambition. Quality is demonstrated by
+  {\bf Quality, Ambition, Adventure and Distinctiveness.} 
+  Developing the first of a new breed of HoTT-based programming
+  languages which support machine checked proofs of software
+  correctness shows our ambition and is the most transformative
+  aspect of the project. Quality is demonstrated by
   the depth and range of our state-of-the-art ideas and by the stature
   of our collaborators. The proposal's adventure is its
   interdisciplinary nature in breaking down boundaries between
   homotopy theory, theoretical computer science, programming languages
   and verification. This is reflected in its scope, ranging from
   fundamental research (WP1,2,3) to programming languages and
-  verification (WP5,6,7) to impact generation via case studies with
-  industrial collaborators (WP4,8). As for distinctiveness, neither we
+  verification (WP5,6,7) to case studies with
+  industrial collaborators (WP4,8). As for novelty, neither we
   nor our collaborators know of any other groups aiming to construct
   HoTT-based programming languages and verification tools, let alone
-  apply them to specific case studies. This distinctiveness is matched
+  apply them to specific case studies. This novelty is matched
   by the distinctiveness of our ideas and expertise covering logical
   relations, containers, observational type theory, cubical type
   theory and dependently typed programming.  Overall, our central
@@ -500,11 +494,11 @@ theories thus advances both the fields of programming and
 verification. Another major advance was Martin-L\"of's realisation
 that type theory needed to cover equality --- however, although
 extensional Martin-L\"of Type Theory produced a strong equality, it
-had the fundamental flaw that type checking was undecidable. He then
-formulated intensional Martin-L\"of Type Theory (MLTT), but its
+had the fatal flaw that type checking was undecidable. He then
+created intensional Martin-L\"of Type Theory (MLTT), but its
 equality proved to be too weak, \eg pointwise equal functions cannot
 be proven equal. Defining a strong yet computationally tractable
-equality has remained unresolved for 40 years --- HoTT is so exciting
+equality has remained unresolved for 40 years --- HoTT is so transformative
 and attracts so much attention precisely because it offers a solution
 to this most fundamental of problems.
 
@@ -553,13 +547,19 @@ studies --- exactly the central and distinctive core of this proposal.
 
 Our overall methodology harnesses i) our distinctive ideas and
 competencies detailed below and within our track records and the {\em
-  Justification of Resources}; ii) our ongoing dialogue with our
-world-leading collaborators, and iii) our workshops which
-foster interaction. Additionally, each work package has its own
-methodology, risk analysis, and a concrete and relatively
-risk-free deliverable enabling the project to proceed. Collectively,
-our work packages establish HoTT as a fundamental innovation within
-programming languages and verification.
+  Justification of Resources}; and ii) our ongoing dialogue with our
+world-leading collaborators. Additionally, each work package has an
+appropriate methodology informed by its risk analysis, and its need
+for a concrete and relatively risk-free deliverable enabling the
+project to proceed. Collectively, our work packages establish HoTT as
+a transformative innovation within programming languages and
+verification.
+
+% ii) our ongoing dialogue with our
+%world-leading collaborators, and iii) our workshops which
+%foster interaction. Additionally, each work package has its own
+%methodology, risk analysis, and a concrete and relatively
+%risk-free deliverable enabling the project to proceed
 
 {\bf WP1: Semantic Foundations of HoTT.}  A proper model theory for
 HoTT is essential because i) a general model theory guides the design
@@ -600,7 +600,7 @@ axiomatically. Such a type theory must be proved to retain key
 properties of traditional type theories such as strong normalisation,
 decidability of definitional equality, and canonicity ({i.e.}~all
 terms reduce to values). We must also establish the expressive power
-of the associated equational theories, {e.g.}~by analyzing carefully
+of the associated equational theories, {e.g.}~by analysing carefully
 whether computation rules hold definitionally or
 propositionally. Another key property (needed for WP5) is that these
 type theories should be expressive enough to describe their own
@@ -651,7 +651,7 @@ types~\cite{alti:cont-tcs, alti:mpc04,
   GambinoN:polfpm,awodeyGamSoja:indTypesInHTT},
 our EPSRC grant on containers, and our partial results 
 mean our basic goals are relatively risk-free.
-Our more ambitious goal (which is not essential to the other work packages) is also feasable if time
+Our more ambitious goal (which is not essential to the other work packages) is also feasible if time
 permits because of our previous work~\cite{alti:catind2,ghani:fibredIR}
 and grant on induction-recursion. {\em Deliverable: A foundational theory of HITs that 
   can be implemented in WP6,7.
@@ -759,9 +759,9 @@ matching and with traditional termination checking. We will find
 minimal restrictions on pattern matching to ensure consistency when
 combined with HoTT --- recent work by Cockx \cite{cockx-without-k},
 building on McBride~\cite{viewftl}, shows this is
-feasable. Termination checking is problematic as equivalence of types
+feasible. Termination checking is problematic as equivalence of types
 does not preserve subterm structure and hence transporting a smaller
-recursive call across an equivlance need not result in a smaller
+recursive call across an equivalence need not result in a smaller
 recursive call. We will use the proof-relevant nature of HoTT to
 broaden the notion of size to include structural information about
 equivalences. While these results are relatively low-risk, we also aim
@@ -915,3 +915,27 @@ project will thus have high impact in terms of training.
 % \end{multicols}{2}
 
 \end{document}
+
+This project will show that HoTT has just as much
+potential to transform the machine checking of software correctness 
+via a synthesis of theoretical, applied, and
+impact-focussed research:
+
+
+The cost of software failure is truly
+staggering\footnote{see the sections on National Importance and
+  Pathways to Impact.} and there are many successful approaches to
+software verification, \eg testing, model checking etc. Formal
+verification seeks mathematical guarantees of software correctness but
+the complexity of modern software means that hand-written mathematical
+proofs can be untrustworthy. Several decades of
+research in the UK and elsewhere have culminated in systems
+such as Agda, Coq, Epigram, HOL, Idris, Isabelle, NuPRL, Twelf, and
+the Trellys project which offer machine-checked proofs of software
+correctness. They
+are having significant impact, \eg Coq won
+the 2013 ACM Software and the 2013 SIGPLAN Programming Languages
+awards, while HOL is used extensively by
+Intel~\cite{harrison:sfm}. These systems also influence
+languages with significant industrial
+deployment such as Haskell, OCaml, Scala and F\#.
