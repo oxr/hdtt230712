@@ -72,6 +72,8 @@
 \usepackage{natbib}
 \setlength{\bibsep}{0.0pt}
 
+\usepackage{microtype}
+
 \usepackage{hyperref}
 
 %\newlength{\extraplusheight}
@@ -136,11 +138,10 @@ Homotopy Type Theory (HoTT) in WP1,2; ii) his work on data types
 (containers~\cite{alti:cont-tcs}, quotient
 containers~\cite{alti:mpc04}, indexed
 containers~\cite{altenkirchGhaniHancockMcBrideMorris:indexedContainers}
-and induction-recursion~\cite{ghani:fibredIR})
-%~\cite{alti:mpc04,altenkirchGhaniHancockMcBrideMorris:indexedContainers,alti:cont-tcs}
-feed into the development of higher inductive types in WP3; iii) his
-work on the semantics of effects~\cite{atkeyGhaniJacobsJohann:effects}
-feeds into the application of HoTT to effects in WP4; iv) his work on
+and induction-recursion~\cite{ghani:fibredIR}) feed into the
+development of higher inductive types in WP3; iii) his work on the
+semantics of effects~\cite{atkeyGhaniJacobsJohann:effects} feeds into
+the application of HoTT to effects in WP4; iv) his work on
 induction-recursion~\cite{ghani:fibredIR} also feeds into the
 formalisation of the syntax of HoTT in WP5; and v) his work on Units
 of Measure~\cite{uom} (via an Impact Accelerator Account grant held in
@@ -149,8 +150,6 @@ algebraically indexed types in WP8. More generally, Neil Ghani is a
 world expert on using semantic structures to drive the development of
 type theory and programming languages, exactly the methodology to be
 followed in this proposal.
-
-
 
 Professor Ghani has attracted \pounds 1.7M in research funding,
 comprising \pounds 1.3M as PI on 8 grants and \pounds 400K as CoI in 2
@@ -190,7 +189,7 @@ into WP2, his work on containers~\cite{alti:mpc04} feeds directly into WP3, his
 work on effects~\cite{conor:frank} feeds directly into WP4, and his work on
 dependently typed programming and formalising the syntax of type
 theory in itself~\cite{viewftl,alti:ott-conf,easy,mcbride:outrageous}
-feeds directly into WP5-8.
+feeds directly into WP5--8.
 
 Dr McBride has attracted \pounds 600K in research funding comprising
 \pounds 100K as PI on an EPSRC grant, \pounds 100K as a PI on a
@@ -216,7 +215,7 @@ RAs and seven PhD students. The MSP group's vision is to use
 mathematics to understand the nature of computation, and to turn that
 understanding into the next generation of programming languages ---
 exactly the methodology of this proposal. This proposal will thus both
-benefit from the MSP group. Central Scotland also hosts many vibrant
+benefit from, and benefit, the MSP group. Central Scotland hosts many vibrant
 research groups linked via the Scottish Informatics and Computer
 Science Alliance (SICSA). The MSP group is also active in other
 Scottish meetings, including ScotCats and SPLS, and regularly
@@ -282,7 +281,7 @@ He is one of the leading researchers
 on HoTT. For example, his combination of expertise in type
 theory~\cite{GambinoN:gentti}, category theory~\cite{GambinoN:polfpm}
 and homotopical algebra~\cite{GambinoN:homl2c,GambinoN:weilsh} allowed
-him to obtain with Richard Garner one of 
+him to obtain with Richard Garner one of the 
 first, fundamental, results relating type theory and homotopy
 theory~\cite{GambinoN:idetwfs} and, in collaboration with Steve Awodey
 and Kristina Sojakova, a characterisation of inductive types in
@@ -294,7 +293,7 @@ higher-dimensional category theory, \pounds 304,070 as CoI on a grant
 by the Templeton Foundation on proof theory, and \pounds 66,191 as PI
 on an EPSRC Postdoctoral Fellowship in Mathematics, held at the
 University of Cambridge~(GR/R95975/01). He is also an unfunded
-coinvestigator on Awodey's recent grant using HoTT to the
+collaborator on Awodey's recent grant using HoTT to the
 redevelop the foundations of mathematics and organised the first
 UK HoTT meeting in March 2014. Nicola Gambino has a
 consistent record of invited lectures at international conferences,
@@ -344,7 +343,7 @@ on a 3-year EPSRC grant on proof-theoretical aspects of HoTT.
 {\bf Formal Verification.} The cost of software failure is truly
 staggering\footnote{see the sections on National Importance and
   Pathways to Impact.} and there are many successful approaches to
-software verification (\eg testing, model checking etc). Formal
+software verification (\eg testing, model checking). Formal
 verification seeks mathematical guarantees of software correctness but
 the complexity of modern software means that hand-written mathematical
 proofs can be untrustworthy. This has led to a growing desire for
@@ -387,7 +386,7 @@ lacked.  HoTT is widely regarded as a huge advance, \eg the HoTT
 book~\cite{hott-book} is on the ACM's list of notable books of 2013,
 articles on HoTT have appeared in the New Scientist and in Scientific
 American, thirty of the world's leading researchers spent a year
-developing HoTT at Princeton's Special Year on HoTT, and Prof. Awodey
+developing HoTT at Princeton's Special Year on HoTT, and Prof.\ Awodey
 was recently awarded a complementary grant of $\$ 7.5$M to redevelop
 the entire foundations of mathematics using HoTT.
 
@@ -455,7 +454,7 @@ influence all future systems which compute with equalities (WP5,6,7).
 \section{Scientific and Technological Background}
 \vspace*{-0.1in} 
 
-{\bf Programming Languages.} Abstraction is essential in programming
+{\bf Programming Languages.} Abstraction is essential in programming,
 as identifying common structure ensures code is clear, clean, and
 concise. This leads to high-level programming languages with
 expressive type systems capable of closing the gap between what
@@ -544,14 +543,14 @@ studies --- exactly the central and distinctive core of this proposal.
 \vspace*{-0.1in}
 
 Our overall methodology harnesses i) our distinctive ideas and
-competencies; ii) our ongoing dialogue with our
-world-leading collaborators; and iii) our workshops held to foster
-interaction. Additionally, each work package has a
-clearly achievable deliverable enabling the project to progress, more
-ambitious goals if time permits, an analysis of risk, and an
-appropriate methodology to maximize results. Individually, they
-advance the state-of-the-art and collectively they
-establish HoTT as a transformative innovation within programme languages.
+competencies; ii) our ongoing dialogue with our world-leading
+collaborators listed below; and iii) our workshops held to foster
+interaction. Each work package also has a clearly achievable
+deliverable enabling the project to progress, more ambitious goals if
+time permits, a risk analysis, and an appropriate methodology to
+maximize results. Individually, they advance the state-of-the-art, and
+collectively they establish HoTT as a transformative innovation within
+programming languages.
 
 {\bf WP1: Semantic Foundations of HoTT.}  A proper model theory for
 HoTT is essential because i) a general model theory guides the design
@@ -560,7 +559,8 @@ HoTT provide algebraic techniques to reason about the correctness of
 implementations which complement syntactic techniques; and iii)
 specific implementations of HoTT can be proven sound by giving a
 specific model of them.  These models need to be constructive so that
-all programs reduce to a value.
+they can be used to compute with programs.
+%all programs reduce to a value.
 We will: i) analyse existing
 models ({e.g.}  groupoids~\cite{HofmannM:groitt}, simplicial
 sets~\cite{KapulkinC:simmuv}, cubical sets~\cite{BezemM:cubsmt}) and
@@ -633,7 +633,7 @@ Kock~\cite{kock:groupoids}).  Another basic goal is to generate a
 high-level syntax for HITs as an alternative to the universal HIT in
 the same way that strictly positive types provide a grammar for
 defining W-types~\cite{alti:cont-tcs}.  This feeds into WP7.  More
-ambitiously, we will investigate extensions such as coinductive HITs,
+ambitiously, we will investigate extensions such as coinductive,
 inductive-inductive and inductive-recursive HITs. The latter would be
 useful in WP5 since it offers a more concise representation of
 dependently typed syntax by introducing the representation of terms
@@ -672,7 +672,7 @@ Frank~\cite{conor:frank}; ii) Benton, Hofmann and Nigam's Abstract
 Effects (see Benton's attached letter); iii) Brady's effects library
 for Idris~\cite{brady:effects}; and iv) Bauer and Pretnar's treatment
 of effects in Eff~\cite{bauer:eff}.  Our work will use the type theory
-of WP2 and HITs of WP3, validate the research of WP1-3,
+of WP2 and HITs of WP3, validate the research of WP1--3,
 and help generate impact by developing a case study on effects with Benton of Microsoft.
 Risks are low as,
 conceptually, we need only integrate the treatment of quotients
@@ -686,7 +686,7 @@ treatment of Lawvere Theories.  Collaborator: Nick
 Benton.  }
 
 
-{\bf WP5 Formalisation of the Meta-Theory of HoTT.}  Since we need to
+{\bf WP5: Formalisation of the Meta-Theory of HoTT.}  Since we need to
 trust verification conducted within HoTT, the key properties of HoTT
 must themselves be formally verified. Indeed, as Voevodsky pointed out
 \cite{voevodsky-ias14}, the complexity of the higher dimensional
@@ -700,7 +700,7 @@ results across our work packages; and ii) replacing the axiomatic
 approach to HoTT with a computational one by switching from Agda to
 the system developed in WP6 and WP7, thereby enabling a partial
 formalisation of HoTT within itself. If possible, we will simplify our
-formalisation by using inductive-recursive HITs of WP3.  Overall, WP5
+formalisation by using inductive-recursive HITs developed in WP3.  Overall, WP5
 ensures the required level of trust in our system and impacts
 the formal verification community as the first formal
 verification in a {\em HoTT-based} environment. It will also establish
@@ -710,7 +710,7 @@ already formalised parts of
 HoTT~\cite{alti:csl12,AltenkirchLiRypacek14}. Further, our experience
 of formalising the syntax of type theory in
 itself~\cite{mcbride:outrageous,ghani:fibredIR,alti:catind2} makes us
-well positioned with respect to our more ambitious goals. No other WPs
+well positioned with respect to our more ambitious goals. No other work packages
 depend on WP5. {\em Deliverable: Formally verified proofs of
   the key properties of HoTT, our implementation of HoTT, and software
   written in our implementation of HoTT. Collaborator: Matthieu Sozeau.  }
@@ -737,7 +737,7 @@ $\Pi\Sigma$~\cite{alti:checking,easy,alti:pisigma-new}. In addition,
 our implementation of OTT will be informative as OTT can be seen as a
 precursor of HoTT.  These experiences --- and the care taken to avoid
 unrealistic goals --- makes us confident of success in
-WP6. Coquand et al.'s interpretation HoTT into their cubical sets
+WP6. Coquand et al.'s implementation of their cubical sets
 model further shows our goal is feasible. {\em Deliverable: A type
   checker and evaluator for core HoTT.  Collaborator: Thierry Coquand.
 }
@@ -761,17 +761,17 @@ more ambitiously to solve the open problem of integrating pattern
 matching with HITs and to add interfaces to Idris, Coq and Agda. This
 increases impact by giving users of these systems access to our
 results. To do this, we will work closely with the developers of Idris
-(Brady), Coq (Herbelin, Sozeau) and Agda (Abel, Norell). {\em
+(Brady), Coq (\eg Herbelin, Sozeau) and Agda (Abel, Danielsson, Norell). {\em
   Deliverable: A high level HoTT-based programming language.
   Collaborator: Edwin Brady.  }
 
 
 {\bf WP8: Impact II --- Programming and Invariance.}  We will validate
-the applied research of WP5-7 and help generate impact by developing a
+the applied research of WP5--7 and help generate impact by developing a
 case study on Units of Measure with Kennedy of Microsoft. This builds
 on Ghani's ideas~\cite{uom} and his Impact Accelerator Account grant
 with Kennedy. Details are given in {\em Pathways to Impact}. {\em
-  Deliverable: A HoTT based generalisation of Units of
+  Deliverable: A HoTT-based generalisation of Units of
   Measure. Collaborator: Andrew Kennedy.  }
 
 
@@ -798,7 +798,7 @@ into HoTT. See {\em Pathways to Impact}.
 {\bf National Importance.}  The cost of software failure is truly
 staggering, \eg the annual cost to the US economy alone of avoidable
 software errors was estimated between $\$ 20$ and $\$60$
-billion~\cite{grandchallenges} in 2002.  As a result, both EPSRC and
+billion in 2002~\cite{grandchallenges}.  As a result, both EPSRC and
 the UK Grand Challenges in Computing~\cite{grandchallenges} recognise
 formal methods guaranteeing software correctness as essential to the
 UK's economy. For example, EPSRC is growing its funding in both
@@ -869,7 +869,7 @@ management. Research group meetings provide regular opportunities to
 report on progress, generate new ideas, and integrate the RAs into the
 local environments. Further training includes i) reading groups for
 relevant papers; ii) ensuring the RAs play prominent roles in meetings
-(\eg UK HoTT, ScotCats, SPLS, MGS, FiTA) we attend/organise; iii)
+we attend/organise (\eg UK HoTT, ScotCats, SPLS, MGS, FiTA); iii)
 writing of papers and grant proposals; iv) leading research activities
 and mentoring PhD students; and v) participation in the large and
 active HoTT community. The RAs will thus be able to lead future

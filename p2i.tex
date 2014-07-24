@@ -28,7 +28,8 @@
 
 \usepackage{multicol}
 
-
+\usepackage{microtype}
+\usepackage{hyperref}
 
 %\newlength{\extraplusheight}
 
@@ -146,7 +147,7 @@ major approach to software correctness is {\em language-based
   verification}, where successful compilation provides machine
 certification of correctness. This is the logical conclusion of the
 persistent trend in software engineering toward ever earlier program
-verification. Thus, while the proposal is foundational in nature, the
+verification. Thus, while our proposal is foundational in nature, the
 economic importance of the problem it addresses means that our
 Pathways to Impact document is stronger than many other similarly
 foundational proposals, e.g. including summer schools, collaboration
@@ -167,13 +168,13 @@ publications and several to result in more. This is feasible as we
 have substantial publication track records.
 
 \vspace*{0.02in} $\bullet$ {\bf Scientific Interaction.} We will
-interact other researchers via conferences,
+interact with other researchers via conferences,
 research visits, and other meetings as detailed elsewhere. More
 generally, Scotland is an excellent place for interaction as there are
 strong programming languages and verification groups at Edinburgh,
 Glasgow, Heriot-Watt, Dundee and St Andrews. Similarly Nottingham is a
 leading member of the MGS --- a collaboration with Birmingham and
-Leicester providing training to young PhD students
+Leicester providing training to PhD students
 from across Europe. Lecturing on our results there will also increase
 impact. Strathclyde will also host a specialist
 workshop in HoTT at Strathclyde in 2015 which has been partially
@@ -198,37 +199,36 @@ research and so their intimate involvement will ensure our research is
 fit-for-purpose by ensuring it is fit-for-purpose for their own high
 standards. Thirdly, thorough dissemination will be occurring via our
 collaborators even as the work is being done. And, finally, our
-collaborators different perspectives will ensure our research is
+collaborators' different perspectives will ensure our research is
 outward-looking.
 
-We chose the best project partners we could. They are Prof~Steve
+We chose the best project partners we could. They are Prof.\ Steve
 Awodey (CMU, WP1) who was recently awarded $\$7.5$M to reformulate
-mathematics within HoTT; Prof Vladimir Voevodsky (Princeton, WP2) who 
-created HoTT and the Univalence
-Axiom, Dr Mike Schulman (UCSD, WP3) invented HITs,
-Dr Nick Benton (Microsoft, WP4) who is a leading industrial user of
-foundational ideas, Dr Matthieu Sozeau (Paris 7, WP5) is a leading
-member of the Coq team, Prof~Thierry Coquand (Chalmers, WP6) developed
-the cubical set model of HoTT, Dr Edwin Brady (St. Andrews, WP7) is
-the developer of Idris and Dr Andrew Kennedy (Microsoft, WP8) who
-invented the Units of Measure type system. One could hardly imagine a
-stronger set of collaborators: we have the key figures in HoTT, an
-industrial partner for each of the impact generating work packages,
-and the chance of impact on and via Agda, Idris and Coq via Coquand,
-Brady and Sozeau.
+mathematics within HoTT; Prof.\ Vladimir Voevodsky (Princeton, WP2)
+who created HoTT and the Univalence Axiom, Dr Mike Schulman (UCSD,
+WP3) who invented HITs, Dr Nick Benton (Microsoft, WP4) who is a
+leading industrial user of foundational ideas, Dr Matthieu Sozeau
+(Paris 7, WP5) who is a leading member of the Coq team, Prof.\ Thierry
+Coquand (Chalmers, WP6) who developed the cubical set model, Dr Edwin
+Brady (St Andrews, WP7) who is the developer of Idris, and Dr Andrew
+Kennedy (Microsoft, WP8) who invented the Units of Measure type
+system. One could hardly imagine a stronger set of collaborators: we
+have the key figures in HoTT, an industrial partner for each of the
+impact generating work packages, and the chance of impact on and via
+Agda, Idris and Coq via Coquand, Brady and Sozeau.
 
 \vspace*{0.02in}
 
 $\bullet$ {\bf The Work Packages.} While the main consideration in
 developing our work packages is scientific quality, our work
 packages have also been designed to smooth the pathway to achieving
-impact from them. For example i) by presenting 
-HoTT as a type theory, our research opens the way for HoTT to gain impact
+impact from them, e.g.\ i) by presenting 
+HoTT as a computational type theory, our research opens the way for HoTT to gain impact
 amongst computer scientists who have little or
 no knowledge of either homotopy theory or higher dimensional category
 theory; ii) by developing HoTT-based programming language and
 verification tools, our research opens the way for HoTT to gain impact
-amongst these communities where HoTT currently has little impact; and
+amongst these communities, where HoTT currently has little impact; and
 iii) applying HoTT to Effects in WP4 and enhancing the
 functionality of Units of Measure in WP8 is a concrete pathway to
 impact for actual programmers. As WP8 is the most impactful of our
@@ -259,7 +259,7 @@ security constraints. This was achieved by so called {\em
   algebraically indexed types}~\cite{ajk} which generalise units of
 measure by allowing types to be indexed by other, specific, equational
 theories. In this work package we want to lay new foundations for
-algebraically indexed types by using HoTT to programming with types
+algebraically indexed types by using HoTT for programming with types
 indexed by {\em arbitrary} equational theories. The likelihood of
 producing results is high as, conceptually, HoTT contains both the
 capacity to define arbitrary equational theories via HITs as well as
@@ -278,16 +278,15 @@ thrilling prospect!
 \vspace*{0.02in}
 
 $\bullet$ {\bf Impact Accelerator Accounts.} IAA grants are funded by
-EPSRC to explore the possibility of
-developing the impact of EPSRC funded research with non-academic
-partners. We will increase potential impact 
-by applying for IAA grants at both Nottingham and Strathclyde. Prof
-Ghani already has an IAA grant, demonstrating the feasibility of
-this. Further, the main prerequisite for IAA grants is the involvement 
-of industrial collaborators but as WP4,8 show, we already meet this
-criteria. IAA grants are short term (a few months to a year)
-and so this will occur towards the end of the grant once it is clear
-which results most interest industrial partners.
+EPSRC to explore the possibility of developing the impact of EPSRC
+funded research with non-academic partners. We will increase potential
+impact by applying for IAA grants at both Nottingham and
+Strathclyde. Ghani already has an IAA grant, demonstrating the
+feasibility of this. Further, the main prerequisite for IAA grants is
+the involvement of industrial collaborators but as WP4,8 show, we
+already meet this criteria. IAA grants are short term (a few months to
+a year) and so this will occur towards the end of the grant once it is
+clear which results most interest industrial partners.
 
 \vspace*{0.02in}
 
@@ -295,22 +294,22 @@ which results most interest industrial partners.
 {\bf Ambition and Realism.} Our {\em Pathways to Impact} are both
 ambitious and realistic. They are ambitious because, while it is a
 long way from fundamental advances in type theory to routine
-verification conducted by software engineers, we have managed to push
+verification conducted by software engineers, we intend to push
 HoTT all the way to programming languages and verification tools and
 even beyond into actual verification. To expect more,
 e.g. significantly increasing industrial involvement, would be both
-infeasible and unrealistic. That we have gone this far is partially a
+infeasible and unrealistic. That we intend to go this far is partially a
 testament to our vision but also a testament to the potential of
-HoTT. The proposal certainly has stronger pathways to impact than any
+HoTT. This proposal certainly has stronger pathways to impact than any
 previously written by the investigators. Our plans are also realistic:
 apart from our own abilities, we have members of the Agda (Coquand),
 Coq (Sozeau) and Idris (Brady) teams as collaborators, and industrial
 collaborators (Benton, Kennedy) for each of our impact generating work
 packages. Further, we have significant successful experience of
-working with Microsoft, e.g. both Dr McBride's and Dr Altenkirch had
-Microsoft funded PhD students, Dr McBride has a three month placement
-at Microsoft during summer 2014, and Prof Ghani's current IAA
-grant. Our plans are effective as case studies with industrial
+working with Microsoft, e.g. both McBride and Altenkirch have had
+Microsoft funded PhD students, McBride has a three month placement
+at Microsoft during summer 2014, and Ghani currently has an IAA
+grant with Microsoft. Our plans are effective as case studies with industrial
 collaborators such as WP4,8 are the best way to make our research
 accessible to non-academics. Finally, as each collaborator is
 an end-user of each work package, we are following EPSRC best-practice
@@ -390,7 +389,7 @@ collaborators.
 \setlength{\parskip}{-0.1ex}
 
 
-
+\begin{footnotesize}
 \begin{multicols}{2}
 
 %
@@ -404,13 +403,14 @@ collaborators.
 
 \bibitem{cnet08}
 Total economic cost of insecure software: \$180 billion a year in the
-U.S. 2008. At {\tt http://news.}\\
-{\tt cnet.com/8301-13846$\_$3-9978812-62.html}
+U.S. 2008. At \url{http://news.cnet.com/8301-13846_3-9978812-62.html}.
+%{\tt http://news.}\\
+%{\tt cnet.com/8301-13846$\_$3-9978812-62.html}
 
 \bibitem{wp99}
-Mystery of Orbiter Crash Solved. Available at
-{\tt http://www.tysknews.com/Depts/Metrication}\\
-{\tt /mystery$\_$of$\_$orbiter$\_$crash$\_$solved.htm} 
+Mystery of Orbiter Crash Solved. At \url{http://www.tysknews.com/Depts/Metrication/mystery_of_orbiter_crash_solved.htm}.
+%{\tt http://www.tysknews.com/Depts/Metrication}\\
+%{\tt /mystery$\_$of$\_$orbiter$\_$crash$\_$solved.htm} 
 
 \bibitem{aknn97}
 A. Kennedy,  {\em Relational parametricity and units of measure},
@@ -426,6 +426,7 @@ Procs. of POPL'13, 87-100. ACM Press, 2013.
 
 
 \end{multicols}
+\end{footnotesize}
 
 \end{thebibliography}
 
