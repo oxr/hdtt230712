@@ -23,6 +23,9 @@
 
 
 
+%We are ground breaking
+%HoTT haspotential to transform PL/PV/MC
+
 %Goal: Foundational advances in TT => groundbreaking advances in PL/PV
 % PV -> machine checked
 % MC FV + MC science
@@ -31,28 +34,15 @@
 %HoTT transform founds of PL/PV by enabling MC of SC
 %Delivs: New systems with new power treat of EQ
 
-%This project treads a
-%fine balance between being well scoped so that we can achieve theirs
-%goals within the allocated period of study while simultaneously being
-%ambitious enough to have a major and lasting impact upon how we
-%compute.  
-
-
-% Of course, we could have promised to revolutionise not only the
-% foundations of logical relations but also the applications to program
-% verification. However, this would have been a mistake, as pointed out
-% by Reviewer 13M7PG who states taht “One cannot reasonably expect
-% direct industrial use on a broad scale of a proposal such as this, and
-% if the authors proposed it, I would conclude their proposal lacks
-% credibility. But they do not do that; and what they propose is
-% delicate, eminently sensible, and practical.” We also believe that we
-% have found the right balance of doing good foundational research on
-% the one hand, and putting in place a robust mechanism for generating
-% impact from that research on the other. Undertaking proof-of-concept
-% case studies with various industrial collaborators is significantly
-% more adventurous than a lot of proposed research. We do hope that this
-% adventurousness will not be held against us because these case studies
-% cannot be guaranteed to have massive and immediate industrial impact.
+%Of course, we could have promised to revolutionise not only the
+% foundations of formal verification, also formal verification
+% itself. However, this would be unrealistic as one cannot reasonably
+% expect direct industrial use on a broad scale of a proposal such as
+% this.  Instead, we have found the right balance of transformative
+% foundational research, and putting in place a robust mechanism for
+% generating impact from that research. Undertaking proof-of-concept
+% case studies with industrial collaborators is significantly more
+% adventurous than a lot of proposed research.
 
 
 
@@ -426,31 +416,30 @@ influence all future systems which compute with equalities (WP5,6,7).
   results. Their practical experiences will also feed back into our
   research (WP4,8).
 
-  {\bf Quality, Ambition, Adventure and Distinctiveness.} 
-  Developing the first of a new breed of HoTT-based programming
-  languages which support machine checked proofs of software
-  correctness shows our ambition and is the most transformative
-  aspect of the project. Quality is demonstrated by
-  the depth and range of our state-of-the-art ideas and by the stature
-  of our collaborators. The proposal's adventure is its
-  interdisciplinary nature in breaking down boundaries between
-  homotopy theory, theoretical computer science, programming languages
-  and verification. This is reflected in its scope, ranging from
-  fundamental research (WP1,2,3) to programming languages and
-  verification (WP5,6,7) to case studies with
-  industrial collaborators (WP4,8). As for novelty, neither we
+  {\bf Quality, Ambition, Adventure and Distinctiveness.}  Developing
+  the first of a new breed of HoTT-based programming languages which
+  support machine checked proofs of software correctness shows our
+  ambition and is the most transformative aspect of the
+  project. Quality is demonstrated by the depth and range of our
+  state-of-the-art ideas and by the stature of our collaborators. The
+  proposal's adventure is its interdisciplinary nature in breaking
+  down boundaries between homotopy theory, theoretical computer
+  science, programming languages and verification. This is reflected
+  in its scope, ranging from fundamental research (WP1,2,3) to
+  programming languages and verification (WP5,6,7) to case studies
+  with industrial collaborators (WP4,8). As for novelty, neither we
   nor our collaborators know of any other groups aiming to construct
   HoTT-based programming languages and verification tools, let alone
-  apply them to specific case studies. This novelty is matched
-  by the distinctiveness of our ideas and expertise covering logical
+  apply them to specific case studies. This novelty is matched by the
+  distinctiveness of our ideas and expertise covering logical
   relations, containers, observational type theory, cubical type
   theory and dependently typed programming.  Overall, our central
   belief is that i) this research clearly ought to be done for both
   its scientific and impact value; and ii) our experience in both the
   sophisticated mathematical foundations of HoTT, and in the intricate
   engineering techniques of implementation makes us the ideal team.
-  Indeed, the breadth of this research prevents most others from
-  undertaking this project.
+  Indeed, the simultaneous breadth and depth of this research prevents
+  most others from undertaking this project.
 
 \vspace*{-0.1in} 
 \vspace*{-0.1in} 
@@ -544,14 +533,13 @@ studies --- exactly the central and distinctive core of this proposal.
 
 \section{Methodology and Research Programme}
 \vspace*{-0.1in}
-
 Our overall methodology harnesses i) our distinctive ideas and
 competencies; ii) our ongoing dialogue with our world-leading
 collaborators listed below; and iii) our workshops held to foster
 interaction. Each work package also has a clearly achievable
 deliverable enabling the project to progress, more ambitious goals if
 time permits, a risk analysis, and an appropriate methodology to
-maximize results. Individually, they advance the state-of-the-art, and
+maximise results. Individually, they advance the state-of-the-art, and
 collectively they establish HoTT as a transformative innovation within
 programming languages.
 
@@ -582,7 +570,7 @@ concrete models, while ii) is our more ambitious goal. Nevertheless, our
 expertise on logical relations~\cite{neil2014relParamDep},
 homotopical algebra~\cite{GambinoN:homl2c,GambinoN:weilsh}, and
 $\omega$-groupoids~\cite{alti:csl12,alti:tlca13-hedberg} makes even this ambitious goal
-feasible. {\em Deliverables: A broad collection of models of HoTT
+feasible. {\em Deliverable: A broad collection of models of HoTT
   describing the design space of its syntactic presentations.
   Collaborator: Steve Awodey.  }
 
@@ -622,9 +610,9 @@ the project to proceed.  {\em Deliverable: A type theory validating
 
 
 {\bf WP3: Higher Inductive Types (HITs).}  We will accommodate HITs in
-the semantics developed in WP1 and the type theory of WP2. To
-achieve this, we will first develop a universal HIT playing the role
-for HITs that W-types play for ordinary inductive
+the semantics developed in WP1 and the type theory of WP2. To achieve
+this, we will first develop a universal HIT playing the role for HITs
+that W-types play for ordinary inductive
 types~\cite{alti:cont-tcs}. This is feasible as i) we know we can
 reduce HITs with higher dimensional constructors to HITs with only 0-
 and 1-dimensional ones (using the \emph{hub-and-spokes}
@@ -632,25 +620,24 @@ construction~\cite{hott-book}); and ii) our preliminary results show
 that quotient containers~\cite{alti:mpc04} (special 1-dimensional
 HITs) can be reduced to containers in a homotopical setting (using
 ideas of Gylterud~\cite{gylterud:thesis} and
-Kock~\cite{kock:groupoids}).  Another basic goal is to generate a
-high-level syntax for HITs as an alternative to the universal HIT in
-the same way that strictly positive types provide a grammar for
-defining W-types~\cite{alti:cont-tcs}.  This feeds into WP7.  More
-ambitiously, we will investigate extensions such as coinductive,
-inductive-inductive and inductive-recursive HITs. The latter would be
-useful in WP5 since it offers a more concise representation of
-dependently typed syntax by introducing the representation of terms
-and definitional equality at the same time.  Our work on data
-types~\cite{alti:cont-tcs, alti:mpc04,
+Kock~\cite{kock:groupoids}). This feeds into WP6.  Another basic goal
+is to generate a high-level syntax for HITs as an alternative to the
+universal HIT in the same way that strictly positive types provide a
+grammar for defining W-types~\cite{alti:cont-tcs}.  This feeds into
+WP7.  More ambitiously, we will investigate extensions such as
+coinductive, inductive-inductive and inductive-recursive HITs. The
+latter would be useful in WP5 since it offers a more concise
+representation of dependently typed syntax by introducing the
+representation of terms and definitional equality at the same time.
+Our work on data types~\cite{alti:cont-tcs, alti:mpc04,
   altenkirchGhaniHancockMcBrideMorris:indexedContainers,
-  GambinoN:polfpm,awodeyGamSoja:indTypesInHTT},
-our EPSRC grant on containers, and our partial results 
-mean our basic goals are relatively risk-free.
-Our more ambitious goal (which is not essential to the other work packages) is also feasible if time
-permits because of our previous work~\cite{alti:catind2,ghani:fibredIR}
-and grant on induction-recursion. {\em Deliverable: A foundational theory of HITs that 
-  can be implemented in WP6,7.
-  Collaborator: Mike Shulman.  }
+  GambinoN:polfpm,awodeyGamSoja:indTypesInHTT}, our EPSRC grant on
+containers, and our partial results mean our basic goals are
+relatively risk-free.  Our more ambitious goal (which is not essential
+to the other work packages) is also feasible if time permits because
+of our previous work~\cite{alti:catind2,ghani:fibredIR} and grant on
+induction-recursion. {\em Deliverable: A foundational theory of HITs
+  that can be implemented in WP6,7.  Collaborator: Mike Shulman.  }
 
 {\bf WP4: Impact I --- Programming with Effects.}  Most programs
 interact with their environments, but such \emph{effectful} programs
@@ -871,14 +858,23 @@ and iii) a code base of programs written in, and verified by, these
 tools.
 
 
-{\bf Planning, Risk, Management and RA Training.} Apart from clearly
-planning the content, methodology, and success criteria of each work
-package, and the inherent balance between risk and ambition within
-them, we have also minimised risk {\em between} work packages by
-ensuring the deliverables required to enable the project to proceed
-are relatively low-risk --- see the {\em Gantt chart} for more details on
-this and on how the work packages interact, who will lead them, and
-who will be secondary contributors. We will manage the project by i)
+{\bf Planning, Risk, Management and RA Training.}  The content,
+methodology, and success criteria of each work package, and the
+inherent balance between risk and ambition within them, have been
+planned in detail.  Overall, risk is managed by treading a fine line
+between ensuring our key deliverables are feasable and our desire to
+be aggresively ambitious by pushing our results to the limit. See the
+{\em Gantt chart} for more details on how the work packages interact,
+who will lead them, and who will be secondary contributors.
+% Apart from clearly
+% planning the content, methodology, and success criteria of each work
+%  package, and the inherent balance between risk and ambition within
+% them, we have also minimised risk {\em between} work packages by
+% ensuring the deliverables required to enable the project to proceed
+% are relatively low-risk --- see the {\em Gantt chart} for more details on
+% this and on how the work packages interact, who will lead them, and
+% who will be secondary contributors. 
+We will manage the project by i)
 6-monthly team meetings; and ii) asking our collaborators to formally
 review our progress after two years.  Our successful
 track records of working together --- including managing similar
