@@ -1,23 +1,12 @@
+%Read negative comments
+
 %WP7 Fred, TXA
 %URL for CTT and UoM on web
 %Spell, fullsptop
+
 %We are formal verifiers
-
-
-
 %Already HoTT is impacting Coq
 %letters, quotes
-
-
-
-
-%Humility
-%========
-%Dissing others (AS + PW). We are formal methods (GC)
-%acheivable POCS for overall ambitious result with individual ambition too.
-%generate impact or pathways to generate impact. open to door?
-
-
 %Of course, we could have promised to revolutionise not only the
 % foundations of formal verification, also formal verification
 % itself. However, this would be unrealistic as one cannot reasonably
@@ -346,8 +335,8 @@ the lack of a satisfactory computational theory of equality. The
 problem is that, to be computational (\eg to allow proof checking), it
 is not enough to know when things are equal and we must instead know
 how we proved such an equality. And then one needs to address the
-question of when such proofs are equal! This leads to a intricate
-higher dimensional structure which we have so far not understood.
+question of when such proofs are equal! This leads to an intricate
+and higher-dimensional structure which we have so far not understood.
 
 {\bf Homotopy Type Theory.} Fields medallist Vladimir Voevodsky
 introduced HoTT to enable machine checking of mathematical proofs.
@@ -377,28 +366,19 @@ $\;\;\; \;\;\;$ {\em Foundations.}  While most presentations of HoTT
 involve axioms which lack computational justification, the
 recent cubical sets model~\cite{BezemM:cubsmt,nominal} strongly
 suggests that HoTT has an axiom-free, and hence computational,
-presentation. We will transform our computational understanding of
+presentation. We will transform our understanding of
 equality by producing a new
-computational rendering of HoTT based on new constructive models
-and complementary new type theories for HoTT (WP1,2,3). 
-
-
-%While most of our understanding of
-%HoTT is classical, and hence cannot be used to develop programming and
-%verification tools, the recent cubical sets
-%model~\cite{BezemM:cubsmt,nominal} strongly suggests that HoTT has a
-%purely constructive presentation. We will 
-%develop both specific constructive models and a
-%general constructive model theory of HoTT, and complement these models
-%with type-theoretic presentations of them (WP1,2,3).
+computational rendering of HoTT based on a new constructive models
+with complementary new type theories (WP1,2,3). 
 
 $\;\;\;\;\;\;$ {\em Programming Language and Verification Tools.}  
 We will produce the first HoTT-based
 programming language and formal verification
 environment. By incorporating our computational rendering of HoTT's new
 powerful theory of equality, our system will be a fundamental
-innovation within programming languages and will thus influence all
-future systems which compute with equalities (WP5,6,7).
+innovation which transforms the treatment of equality within
+programming languages and verification systems. It will thus influence all
+future systems in the area (WP5,6,7).
 
 $\;\;\;\;\;\;$ {\em Generating Impact.} %In addition to advancing our ability to
 %construct formally verified software, we wish to  is not, by itself, sufficient for
@@ -408,9 +388,9 @@ $\;\;\;\;\;\;$ {\em Generating Impact.} %In addition to advancing our ability to
 %into our research. 
 While vital in itself, developing new and fundamentally better ways to
 construct formally verified software is also essential in
-engaging others to do the same. To ensure this, we will produce case
+engaging others to do the same. To further ensure this, we will produce case
 studies with industrial collaborators from Microsoft so users can
-learn from, experiment with, and feedback into our results. Applying HoTT to
+learn from, experiment with, and offer feedback into our research. Applying HoTT to
 actual verification is new and hence is ground-breaking research (WP4,8).
 
   {\bf Quality, Ambition, Adventure and Distinctiveness.} Developing 
@@ -452,12 +432,13 @@ concise. This leads to high-level programming languages with
 expressive type systems capable of closing the gap between what
 programmers know about their code and what their types can express.
 The current state-of-the-art are the {\em dependently typed
-  programming languages} where the type of a program can express a
+  programming languages} where a program's type can express a
 continuum of precision --- from basic assertions up to a complete
-specification --- about its behaviour. This proposal will develop the
-first of a new breed of such languages which offer a powerful yet
-computationally tractable notion of equality, thereby achieving the
-the goal of programming up to invariance of representation.
+specification --- about its behaviour. This research will produce a fundamental
+innovation, namely the first of a new breed of such languages which
+offers a powerful yet tractable equality, thus
+achieving the goal of programming up to invariance of
+representation.
 
 
 {\bf Program Verification.} While the advantages of the certainty
@@ -524,9 +505,13 @@ element past its neighbours, and bags are braids with
 paths-between-paths identifying braidings which yield the same
 permutation.  The cubical sets model~\cite{BezemM:cubsmt, nominal} 
 proves the basic feasibility of computing with Univalence.  However,
-much work remains: we need an axiom-free type theory for HoTT (as opposed to a
-model validating the axioms of HoTT) within which closed expressions
-can be reduced to values. Definitional equalities lost by the cubical
+much work remains: we need an axiom-free type theory for HoTT 
+so evaluation of programs to values doesn't get stuck when trying to evaluate
+axioms like Univalence.
+%(as opposed to a
+%model validating the axioms of HoTT) within which closed expressions
+%can be reduced to values. 
+Definitional equalities lost by the cubical
 interpretation (such as the computation rule for equality types) must
 be recovered. And, we need to build programming language and
 verification tools, and demonstrate their value via case studies ---
