@@ -497,19 +497,14 @@ tree-like data types, \eg while lists are an inductive type, braids
 are lists with extra paths identifying lists up to twisting of any
 element past its neighbours, and bags are braids with
 paths-between-paths identifying braidings which yield the same
-permutation.  The cubical sets model~\cite{BezemM:cubsmt, nominal} 
+permutation.  The cubical sets model~\cite{BezemM:cubsmt, nominal}
 proves the basic feasibility of computing with Univalence.  However,
-much work remains: we need an axiom-free type theory for HoTT 
-so evaluation of programs to values doesn't get stuck when trying to evaluate
-axioms like Univalence.
-%(as opposed to a
-%model validating the axioms of HoTT) within which closed expressions
-%can be reduced to values. 
-Definitional equalities lost by the cubical
-interpretation (such as the computation rule for equality types) must
-be recovered. And, we need to build programming language and
-verification tools, and demonstrate their value via case studies ---
-exactly the central and distinctive core of this proposal.
+much work remains: we need an axiom-free type theory for HoTT so
+evaluation of programs involving Univalence does not get stuck. Definitional equalities lost by the
+cubical interpretation (such as the computation rule for equality
+types) must be recovered. And, we need to build programming language
+and verification tools, and demonstrate their value via case studies
+--- exactly the central and distinctive core of this proposal.
 
 \vspace*{-0.2in}
 
@@ -524,36 +519,35 @@ also expect to achieve, a risk analysis, and an appropriate methodology. Individ
 collectively they establish HoTT as a fundamental innovation within
 programming languages.
 
-{\bf WP1: Semantics of HoTT.}  A proper model theory for
-HoTT is essential because i) a general model theory guides the design
-of different presentations and implementations of HoTT; ii) models of
+{\bf WP1: Semantics of HoTT.}  A proper model theory for HoTT is
+essential because i) a general model theory guides the design of
+different presentations and implementations of HoTT; ii) models of
 HoTT provide algebraic techniques to reason about the correctness of
 implementations which complement syntactic techniques; and iii)
 specific implementations of HoTT can be proven sound by giving a
-specific model of them.  These models need to be constructive so that
-%their validation of HoTT-axioms is computationally justified.
-programs containing axoims such as Univalence can be run.
-We will: i) analyse existing
-models ({e.g.}  groupoids~\cite{HofmannM:groitt}, simplicial
+specific model of them.  These models need to be constructive so that,
+for example, programs using Univalence can be reduced to values.  We
+will: i) analyse existing models ({e.g.}
+groupoids~\cite{HofmannM:groitt}, simplicial
 sets~\cite{KapulkinC:simmuv}, cubical sets~\cite{BezemM:cubsmt}) and
 isolate exactly how they ensure constructivity or where they fail to
 do so --- in the latter case, we will attempt to constructivise them
-so we may utilise them within this project;
-ii) building on this, we will develop a general model theory for HoTT
-by isolating the essential features of these models and by adapting
-known methods to construct Quillen model structures to the setting of
-HoTT ({c.f.}~\cite{ShulmanM:uniidh}, which however does not cover the
+so we may utilise them within this project; ii) building on this, we
+will develop a general model theory for HoTT by isolating the
+essential features of these models and by adapting known methods to
+construct Quillen model structures to the setting of HoTT
+({c.f.}~\cite{ShulmanM:uniidh}, which however does not cover the
 cubical sets model).  The challenge is to take recent advances in
 axiomatizing models of type theory ({e.g.}~\cite{AwodeyS:natmtt}) and
 blend in the additional structure of HoTT. In terms of risk, i) is
 certainly achievable as it involves only the analysis of existing
-concrete models, while ii) is our more ambitious goal. Nevertheless, our
-expertise on logical relations~\cite{neil2014relParamDep},
+concrete models, while ii) is our more ambitious goal. Nevertheless,
+our expertise on logical relations~\cite{neil2014relParamDep},
 homotopical algebra~\cite{GambinoN:homl2c,GambinoN:weilsh}, and
-$\omega$-groupoids~\cite{alti:csl12,alti:tlca13-hedberg} makes even this ambitious goal
-feasible. {\em Deliverable: A broad collection of models of HoTT
-  describing the design space of its syntactic presentations.
-  Collaborator: Steve Awodey.  }
+$\omega$-groupoids~\cite{alti:csl12,alti:tlca13-hedberg} makes even
+this ambitious goal feasible. {\em Deliverable: A broad collection of
+  models of HoTT describing the design space of its syntactic
+  presentations.  Collaborator: Steve Awodey.  }
 
 
 
