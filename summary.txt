@@ -1,26 +1,60 @@
-This project is about a new programming language, called Homotopy Type
-Theory (HoTT), which has been recently formulated during a special
-year at the Institute of Advanced Study in Princeton. In this language
-we cannot only write programs, but also express properties of programs
-using types, and programs to express proofs that our programs are
-correct. It is called Homotopy Type Theory because concepts from
-Homotopy Theory which investigates abstract properties of geometric
-objects.  The Fields Medallist Vladimir Voevodsky and others have
-established a new and exciting link between geometry and reasoning
-about equality.  In a nutshell, HoTT allows us to treat objects which
-behave the same as equal (a feature encapsulated by the so-called Univalence Axiom). Another feature of HoTT is that we can model datatypes, such as bags, where elements can be exchanged
-easily (using what is called higher inductive types). We believe that
-these are essential ingredients to make formal verification possible, since
-they allow us to reuse proofs and programs effectively.
+The cost of software failure is truly staggering. Well known 
+individual cases include the Mars Climate Orbiter failure 
+(£80 million), Ariane Rocket disaster (£350 million), Pentium 
+Chip Division failure (£300 million), and more recently the heartbleed 
+bug (est. £400 million).  There are many, many more examples. Even worse, 
+failures such as one in the Patriot Missile System and another 
+in the Therac-25 radiation system have cost lives. More generally, a 
+2008 study by the US government estimated that faulty
+software costs the US economy £100 billion
+annually.  
 
-Homotopy Type Theory is also possible foundational language for
-Mathematics, an aspect which has already been explored extensively in 
-a recent book (freely available download online). 
+There are many successful approaches to software verification
+(testing, model checking etc).  One approach is to find mathematical
+proofs that guarantees of software correctness. However, the
+complexity of modern software means that hand-written mathematical
+proofs can be untrustworthy and this has led to a growing desire for
+computer-checked proofs of software correctness. One of the most
+successful approaches to formal verification is based on Martin-Löf's
+Type Theory: In this language we cannot only write programs, but also
+express properties of programs using types, and programs to express
+proofs that our programs are correct. Type Theory has been the base of
+programming languages and interactive proof systems like Coq, Agda,
+NuPRL and Idris. While these system work well for small problems the
+issue of scalability arises: how can we use them to build large
+libraries of verified software? 
 
-A fundamental open problem concerning Homotopy Type Theory is that at present
-it is not clear how we could write a compiler or interpreter for HoTT. The
-goal of this project is to address this issue by foundational research
-based on some recent and promising ideas and to implement tools which
-make HoTT available to researchers and
-programmers. We will also study some concrete examples in program
-verification to see wether and if how we can take advantage of HoTT.
+This is related to the problem of abstraction: a component in a
+software system should be replaceable by another which behaves the
+same way even though it may be constructed in a completely different
+way. That is we want an "extensional equality" and we want it to be
+computationally well behaved (that is we can run programs using this
+equality). This is a fundamental and difficult problem which has
+remained unsolved for over 40 years, namely the lack of a satisfactory
+treatment of equality within programming languages and verification
+systems.
+
+But now it looks like we might have a solution! Fields medalist
+Vladimir Voevodsky has come up with a completely different take on the
+problem by thinking of equalities as paths such as those which occur
+in one of the most abstract branches of mathematics, namely homotopy
+theory, leading to Homotopy Type Theory (HoTT). While in HoTT two
+software components are equal if they behave the same way. At the same
+time our HoTT is a programming language, that is we can run our
+program even if they involve this powerful abstraction. However,
+currently there is no proper implementation of HoTT which satisfies
+these properties. The goal of our project is to fix that and to
+develop tools to make the power of HoTT available to programmers and
+verification.
+
+While many are working on the mathematical foundations of this new
+theory of equality, we propose to use our programming language skills
+to build the first of a new breed of much more powerful programming
+language and verification systems based upon HoTT. We can do this
+because i) we have unique skills and ideas ranging from the
+foundations of HoTT to the implementation and deployment of
+programming language and verification tools; and ii) the active
+collaboration of the most important figures in the area (including
+Voevodsky) as well as industrial participation to ensure that we keep
+in mind our ultimate goal - usable programming language and
+verification tools.

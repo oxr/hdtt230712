@@ -1,20 +1,36 @@
-Researchers in Type Theory and formal verification
-	   who can use the theory and the tools we are developing
+We expect the following academic beneficiaries
 
-Designers of programming languages
-	  who can exploit our theoretical results
+1. Each of our collaborators are also end users of our research and
+therefore will gain immediate benefit from our results. They are
+particularly likely to do this because they have been involved in the
+design of the research and will be involved in its execution.
 
-Users of interactive proof systems
-      who can take advantage of the tools we are developing
+2. The Homotopy Type Theory (HoTT) community will be the next most
+immediate beneficiaries as most of their research occurs within the
+mathematical foundations of HoTT. They will benefit by taking HoTT
+into the direction of programming languages and verification.
 
-Mathematicans 
-      who can use our tools to formally verify the results using HoTT
+3. Next, theoretical computer scientists will benefit by seeing new
+foundations for their discipline developed based upon HoTT. In
+particular, users of type theoretic tools (Coq, Agda, Idris, NuPRL)
+will be excited at the advent of new type theories which encapsulate
+the Univalence not as an axiom but as a computational feature.
 
-Interested public
-      who is interested in foundations of mathematics
+4. Moving outwards, programming language designers will benefit as
+currently they are intrigued by HoTT but are put off by the overhead
+of its current mathematical presentation. Being able to access HoTT in
+the form of a programming language will give them the ability to gain
+a deep understanding HoTT in terms they understand.
 
-Programmers
-      who can take advantages of HoTT's features to structure and effectively develop certified software.
+5. Similarly, the programme verification community will also be able
+to access HoTT as a programming verification tool and thus use it for
+their own concerns.
 
-The general public
-     who in the long run will profit from reduced errors in software developed using HoTT.
+6. PhD students who will become the next generation of programmers,
+developers and academics will benefit via the courses and talks we
+intend to give at workshops, via the MGS and similar events, and
+through our own workshop and summer school.
+
+7. Finally, other academics (eg mathematicians) who want to formalise
+large libraries of knowledge will benefit from the improved
+reusability and modularity HoTT is offering.

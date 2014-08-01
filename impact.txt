@@ -1,0 +1,34 @@
+In the short term, we expect impact in the following areas
+
+1. EPSRC has a goal of growing its research in programming languages
+and programme verification and this research contributes directly -
+and immediately - to this goal. This research also contributes
+immediately to both the overall objective and the three objectives of
+the EPSRC funded Grand Challenge 6 "Dependable Systems Evolution". The
+research also contributes indirectly to the EPSRC themes of the
+Digital Economy, Global Uncertainty and cyber security by increasing
+trust in software by establishing machine-checked mathematical proofs
+concerning program behaviour.
+
+2. National Economy: The software market is huge and this research
+contributes to this area by producing the first HoTT-based programming
+language which, unlike current languages, allows programming with
+quotients and supports abstraction by using an extensional but
+computationally well-behaved equality. This will be demonstrated via a
+case study concerning Units of Measure, a feature within the
+Microsoft's commercial language F#.
+
+In the long term, we expect impact in the following areas:
+
+3. Emerging Industry: Because of the huge cost of software failures as
+detailed in the proposal, there is growing interest within industry in
+formally verified software and this research contributes to this area
+by aiming to build the first of a new breed of more powerful
+verification environments with better ability to scale to large
+systems due to the specific properties of HoTT.
+ 
+4. In the long term, the need for trust in results across the sciences
+will mean that there will be a growing interest in formal verification
+of such human knowledge. By developing more powerful systems for
+formal verification, our research will contribute (once more in the
+long run) to this goal.
