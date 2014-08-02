@@ -327,16 +327,17 @@ deployment such as Haskell, OCaml, Scala and F\#.
 {\bf The Problem with Equality.} However, such systems have
 fundamental limitations, \eg when programming with quotients
 (identifying objects up to an equivalence relation), supporting
-abstraction (invariance under different representations of the same
-structure) and extensional reasoning (proving that programs with the
-same behaviour are the same). These limitations are manifestations of
-an even more fundamental problem unresolved for over 40 years, namely
-the lack of a satisfactory computational theory of equality. The
-problem is that, to be computational (\eg to allow proof checking), it
-is not enough to know when things are equal, but we must also know how
-we proved such an equality. And then one needs to address the question
-of when such proofs are equal! This leads to an intricate,
-higher-dimensional structure which we have so far not understood.
+abstraction, reusability and modularity (invariance under different
+representations of the same structure) and extensional reasoning
+(proving that programs with the same behaviour are the same). These
+limitations are manifestations of an even more fundamental problem
+unresolved for over 40 years, namely the lack of a satisfactory
+computational theory of equality. The problem is that, to be
+computational (\eg to allow proof checking), it is not enough to know
+when things are equal, but we must also know how we proved such an
+equality. And then one needs to address the question of when such
+proofs are equal! This leads to an intricate, higher-dimensional
+structure which we have so far not understood.
 
 {\bf Homotopy Type Theory.} Fields medallist Vladimir Voevodsky
 introduced HoTT to enable machine checking of mathematical proofs.
@@ -445,7 +446,8 @@ able to formally verify both large mathematical theorems such as the
 Four Colour Theorem, and large software systems such as the CompCert
 C compiler. However, these systems are not {\em extensional}:
 behaviourally indistinguishable objects cannot be proven to be the
-same, and this fundamental problem significantly weakens usability of the
+same, which seriously hinders reusability and modularity.
+This fundamental problem significantly weakens usability of the
 systems. As extensionality is a consequence of HoTT, our system
 will be extensional and hence a fundamental innovation in this area.
 
@@ -747,16 +749,20 @@ with Kennedy. Details are given in {\em Pathways to Impact}. {\em
 \vspace*{-0.1in}
 
 {\bf Relevance to Beneficiaries.} Our collaborators will benefit from
-our results as they are also end-users of our research, 
-the HoTT community will benefit from our programming languages
-view of HoTT, type theorists will benefit from new
-foundations for their subject, and the programming languages and
-verification communities will benefit from our tools making HoTT more
-accessible. In the long term, beneficiaries extend to
-programmers beginning with those interested in formal
-verification and broadening out to the wider community. Our critical
-mass of examples of verified code will offer them a gateway
-into HoTT. See {\em Pathways to Impact}.
+our results as they are also end-users of our research, the HoTT
+community will benefit from our programming languages view of HoTT,
+type theorists will benefit from new foundations for their subject,
+and the programming languages and verification communities will
+benefit from our tools making HoTT more accessible.  In the long term,
+beneficiaries extend to programmers, beginning with those interested
+in formal verification and broadening out to the wider community. Our
+critical mass of examples of verified code will offer them a gateway
+into HoTT (see {\em Pathways to Impact}). Finally, academics from
+other fields (e.g.\ mathematicians) who want to formalise their work
+will benefit from the improvements our system offers with respect to
+reusability and modularity. %when
+%machine checking proofs.
+
 
 
 
