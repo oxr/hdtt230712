@@ -14,38 +14,39 @@ There are many successful approaches to software verification
 proofs that guarantees of software correctness. However, the
 complexity of modern software means that hand-written mathematical
 proofs can be untrustworthy and this has led to a growing desire for
-computer-checked proofs of software correctness. One of the most
-successful approaches to formal verification is based on Martin-Löf's
-Type Theory: In this language we cannot only write programs, but also
-express properties of programs using types, and programs to express
-proofs that our programs are correct. Type Theory has been the base of
-programming languages and interactive proof systems like Coq, Agda,
-NuPRL and Idris. While these system work well for small problems the
+computer-checked proofs of software correctness. 
+Programming languages and interactive proof systems like Coq, Agda,
+NuPRL and Idris have been developed based on a formal system called
+Martin-Löf Type Theory. In these systems, we can not only write
+programs, but we can also express properties of programs using types,
+and write programs to express proofs that our programs are correct.
+In this way, both large mathematical theorems such as the Four Colour
+Theorem, and large software systems such as the CompCert C compiler
+have been formally verified. However, in such large projects, the
 issue of scalability arises: how can we use them to build large
-libraries of verified software? 
+libraries of verified software in an effective way?
 
 This is related to the problem of abstraction: a component in a
 software system should be replaceable by another which behaves the
 same way even though it may be constructed in a completely different
-way. That is we want an "extensional equality" and we want it to be
-computationally well behaved (that is we can run programs using this
+way. That is, we want an "extensional equality" and we want it to be
+computationally well behaved (that is, we want to run programs using this
 equality). This is a fundamental and difficult problem which has
 remained unsolved for over 40 years, namely the lack of a satisfactory
-treatment of equality within programming languages and verification
-systems.
+treatment of equality within verification systems.
 
-But now it looks like we might have a solution! Fields medalist
+But now it looks like we might have a solution! Fields medallist
 Vladimir Voevodsky has come up with a completely different take on the
 problem by thinking of equalities as paths such as those which occur
 in one of the most abstract branches of mathematics, namely homotopy
-theory, leading to Homotopy Type Theory (HoTT). While in HoTT two
-software components are equal if they behave the same way. At the same
-time our HoTT is a programming language, that is we can run our
-program even if they involve this powerful abstraction. However,
-currently there is no proper implementation of HoTT which satisfies
-these properties. The goal of our project is to fix that and to
-develop tools to make the power of HoTT available to programmers and
-verification.
+theory, leading to Homotopy Type Theory (HoTT). In HoTT, two
+components are completely interchangeable if they behave the same
+way. However, we also want HoTT to be computational; that is, we
+want to run our program even if they involve this powerful
+abstraction. Currently, there is no proper implementation of
+HoTT which satisfies this property. The goal of our project is to
+fix that, and to develop tools to make the power of HoTT available to
+programmers and verification.
 
 While many are working on the mathematical foundations of this new
 theory of equality, we propose to use our programming language skills
@@ -56,5 +57,5 @@ foundations of HoTT to the implementation and deployment of
 programming language and verification tools; and ii) the active
 collaboration of the most important figures in the area (including
 Voevodsky) as well as industrial participation to ensure that we keep
-in mind our ultimate goal - usable programming language and
+in mind our ultimate goal -- usable programming language and
 verification tools.
