@@ -1,10 +1,6 @@
 %Read negative comments
-
-%WP7 Fred, TXA
 %URL for CTT and UoM on web
 %Spell, fullsptop
-
-%We are formal verifiers
 %Already HoTT is impacting Coq
 %letters, quotes
 %Of course, we could have promised to revolutionise not only the
@@ -17,6 +13,8 @@
 % case studies with industrial collaborators is significantly more
 % adventurous than a lot of proposed research.
 
+%ext reasoning in WP?
+%mod in WPY
 
 
 
@@ -307,8 +305,8 @@ on a 3-year EPSRC grant on proof-theoretical aspects of HoTT.
 \vspace*{-0.1in}
 
 {\bf Formal Verification.} The cost of software failure is truly
-staggering\footnote{see the sections on National Importance and
-  Pathways to Impact.} and there are many successful approaches to
+staggering\footnote{see the sections on {\em National Importance} and
+  {\em Pathways to Impact.}} and there are many successful approaches to
 software verification (\eg testing, model checking). Within formal
 verification, one seeks mathematical guarantees of software correctness but
 the complexity of modern software means that hand-written mathematical
@@ -327,17 +325,25 @@ deployment such as Haskell, OCaml, Scala and F\#.
 {\bf The Problem with Equality.} However, such systems have
 fundamental limitations, \eg when programming with quotients
 (identifying objects up to an equivalence relation), supporting
-abstraction, reusability and modularity (invariance under different
-representations of the same structure) and extensional reasoning
+reusability and modularity 
+(interchangeability of different
+implementations of the same specification) and extensional reasoning
 (proving that programs with the same behaviour are the same). These
-limitations are manifestations of an even more fundamental problem
-unresolved for over 40 years, namely the lack of a satisfactory
+limitations are manifestations of an even %more fundamental
+deeper  problem
+unresolved for 40 years, namely the lack of a satisfactory
 computational theory of equality. The problem is that, to be
 computational (\eg to allow proof checking), it is not enough to know
 when things are equal, but we must also know how we proved such an
-equality. And then one needs to address the question of when such
+equality. And then one must address the question of when such
 proofs are equal! This leads to an intricate, higher-dimensional
 structure which we have so far not understood.
+
+
+%This leads to the question of when such
+%proofs are equal, resulting in an intricate, higher-dimensional
+%structure which we have so far not understood.
+
 
 {\bf Homotopy Type Theory.} Fields medallist Vladimir Voevodsky
 introduced HoTT to enable machine checking of mathematical proofs.
@@ -438,17 +444,16 @@ representation.
 
 {\bf Program Verification.} While the advantages of the certainty
 afforded by mathematical proof has been recognised for centuries, this
-certainty is undermined by the risk of making mistakes in
-proofs. The advent of computers raised the possibility once more of
-achieving in practice the promise of mathematical certainty. This
-potential is now coming to fruition, \eg systems such as Coq have been
-able to formally verify both large mathematical theorems such as the
-Four Colour Theorem, and large software systems such as the CompCert
-C compiler. However, these systems are not {\em extensional}:
-behaviourally indistinguishable objects cannot be proven to be the
-same, which seriously hinders reusability and modularity.
-This fundamental problem significantly weakens usability of the
-systems. As extensionality is a consequence of HoTT, our system
+certainty is undermined by the risk of making mistakes in proofs. The
+advent of computers raised the possibility once more of achieving in
+practice the promise of mathematical certainty. This potential is now
+coming to fruition, \eg systems such as Coq have been able to formally
+verify both large mathematical theorems such as the Four Colour
+Theorem, and large software systems such as the CompCert C compiler.
+However, these systems are not {\em extensional}: behaviourally
+indistinguishable objects cannot be proven to be the same. 
+This fundamental problem significantly hinders reusability and modularity.
+As extensionality is a consequence of HoTT, our system
 will be extensional and hence a fundamental innovation in this area.
 
 
@@ -660,17 +665,21 @@ must themselves be formally verified. Indeed, as Voevodsky pointed out
 semantics of HoTT makes a paper-based verification almost infeasible,
 and certainly not trustworthy. We begin by formalising the current
 understanding of HoTT using current tools such as Agda. In this less
-ambitious initial phase we will take an axiomatic approach to HoTT
-(i.e., adding univalence and HITs as postulates). As the project
-develops we will become more ambitious by i) formally verifying key
+ambitious initial phase we will take an axiomatic approach to HoTT, \eg
+adding univalence and HITs as postulates. Later, we will be  more ambitious by i) formally verifying key
 results across our work packages; and ii) replacing the axiomatic
 approach to HoTT with a computational one by switching from Agda to
 the system developed in WP6 and WP7, thereby enabling a partial
-formalisation of HoTT within itself. If possible, we will simplify our
-formalisation by using inductive-recursive HITs developed in WP3.  Overall, WP5
-ensures the required level of trust in our system and impacts
-the formal verification community as the first formal
-verification in a {\em HoTT-based} environment. It will also establish
+formalisation of HoTT within itself. Working within a HoTT-based
+system will produce more reusable and modular
+proofs --- important as our formalisation needs to adapt to
+developments in other work packages. If possible, we will simplify our
+formalisation by using inductive-recursive HITs developed in WP3.  
+%Overall, WP5 ensures the required level of trust in our system and
+Clearly, WP5 impacts
+the formal verification community. %as the first example of formal
+%verification in a {\em HoTT-based} environment 
+WP5 also establishes
 that HoTT (like any foundational theory) can describe its own
 meta-theory. Risk of failure in our basic goal is low as we have
 already formalised parts of
@@ -679,8 +688,8 @@ of formalising the syntax of type theory in
 itself~\cite{mcbride:outrageous,ghani:fibredIR,alti:catind2} makes us
 well positioned with respect to our more ambitious goals. No other work packages
 depend on WP5. {\em Deliverable: Formally verified proofs of
-  the key properties of HoTT, our implementation of HoTT, and software
-  written in our implementation of HoTT. Collaborator: Matthieu Sozeau.  }
+  the key properties of HoTT, our implementation of HoTT and software
+  written in it. Collaborator: Matthieu Sozeau.  }
 
 
 {\bf WP6: Implementing a Core Programming Language.} In order to
@@ -733,7 +742,7 @@ results. To do this, we will work closely with the developers of Idris
   Collaborator: Edwin Brady.  }
 
 
-{\bf WP8: Impact II --- Programming and Invariance.}  We will validate
+{\bf WP8: Impact II --- HoTT and Units of Measure.}  We will validate
 the applied research of WP5--7 and help generate impact by developing a
 case study on Units of Measure with Kennedy of Microsoft. This builds
 on Ghani's ideas~\cite{uom} and his Impact Accelerator Account grant
@@ -757,11 +766,11 @@ benefit from our tools making HoTT more accessible.  In the long term,
 beneficiaries extend to programmers, beginning with those interested
 in formal verification and broadening out to the wider community. Our
 critical mass of examples of verified code will offer them a gateway
-into HoTT (see {\em Pathways to Impact}). Finally, academics from
-other fields (e.g.\ mathematicians) who want to formalise their work
-will benefit from the improvements our system offers with respect to
-reusability and modularity. %when
-%machine checking proofs.
+into HoTT. See {\em Pathways to Impact}. %  Finally, academics from
+% other fields (e.g.\ mathematicians) who want to formalise their work
+% will benefit from the improvements our system offers with respect to
+% reusability and modularity. %when
+% %machine checking proofs.
 
 
 
